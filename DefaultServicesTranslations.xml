@@ -18,6 +18,24 @@
             field="uid"
             tag_name="uid" type="1" scalar_type="LongType"></field_descriptor>
     </class_descriptor>
+    <class_descriptor described_class="class ecologylab.services.messages.OkResponse"
+		tag_name="ok_response">
+		<field_descriptor
+			field="protected long ecologylab.services.messages.ServiceMessage.timeStamp"
+			tag_name="time_stamp" type="1" scalar_type="LongType"></field_descriptor>
+		<field_descriptor
+			field="protected long ecologylab.services.messages.ServiceMessage.uid"
+			tag_name="uid" type="1" scalar_type="LongType"></field_descriptor>
+	</class_descriptor>
+	<class_descriptor described_class="class ecologylab.services.messages.UpdateMessage"
+		tag_name="update_message">
+		<field_descriptor
+			field="protected long ecologylab.services.messages.ServiceMessage.timeStamp"
+			tag_name="time_stamp" type="1" scalar_type="LongType"></field_descriptor>
+		<field_descriptor
+			field="protected long ecologylab.services.messages.ServiceMessage.uid"
+			tag_name="uid" type="1" scalar_type="LongType"></field_descriptor>
+	</class_descriptor>
     <class_descriptor
         described_class="ecologylab.services.messages.InitConnectionResponse"
         tag_name="init_connection_response">
