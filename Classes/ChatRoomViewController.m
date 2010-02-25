@@ -1,92 +1,77 @@
 //
 //  ChatRoomViewController.m
-//  Chatty
+//  ecologylabFundamentalObjC
 //
-//  Copyright (c) 2009 Peter Bakhyryev <peter@byteclub.com>, ByteClub LLC
+//  Created by William Hamilton on 2/24/10.
+//  Copyright 2010 Texas A&M University. All rights reserved.
 //
-//  Permission is hereby granted, free of charge, to any person
-//  obtaining a copy of this software and associated documentation
-//  files (the "Software"), to deal in the Software without
-//  restriction, including without limitation the rights to use,
-//  copy, modify, merge, publish, distribute, sublicense, and/or sell
-//  copies of the Software, and to permit persons to whom the
-//  Software is furnished to do so, subject to the following
-//  conditions:
-//  
-//  The above copyright notice and this permission notice shall be
-//  included in all copies or substantial portions of the Software.
-//  
-//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-//  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
-//  OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-//  NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-//  HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-//  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-//  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-//  OTHER DEALINGS IN THE SOFTWARE.
 
 #import "ChatRoomViewController.h"
-#import "ChattyAppDelegate.h"
+#import "ChatAppDelegate.h"
 #import "UITextView+Utils.h"
 #import "AppConfig.h"
+#import "ChatRequest.h"
 
 @implementation ChatRoomViewController
 
-// After view shows up, start the room
-- (void)activate {
-  [input becomeFirstResponder];
-}
+@synthesize client;
 
-
-// Cleanup
-- (void)dealloc {
-    [super dealloc];
-}
-
-
-// We are being asked to display a chat message
+/*
+ * Add a chat message
+ */
 - (void)displayChatMessage:(NSString*)message fromUser:(NSString*)userName {
   [chat appendTextAfterLinebreak:[NSString stringWithFormat:@"%@: %@", userName, message]];
   [chat scrollToBottom];
 }
 
-
-// Room closed from outside
-- (void)roomTerminated:(id)room reason:(NSString*)reason {
-  // Explain what happened
-  UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Room terminated" message:reason delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-  [alert show];
-  [alert release];
-  [self exit];
+/*
+ * ChatUpdateDelegate method.
+ */
+- (void) recievedChatUpdate:(ChatUpdate*)update;
+{
+  /*
+   * Build username (ip:port) and post to chat area.
+   */
+  NSString* user = [NSString stringWithFormat:@"%@:%d", update.host, update.port];
+  [self displayChatMessage:update.message fromUser:user];
 }
-
-
-// User decided to exit room
-- (IBAction)exit {
-  // Remove keyboard
-  [input resignFirstResponder];
-
-  // Erase chat
-  chat.text = @"";
-  
-  // Switch back to welcome view
-  [[ChattyAppDelegate getInstance] showRoomSelection];
-}
-
 
 #pragma mark -
 #pragma mark UITextFieldDelegate Method Implementations
 
-// This is called whenever "Return" is touched on iPhone's keyboard
+/*
+ * This is called whenever "Return" is touched on iPhone's keyboard
+ */
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
 	if (theTextField == input) {
-		// processs input
-    //[chatRoom broadcastChatMessage:input.text fromUser:[AppConfig getInstance].name];
+		NSString* inputText = input.text;
+       
+    /*
+     * Initialize ChatRequest and set message to content's of the text field.
+     */
+    ChatRequest* request = [[ChatRequest alloc] init];
+    [request setMessage:inputText];
+    
+    /*
+     * Setup the client to send the message a little later in
+     * the run loop.
+     */
+    [client performSelector:@selector(sendMessage:) withObject: request];
+    
+    [request release];
 
-		// clear input
 		[input setText:@""];
+    [self displayChatMessage:inputText fromUser:@"me"];
 	}
 	return YES;
+}
+
+- (void)activate {
+  [input becomeFirstResponder];
+}
+
+- (void)dealloc {
+  [super dealloc];
 }
 
 @end

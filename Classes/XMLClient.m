@@ -177,6 +177,7 @@ NSString * const OODSS_CLIENT = @"OODSS_CLIENT";
       //we've got an incoming message (Response)
       
       [self processIncomingMessage:firstMessageBuffer withUID:uidOfCurrentMessage];
+      [firstMessageBuffer setLength:0];
     }
   };
 
@@ -186,32 +187,34 @@ NSString * const OODSS_CLIENT = @"OODSS_CLIENT";
 
 - (void) processIncomingMessage:(NSMutableData*) message withUID:(int) uid
 {
-  NSString* incomingMessage = [[NSString alloc] initWithBytes:[message bytes] 
-                                                length:[message length]
-                                                encoding:NSISOLatin1StringEncoding];
-  NSLog(@"Got message: %@", incomingMessage);
+  NSString* messageString = [[NSString alloc] initWithBytes:[message bytes] 
+                                                       length:[message length]
+                                                       encoding:NSISOLatin1StringEncoding];
   
-  //self.translationScope = [DefaultServicesTranslations get];
+  NSLog(messageString);
   
-  ElementState* response = [ElementState translateFromXMLData:message translationScope:self.translationScope];
+  ElementState* incomingMessage = [ElementState translateFromXMLData:message translationScope:self.translationScope];
  
-  [message setLength:0];
-  
-  if([response isKindOfClass:[ResponseMessage class]])
+  if([incomingMessage isKindOfClass:[ResponseMessage class]])
   {
-    ResponseMessage* responseMessage = (ResponseMessage*) response;
+    ResponseMessage* responseMessage = (ResponseMessage*) incomingMessage;
     
     if([responseMessage isKindOfClass:[InitConnectionResponse class]])
     {
-      InitConnectionResponse* initConnResp = (InitConnectionResponse*) response;
+      InitConnectionResponse* initConnResp = (InitConnectionResponse*) incomingMessage;
       self.sessionId = initConnResp.sessionId;
       [delegate connectionSuccessful:self withSessionId:self.sessionId];
     }
     
     [responseMessage processResponse: self.scope];
   }
+  else if ([incomingMessage isKindOfClass: [UpdateMessage class]])
+  {
+    UpdateMessage* updateMessage = (UpdateMessage*) incomingMessage;
+    
+    [updateMessage processUpdate: self.scope];
+  }
   
-  [response release];
   [incomingMessage release];
 }
   
@@ -351,6 +354,14 @@ NSString * const OODSS_CLIENT = @"OODSS_CLIENT";
   [initReq release];
 }
 
+-(void) disconnect
+{
+  DisconnectRequest* request = [[DisconnectRequest alloc] init];
+  [self sendMessage:request];
+  
+  [theConnection close];
+  [delegate connectionTerminated:self];
+}
 -(void) dealloc
 {
   [scope release];

@@ -14,6 +14,8 @@
 #import "ErrorResponse.h"
 #import "HistoryEchoRequest.h"
 #import "HistoryEchoResponse.h"
+#import "OkResponse.h"
+#import "UpdateMessage.h"
 
 @interface DefaultServicesTranslations : NSObject {
 

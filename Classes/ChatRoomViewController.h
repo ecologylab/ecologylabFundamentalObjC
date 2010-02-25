@@ -1,40 +1,21 @@
 //
 //  ChatRoomViewController.h
-//  Chatty
+//  ecologylabFundamentalObjC
 //
-//  Copyright (c) 2009 Peter Bakhyryev <peter@byteclub.com>, ByteClub LLC
+//  Created by William Hamilton on 2/24/10.
+//  Copyright 2010 Texas A&M University. All rights reserved.
 //
-//  Permission is hereby granted, free of charge, to any person
-//  obtaining a copy of this software and associated documentation
-//  files (the "Software"), to deal in the Software without
-//  restriction, including without limitation the rights to use,
-//  copy, modify, merge, publish, distribute, sublicense, and/or sell
-//  copies of the Software, and to permit persons to whom the
-//  Software is furnished to do so, subject to the following
-//  conditions:
-//  
-//  The above copyright notice and this permission notice shall be
-//  included in all copies or substantial portions of the Software.
-//  
-//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-//  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
-//  OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-//  NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-//  HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-//  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-//  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-//  OTHER DEALINGS IN THE SOFTWARE.
-
 #import <UIKit/UIKit.h>
+#import "ChatUpdateDelegate.h"
+#import "xMLClient.h"
 
-
-@interface ChatRoomViewController : UIViewController <UITextFieldDelegate> {
+@interface ChatRoomViewController : UIViewController <UITextFieldDelegate, ChatUpdateDelegate> {
   IBOutlet UITextView* chat;
   IBOutlet UITextField* input;
+  XMLClient* client;
 }
 
-// Exit back to the welcome screen
-- (IBAction)exit;
+@property(nonatomic, retain) XMLClient* client;
 
 // View is active, start everything up
 - (void)activate;
