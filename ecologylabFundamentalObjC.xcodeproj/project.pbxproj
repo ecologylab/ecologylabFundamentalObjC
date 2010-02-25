@@ -71,7 +71,6 @@
 		EDE4A54C1135D907005517C6 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDCAD1291135D8240076CCCC /* CoreFoundation.framework */; };
 		EDE4A54D1135D907005517C6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDCAD12B1135D82B0076CCCC /* UIKit.framework */; };
 		EDE4A5A31135DE6E005517C6 /* ChatClientInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDE4A5A21135DE6E005517C6 /* ChatClientInfo.plist */; };
-		EDE4A5A51135DE8F005517C6 /* ChatMainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDE4A5A41135DE8F005517C6 /* ChatMainWindow.xib */; };
 		EDE4A5B41135E09E005517C6 /* UITextView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE4A5B01135E09E005517C6 /* UITextView+Utils.m */; };
 		EDE4A5D21135E3B9005517C6 /* ChatAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE4A5A91135E08A005517C6 /* ChatAppDelegate.m */; };
 		EDE4A5D31135E3B9005517C6 /* ChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE4A5AC1135E08A005517C6 /* ChatRoomViewController.m */; };
@@ -82,7 +81,6 @@
 		EDE4A5DA1135E418005517C6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE4A5D91135E418005517C6 /* UIKit.framework */; };
 		EDE4A5DC1135E422005517C6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE4A5DB1135E422005517C6 /* CoreGraphics.framework */; };
 		EDE4A5DE1135E42F005517C6 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE4A5DD1135E42F005517C6 /* CFNetwork.framework */; };
-		EDE4A5DF1135E44C005517C6 /* ChatMainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDE4A5A41135DE8F005517C6 /* ChatMainWindow.xib */; };
 		EDE4A5E01135E44C005517C6 /* ChatRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDE4A5A01135DA09005517C6 /* ChatRoomViewController.xib */; };
 		EDE4A5EB1135E4E4005517C6 /* BItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCACEDB1135CF040076CCCC /* BItem.m */; };
 		EDE4A5EC1135E4E4005517C6 /* BooleanType.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCACF071135CF040076CCCC /* BooleanType.m */; };
@@ -145,6 +143,7 @@
 		EDE4AAC5113653B0005517C6 /* OkResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE4A6DF1135F2DF005517C6 /* OkResponse.m */; };
 		EDE4AAC6113653B0005517C6 /* UpdateMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE4A6E11135F2DF005517C6 /* UpdateMessage.m */; };
 		EDE4AAED1136561F005517C6 /* UpdateMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE4A6E11135F2DF005517C6 /* UpdateMessage.m */; };
+		EDE4AB2C1137301A005517C6 /* ChatMainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDE4AB2911372FE7005517C6 /* ChatMainWindow.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -286,7 +285,6 @@
 		EDCAD2091135D8870076CCCC /* ecologylabXML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ecologylabXML.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE4A5A01135DA09005517C6 /* ChatRoomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatRoomViewController.xib; sourceTree = "<group>"; };
 		EDE4A5A21135DE6E005517C6 /* ChatClientInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ChatClientInfo.plist; sourceTree = "<group>"; };
-		EDE4A5A41135DE8F005517C6 /* ChatMainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ChatMainWindow.xib; path = "../../Downloads/chatty 2/ChatMainWindow.xib"; sourceTree = SOURCE_ROOT; };
 		EDE4A5A81135E08A005517C6 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
 		EDE4A5A91135E08A005517C6 /* ChatAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatAppDelegate.m; sourceTree = "<group>"; };
 		EDE4A5AA1135E08A005517C6 /* ChatAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatAppDelegate.h; sourceTree = "<group>"; };
@@ -316,6 +314,7 @@
 		EDE4A79F1135FE10005517C6 /* ChatTranslations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTranslations.m; sourceTree = "<group>"; };
 		EDE4A87F113606B3005517C6 /* ChatUpdateDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatUpdateDelegate.h; sourceTree = "<group>"; };
 		EDE4A880113606B3005517C6 /* ChatUpdateDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatUpdateDelegate.m; sourceTree = "<group>"; };
+		EDE4AB2911372FE7005517C6 /* ChatMainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatMainWindow.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -700,7 +699,7 @@
 			isa = PBXGroup;
 			children = (
 				EDE4A5A21135DE6E005517C6 /* ChatClientInfo.plist */,
-				EDE4A5A41135DE8F005517C6 /* ChatMainWindow.xib */,
+				EDE4AB2911372FE7005517C6 /* ChatMainWindow.xib */,
 				EDE4A5A01135DA09005517C6 /* ChatRoomViewController.xib */,
 			);
 			name = ChatTutorialResources;
@@ -856,7 +855,6 @@
 				EDE4A4BC1135D8F5005517C6 /* MainWindow.xib in Resources */,
 				EDE4A4BD1135D8F5005517C6 /* ecologylabXML-Info.plist in Resources */,
 				EDE4A5A31135DE6E005517C6 /* ChatClientInfo.plist in Resources */,
-				EDE4A5A51135DE8F005517C6 /* ChatMainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -864,10 +862,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDE4A5DF1135E44C005517C6 /* ChatMainWindow.xib in Resources */,
 				EDE4A5E01135E44C005517C6 /* ChatRoomViewController.xib in Resources */,
 				EDE4A7911135FD92005517C6 /* DefaultServicesTranslations.xml in Resources */,
 				EDE4A6DD1135EF5E005517C6 /* ChatTranslations.xml in Resources */,
+				EDE4AB2C1137301A005517C6 /* ChatMainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
