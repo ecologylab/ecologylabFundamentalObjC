@@ -25,7 +25,7 @@
 	@private NSMutableArray *elementFieldDescriptors;
 	@private DictionaryList *fieldDescriptorsByFieldName;
 	@private FieldDescriptor *pseudoFieldDescriptor;
-	@private NSMutableDictionary *allFieldDescriptorsByTagNames;
+	@private NSMutableDictionary *allFieldDescriptorsByTagNames; 
 }
 
 @property (nonatomic, readwrite) Class *describedClass;
