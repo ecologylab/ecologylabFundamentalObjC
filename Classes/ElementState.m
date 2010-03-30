@@ -158,7 +158,6 @@
 
 		switch (fd.type) {
 		case ATTRIBUTE:
-				NSLog(key); 
 			[[fd scalarType] setField: self fieldName:[fd getFieldName] value: value];
 			if ([[NSString stringWithString: @"id"] isEqualToString: fd.tagName]) {
 				[elementById setValue: value forKey: key];
