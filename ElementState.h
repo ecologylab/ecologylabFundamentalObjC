@@ -22,13 +22,13 @@
 @interface ElementState : NSObject {
 	ElementState *parent;
 	ClassDescriptor *classDescriptor;
-	NSDictionary *elementById;
+	NSMutableDictionary *elementById;
 }
 
 
 @property (nonatomic, readwrite, retain) ElementState *parent;
 @property (nonatomic, readwrite, retain) ClassDescriptor *classDescriptor;
-@property (nonatomic, readwrite, retain) NSDictionary *elementById;
+@property (nonatomic, readwrite, retain) NSMutableDictionary *elementById;
 
 
 - (ClassDescriptor *) classDescriptor;
