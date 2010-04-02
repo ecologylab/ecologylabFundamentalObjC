@@ -1,2 +1,0 @@
-/Users/bilhamil/code/xcode/fundBack/trunk/Classes/HistoryEchoResponse.m: In function '-[HistoryEchoResponse processResponse:]':
-/Users/bilhamil/code/xcode/fundBack/trunk/Classes/HistoryEchoResponse.m:33: warning: '-performSelector:withObject:afterDelay:' not found in protocol(s)
