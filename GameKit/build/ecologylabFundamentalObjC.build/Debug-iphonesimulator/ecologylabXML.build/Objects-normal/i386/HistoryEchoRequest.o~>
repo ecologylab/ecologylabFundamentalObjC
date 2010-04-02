@@ -1,0 +1,6 @@
+/Users/bilhamil/code/xcode/fundBack/trunk/Classes/HistoryEchoRequest.m: In function '-[HistoryEchoRequest PerformService:]':
+/Users/bilhamil/code/xcode/fundBack/trunk/Classes/HistoryEchoRequest.m:18: error: 'HistoryEchoResponse' undeclared (first use in this function)
+/Users/bilhamil/code/xcode/fundBack/trunk/Classes/HistoryEchoRequest.m:18: error: (Each undeclared identifier is reported only once
+/Users/bilhamil/code/xcode/fundBack/trunk/Classes/HistoryEchoRequest.m:18: error: for each function it appears in.)
+/Users/bilhamil/code/xcode/fundBack/trunk/Classes/HistoryEchoRequest.m:18: error: 'resp' undeclared (first use in this function)
+/Users/bilhamil/code/xcode/fundBack/trunk/Classes/HistoryEchoRequest.m:23: warning: passing argument 1 of 'NSLog' from incompatible pointer type
