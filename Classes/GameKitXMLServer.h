@@ -12,6 +12,7 @@
 #import "MessageComposer.h"
 #import "Scope.h"
 #import "SessionManager.h"
+#import "DisconnectsDelegate.h"
 
 @interface GameKitXMLServer : NSObject<GKSessionDelegate, ServerDelegate> {
 	GKSession* session;
@@ -21,7 +22,10 @@
 	MessageComposer* composer;
 	
 	TranslationScope* translations;
+	id<DisconnectsDelegate> delegate;
 }
+
+@property(readwrite, retain) id<DisconnectsDelegate> delegate;
 
 -(id) initWithSessionID:(NSString*) sessionId displayName:(NSString*) name translationScope:(TranslationScope*) trans;
 

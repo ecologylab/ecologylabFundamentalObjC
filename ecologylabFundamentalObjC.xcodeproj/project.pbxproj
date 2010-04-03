@@ -200,6 +200,7 @@
 		ED0AF6791164756A004A03CC /* Ping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ping.m; sourceTree = "<group>"; };
 		ED0AF67B11647635004A03CC /* Pong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pong.h; sourceTree = "<group>"; };
 		ED0AF67C11647635004A03CC /* Pong.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pong.m; sourceTree = "<group>"; };
+		ED6701A11167DBE200AC2C8C /* DisconnectsDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisconnectsDelegate.h; sourceTree = "<group>"; };
 		EDCACEA71135CF040076CCCC /* GameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameData.h; sourceTree = "<group>"; };
 		EDCACEA81135CF040076CCCC /* GameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameData.m; sourceTree = "<group>"; };
 		EDCACEAB1135CF040076CCCC /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
@@ -411,6 +412,7 @@
 				ED0AF5221164064B004A03CC /* NSDataAdditions.m */,
 				ED0AF5FE1164715C004A03CC /* HeartBeater.h */,
 				ED0AF5FF1164715C004A03CC /* HeartBeater.m */,
+				ED6701A11167DBE200AC2C8C /* DisconnectsDelegate.h */,
 			);
 			name = Common;
 			sourceTree = "<group>";
