@@ -16,7 +16,7 @@
 
 @implementation GameKitXMLServer
 
-@synthesize session;
+@synthesize session, delegate;
 
 -(id)initWithSessionID:(NSString*) sessionId displayName:(NSString*) name translationScope:(TranslationScope*) trans
 {
@@ -67,7 +67,14 @@
 	if(state == GKPeerStateDisconnected)
 	{
 		NSLog(@"Disconnecting peer: %@", peerID);
-		[activePeerIdsToSessionManagers removeObjectForKey:peerID];
+		
+		NSValue* managerPtr = [activePeerIdsToSessionManagers objectForKey:peerID];
+		
+		if(managerPtr != nil)
+		{
+			[delegate sessionDisconnected:[managerPtr pointerValue]];
+			[activePeerIdsToSessionManagers removeObjectForKey:peerID];
+		}
 	}
 }
 
@@ -141,6 +148,8 @@
 	
 	[session disconnectPeerFromAllPeers:manager.clientID];
 	
+	[delegate sessionDisconnected:manager];
+	
 	[manager autorelease];
 }
 
@@ -158,6 +167,8 @@
 	
 	[translations release];
 	translations = nil;
+	
+	self.delegate = nil;
 	
 	[super dealloc];
 }
