@@ -23,7 +23,6 @@ static NSMutableDictionary *globalClassDescriptorsMap;
 @synthesize elementFieldDescriptors;
 @synthesize allFieldDescriptorsByTagNames; 
 @synthesize pseudoFieldDescriptor; 
-@synthesize pseudoFieldDescriptor;
 
 #pragma mark ClassDescriptor - static initializer & accessors
 
