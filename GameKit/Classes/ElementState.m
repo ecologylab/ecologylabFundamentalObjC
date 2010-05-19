@@ -38,7 +38,7 @@
 - (void) translateToXML: (NSMutableString *) output fieldDescriptor: (FieldDescriptor *) fieldDescriptor {
 	[fieldDescriptor writeElementStart: output];
 
-	NSMutableArray *attributeFieldDescriptors = [classDescriptor attributeFieldDescriptors];
+	NSMutableArray *attributeFieldDescriptors = [[self classDescriptor] attributeFieldDescriptors];
 	int numbAttributes = attributeFieldDescriptors.count;
 
 	if (numbAttributes > 0) {

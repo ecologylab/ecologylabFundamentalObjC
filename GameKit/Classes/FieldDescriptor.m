@@ -229,7 +229,7 @@
 
 	collection = object_getIvar(elementState, *field);
 	if (collection == nil) {
-		collection = [NSMutableArray array];
+		collection = [[NSMutableArray array] retain];
 		object_setIvar(elementState, *field, collection);
 	}
 	return collection;
