@@ -56,8 +56,12 @@
 	Scope* applicationScope = [[Scope alloc] init];
 	
 	//self.client = [[GameKitXMLClient alloc] initWithSessionID:@"dude" displayName:@"dude" translationScope:scope delgate:self appScope:applicationScope];
-	GameKitXMLServer* server = [[GameKitXMLServer alloc] initWithSessionID:@"rummy" displayName:@"Test Server" translationScope:scope];
-	
+	//GameKitXMLServer* server = [[GameKitXMLServer alloc] initWithSessionID:@"rummy" displayName:@"Test Server" translationScope:scope];
+	self.client = [[XMLDatagramClient alloc] initWithHostAddress:@"localhost" andPort:2107 
+											 andTranslationScope: scope 
+												   doCompression: YES];
+	self.client.delegate = self;
+		
 	/*
 	 * Designate self as the client's delegate.
 	 */
@@ -138,6 +142,6 @@
  */
 - (void) applicationWillTerminate:(UIApplication*) application
 {
-	[client disconnect];
+	//[client disconnect];
 }
 @end

@@ -70,4 +70,11 @@
 	[self doesNotRecognizeSelector: _cmd];
 }
 
+-(void) dealloc
+{
+	free(m_value);
+	[DEFAULT_VALUE_STRING release];
+	
+	[super dealloc];
+}
 @end
