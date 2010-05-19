@@ -24,5 +24,10 @@
 	return [resp autorelease];
 }
 
+-(void) dealloc
+{
+	self.newEcho = nil;
+	[super dealloc];
+}
 
 @end

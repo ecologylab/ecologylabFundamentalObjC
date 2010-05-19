@@ -44,6 +44,5 @@
 - (id)initWithHostAddress:(NSString*)host andPort:(int) port andTranslationScope:(TranslationScope*) transScope;
 - (void) sendMessage:(RequestMessage*) request;
 - (void) connect;
-- (void) disconnect;
 
 @end

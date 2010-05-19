@@ -231,4 +231,17 @@
 - (void) parser: (NSXMLParser *) parser parseErrorOccurred: (NSError *) parseError {
 }
 
+-(void) dealloc
+{
+	[fdStack release];
+	fdStack = nil;
+	
+	[translationScope release];
+	translationScope = nil;
+	
+	[currentTextValue release];
+	currentTextValue = nil;
+	
+	[super dealloc];
+}
 @end

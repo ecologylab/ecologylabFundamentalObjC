@@ -30,7 +30,7 @@
 		
 		req.newEcho = [NSString stringWithFormat:@"%d", nextEcho];
 		
-		[client performSelector:@selector(sendMessage:) withObject:req afterDelay:20.0f];
+		[client performSelector:@selector(sendMessage:) withObject:req afterDelay:5.0];
 		
 		[req release];
 	}
