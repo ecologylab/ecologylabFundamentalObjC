@@ -7,10 +7,27 @@
 //
 
 #import "HistoryEchoRequest.h"
-
+#import "HistoryEchoResponse.h"
 
 @implementation HistoryEchoRequest
 
 @synthesize newEcho;
+
+-(ResponseMessage*) PerformService:(Scope*) scope
+{
+	HistoryEchoResponse* resp = [[HistoryEchoResponse alloc] init];
+	resp.echo = [self.newEcho copy];
+	resp.prevEcho = [self.newEcho copy];
+	
+	NSLog(@"HistoryEchoRequest: %@", self.newEcho);
+	
+	return [resp autorelease];
+}
+
+-(void) dealloc
+{
+	self.newEcho = nil;
+	[super dealloc];
+}
 
 @end

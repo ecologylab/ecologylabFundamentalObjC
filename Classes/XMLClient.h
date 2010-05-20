@@ -12,9 +12,7 @@
 #import "DefaultServicesTranslations.h"
 #import "Scope.h"
 
-extern NSString * const OODSS_CLIENT;
-
-@interface XMLClient : NSObject<ConnectionDelegate> {
+@interface XMLClient : NSObject<ConnectionDelegate, Client> {
   id<XMLClientDelegate> delegate;
   Scope* scope;
   Connection* theConnection;
@@ -46,6 +44,5 @@ extern NSString * const OODSS_CLIENT;
 - (id)initWithHostAddress:(NSString*)host andPort:(int) port andTranslationScope:(TranslationScope*) transScope;
 - (void) sendMessage:(RequestMessage*) request;
 - (void) connect;
-- (void) disconnect;
 
 @end
