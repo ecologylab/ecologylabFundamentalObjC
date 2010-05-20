@@ -1,13 +1,15 @@
-
-
 #import <Foundation/Foundation.h>
+#import "NetworkConstants.h"
+#import "Client.h"
 
 @class XMLClient;
 
-@protocol XMLClientDelegate
+@protocol XMLClientDelegate<NSObject>
 
-- (void) connectionTerminated:(XMLClient*)connection;
-- (void) connectionAttemptFailed:(XMLClient*) connection;
-- (void) connectionSuccessful:(XMLClient*) connection withSessionId:(NSString*) sessionId;
+- (void) connectionTerminated:(id<Client>)connection;
+- (void) connectionAttemptFailed:(id<Client>) connection;
+- (void) connectionSuccessful:(id<Client>) connection withSessionId:(NSString*) sessionId;
+- (void) reconnectSuccessful:(id<Client>) connection;
+- (void) restablishSessionFailed:(id<Client>) connection withSessionId:(NSString*) sessionId;
 
 @end

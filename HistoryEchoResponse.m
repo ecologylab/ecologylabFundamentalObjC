@@ -8,6 +8,7 @@
 
 #import "HistoryEchoResponse.h"
 #import "XMLClient.h"
+#import "Client.h"
 
 @implementation HistoryEchoResponse
 
@@ -16,19 +17,24 @@
 
 -(void) processResponse:(Scope*) scope
 {
-  XMLClient* client = (XMLClient*)[((NSValue*) [scope objectForKey:OODSS_CLIENT]) pointerValue];
-  
-  int nextEcho = [self.echo intValue];
-  
-  nextEcho++;
-  
-  HistoryEchoRequest* req = [[HistoryEchoRequest alloc] init];
-  
-  req.newEcho = [NSString stringWithFormat:@"%d", nextEcho];
-  
-  [client performSelector:@selector(sendMessage:) withObject: req afterDelay:0.25];
-  
-  [req release];
+	NSLog(@"Echo %@", self.echo);
+		  
+	id<Client> client = (id<Client>)[((NSValue*) [scope objectForKey:OODSS_CLIENT]) pointerValue];
+	
+	if(client != nil)
+	{
+		int nextEcho = [self.echo intValue];
+		
+		nextEcho++;
+		
+		HistoryEchoRequest* req = [[HistoryEchoRequest alloc] init];
+		
+		req.newEcho = [NSString stringWithFormat:@"%d", nextEcho];
+		
+		[client performSelector:@selector(sendMessage:) withObject:req afterDelay:5.0];
+		
+		[req release];
+	}
 }
 
 @end

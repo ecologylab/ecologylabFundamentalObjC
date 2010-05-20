@@ -16,3 +16,4 @@ NSString * const UNIQUE_IDENTIFIER_STRING = @"uid";
 NSString * const HTTP_HEADER_LINE_DELIMETER = @"\r\n";
 NSString * const HTTP_HEADER_TERMINATOR = @"\r\n\r\n";
 NSString * const HTTP_CONTENT_CODING = @"content-encoding";
+NSString * const OODSS_CLIENT = @"OODSS_CLIENT";

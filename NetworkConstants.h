@@ -16,6 +16,7 @@ extern NSString * const UNIQUE_IDENTIFIER_STRING;
 extern NSString * const HTTP_HEADER_LINE_DELIMETER;
 extern NSString * const HTTP_HEADER_TERMINATOR;
 extern NSString * const HTTP_CONTENT_CODING;
+extern NSString * const OODSS_CLIENT;
 
 
 

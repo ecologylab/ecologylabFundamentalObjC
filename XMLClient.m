@@ -7,8 +7,6 @@
 
 #import "XMLClient.h"
 
-NSString * const OODSS_CLIENT = @"OODSS_CLIENT";
-
 @interface XMLClient ()
 
 @property(nonatomic, readwrite, retain) NSMutableDictionary* headerMap;
@@ -187,11 +185,11 @@ NSString * const OODSS_CLIENT = @"OODSS_CLIENT";
 
 - (void) processIncomingMessage:(NSMutableData*) message withUID:(int) uid
 {
-  NSString* messageString = [[NSString alloc] initWithBytes:[message bytes] 
+  /*NSString* messageString = [[NSString alloc] initWithBytes:[message bytes] 
                                                        length:[message length]
                                                        encoding:NSISOLatin1StringEncoding];
   
-  NSLog(messageString);
+  NSLog(messageString);*/
   
   ElementState* incomingMessage = [ElementState translateFromXMLData:message translationScope:self.translationScope];
  
