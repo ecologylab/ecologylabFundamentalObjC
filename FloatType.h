@@ -15,7 +15,9 @@
 
 @class FieldDescriptor;
 
-@interface FloatType : ScalarType {
+@interface FloatType : ScalarType 
+{
+	
 }
 
 + (id) floatTypeWithString: (NSString *) value;

@@ -16,7 +16,8 @@
 
 @class FieldDescriptor;
 
-@interface ScalarType : NSObject <Type> {
+@interface ScalarType : NSObject <Type> 
+{
 	id m_value;
 	NSString *DEFAULT_VALUE_STRING;
 }

@@ -10,15 +10,18 @@
 
 @implementation BooleanType
 
-+ (id) booleanTypeWithString : (NSString *) value {
++ (id) booleanTypeWithString : (NSString *) value 
+{
 	return [[[BooleanType alloc] initWithString: value] autorelease];
 }
 
-- (void) setDefaultValue {
+- (void) setDefaultValue 
+{
 	DEFAULT_VALUE_STRING = @"false";
 }
 
-- (void) setInstance: (NSString *) value {
+- (void) setInstance: (NSString *) value 
+{
 	BOOL *bValue = malloc( sizeof(BOOL) );
 	*bValue = [value boolValue];
 	m_value = (id)bValue;

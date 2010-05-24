@@ -10,15 +10,18 @@
 
 @implementation FloatType
 
-+ (id) floatTypeWithString : (NSString *) value {
++ (id) floatTypeWithString : (NSString *) value 
+{
 	return [[[FloatType alloc] initWithString: value] autorelease];
 }
 
-- (void) setDefaultValue {
+- (void) setDefaultValue 
+{
 	DEFAULT_VALUE_STRING = @"0";
 }
 
-- (void) setInstance: (NSString *) value {
+- (void) setInstance: (NSString *) value 
+{
 	float *fValue = malloc( sizeof(float) );
 	*fValue = [value floatValue];
 	m_value = (id)fValue;

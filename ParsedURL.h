@@ -11,7 +11,8 @@
 @class ElementState;
 @class TranslationScope;
 
-@interface ParsedURL : NSObject {
+@interface ParsedURL : NSObject 
+{
 	//private static final String	NOT_IN_THE_FORMAT_OF_A_WEB_ADDRESS = " is not in the format of a web address";
 	//private static final String	DEFAULT_USER_AGENT	= "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.7) Gecko/20070914 Firefox/2.0.0.7";
 

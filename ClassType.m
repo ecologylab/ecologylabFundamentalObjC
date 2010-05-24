@@ -11,15 +11,18 @@
 
 @implementation ClassType
 
-+ (id) classTypeWithString : (NSString *) value {
++ (id) classTypeWithString : (NSString *) value 
+{
 	return [[[ClassType alloc] initWithString: value] autorelease];
 }
 
-- (void) setDefaultValue {
+- (void) setDefaultValue 
+{
 	DEFAULT_VALUE_STRING = nil;
 }
 
-- (void) setInstance: (NSString *) value {
+- (void) setInstance: (NSString *) value 
+{
 	Class *cPtr = malloc( sizeof(Class) );
 	*cPtr = [XMLTools getClass: value];
 	m_value = (id)cPtr;

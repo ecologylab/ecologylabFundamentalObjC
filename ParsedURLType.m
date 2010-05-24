@@ -11,15 +11,18 @@
 
 @implementation ParsedURLType
 
-+ (id) parsedURLTypeWithString : (NSString *) value {
++ (id) parsedURLTypeWithString : (NSString *) value 
+{
 	return [[[ParsedURLType alloc] initWithString: value] autorelease];
 }
 
-- (void) setDefaultValue {
+- (void) setDefaultValue 
+{
 	DEFAULT_VALUE_STRING = nil;
 }
 
-- (void) setInstance: (NSString *) value {
+- (void) setInstance: (NSString *) value 
+{
 	m_value = [NSURL URLWithString: value];
 }
 

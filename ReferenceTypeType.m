@@ -11,15 +11,18 @@
 
 @implementation ReferenceTypeType
 
-+ (id) referenceTypeTypeWithString : (NSString *) value {
++ (id) referenceTypeTypeWithString : (NSString *) value 
+{
 	return [[[ReferenceTypeType alloc] initWithString: value] autorelease];
 }
 
-- (void) setDefaultValue {
+- (void) setDefaultValue 
+{
 	DEFAULT_VALUE_STRING = nil;
 }
 
-- (void) setInstance: (NSString *) value {
+- (void) setInstance: (NSString *) value 
+{
 	m_value = [XMLTools typeWithString: value];
 }
 

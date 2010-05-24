@@ -10,15 +10,18 @@
 
 @implementation IntType
 
-+ (id) intTypeWithString : (NSString *) value {
++ (id) intTypeWithString : (NSString *) value 
+{
 	return [[[IntType alloc] initWithString: value] autorelease];
 }
 
-- (void) setDefaultValue {
+- (void) setDefaultValue 
+{
 	DEFAULT_VALUE_STRING = @"0";
 }
 
-- (void) setInstance: (NSString *) value {
+- (void) setInstance: (NSString *) value 
+{
 	int *iValue = malloc( sizeof(int) );
 	*iValue = [value intValue];
 	m_value = (id)iValue;

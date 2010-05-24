@@ -13,7 +13,9 @@
 
 @class FieldDescriptor;
 
-@interface LongType : ScalarType {
+@interface LongType : ScalarType 
+{
+	
 }
 
 + (id) longTypeWithString: (NSString *) value;

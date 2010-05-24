@@ -11,114 +11,142 @@
 
 @implementation ParsedURL
 
-+ (id) parsedURLWithURL : (NSURL *) newURL {
++ (id) parsedURLWithURL : (NSURL *) newURL 
+{
 	return [[[ParsedURL alloc] iniWithURL: newURL] autorelease];
 }
 
-+ (id) parsedURLWithFile: (NSFileHandle *) fileHandle {
++ (id) parsedURLWithFile: (NSFileHandle *) fileHandle 
+{
 	return nil;
 }
 
-+ (id) parsedURLWithAbsoluteAddress: (NSString *) webAddr {
++ (id) parsedURLWithAbsoluteAddress: (NSString *) webAddr 
+{
 	return nil;
 }
 
-+ (id) parsedURLWithAbsoluteAddress: (NSString *) webAddr withErrorDescription: (NSString *) errorDescription {
++ (id) parsedURLWithAbsoluteAddress: (NSString *) webAddr withErrorDescription: (NSString *) errorDescription 
+{
 	return nil;
 }
 
-+ (id) parsedURLWithRelativePath: (NSURL *) url relativeURLPath: (NSString *) relativeURLPath withErrorDescription: (NSString *) errorDescription {
++ (id) parsedURLWithRelativePath: (NSURL *) url relativeURLPath: (NSString *) relativeURLPath withErrorDescription: (NSString *) errorDescription 
+{
 	return nil;
 }
 
-+ (NSURL *) getURL: (NSURL *) base withPath: (NSString *) path withErro: (NSString *) error {
++ (NSURL *) getURL: (NSURL *) base withPath: (NSString *) path withErro: (NSString *) error 
+{
 	return nil;
 }
 
-- (id) iniWithURL: (NSURL *) newURL {
-	if ( (self ==[super init]) ) {
+- (id) iniWithURL: (NSURL *) newURL 
+{
+	if ( (self ==[super init]) ) 
+	{
 		url = newURL;
 	}
 	return self;
 }
 
-- (id) initWithFile: (NSFileHandle *) fileHandle {
+- (id) initWithFile: (NSFileHandle *) fileHandle 
+{
 	return nil;
 }
 
-- (NSString *) description {
+- (NSString *) description 
+{
 	return [url description];
 }
 
-- (BOOL) isUndetectedMalformedURL: (NSURL *) url {
+- (BOOL) isUndetectedMalformedURL: (NSURL *) url 
+{
 	return NO;
 }
 
-- (BOOL) isNotFileOrExisits {
+- (BOOL) isNotFileOrExisits 
+{
 	return NO;
 }
 
-- (ParsedURL *) getRelative: (NSString *) relativeURLPath {
+- (ParsedURL *) getRelative: (NSString *) relativeURLPath 
+{
 	return nil;
 }
 
-- (ParsedURL *) getRelative: (NSString *) relativeURLPath withErrorDescription: (NSString *) errorDescription {
+- (ParsedURL *) getRelative: (NSString *) relativeURLPath withErrorDescription: (NSString *) errorDescription 
+{
 	return nil;
 }
 
-- (ElementState *) translateFromXML: (TranslationScope *) TranslationScope {
+- (ElementState *) translateFromXML: (TranslationScope *) TranslationScope 
+{
 	return nil;
 }
 
-- (NSString *) lc {
+- (NSString *) lc 
+{
 	return nil;
 }
 
-- (NSString *) suffix {
+- (NSString *) suffix 
+{
 	return nil;
 }
 
-- (NSString *) suffix: (NSString *) lc {
+- (NSString *) suffix: (NSString *) lc 
+{
 	return nil;
 }
 
-- (ParsedURL *) directoryPURL {
+- (ParsedURL *) directoryPURL 
+{
 	return nil;
 }
 
-- (NSURL *) directory {
+- (NSURL *) directory 
+{
 	return nil;
 }
 
-- (NSString *) domain {
+- (NSString *) domain 
+{
 	return nil;
 }
 
-- (NSString *) filename {
+- (NSString *) filename 
+{
 	return nil;
 }
 
-- (NSURL *) url {
+- (NSURL *) url 
+{
 	return nil;
 }
 
-- (NSURL *) hashUrl {
+- (NSURL *) hashUrl 
+{
 	return nil;
 }
 
-- (BOOL) isNull {
+- (BOOL) isNull 
+{
 	return NO;
 }
 
-- (NSString *) noAnchorNoQueryPageString {
+- (NSString *) noAnchorNoQueryPageString 
+{
 	return nil;
 }
 
-- (NSString *) noAnchorPageString {
+- (NSString *) noAnchorPageString 
+{
 	return nil;
 }
 
-- (BOOL) hasSuffix: (NSString *) s {
+- (BOOL) hasSuffix: (NSString *) s 
+{
 	return NO;
 }
 

@@ -16,7 +16,9 @@
 @class FieldDescriptor;
 
 
-@interface IntType : ScalarType {
+@interface IntType : ScalarType 
+{
+	
 }
 
 + (id) intTypeWithString: (NSString *) value;

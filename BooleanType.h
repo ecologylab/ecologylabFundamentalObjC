@@ -13,7 +13,9 @@
 
 #import "ScalarType.h"
 
-@interface BooleanType : ScalarType {
+@interface BooleanType : ScalarType 
+{
+	
 }
 
 + (id) booleanTypeWithString: (NSString *) value;

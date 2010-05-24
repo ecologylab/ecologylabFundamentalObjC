@@ -12,7 +12,9 @@
 #import <Foundation/Foundation.h>
 #import "ReferenceType.h"
 
-@interface ParsedURLType : ReferenceType {
+@interface ParsedURLType : ReferenceType 
+{
+	
 }
 
 + (id) parsedURLTypeWithString: (NSString *) value;

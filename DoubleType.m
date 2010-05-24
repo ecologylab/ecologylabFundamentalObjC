@@ -10,15 +10,18 @@
 
 @implementation DoubleType
 
-+ (id) doubleTypeWithString : (NSString *) value {
++ (id) doubleTypeWithString : (NSString *) value 
+{
 	return [[[DoubleType alloc] initWithString: value] autorelease];
 }
 
-- (void) setDefaultValue {
+- (void) setDefaultValue 
+{
 	DEFAULT_VALUE_STRING = @"0";
 }
 
-- (void) setInstance: (NSString *) value {
+- (void) setInstance: (NSString *) value 
+{
 	double *dValue = malloc( sizeof(double) );
 	*dValue = [value floatValue];
 	m_value = (id)dValue;
