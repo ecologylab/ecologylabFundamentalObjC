@@ -19,7 +19,8 @@
 #import "types.h"
 
 
-@interface ElementStateSAXHandler : NSObject {
+@interface ElementStateSAXHandler : NSObject 
+{
 	TranslationScope *translationScope;
 	ElementState *root;
 	ElementState *currentElementState;

@@ -20,7 +20,8 @@
 @class ElementStateSAXHandler;
 
 
-@interface ElementState : NSObject {
+@interface ElementState : NSObject
+{
 	ElementState *parent;
 	ClassDescriptor *classDescriptor;
 	NSMutableDictionary *elementById;

@@ -10,6 +10,7 @@
 
 static NSString *version = @"ecologylab v0.1";
 
-NSString *ecologylabXMLVersion() {
+NSString *ecologylabXMLVersion() 
+{
 	return version;
 }
