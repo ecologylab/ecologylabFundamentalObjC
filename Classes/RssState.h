@@ -13,7 +13,6 @@
 @property (nonatomic,readwrite, retain) Channel *channel;
 
 + (TranslationScope *) getTranslationScope;
-
 - (void) setVersionWithReference: (float *) p_version;
 
 @end

@@ -10,7 +10,5 @@
 
 @implementation SchmItem
 
-
-
 @end
 

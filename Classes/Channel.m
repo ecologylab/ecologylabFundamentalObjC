@@ -7,7 +7,8 @@
 @synthesize link;
 @synthesize items;
 
-+ (void) initialize {
++ (void) initialize 
+{
 	[Channel class];
 }
 

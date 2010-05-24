@@ -18,11 +18,14 @@ static 	TranslationScope *translationScope;
 /*
  * Create and return TranslationScope by reading the Schmannel.xml file
  */
-+ (TranslationScope *) getTranslationScope {
-	if(translationScope == nil){
++ (TranslationScope *) getTranslationScope 
+{
+	if(translationScope == nil)
+	{
 		NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent: @"Schmannel.xml"];
 		translationScope = [[TranslationScope alloc] initWithXMLFilePath: path];	
 	}
+	
 	return translationScope;
 }
 

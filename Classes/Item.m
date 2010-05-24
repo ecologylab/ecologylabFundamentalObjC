@@ -9,7 +9,8 @@
 @synthesize author;
 @synthesize categorySet;
 
-+ (void) initialize {
++ (void) initialize 
+{
 	[Item class];
 }
 
