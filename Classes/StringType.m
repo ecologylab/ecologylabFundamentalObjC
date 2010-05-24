@@ -11,15 +11,18 @@
 
 @implementation StringType
 
-+ (id) stringTypeWithString : (NSString *) value {
++ (id) stringTypeWithString : (NSString *) value 
+{
 	return [[[StringType alloc] initWithString: value] autorelease];
 }
 
-- (void) setDefaultValue {
+- (void) setDefaultValue 
+{
 	DEFAULT_VALUE_STRING = nil;
 }
 
-- (void) setInstance: (NSString *) value {
+- (void) setInstance: (NSString *) value 
+{
 	m_value = value;
 }
 

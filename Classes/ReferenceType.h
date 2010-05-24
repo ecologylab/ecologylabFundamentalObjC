@@ -11,7 +11,8 @@
 
 @class FieldDescriptor;
 
-@interface ReferenceType : NSObject <Type> {
+@interface ReferenceType : NSObject <Type> 
+{
 	id m_value;
 	id DEFAULT_VALUE_STRING;
 }

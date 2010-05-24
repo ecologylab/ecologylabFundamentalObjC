@@ -12,7 +12,9 @@
 #import <Foundation/Foundation.h>
 #import "ReferenceType.h"
 
-@interface StringType : ReferenceType {
+@interface StringType : ReferenceType 
+{
+	
 }
 
 + (id) stringTypeWithString: (NSString *) value;

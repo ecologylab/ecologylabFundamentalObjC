@@ -15,7 +15,9 @@
 
 @class FieldDescriptor;
 
-@interface DoubleType : ScalarType {
+@interface DoubleType : ScalarType 
+{
+	
 }
 
 + (id) doubleTypeWithString: (NSString *) value;

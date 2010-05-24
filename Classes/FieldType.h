@@ -13,7 +13,9 @@
 #import "XMLTools.h"
 #import "ReferenceType.h"
 
-@interface FieldType : ReferenceType {
+@interface FieldType : ReferenceType 
+{
+	
 }
 
 + (id) fieldTypeWithStringAndClass: (NSString *) value containerClass: (Class *) c;

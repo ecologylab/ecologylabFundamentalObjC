@@ -13,7 +13,9 @@
 #import "ReferenceType.h"
 #import "XMLTools.h"
 
-@interface ClassType : ReferenceType {
+@interface ClassType : ReferenceType 
+{
+	
 }
 
 + (id) classTypeWithString: (NSString *) value;
