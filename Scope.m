@@ -15,50 +15,61 @@
 
 #pragma mark NSScope - class initializers
 
-+ (id) scope {
++ (id) scope 
+{
 	return [[[Scope alloc] init] autorelease];
 }
 
-+ (id) scopeWithParent: (NSDictionary *) parent {
++ (id) scopeWithParent: (NSDictionary *) parent 
+{
 	return [[[Scope alloc] initWithParent: parent] autorelease];
 }
 
-+ (id) scopeWithCapacity: (NSUInteger) capacity {
++ (id) scopeWithCapacity: (NSUInteger) capacity 
+{
 	return [[[Scope alloc] initWithCapacity: capacity] autorelease];
 }
 
-+ (id) scopeWithParentAndCapacity: (NSDictionary *) parent withCapacity: (NSUInteger) capacity {
++ (id) scopeWithParentAndCapacity: (NSDictionary *) parent withCapacity: (NSUInteger) capacity 
+{
 	return [[[Scope alloc] initWithParentAndCapacity: parent withCapacity: capacity] autorelease];
 }
 
 #pragma mark NSScope - instance initializers
 
 - (id) init {
-	if ( (self ==[super init]) ) {
-    mutableDictionary = [[NSMutableDictionary alloc] init];
+	if ( (self ==[super init]) ) 
+	{
+		mutableDictionary = [[NSMutableDictionary alloc] init];
 	}
 
 	return self;
 }
 
-- (id) initWithParent: (NSDictionary *) parent {
-	if ( (self ==[super init]) ) {
+- (id) initWithParent: (NSDictionary *) parent 
+{
+	if ( (self ==[super init]) ) 
+	{
 		self.m_parent = parent;
 	}
 
 	return self;
 }
 
-- (id) initWithCapacity: (NSUInteger) capacity {
-	if ( (self ==[super init]) ) {
+- (id) initWithCapacity: (NSUInteger) capacity 
+{
+	if ( (self ==[super init]) ) 
+	{
 		mutableDictionary = [[NSMutableDictionary alloc] initWithCapacity: capacity];
 	}
 
 	return self;
 }
 
-- (id) initWithParentAndCapacity: (NSDictionary *) parent withCapacity: (NSUInteger) capacity {
-	if ( (self ==[super init]) ) {
+- (id) initWithParentAndCapacity: (NSDictionary *) parent withCapacity: (NSUInteger) capacity 
+{
+	if ( (self ==[super init]) ) 
+	{
 		self.m_parent = parent;
 		mutableDictionary = [[NSMutableDictionary alloc] initWithCapacity: capacity];
 	}
@@ -68,63 +79,75 @@
 
 #pragma mark NSScope - instance functions
 
-- (id) objectForKey: (id) aKey {
+- (id) objectForKey: (id) aKey 
+{
 	id result = [mutableDictionary objectForKey: aKey];
 	NSDictionary *operativeParent = m_parent;
 	return (result != nil) ? result : ( (operativeParent != nil) ? [operativeParent objectForKey: aKey] : nil );
 }
 
-- (void) setObject: (id) anObject forKey: (id) aKey {
+- (void) setObject: (id) anObject forKey: (id) aKey 
+{
 	[mutableDictionary setObject: anObject forKey: aKey];
 }
 
-- (void) setParent: (NSDictionary *) newParent {
+- (void) setParent: (NSDictionary *) newParent 
+{
 	NSDictionary *thisParent = m_parent;
-	if (thisParent == nil) {
+	if (thisParent == nil) 
+	{
 		NSLog(@"Scope : Setting parent to %@ but it was already %@", [newParent description], [thisParent description]);
 	}
-  [thisParent release];
-	m_parent = newParent;
-  [thisParent retain];
+	[thisParent release];
+		m_parent = newParent;
+	[thisParent retain];
 }
 
-- (NSDictionary *) operativeParent {
+- (NSDictionary *) operativeParent 
+{
 	return m_parent;
 }
 
-- (NSString *) toString {
+- (NSString *) toString 
+{
 	//TODO: complete this later add parent message as in java version
 	return [NSString stringWithFormat: @"[NSScope w %i elements]", mutableDictionary.count];
 }
 
-- (NSString *) sizeMsg {
+- (NSString *) sizeMsg 
+{
 	//TODO: complete this later
 	return nil;
 }
 
-- (NSString *) dump {
+- (NSString *) dump 
+{
 	//TODO: complete this later
 	return nil;
 }
 
-- (void) dump: (NSString *) result withPrefix: (NSString *) prefix {
+- (void) dump: (NSString *) result withPrefix: (NSString *) prefix 
+{
 	//TODO: complete this later
 }
 
 //TODO : remove this forward invocation and wrap NSMutableDictionary methods or inherit by implementing those required functions.
 //This code gives the class functionality to call all the methods from NSMutableDictionary
-- (NSMethodSignature *) methodSignatureForSelector: (SEL) selector {
-	if ([mutableDictionary respondsToSelector: selector]) {
+- (NSMethodSignature *) methodSignatureForSelector: (SEL) selector 
+{
+	if ([mutableDictionary respondsToSelector: selector]) 
+	{
 		return [mutableDictionary methodSignatureForSelector: selector];
 	}
-	else {
+	else 
+	{
 		return [super methodSignatureForSelector: selector];
 	}
 }
 
-- (void) forwardInvocation: (NSInvocation *) invocation {
+- (void) forwardInvocation: (NSInvocation *) invocation 
+{
 	[invocation invokeWithTarget: mutableDictionary];
 }
-
 
 @end

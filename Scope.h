@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 
 
-@interface Scope : NSObject {
+@interface Scope : NSObject 
+{
 	NSDictionary *m_parent;
 	NSMutableDictionary *mutableDictionary;
 }
