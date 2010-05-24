@@ -8,21 +8,26 @@ static 	TranslationScope *translationScope;
 @synthesize channel;
 
 
-+ (TranslationScope *) getTranslationScope {
-	if(translationScope == nil){
++ (TranslationScope *) getTranslationScope 
+{
+	if(translationScope == nil)
+	{
 		NSString *path = [[[NSBundle mainBundle] resourcePath] 
 						  stringByAppendingPathComponent: @"RssTranslationScope.xml"];
 		translationScope = [[TranslationScope alloc] initWithXMLFilePath: path];	
 	}
+	
 	return translationScope;
 }
 
 
-+ (void) initialize {
++ (void) initialize 
+{
 	[RssState class];
 }
 
-- (void) setVersionWithReference: (float *) p_version {
+- (void) setVersionWithReference: (float *) p_version 
+{
 	version = *p_version;
 }
 
