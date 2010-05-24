@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 
 
-@interface DictionaryList : NSObject <NSFastEnumeration> {
+@interface DictionaryList : NSObject <NSFastEnumeration> 
+{
 	NSMutableArray *mutableArray;
 	NSMutableDictionary *mutableDictionary;
 }
