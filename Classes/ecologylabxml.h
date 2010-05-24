@@ -18,5 +18,4 @@
 #import "ParsedURL.h"
 #import "ElementState.h"
 
-
 NSString *ecologylabXMLVersion(void);

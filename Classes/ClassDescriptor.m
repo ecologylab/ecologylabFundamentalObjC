@@ -26,37 +26,44 @@ static NSMutableDictionary *globalClassDescriptorsMap;
 
 #pragma mark ClassDescriptor - static initializer & accessors
 
-+ (void) initialize {
++ (void) initialize 
+{
 	globalClassDescriptorsMap = [[NSMutableDictionary dictionary] retain];
 }
 
-+ (NSMutableDictionary *) globalClassDescriptorsMap {
++ (NSMutableDictionary *) globalClassDescriptorsMap
+{
 	return globalClassDescriptorsMap;
 }
 
-+ (id) classDescriptor: (Class) cls {
++ (id) classDescriptor: (Class) cls 
+{
 	return [globalClassDescriptorsMap valueForKey:[NSString stringWithCString: class_getName(cls)]];
 }
 
-+ (id) classDescriptorWithField: (Ivar) field {
++ (id) classDescriptorWithField: (Ivar) field
+{
 	return [globalClassDescriptorsMap valueForKey:[XMLTools getTypeFromField: field]];
 }
 
-+ (id) classDescriptorWithName: (NSString *) className {
++ (id) classDescriptorWithName: (NSString *) className 
+{
 	return [globalClassDescriptorsMap valueForKey: className];
 }
 
 
 #pragma mark ClassDescriptor - class initializer
 
-+ (id) classDescriptor {
++ (id) classDescriptor 
+{
 	return [[[ClassDescriptor alloc] init] autorelease];
 }
 
 
 #pragma mark ClassDescriptor - instance functions
 
-- (id) init {
+- (id) init 
+{
 	if ( (self = [super init]) ) {
 		self.fieldDescriptorsByFieldName = [NSMutableDictionary dictionary];
 		self.allFieldDescriptorsByTagNames = [NSMutableDictionary dictionary];
@@ -66,22 +73,26 @@ static NSMutableDictionary *globalClassDescriptorsMap;
 	return self;
 }
 
-- (FieldDescriptor *) pseudoFieldDescriptor {
+- (FieldDescriptor *) pseudoFieldDescriptor 
+{
 	if (pseudoFieldDescriptor == nil)
 		self.pseudoFieldDescriptor = [FieldDescriptor fieldDescritorWithClassDescriptor: self];
 
 	return pseudoFieldDescriptor;
 }
 
-- (NSMutableArray *) attributeFieldDescriptors {
+- (NSMutableArray *) attributeFieldDescriptors 
+{
 	return attributeFieldDescriptors;
 }
 
-- (NSMutableArray *) elementFieldDescriptors {
+- (NSMutableArray *) elementFieldDescriptors 
+{
 	return elementFieldDescriptors;
 }
 
-- (void) addFieldDescriptor: (FieldDescriptor *) fieldDescriptor {
+- (void) addFieldDescriptor: (FieldDescriptor *) fieldDescriptor 
+{
 	
 	NSString *tempTagName = [NSString stringWithString:[fieldDescriptor isCollection] ? fieldDescriptor.collectionOrMapTagName: fieldDescriptor.tagName];
 	
@@ -93,36 +104,44 @@ static NSMutableDictionary *globalClassDescriptorsMap;
 	else
 		[elementFieldDescriptors addObject: fieldDescriptor];
 
-	if ([fieldDescriptor isWrapped]) {
+	if ([fieldDescriptor isWrapped]) 
+	{
 		FieldDescriptor *wrapper = [FieldDescriptor fieldDescriptorWrapped: self fieldDescriptor: fieldDescriptor wrapperTag:[fieldDescriptor tagName]];
 		[allFieldDescriptorsByTagNames setObject: wrapper forKey:[fieldDescriptor tagName]];			
 	}
 }
 
-- (NSString *) describedClassName {
+- (NSString *) describedClassName 
+{
 	return [NSString stringWithCString: class_getName(*describedClass)];
 }
 
-- (id) getInstance {
+- (id) getInstance 
+{
 	return [XMLTools getInstance: describedClass];
 }
 
-- (FieldDescriptor *) getFieldDescriptorByTag:  (NSString *) elementName scope: (TranslationScope *) translationScope elementState: (ElementState *) elementState {	
+- (FieldDescriptor *) getFieldDescriptorByTag:  (NSString *) elementName scope: (TranslationScope *) translationScope elementState: (ElementState *) elementState 
+{	
 	return [allFieldDescriptorsByTagNames objectForKey: elementName];
 }
 
-- (void) addFieldDescriptorMapping: (FieldDescriptor *) fieldDescriptor {
+- (void) addFieldDescriptorMapping: (FieldDescriptor *) fieldDescriptor
+{
 	NSString *fdTagName = [fieldDescriptor tagName];
-	if (fdTagName != nil) {
+	if (fdTagName != nil) 
+	{
 		id previousValue = [allFieldDescriptorsByTagNames objectForKey: fdTagName];
 		[allFieldDescriptorsByTagNames setValue: fieldDescriptor forKey: fdTagName];
 		if (previousValue != nil) NSLog(@"tag <%@>:\t field[%@] overrides field[%@%]", fdTagName, [fieldDescriptor getFieldName], [previousValue getFieldName]);
 	}
 }
 
-- (void) addFieldDescriptorMapping: (NSString*) tName fieldDescriptor : (FieldDescriptor *) fieldDescriptor {
+- (void) addFieldDescriptorMapping: (NSString*) tName fieldDescriptor : (FieldDescriptor *) fieldDescriptor 
+{
 	NSString *fdTagName = tName;
-	if (fdTagName != nil) {
+	if (fdTagName != nil) 
+	{
 		id previousValue = [allFieldDescriptorsByTagNames objectForKey: fdTagName];
 		[allFieldDescriptorsByTagNames setValue: fieldDescriptor forKey: fdTagName];
 		if (previousValue != nil) NSLog(@"tag <%@>:\t field[%@] overrides field[%@%]", fdTagName, [fieldDescriptor getFieldName], [previousValue getFieldName]);

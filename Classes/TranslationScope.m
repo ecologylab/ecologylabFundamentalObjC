@@ -1,6 +1,3 @@
-
-
-
 #import "TranslationScope.h"
 #import "ClassDescriptor.h"
 #import "FieldDescriptor.h"
@@ -23,7 +20,8 @@
 
 @implementation TranslationScope
 
-- (TranslationScope *) initWithXMLFilePath: (NSString *) pathToFile {
+- (TranslationScope *) initWithXMLFilePath: (NSString *) pathToFile
+{
 	[self init];
 
 	NSURL *xmlURL = [NSURL fileURLWithPath: pathToFile];
@@ -38,12 +36,15 @@
 	return self;
 }
 
-- (ClassDescriptor *) getClassDescriptorByTag: (NSString *) tagName {
+- (ClassDescriptor *) getClassDescriptorByTag: (NSString *) tagName 
+{
 	return [entriesByTag objectForKey: tagName];
 }
 
-- (id) init {
-	if ( (self = [super init]) ) {
+- (id) init 
+{
+	if ( (self = [super init]) ) 
+	{
 		success = NO;
 		classDescriptor = [ClassDescriptor classDescriptor];
 		fdStack = [NSMutableArray array];
@@ -53,7 +54,8 @@
 	return self;
 }
 
-- (void) dealloc {
+- (void) dealloc 
+{
 	[name release];
 	[entriesByTag release];
 	[super dealloc];
@@ -63,22 +65,28 @@
 
 @implementation TranslationScope (private)
 
-- (void) parserDidStartDocument: (NSXMLParser *) parser {
+- (void) parserDidStartDocument: (NSXMLParser *) parser 
+{
+	
 }
 
-- (void) parser: (NSXMLParser *) parser didStartElement: (NSString *) elementName namespaceURI: (NSString *) namespaceURI qualifiedName: (NSString *) qName attributes: (NSDictionary *) attributeDict {
-	if ([elementName isEqualToString: TRANSLATION_SCOPE]) {
+- (void) parser: (NSXMLParser *) parser didStartElement: (NSString *) elementName namespaceURI: (NSString *) namespaceURI qualifiedName: (NSString *) qName attributes: (NSDictionary *) attributeDict 
+{
+	if ([elementName isEqualToString: TRANSLATION_SCOPE]) 
+	{
 		StringType *stTagName = [StringType stringTypeWithString:[attributeDict valueForKey: TRANSLATION_SCOPE_NAME]];
 		[stTagName setField: self fieldName: "name"];
 	}
-	else if ([elementName isEqualToString: CLASS_DESCRIPTOR]) {
+	else if ([elementName isEqualToString: CLASS_DESCRIPTOR]) 
+	{
 		StringType *stTagName = [StringType stringTypeWithString:[attributeDict valueForKey: CLASS_DESCRIPTOR_TAG_NAME]];
 		ClassType  *ctDescribedClass =  [ClassType classTypeWithString:[XMLTools getClassSimpleName:[attributeDict valueForKey: CLASS_DESCRIPTOR_DESCRIBED_CLASS]]];
 
 		[stTagName setField: classDescriptor fieldName: "tagName"];
 		[ctDescribedClass setField: classDescriptor fieldName: "describedClass"];
 	}
-	else if ([elementName isEqualToString: FIELD_DESCRIPTOR]) {
+	else if ([elementName isEqualToString: FIELD_DESCRIPTOR]) 
+	{
 		fieldDescriptor = [FieldDescriptor fieldDescriptor];
 
 		StringType *stTagName = [StringType stringTypeWithString:[attributeDict valueForKey: FIELD_DESCRIPTOR_TAG_NAME]];
@@ -103,57 +111,72 @@
 
 		[classDescriptor addFieldDescriptor: fieldDescriptor];
 	}
-	else if ([elementName isEqualToString: TAG_CLASSES]) {
+	else if ([elementName isEqualToString: TAG_CLASSES]) 
+	{
 		addTagClasses = YES;
 	}
 }
 
-- (void) parser: (NSXMLParser *) parser didEndElement: (NSString *) elementName namespaceURI: (NSString *) namespaceURI qualifiedName: (NSString *) qName {
-	if ([elementName isEqualToString: CLASS_DESCRIPTOR]) {
+- (void) parser: (NSXMLParser *) parser didEndElement: (NSString *) elementName namespaceURI: (NSString *) namespaceURI qualifiedName: (NSString *) qName 
+{
+	if ([elementName isEqualToString: CLASS_DESCRIPTOR]) 
+	{
 		[entriesByTag setObject: classDescriptor forKey: classDescriptor.tagName];
 		[[ClassDescriptor globalClassDescriptorsMap] setObject: classDescriptor forKey:[classDescriptor describedClassName]];
 		classDescriptor = [ClassDescriptor classDescriptor];
 	}
-	else if ([elementName isEqualToString: TAG_CLASSES]) {
+	else if ([elementName isEqualToString: TAG_CLASSES]) 
+	{
 		addTagClasses = NO;
 	}
-	else if ([elementName isEqualToString: TAG_CLASSES_OUTER]) {
+	else if ([elementName isEqualToString: TAG_CLASSES_OUTER]) 
+	{
 		[self pushFieldDescriptor: fieldDescriptor];
 	}
-	else if ([elementName isEqualToString: TRANSLATION_SCOPE]) {
+	else if ([elementName isEqualToString: TRANSLATION_SCOPE]) 
+	{
 		[self processPendingFieldDescriptor];
 	}
 }
 
-- (void) parser: (NSXMLParser *) parser foundCharacters: (NSString *) string {
-	if (addTagClasses) {
+- (void) parser: (NSXMLParser *) parser foundCharacters: (NSString *) string 
+{
+	if (addTagClasses) 
+	{
 		ClassType  *ctDescribedClass =  [ClassType classTypeWithString:[XMLTools getClassSimpleName: string]];
 		[fieldDescriptor addTagClass:[XMLTools getClassSimpleName: string] tagClass: (Class *)[ctDescribedClass getInstance]];
 	}
 }
 
-- (void) parser: (NSXMLParser *) parser parseErrorOccurred: (NSError *) parseError {
+- (void) parser: (NSXMLParser *) parser parseErrorOccurred: (NSError *) parseError 
+{
 	NSLog(@"parse error occurred : %@", [parseError localizedDescription]);
 }
 
-- (void) pushFieldDescriptor: (FieldDescriptor *) fd {
+- (void) pushFieldDescriptor: (FieldDescriptor *) fd
+{
 	[fdStack addObject: fd];
 }
 
-- (FieldDescriptor *) popAndPeekFieldDescriptor {
+- (FieldDescriptor *) popAndPeekFieldDescriptor 
+{
 	id result = nil;
 	int last = [fdStack count] - 1;
-	if (last >= 0) {
+	if (last >= 0) 	
+	{
 		result = [fdStack objectAtIndex: last];
 		[fdStack removeLastObject];
 	}
 	return result;
 }
 
-- (void) processPendingFieldDescriptor {
+- (void) processPendingFieldDescriptor 
+{
 	FieldDescriptor *fd = nil;
-	while ( (fd = [self popAndPeekFieldDescriptor]) != nil ) {
-		for (Class class in[fd.tagClasses allValues]) {
+	while ( (fd = [self popAndPeekFieldDescriptor]) != nil ) 
+	{
+		for (Class class in[fd.tagClasses allValues])		
+		{
 			ClassDescriptor *polymorphicClassDescriptor = [ClassDescriptor classDescriptor: class];
 			[[fd declaringClassDescriptor] addFieldDescriptorMapping:[polymorphicClassDescriptor tagName] fieldDescriptor: fd];
 			[fd addTagClassDescriptor:[polymorphicClassDescriptor tagName] tagClass: polymorphicClassDescriptor];

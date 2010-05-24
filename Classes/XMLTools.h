@@ -13,7 +13,9 @@
 
 #import "Type.h"
 
-@interface XMLTools : NSObject {
+@interface XMLTools : NSObject 
+{
+	
 }
 
 + (NSString *) getClassSimpleName: (NSString *) classFullName;
