@@ -197,7 +197,6 @@
 	return tagClasses != nil;
 }
 
-
 - (void) writeOpenTag: (NSMutableString *) output 
 {
 	[output appendFormat: @"<%@>", [self elementStart]];
