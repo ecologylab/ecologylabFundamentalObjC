@@ -36,6 +36,7 @@ static NSMutableDictionary *globalClassDescriptorsMap;
 	return globalClassDescriptorsMap;
 }
 
+
 + (id) classDescriptor: (Class) cls 
 {
 	return [globalClassDescriptorsMap valueForKey:[NSString stringWithCString: class_getName(cls)]];
@@ -92,8 +93,7 @@ static NSMutableDictionary *globalClassDescriptorsMap;
 }
 
 - (void) addFieldDescriptor: (FieldDescriptor *) fieldDescriptor 
-{
-	
+{	
 	NSString *tempTagName = [NSString stringWithString:[fieldDescriptor isCollection] ? fieldDescriptor.collectionOrMapTagName: fieldDescriptor.tagName];
 	
 	[fieldDescriptorsByFieldName setObject: fieldDescriptor forKey: tempTagName];
