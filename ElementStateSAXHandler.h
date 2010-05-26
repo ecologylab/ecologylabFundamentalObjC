@@ -1,7 +1,7 @@
 /*!
 	 @header	 ElementStateSAXHandler
-	 @abstract   -
-	 @discussion -
+	 @abstract   SAX handler to perform translate from XML operation for unmarshalling XML files.
+	 @discussion Uses an objective-c internal SAX handler 
 	 @updated    05/24/10
 	 @created	 01/05/10
 	 @author	 Nabeel Shahzad

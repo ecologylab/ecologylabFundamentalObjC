@@ -1,7 +1,6 @@
 /*!
-	 @header	 -
-	 @abstract   -
-	 @discussion -
+	 @header	 ecologylabxml.h
+	 @abstract   contains includes
 	 @updated    05/24/10
 	 @created	 01/05/10
 	 @author	 Nabeel Shahzad

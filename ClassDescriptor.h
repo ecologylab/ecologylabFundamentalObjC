@@ -1,5 +1,5 @@
 /*!
-    @header		ClassDescriptor
+    @header		ClassDescriptor.h
     @abstract   This header file contains the definition of the class descriptor 
     @discussion ClassDescriptors are the objects which are associated for each class. They are mapped with class names and 
 				XML tag names which helps in the serialization and deserialiazation and binds the objects to their XML represeantion. 

@@ -1,5 +1,5 @@
 /*!
-	 @header	 ElementState
+	 @header	 ElementState.h
 	 @abstract   This header file contains the definition of the element state class
 	 @discussion ElementState is the heart of simpl serialization library. It provides functionality to translate to and 
 				 from XML file representation of inherited objects. 

@@ -1,7 +1,8 @@
 /*!
-	 @header	 XMLTools
-	 @abstract   -
-	 @discussion -
+	 @header	 XMLTools.h
+	 @abstract   Contains simple utility functions
+	 @discussion XMLTools class contains static utility functions which are used by simpl serialization
+				 to perform reflection and XML related operations on data structures
 	 @updated    05/24/10
 	 @created	 01/05/10
 	 @author	 Nabeel Shahzad
@@ -17,8 +18,9 @@
 
 /*!
 	 @class		 XMLTools	
-	 @abstract   -
-	 @discussion -
+	 @abstract   Contains simple utility functions
+	 @discussion XMLTools class contains static utility functions which are used by simpl serialization
+				 to perform reflection and XML related operations on data structures
 */
 @interface XMLTools : NSObject 
 {
