@@ -18,7 +18,7 @@
 @class FieldDescriptor;
 
 /*!
-	 @class		 ScalarType	
+	 @class		 IntType	
 	 @abstract   -
 	 @discussion -
 */
