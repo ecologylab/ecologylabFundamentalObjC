@@ -1,10 +1,12 @@
-//
-//  StringType.h
-//  ecologylabXML
-//
-//  Created by Nabeel Shahzad on 1/8/10.
-//  Copyright 2010 Interface Ecology Lab. All rights reserved.
-//
+/*!
+	 @header	 StringType
+	 @abstract   -
+	 @discussion -
+	 @updated    05/24/10
+	 @created	 01/05/10
+	 @author	 Nabeel Shahzad
+	 @copyright  Interface Ecology Lab
+ */
 
 #import <stdio.h>
 #import <objc/runtime.h>
@@ -12,11 +14,22 @@
 #import <Foundation/Foundation.h>
 #import "ReferenceType.h"
 
+/*!
+	 @class		 StringType	
+	 @abstract   -
+	 @discussion -
+*/
 @interface StringType : ReferenceType 
 {
 	
 }
 
+/*!
+	 @method     stringTypeWithString
+	 @discussion -
+	 @param		 - 
+	 @result     -
+*/
 + (id) stringTypeWithString: (NSString *) value;
 
 @end

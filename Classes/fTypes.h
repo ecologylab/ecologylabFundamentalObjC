@@ -1,11 +1,15 @@
-/*
- *  FieldTypes.h
- *  ecologylabXML
- *
- *  Created by Nabeel Shahzad on 1/11/10.
- *  Copyright 2010 Interface Ecology Lab. All rights reserved.
- *
- */
+/*!
+	 @header	 ElementState
+	 @abstract   This header file contains the definition of the field descriptor 
+	 @discussion ElementState are the objects which describe each field. They are mapped with field names and 
+				 XML tag names which helps in the serialization and deserialiazation and binds the objects to their XML representation. 
+				 Field descriptors also holds the arrays and mappings of the field descriptors to their tag names which binds run-time objects
+				 to their XML representation
+	 @updated    05/24/10
+	 @created	 01/05/10
+	 @author	 Nabeel Shahzad
+	 @copyright  Interface Ecology Lab
+*/
 
 #define UNSET_TYPE					- 999
 #define BAD_FIELD					- 99

@@ -1,5 +1,5 @@
 //
-//  AbstractScalarType.m
+//  ScalarType.m
 //  ecologylabXML
 //
 //  Created by ecologylab on 1/20/10.

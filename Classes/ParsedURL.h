@@ -1,10 +1,12 @@
-//
-//  ParsedURL.h
-//  ecologylabXML
-//
-//  Created by Nabeel Shahzad on 1/8/10.
-//  Copyright 2010 Interface Ecology Lab. All rights reserved.
-//
+/*!
+	 @header	 ParsedURL
+	 @abstract   -
+	 @discussion -
+	 @updated    05/24/10
+	 @created	 01/05/10
+	 @author	 Nabeel Shahzad
+	 @copyright  Interface Ecology Lab
+ */
 
 #import <Foundation/Foundation.h>
 
@@ -13,21 +15,16 @@
 
 @interface ParsedURL : NSObject 
 {
-	//private static final String	NOT_IN_THE_FORMAT_OF_A_WEB_ADDRESS = " is not in the format of a web address";
-	//private static final String	DEFAULT_USER_AGENT	= "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.7) Gecko/20070914 Firefox/2.0.0.7";
-
-	NSURL *url;
+	NSURL		 *url;
 	NSFileHandle *file;
-	NSURL *hashUrl;
-	NSURL *directory;
-
-	ParsedURL *directoryPURL;
-
-	NSString *string;
-	NSString *shortString;
-	NSString *lc;
-	NSString *suffix;
-	NSString *domain;
+	NSURL		 *hashUrl;
+	NSURL		 *directory;
+	ParsedURL	 *directoryPURL;
+	NSString	 *string;
+	NSString	 *shortString;
+	NSString	 *lc;
+	NSString	 *suffix;
+	NSString	 *domain;
 }
 
 + (id) parsedURLWithURL: (NSURL *) newURL;
