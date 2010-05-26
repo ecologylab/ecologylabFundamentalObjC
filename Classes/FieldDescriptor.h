@@ -1,5 +1,5 @@
 /*!
-	 @header	 FieldDescriptor
+	 @header	 FieldDescriptor.h
 	 @abstract   This header file contains the definition of the field descriptor 
 	 @discussion FieldDescriptor are the objects which describe each field. They are mapped with field names and 
 				 XML tag names which helps in the serialization and deserialiazation and binds the objects to their XML representation. 
