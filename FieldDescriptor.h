@@ -1,15 +1,15 @@
 /*!
 	 @header	 FieldDescriptor
 	 @abstract   This header file contains the definition of the field descriptor 
-	 @discussion FieldDescriptor are the objects which are associated for each class. They are mapped with class names and 
-				 XML tag names which helps in the serialization and deserialiazation and binds the objects to their XML represeantion. 
-				 Class descriptors also holds the arrays and mappings of the field descriptors again completing the bindings of run-time
-				 objects to their XML representation.
+	 @discussion FieldDescriptor are the objects which describe each field. They are mapped with field names and 
+				 XML tag names which helps in the serialization and deserialiazation and binds the objects to their XML representation. 
+				 Field descriptors also holds the arrays and mappings of the field descriptors to their tag names which binds run-time objects
+				 to their XML representation
 	 @updated    05/24/10
 	 @created	 01/05/10
 	 @author	 Nabeel Shahzad
 	 @copyright  Interface Ecology Lab
- */
+*/
 
 #import <stdio.h>
 #import <objc/runtime.h>
@@ -26,11 +26,11 @@
 /*!
 	 @class		 FieldDescriptor	
 	 @abstract   Class to hold relevant data structures and relevant 
-				 functinality for a serializable class
-	 @discussion ClassDescriptors defines the data strucutres and relevant functionality 
-				 to perform serialization of a class. They also hold information about the class and its 
-				 fields.
- */
+				 functinality for a serializable field
+	 @discussion FieldDescriptors defines the data strucutres and relevant functionality 
+				 to perform serialization of a field. They also hold information about the field and its
+				 declaring class descriptor.
+*/
 @interface FieldDescriptor : NSObject
 {
 	int					type;
@@ -67,287 +67,272 @@
 #pragma mark FieldDescriptor - static accessors
 
 /*!
-	 @method     init
+	 @method     fieldDescriptor
 	 @abstract   An object level method to initialize a ClassDescriptor.
 	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
- */
+	 @result     initilized FieldDescriptor
+*/
 + (id) fieldDescriptor;
 
 /*!
-	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
-	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
- */
+	 @method     fieldDescritorWithClassDescriptor
+	 @abstract   A class level static method to initialize a FieldDescritpor.
+	 @discussion Simple mehtod to initialize the Field descriptor from a declaring class descriptor
+	 @param		 ClassDescriptor declaring class descriptor.
+	 @result     initilized FieldDescriptor
+*/
 + (id) fieldDescritorWithClassDescriptor: (ClassDescriptor *) classDescriptor;
 
 /*!
-	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
-	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
+	 @method     ignoredElementFieldDescriptor
+	 @discussion initializes the fied descriptor for the ignored element.
+	 @result     initilized FieldDescriptor
  */
 + (id) ignoredElementFieldDescriptor;
 
 /*!
-	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
-	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
+	 @method     fieldDescriptorWithTagName
+	 @discussion static method to initialize the field descriptor with the tag name.
+	 @result     initilized FieldDescriptor
  */
 + (id) fieldDescriptorWithTagName: (NSString *) elementName;
 
 /*!
-	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
-	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
+	 @method     fieldDescriptorWrapped
+	 @discussion a field descriptor which holds the tag name for wrapped collections or maps 
+	 @result     initilized FieldDescriptor
  */
 + (id) fieldDescriptorWrapped: (ClassDescriptor *) classDescriptor fieldDescriptor: (FieldDescriptor *) fieldDescriptor wrapperTag: (NSString *) wrapperTag;
 
 #pragma mark FieldDescriptor - instance initializers 
 
 /*!
-	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
-	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
+	 @method     initWithClassDescriptor
+	 @discussion An instance method to initialize the field descriptor from declaring class descriptor 
+	 @result     initilized self FieldDescriptor
  */
 - (id) initWithClassDescriptor: (ClassDescriptor *) classDescriptor;
 
 /*!
-	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
-	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
+	 @method     initWithTagName
+	 @discussion Initializes the field descriptor from the tag name.  
+	 @result     initilized self FieldDescriptor
  */
 - (id) initWithTagName: (NSString *) elementName;
 
 /*!
-	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
+	 @method     initWrapped
 	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
+	 @param		 ClassDescriptor - declaring class descriptor
+	 @param		 FieldDescriptor - wrapping field descriptor 
+	 @param		 NSString wrapper tag name 
+	 @result     initilized self FieldDescriptor
  */
 - (id) initWrapped: (ClassDescriptor *) classDescriptor fieldDescriptor: (FieldDescriptor *) fieldDescriptor wrapperTag: (NSString *) wrapperTag;
 
 /*!
 	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
-	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
+	 @discussion Initializes a FieldDescriptor with default values 
+	 @result     initilized self FieldDescriptor
  */
 - (id) init;
 
 #pragma mark FieldDescriptor - instance methods
 
 /*!
-	 @method     init
+	 @method     getWrappedFieldDescriptor
 	 @abstract   An object level method to initialize a ClassDescriptor.
 	 @discussion Simple mehtod to initialize the class data structures. 
 	 @result     initilized self ClassDescriptor
- */
+*/
 - (id) getWrappedFieldDescriptor;
 
 /*!
-	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
-	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
- */
+	 @method     setTypeWithReference
+	 @discussion Set the type of the field descriptor 
+ 	 @param		 - 
+*/
 - (void) setTypeWithReference: (int *) t;
 
 /*!
-	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
-	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
- */
+	 @method     setIsCDATAWithReference
+	 @discussion set the flag if the field descriptor is a CData
+ 	 @param		 - 
+*/
 - (void) setIsCDATAWithReference: (bool *) isCData;
 
 /*!
-	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
-	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
- */
+	 @method     setNeedsEscapingWithReference
+	 @discussion Set the flag if the serialized field descriptor needs escaping.
+ 	 @param		 - 
+*/
 - (void) setNeedsEscapingWithReference: (bool *) nEscaping;
 
 /*!
-	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
-	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
- */
+	 @method     setIsWrappedWithReference
+	 @discussion set the flag if the field is wrapped.
+ 	 @param		 - 
+*/
 - (void) setIsWrappedWithReference: (bool *) wrapped;
 
 /*!
-	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
-	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
- */
+	 @method     writeElementStart
+	 @discussion Write the start tag of the element to the output string. 
+ 	 @param		 - 
+*/
 - (void) writeElementStart: (NSMutableString *) output;
 
 /*!
-	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
-	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
- */
+	 @method     appendValueAsAttribute
+	 @discussion append the value of the field to the output string as an XML attribute.
+ 	 @param		 NSMutableString
+ 	 @param		 ElementSTate
+*/
 - (void) appendValueAsAttribute: (NSMutableString *) output elementState: (ElementState *) elementState;
 
 /*!
-	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
-	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
- */
+	 @method     setFieldToNestedObject
+	 @discussion -
+ 	 @param		 ElementState* 
+ 	 @param		 ElementSTate* 
+*/
 - (void) setFieldToNestedObject: (ElementState *) elementState childES: (ElementState *) childElementState;
 
 /*!
-	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
-	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
- */
+	 @method     setField
+	 @discussion -
+ 	 @param		 id 
+ 	 @param		 id
+*/
 - (void) setField: (id) object value: (id) value;
 
 /*!
-	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
-	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
+	 @method     constructChildElementState
+	 @discussion -
+	 @param		 ElementState
+ 	 @param		 NSString
+	 @result	 ElementState
  */
 - (ElementState *) constructChildElementState: (ElementState *) elementState tagName: (NSString *) elementName;
 
 /*!
-	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
+	 @method     appendLeaf
 	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
- */
+	 @param		 NSMutableString 
+ 	 @param		 ElementState
+*/
 - (void) appendLeaf: (NSMutableString *) output elementState: (ElementState *) elementState;
 
 /*!
-	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
-	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
- */
+	 @method     writeWrap
+	 @discussion -
+	 @param		 NSMutableString
+ 	 @param		 BOOL
+*/
 - (void) writeWrap: (NSMutableString *) output close: (BOOL) close;
 
 /*!
-	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
-	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
- */
+	 @method     appendCollectionLeaf
+	 @discussion -
+	 @param		 NSMutableString
+ 	 @param		 NSObject
+*/
 - (void) appendCollectionLeaf: (NSMutableString *) output elementState: (NSObject *) instance;
 
 /*!
-	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
-	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
+	 @method     isTagNameFromClassName
+	 @discussion To check if the tag name is derived from the class name. 
+	 @result     BOOL
  */
 - (BOOL) isTagNameFromClassName;
 
 /*!
-	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
-	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
+	 @method     elementStart
+	 @discussion returns the tag of the element start 
+	 @result     NSString 
  */
 - (NSString *) elementStart;
 
 /*!
-	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
-	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
- */
+	 @method     writeOpenTag
+	 @discussion Appends the open tag of the field to the output
+	 @param		 NSMutableString output
+*/
 - (void) writeOpenTag: (NSMutableString *) output;
 
 /*!
-	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
+	 @method     writeCloseTag
 	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
- */
+	 @param		 NSMutableString
+*/
 - (void) writeCloseTag: (NSMutableString *) output;
 
 /*!
-	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
-	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
- */
+	 @method     isCollection
+	 @discussion Simple mehtod to initialize the class data structures
+	 @result     BOOL
+*/
 - (BOOL) isCollection;
 
 /*!
-	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
-	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
- */
+	 @method     isPolymorphic
+	 @discussion Method to check if the described field is a 
+	 @result     BOOL
+*/
 - (BOOL) isPolymorphic;
 
 /*!
-	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
-	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
- */
+	 @method     addLeafNodeToCollection
+	 @discussion -
+	 @param		 ElementState
+ 	 @param		 NSString
+*/
 - (void) addLeafNodeToCollection: (ElementState *) elementState leafNodeValue: (NSString *) leafNodeValue;
 
 /*!
-	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
-	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
- */
+	 @method     automaticLazyGetCollectionOrMap
+	 @discussion -
+ 	 @param		 ElementState
+	 @result     id
+*/
 - (id) automaticLazyGetCollectionOrMap: (ElementState *) elementState;
 
 /*!
-	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
-	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
- */
+	 @method     getMap
+	 @discussion -
+ 	 @param		 ElementState
+	 @result     id
+*/
 - (id) getMap: (ElementState *) elementState;
 
 /*!
-	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
-	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
- */
+	 @method     addTagClass
+	 @discussion -
+	 @param		 NSString
+ 	 @param		 Class*
+*/
 - (void) addTagClass : (NSString*) name tagClass :  (Class *) tagClass;
 
 /*!
-	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
-	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
- */
+	 @method     addTagClassDescriptor
+	 @discussion - 
+	 @param		 NSString name
+	 @param		 ClassDescriptor tagClassDescriptor
+*/
 - (void) addTagClassDescriptor : (NSString*) name tagClass :  (ClassDescriptor *) tagClassDescriptor; 
 
 /*!
-	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
-	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
- */
+	 @method     getField
+	 @discussion - 
+	 @result     Ivar
+*/
 - (Ivar) getField;
 
 /*!
 	 @method     init
-	 @abstract   An object level method to initialize a ClassDescriptor.
-	 @discussion Simple mehtod to initialize the class data structures. 
-	 @result     initilized self ClassDescriptor
- */
+	 @discussion -
+	 @result     NSString
+*/
 - (NSString *) getFieldName;
 
 

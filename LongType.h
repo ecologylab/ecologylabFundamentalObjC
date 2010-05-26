@@ -1,10 +1,12 @@
-//
-//  LongType.h
-//  ecologylabXML
-//
-//  Created by ecologylab on 1/22/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
-//
+/*!
+	 @header	 LongType
+	 @abstract   -
+	 @discussion -
+	 @updated    05/24/10
+	 @created	 01/05/10
+	 @author	 Nabeel Shahzad
+	 @copyright  Interface Ecology Lab
+ */
 
 #import <Foundation/Foundation.h>
 
@@ -13,11 +15,22 @@
 
 @class FieldDescriptor;
 
+/*!
+	 @class		 LongType	
+	 @abstract   -
+	 @discussion -
+*/
 @interface LongType : ScalarType 
 {
 	
 }
 
+/*!
+	 @method     longTypeWithString
+	 @discussion -
+	 @param		 - 
+	 @result     -
+*/
 + (id) longTypeWithString: (NSString *) value;
 
 @end

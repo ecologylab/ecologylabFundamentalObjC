@@ -2,7 +2,7 @@
 //  ReferenceType.m
 //  ecologylabXML
 //
-//  Created by ecologylab on 1/20/10.file://localhost/output/ecologylab/tutorials/polymorphic/rogue/game2d/entity/Entity.h
+//  Created by ecologylab on 1/20/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 

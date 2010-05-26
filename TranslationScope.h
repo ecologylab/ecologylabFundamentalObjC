@@ -1,16 +1,11 @@
-//
-//  TranslationScope.h
-//  ecologylabXML
-//
-//  Created by Nabeel Shahzad on 1/5/10.
-//  Copyright 2010 Interface Ecology Lab. All rights reserved.
-//
-
-
 /*!
- @header TranslationScope The Repast Manager provides a functional interface to the repast driver. Use the functions declared here to generate, distribute, and consume meals.
- @copyright Interface Ecology Lab
- @updated 01-01-10
+	 @header	 TranslationScope
+	 @abstract   -
+	 @discussion -
+	 @updated    05/24/10
+	 @created	 01/05/10
+	 @author	 Nabeel Shahzad
+	 @copyright  Interface Ecology Lab
 */
 
 #import <stdio.h>
@@ -24,29 +19,35 @@
 @class ClassDescriptor;
 
 /*!
-    @class		 TranslationScope
-    @abstract    Class to manages the translation scope 
-    @discussion  test discussion
+	 @class		 TranslationScope	
+	 @abstract   -
+	 @discussion -
 */
-
 @interface TranslationScope : NSObject
 {
-	@private NSString *name;
-	@private NSMutableDictionary *entriesByTag;
-	@private ClassDescriptor *classDescriptor;
-	@private FieldDescriptor *fieldDescriptor;
-	@private NSMutableArray *fdStack;
-	@private BOOL success;
-	@private BOOL addTagClasses;
+	NSString			*name;
+	NSMutableDictionary *entriesByTag;
+	ClassDescriptor		*classDescriptor;
+	FieldDescriptor		*fieldDescriptor;
+	NSMutableArray		*fdStack;
+	BOOL				success;
+	BOOL				addTagClasses;
 }
 
 /*!
-    @method     initWithXMLFilePath
-    @abstract   brief description
-    @discussion test discussion
-	@param pathToFile NSString representing the path of the file to use for translation
+	 @method     initWithXMLFilePath
+	 @abstract   An object level method to initialize a TranslationScope.
+	 @discussion Simple mehtod to initialize the class data structures. 
+	 @result     initilized TranslationScope
 */
 - (TranslationScope *) initWithXMLFilePath: (NSString *) pathToFile; 
+
+/*!
+	 @method     getClassDescriptorByTag
+	 @abstract   An object level method to initialize a TranslationScope.
+	 @discussion Simple mehtod to initialize the class data structures. 
+	 @result     initilized TranslationScope
+*/
 - (ClassDescriptor *) getClassDescriptorByTag: (NSString *) tagName;
 
 

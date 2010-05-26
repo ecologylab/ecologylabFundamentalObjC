@@ -1,10 +1,12 @@
-//
-//  DoubleType.h
-//  ecologylabXML
-//
-//  Created by Nabeel Shahzad on 1/8/10.
-//  Copyright 2010 Interface Ecology Lab. All rights reserved.
-//
+/*!
+	 @header	 DoubleType
+	 @abstract   -
+	 @discussion -
+	 @updated    05/24/10
+	 @created	 01/05/10
+	 @author	 Nabeel Shahzad
+	 @copyright  Interface Ecology Lab
+ */
 
 #import <stdio.h>
 #import <objc/runtime.h>
@@ -15,11 +17,22 @@
 
 @class FieldDescriptor;
 
+/*!
+	 @class		 DoubleType	
+	 @abstract   -
+	 @discussion -
+*/
 @interface DoubleType : ScalarType 
 {
 	
 }
 
+/*!
+	 @method     doubleTypeWithString
+	 @discussion -
+	 @param		 - 
+	 @result     -
+*/
 + (id) doubleTypeWithString: (NSString *) value;
 
 @end

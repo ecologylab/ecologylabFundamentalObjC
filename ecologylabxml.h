@@ -1,10 +1,12 @@
-//
-//  ecologylabxml.h
-//  ecologylabXML
-//
-//  Created by Nabeel Shahzad on 1/5/10.
-//  Copyright 2010 Interface Ecology Lab. All rights reserved.
-//
+/*!
+	 @header	 -
+	 @abstract   -
+	 @discussion -
+	 @updated    05/24/10
+	 @created	 01/05/10
+	 @author	 Nabeel Shahzad
+	 @copyright  Interface Ecology Lab
+ */
 
 #import <stdio.h>
 #import <objc/runtime.h>
