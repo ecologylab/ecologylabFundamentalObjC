@@ -108,7 +108,7 @@
 	NSLog(@"The connection failed to connect!\n");
 }
 
-- (void) connectionSuccessful:(id<Client>) client withSessionId:(NSString*) sessionId;
+- (void) connectionSuccessful:(id<Client>) clnt withSessionId:(NSString*) sessionId;
 {
 	/*
 	 * Show the chat window after the client has connected.
@@ -122,7 +122,7 @@
 	req.newEcho = @"1";
 	
 	
-	[client sendMessage:req];
+	[clnt sendMessage:req];
 	
 	[req release];
 }

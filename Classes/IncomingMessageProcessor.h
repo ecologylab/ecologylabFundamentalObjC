@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "NetworkConstants.h"
 
+/*!
+ @class IncomingMessageProcessor
+ @abstract Processes an incoming stream of bytes and parses out individual messages.
+ @discussion To be used with 
+ */
 @interface IncomingMessageProcessor : NSObject {
 	NSMutableDictionary* headerMap;
 	NSMutableData* incomingMessageBuffer;

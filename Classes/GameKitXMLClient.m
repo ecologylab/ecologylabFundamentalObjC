@@ -24,14 +24,14 @@
 
 @implementation GameKitXMLClient
 
-@synthesize delegate, scope = applicationScope, session, connected;
+@synthesize delegate, scope = applicationScope, session, connected, picker;
 
 -(id)initWithSessionID:(NSString*) sId displayName:(NSString*) name 
 	  translationScope:(TranslationScope*) trans 
 			   delgate:(id<XMLClientDelegate>) del 
 			  appScope:(Scope*) scp
 {
-	if( self = [super init] )
+	if( (self = [super init] ) )
 	{
 		sessionId = [sId copy];
 		sessionToken = nil;
@@ -41,7 +41,7 @@
 		
 		self.delegate = del;
 		
-		ServerPicker* picker = [[ServerPicker alloc] initWithSessionId:sessionId displayName:displayName];
+		picker = [[ServerPicker alloc] initWithSessionId:sessionId displayName:displayName];
 		
 		translations = trans;
 		[translations retain];
@@ -61,6 +61,8 @@
 		
 		picker.delegate = self;
 		[picker show];	
+		
+		reconnectAttempts = 0;
 	}
 	return self;
 }
@@ -79,19 +81,15 @@
 	[processor receivedNetworkData:data];
 	
 	NSData* message = nil;
-	while ( message = [processor getNextMessage])
+	while ( (message = [processor getNextMessage] ))
 	{
-		/*messageString = [[NSString alloc] initWithBytes:[message bytes] 
-												 length:[message length]
-											   encoding:NSISOLatin1StringEncoding];*/
-		
 		ElementState* incomingMessage = [ElementState translateFromXMLData:message translationScope:translations];
 		
 		if([incomingMessage isKindOfClass:[ResponseMessage class]])
 		{
 			if([incomingMessage isKindOfClass:[InitConnectionResponse class]])
 			{
-				InitConnectionResponse* initResp = incomingMessage;
+				InitConnectionResponse* initResp = (InitConnectionResponse*) incomingMessage;
 				
 				if(sessionToken == nil)
 				{
@@ -161,8 +159,8 @@
 	}
 }
 
-/* ServerDelegate methods */
-- (void) sendMessage:(ServiceMessage*) message
+/* Client methods */
+- (void) sendMessage:(RequestMessage*) message
 {
 	[self performSelector:@selector(sendMessageImpl:) withObject: message];
 }
@@ -172,6 +170,7 @@
 {
 	if(state == GKPeerStateDisconnected && [peerID isEqualToString:serverId] )
 	{
+		self.connected = NO;
 		[delegate connectionTerminated:self];
 		if(!userDisconnected)
 		{
@@ -196,6 +195,7 @@
 {
 	/* Shouldn't recieve any of these */
 	NSLog(@"Why am I, a client, recieving a connection request?");
+	self.connected = NO;
 }
 
 - (void)session:(GKSession *)session didFailWithError:(NSError *)error
@@ -216,8 +216,15 @@
 -(void) reconnect
 {
 	NSLog(@"Attempting to reconnect!");
-	session.available = YES;
-
+	
+	if(reconnectAttempts == 0)
+	{
+		//Use new session
+		self.session = [[GKSession alloc] initWithSessionID:sessionId displayName:displayName sessionMode:GKSessionModeClient];
+	}
+	
+	reconnectAttempts++;
+	
 	[self performSelector:@selector(connect) withObject:nil afterDelay:5.0];
 }
 
@@ -232,16 +239,36 @@
 	[delegate connectionTerminated:self];
 }
 
+-(void) setSession:(GKSession*) s
+{
+	if(session != nil)
+	{
+		session.delegate = nil;
+		[session disconnectFromAllPeers];
+		[session setDataReceiveHandler:nil withContext:NULL];
+		session.available = NO;
+		[session release];
+	}
+	
+	[session release];
+	
+	if(s != nil)
+	{
+		session = s;
+		session.delegate = self;
+		[session retain];
+		[session setDataReceiveHandler:self withContext:NULL];
+		session.available = YES;
+		session.disconnectTimeout = 100.0;
+	}
+	
+	[processor clean];
+}
+
 -(void) pickedServer:(NSString*) srvrId onSession:(GKSession*) s
 {
-	session = s;
-	[session retain];
-	
-	session.delegate = self;
-	[session setDataReceiveHandler:self withContext:NULL];
-	
-	session.disconnectTimeout = 100.0;
-	
+	self.session = s;
+		
 	serverId = [srvrId copy];
 	
 	[self connect];
@@ -253,6 +280,7 @@
 	
 	if(b)
 	{
+		reconnectAttempts = 0;
 		[beater start];
 	}
 	else
@@ -263,9 +291,7 @@
 
 -(void) dealloc
 {
-	[session disconnectFromAllPeers];
-	session.available = NO;
-	[session release];
+	self.session = nil;
 	
 	[sessionId release];
 	sessionId = nil;

@@ -9,6 +9,7 @@
 #import "SessionManager.h"
 
 NSString * const SESSION_ID = @"SESSION_ID";
+NSString * const SESSION_MANAGER = @"SESSION_MANAGER";
 
 @interface SessionManager ()
 
@@ -31,8 +32,9 @@ NSString * const SESSION_ID = @"SESSION_ID";
 	if(self = [super init])
 	{
 		self.clientID = sessionId;
-		sessionScope = [[Scope alloc] initWithParent:(scope.m_parent)];
+		sessionScope = [[Scope alloc] initWithParent:scope];
 		[sessionScope setObject:sessionId forKey: SESSION_ID];
+		[sessionScope setObject:[NSValue valueWithPointer:self] forKey: SESSION_MANAGER];		
 		
 		messageProcessor = [[IncomingMessageProcessor alloc] init];
 		
