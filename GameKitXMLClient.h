@@ -1,10 +1,11 @@
-//
-//  GameKitXMLClient.h
-//  ecologylabFundamentalObjC
-//
-//  Created by William Hamilton on 3/26/10.
-//  Copyright 2010 Texas A&M University Department of Computer Science and Engineering. All rights reserved.
-//
+/*!
+ @header	 GameKitXMLClient.h
+ @abstract Client for communicating with OODSS TCP servers.
+ @updated    05/24/10
+ @created	 05/10/10
+ @author	 William Hamilton
+ @copyright  Interface Ecology Lab
+ */
 
 #import <Foundation/Foundation.h>
 #import <GameKit/GameKit.h>
@@ -25,6 +26,12 @@
 #import "OkResponse.h"
 #import "HeartBeater.h"
 
+@class ServerPicker;
+
+/*!
+ @class GameKitXMLClient
+ @abstract Client for communicating with OODSS TCP servers.
+ */
 @interface GameKitXMLClient : NSObject<Client, GKSessionDelegate, GKPeerPickerControllerDelegate, ServerPickerDelegate> {
 	GKSession* session;
 	
@@ -35,10 +42,12 @@
 	
 	int currentUID;
 	int disconnectUID;
+	int reconnectAttempts;
 	
 	Scope* applicationScope;
 	MessageComposer* composer;
 	IncomingMessageProcessor* processor;
+	ServerPicker* picker;
 	
 	id<XMLClientDelegate> delegate;
 	
@@ -53,13 +62,31 @@
 @property(retain, readwrite) id<XMLClientDelegate> delegate;
 @property(retain, readonly) Scope* scope;
 @property(assign, readonly) BOOL connected;
+@property(retain, readonly) ServerPicker* picker;
 
+/*!
+ @function intiWithSessionID
+ @abstract Initializes the client
+ @discussion Server selection is done through the use of ServerPickerUI.
+ @param trans translation scope
+ @param del delegate that is informed of connection status
+ @param scp application scope
+*/
 -(id)initWithSessionID:(NSString*) sId 
 		   displayName:(NSString*) name 
 	  translationScope:(TranslationScope*) trans 
 			   delgate:(id<XMLClientDelegate>) del 
 			  appScope:(Scope*) scp;
 
+/*!
+ @function disconnect
+ @abstract disconnects the client from the server
+ */
 -(void) disconnect;
 
+/*!
+ @function reconnect
+ @abstract reconnects the client after it's been disconnected
+ */
+-(void) reconnect;
 @end

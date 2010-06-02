@@ -58,7 +58,7 @@
 
 @implementation XMLDatagramClient
 
-@synthesize sessionId, scope, translationScope, doCompress, socket, receivePending, delegate;
+@synthesize sessionId, scope, translationScope, doCompress, socket, receivePending, delegate, timeout;
 
 - (id)initWithHostAddress:(NSString*)host andPort:(UInt16) port 
 	  andTranslationScope:(TranslationScope*) transScope 

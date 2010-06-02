@@ -121,6 +121,8 @@
 			manager.sessionScope = mngr.sessionScope;
 			managerPtr = [NSValue valueWithPointer:manager];
 			[allSessionTokensToSessionManagers setObject:managerPtr forKey:sessionToken];
+			
+			[manager.sessionScope setObject:[NSValue valueWithPointer:manager] forKey:SESSION_MANAGER];
 			[mngr release];
 		}
 		

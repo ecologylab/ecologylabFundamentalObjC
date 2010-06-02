@@ -1,15 +1,19 @@
-//
-//  HeartBeater.h
-//  ecologylabFundamentalObjC
-//
-//  Created by William Hamilton on 4/1/10.
-//  Copyright 2010 Texas A&M University Department of Computer Science and Engineering. All rights reserved.
-//
+/*!
+ @header	 HeartBeater.h
+ @abstract   Class that sends "heart beats" at regular interval on a client. Used for keeping connection alive.
+ @created 04/1/10
+ @author William Hamilton
+ @copyright Interface Ecology Lab
+ */
 
 #import <Foundation/Foundation.h>
 #import "Ping.h"
 #import "Client.h"
-
+/*!
+ @class HeartBeater
+ @abstract Class that sends "heart beats" at regular interval on a client.
+ @discussion Used for keeping connection alive.
+ */
 @interface HeartBeater : NSObject {
 	BOOL started;
 	Ping* cachedPing;
