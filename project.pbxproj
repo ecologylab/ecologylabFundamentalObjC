@@ -25,6 +25,7 @@
 		ED5D464211A5AD7100BE854C /* HeartBeater.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D464011A5AD7100BE854C /* HeartBeater.m */; };
 		ED5D464711A5ADAE00BE854C /* Ping.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D464411A5ADAE00BE854C /* Ping.m */; };
 		ED5D464811A5ADAE00BE854C /* Pong.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D464611A5ADAE00BE854C /* Pong.m */; };
+		EDBF6A9D11B836F600812C5C /* ChatUpdateImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBF6A9C11B836F600812C5C /* ChatUpdateImpl.m */; };
 		EDE4A4811135D8EB005517C6 /* BItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCACEDB1135CF040076CCCC /* BItem.m */; };
 		EDE4A4821135D8EB005517C6 /* BooleanType.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCACF071135CF040076CCCC /* BooleanType.m */; };
 		EDE4A4831135D8EB005517C6 /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCACEE21135CF040076CCCC /* Channel.m */; };
@@ -216,6 +217,8 @@
 		ED5D464511A5ADAE00BE854C /* Pong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pong.h; sourceTree = "<group>"; };
 		ED5D464611A5ADAE00BE854C /* Pong.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pong.m; sourceTree = "<group>"; };
 		ED6701A11167DBE200AC2C8C /* DisconnectsDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisconnectsDelegate.h; sourceTree = "<group>"; };
+		EDBF6A9B11B836F600812C5C /* ChatUpdateImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatUpdateImpl.h; sourceTree = "<group>"; };
+		EDBF6A9C11B836F600812C5C /* ChatUpdateImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatUpdateImpl.m; sourceTree = "<group>"; };
 		EDCACEA71135CF040076CCCC /* GameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameData.h; sourceTree = "<group>"; };
 		EDCACEA81135CF040076CCCC /* GameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameData.m; sourceTree = "<group>"; };
 		EDCACEAB1135CF040076CCCC /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
@@ -880,6 +883,8 @@
 				EDE4A6DC1135EF5E005517C6 /* ChatTranslations.xml */,
 				EDE4A79E1135FE10005517C6 /* ChatTranslations.h */,
 				EDE4A79F1135FE10005517C6 /* ChatTranslations.m */,
+				EDBF6A9B11B836F600812C5C /* ChatUpdateImpl.h */,
+				EDBF6A9C11B836F600812C5C /* ChatUpdateImpl.m */,
 			);
 			name = Messages;
 			sourceTree = "<group>";
@@ -1138,6 +1143,7 @@
 				ED5D464211A5AD7100BE854C /* HeartBeater.m in Sources */,
 				ED5D464711A5ADAE00BE854C /* Ping.m in Sources */,
 				ED5D464811A5ADAE00BE854C /* Pong.m in Sources */,
+				EDBF6A9D11B836F600812C5C /* ChatUpdateImpl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
