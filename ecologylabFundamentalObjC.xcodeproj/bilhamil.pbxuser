@@ -3452,16 +3452,16 @@
 	};
 	EDE4A6E61135F2F9005517C6 /* ChatUpdate.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {768, 718}}";
+			sepNavIntBoundsRect = "{{0, 0}, {439, 823}}";
 			sepNavSelRange = "{141, 0}";
-			sepNavVisRange = "{0, 506}";
+			sepNavVisRange = "{0, 0}";
 		};
 	};
 	EDE4A6E71135F2F9005517C6 /* ChatUpdate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {768, 718}}";
+			sepNavIntBoundsRect = "{{0, 0}, {705, 823}}";
 			sepNavSelRange = "{197, 643}";
-			sepNavVisRange = "{0, 842}";
+			sepNavVisRange = "{0, 0}";
 		};
 	};
 	EDE4A79E1135FE10005517C6 /* ChatTranslations.h */ = {
