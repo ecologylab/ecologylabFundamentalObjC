@@ -19,7 +19,7 @@
 {
 	NSLog(@"Echo %@", self.echo);
 		  
-	id<Client> client = (id<Client>)[((NSValue*) [scope objectForKey:OODSS_CLIENT]) pointerValue];
+	id<Client> client = (id<Client>)[((NSValue*) [scope objectForKey: @"OODSS_CLIENT"]) pointerValue];
 	
 	if(client != nil)
 	{

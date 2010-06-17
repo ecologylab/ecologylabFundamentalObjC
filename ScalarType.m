@@ -8,8 +8,23 @@
 
 #import "ScalarType.h"
 #import "FieldDescriptor.h"
+#import "DoubleType.h"
+#import "FloatType.h"
+#import "IntType.h"
+#import "LongType.h"
+#import "BooleanType.h"
 
 @implementation ScalarType
+
++ (void) initialize 
+{
+	[DoubleType class];	
+	[FloatType class];
+	[LongType class];
+	[IntType class];
+	[BooleanType class];	
+}
+
 
 #pragma mark AbstractScalarType - Default constructor cannot be called.
 

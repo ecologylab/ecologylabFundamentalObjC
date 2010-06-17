@@ -175,7 +175,7 @@
 	FieldDescriptor *fd = nil;
 	while ( (fd = [self popAndPeekFieldDescriptor]) != nil ) 
 	{
-		for (Class class in[fd.tagClasses allValues])		
+		for (Class class in [fd.tagClasses allValues])		
 		{
 			ClassDescriptor *polymorphicClassDescriptor = [ClassDescriptor classDescriptor: class];
 			[[fd declaringClassDescriptor] addFieldDescriptorMapping:[polymorphicClassDescriptor tagName] fieldDescriptor: fd];
