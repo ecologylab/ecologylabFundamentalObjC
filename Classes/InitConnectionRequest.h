@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ecologylabxml.h"
 #import "RequestMessage.h"
 
 @interface InitConnectionRequest : RequestMessage

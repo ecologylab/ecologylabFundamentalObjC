@@ -6,10 +6,9 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 #import <Foundation/Foundation.h>
-#import "ecologylabxml.h"
 #import "ServiceMessage.h"
-#import "Scope.h"
 #import "ResponseMessage.h"
+#import "Scope.h"
 
 @interface RequestMessage : ServiceMessage
 {
