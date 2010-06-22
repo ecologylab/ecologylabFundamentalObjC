@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ecologylabxml.h"
 #import "ResponseMessage.h"
 
 @interface InitConnectionResponse : ResponseMessage

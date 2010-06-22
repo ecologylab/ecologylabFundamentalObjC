@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ecologylabxml.h"
+#import "ElementState.h"
 
 @interface ServiceMessage : ElementState
 {
