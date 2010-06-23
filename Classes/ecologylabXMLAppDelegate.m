@@ -8,6 +8,8 @@
 
 #import "ecologylabXMLAppDelegate.h"
 #import "ecologylabXMLViewController.h"
+#import "XMLDatagramClient.h"
+#import "RssState.h"
 
 @implementation ecologylabXMLAppDelegate
 
@@ -17,8 +19,12 @@
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
     
-    // Override point for customization after app launch    
-    [window addSubview:viewController.view];
+	[[XMLDatagramClient alloc] initWithHostAddress:@"localhost" andPort:2107 
+							   andTranslationScope: [RssState getTranslationScope] 
+									 doCompression: YES];
+	
+    // Override point for customization after app launch   
+	[window addSubview:viewController.view];
     [window makeKeyAndVisible];
 }
 

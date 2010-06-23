@@ -143,7 +143,8 @@
 {
 	if (addTagClasses) 
 	{
-		ClassType  *ctDescribedClass =  [ClassType classTypeWithString:[XMLTools getClassSimpleName: string]];
+		NSString *trimmedString = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+		ClassType  *ctDescribedClass =  [ClassType classTypeWithString:[XMLTools getClassSimpleName: trimmedString]];
 		[fieldDescriptor addTagClass:[XMLTools getClassSimpleName: string] tagClass: (Class *)[ctDescribedClass getInstance]];
 	}
 }

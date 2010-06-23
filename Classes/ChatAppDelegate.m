@@ -21,7 +21,7 @@
 @synthesize client;
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application 
-{         
+{   
 	/*
 	 * Get an instance of the ChatTranslations scope.
 	 */
