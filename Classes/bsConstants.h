@@ -24,6 +24,7 @@
 #define FIELD_DESCRIPTOR_FIELD			 @"field"
 #define FIELD_DESCRIPTOR_TAG_NAME		 @"tag_name"
 #define FIELD_DESCRIPTOR_TYPE			 @"type"
+#define FIELD_DESCRIPTOR_HINT			 @"xml_hint"
 #define FIELD_DESCRIPTOR_SCALAR_TYPE	 @"scalar_type"
 #define FIELD_DESCRIPTOR_NEEDS_ESCAPING  @"needs_escaping"
 #define FIELD_DESCRIPTOR_COLLECTION_TAG  @"collection_or_map_tag_name"

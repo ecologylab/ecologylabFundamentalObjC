@@ -19,10 +19,6 @@
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
     
-	[[XMLDatagramClient alloc] initWithHostAddress:@"localhost" andPort:2107 
-							   andTranslationScope: [RssState getTranslationScope] 
-									 doCompression: YES];
-	
     // Override point for customization after app launch   
 	[window addSubview:viewController.view];
     [window makeKeyAndVisible];

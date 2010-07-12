@@ -83,7 +83,7 @@
 	NSData* message = nil;
 	while ( (message = [processor getNextMessage] ))
 	{
-		ElementState* incomingMessage = [ElementState translateFromXMLData:message translationScope:translations];
+		ElementState* incomingMessage = [ElementState deserializeData:message translationScope:translations];
 		
 		if([incomingMessage isKindOfClass:[ResponseMessage class]])
 		{

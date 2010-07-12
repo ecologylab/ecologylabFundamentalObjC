@@ -53,7 +53,7 @@ NSString * const SESSION_MANAGER = @"SESSION_MANAGER";
                                                        length:[message length]
 													 encoding:NSISOLatin1StringEncoding];*/
 	
-	ElementState* incomingMessage = [ElementState translateFromXMLData:message translationScope:translations];
+	ElementState* incomingMessage = [translations deserializeData:message];
 	if([incomingMessage isKindOfClass:[RequestMessage class]])
 	{
 		if([incomingMessage isKindOfClass:[InitConnectionRequest class]])

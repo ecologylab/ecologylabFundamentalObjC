@@ -14,6 +14,7 @@
 #import "LongType.h"
 #import "BooleanType.h"
 
+
 @implementation ScalarType
 
 + (void) initialize 
@@ -22,7 +23,7 @@
 	[FloatType class];
 	[LongType class];
 	[IntType class];
-	[BooleanType class];	
+	[BooleanType class];
 }
 
 

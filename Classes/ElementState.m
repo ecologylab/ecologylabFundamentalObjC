@@ -32,12 +32,12 @@
 	return parent;
 }
 
-- (void) translateToXML: (NSMutableString *) output 
+- (void) serialize: (NSMutableString *) output 
 {
-	[self translateToXML: output fieldDescriptor:[[self classDescriptor] pseudoFieldDescriptor]];
+	[self serialize: output fieldDescriptor:[[self classDescriptor] pseudoFieldDescriptor]];
 }
 
-- (void) translateToXML: (NSMutableString *) output fieldDescriptor: (FieldDescriptor *) fieldDescriptor
+- (void) serialize: (NSMutableString *) output fieldDescriptor: (FieldDescriptor *) fieldDescriptor
 {
 	[fieldDescriptor writeElementStart: output];
 
@@ -72,7 +72,7 @@
 		{
 			FieldDescriptor *childFd = [elementFieldDescriptors objectAtIndex: i];
 
-			if (childFd.type == LEAF)
+			if (childFd.type == SCALAR)
 			{
 				[childFd appendLeaf: output elementState: self];
 			}
@@ -114,7 +114,7 @@
 						else if ([next isKindOfClass:[ElementState class]])
 						{
 							FieldDescriptor *collectionElementFD = [childFd isPolymorphic] ? [[next classDescriptor] pseudoFieldDescriptor] : childFd;
-							[next translateToXML: output fieldDescriptor: collectionElementFD];
+							[next serialize: output fieldDescriptor: collectionElementFD];
 						}
 					}
 
@@ -126,7 +126,7 @@
 				else if ([thatReferenceObject isKindOfClass:[ElementState class]]) 
 				{
 					FieldDescriptor *nestedElementFD = [childFd isPolymorphic] ? [[thatReferenceObject classDescriptor] pseudoFieldDescriptor] : childFd;
-					[thatReferenceObject translateToXML: output fieldDescriptor: nestedElementFD];
+					[thatReferenceObject serialize: output fieldDescriptor: nestedElementFD];
 				}
 			}
 		}
@@ -135,25 +135,6 @@
 	}
 }
 
-
-/*!
- @function  translateFromXML
- @abstract   none
- @discussion  none
- @param      none
- @result     none
- */
-+ (ElementState *) translateFromXML: (NSString *) pathToFile translationScope: (TranslationScope *) translationScope 
-{
-	ElementStateSAXHandler *elementStateSAXHandler = [ElementStateSAXHandler handlerWithTranslationScope: translationScope];
-	return [elementStateSAXHandler parse: pathToFile];
-}
-
-+ (ElementState *) translateFromXMLData: (NSData *) data translationScope: (TranslationScope *) translationScope
-{
-	ElementStateSAXHandler *elementStateSAXHandler = [ElementStateSAXHandler handlerWithTranslationScope: translationScope];
-	return [elementStateSAXHandler parseData: data];
-}
 
 - (void) setupRoot 
 {
@@ -180,7 +161,7 @@
 
 		switch (fd.type)
 		{
-			case ATTRIBUTE:
+			case SCALAR:
 				[[fd scalarType] setField: self fieldName:[fd getFieldName] value: value];
 				if ([[NSString stringWithString: @"id"] isEqualToString: fd.tagName]) 
 				{

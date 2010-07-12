@@ -99,7 +99,7 @@ static NSMutableDictionary *globalClassDescriptorsMap;
 	[fieldDescriptorsByFieldName setObject: fieldDescriptor forKey: tempTagName];
 	[allFieldDescriptorsByTagNames setObject: fieldDescriptor forKey: tempTagName];
 
-	if (fieldDescriptor.type == ATTRIBUTE)
+	if (fieldDescriptor.type == SCALAR && fieldDescriptor.xmlHint == XML_ATTRIBUTE)
 		[attributeFieldDescriptors addObject: fieldDescriptor];
 	else
 		[elementFieldDescriptors addObject: fieldDescriptor];

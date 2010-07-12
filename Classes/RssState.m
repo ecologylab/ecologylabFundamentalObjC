@@ -13,7 +13,7 @@ static 	TranslationScope *translationScope;
 	if(translationScope == nil)
 	{
 		NSString *path = [[[NSBundle mainBundle] resourcePath] 
-						  stringByAppendingPathComponent: @"RssTranslationScope.xml"];
+						  stringByAppendingPathComponent: @"rssTranslationScope1.xml"];
 		translationScope = [[TranslationScope alloc] initWithXMLFilePath: path];	
 	}
 	

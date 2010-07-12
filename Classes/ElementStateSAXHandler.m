@@ -111,12 +111,12 @@
 
 	switch (activeFieldDescriptor.type)
 	{
-		case NESTED_ELEMENT:
+		case COMPOSITE_ELEMENT:
 			childElementState = [activeFieldDescriptor constructChildElementState: currentElementState tagName: elementName];
 			[activeFieldDescriptor setFieldToNestedObject: currentElementState childES: childElementState];
 		break;
 
-		case LEAF:
+		case SCALAR:
 			break;
 
 		case COLLECTION_ELEMENT:
@@ -138,10 +138,6 @@
 				childElementState = [activeFieldDescriptor constructChildElementState: currentElementState tagName: elementName];
 			}
 		break;
-
-		case AWFUL_OLD_NESTED_ELEMENT:
-			break;
-
 		case IGNORED_ELEMENT:
 		case BAD_FIELD:
 		case WRAPPER:
@@ -166,11 +162,8 @@
 	switch (currentFdType)
 	{
 		case MAP_ELEMENT:
-		case NESTED_ELEMENT:
+		case COMPOSITE_ELEMENT:
 		case COLLECTION_ELEMENT:
-		//case NAME_SPACE_NESTED_ELEMENT:
-		//case NAME_SPACE_LEAF_NODE:
-		case AWFUL_OLD_NESTED_ELEMENT:
 			currentElementState     = parentElementState;
 			break;
 
@@ -196,7 +189,7 @@
 		switch (type)
 		{
 			//case NAME_SPACE_LEAF_NODE:
-			case LEAF:
+			case SCALAR:
 				value = [NSString stringWithString:[currentTextValue substringWithRange: NSMakeRange(0, length)]];
 				[currentFieldDescriptor setField: elementState value: value];
 				break;
@@ -205,9 +198,7 @@
 				value = [NSString stringWithString:[currentTextValue substringWithRange: NSMakeRange(0, length)]];
 				[currentFieldDescriptor addLeafNodeToCollection: elementState leafNodeValue: value];
 				break;
-
-			case ROOT:
-			case NESTED_ELEMENT:
+			case COMPOSITE_ELEMENT:
 			case COLLECTION_ELEMENT:
 				break;
 
@@ -249,9 +240,8 @@
 	{
 		switch (currentFieldDescriptor.type)
 		{
-			case LEAF:
+			case SCALAR:
 			case COLLECTION_SCALAR:
-			case NAME_SPACE_LEAF_NODE:
 				[currentTextValue appendString: string];
 				break;
 			default:

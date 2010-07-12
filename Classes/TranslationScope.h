@@ -54,5 +54,22 @@
 */
 - (ClassDescriptor *) getClassDescriptorByTag: (NSString *) tagName;
 
+/*!
+ @method     translateFromXML
+ @discussion - 
+ @param		 NSString* 
+ @param		 TranslationScope*
+ @result     ElementState*
+ */
+- (ElementState *) deserialize: (NSString *) pathToFile;
+
+/*!
+ @method     translateFromXMLData
+ @discussion -
+ @param		 NSData*
+ @param		 TranslationScope*
+ @result     ElementState*
+ */
+- (ElementState *) deserializeData: (NSData *) data;
 
 @end
