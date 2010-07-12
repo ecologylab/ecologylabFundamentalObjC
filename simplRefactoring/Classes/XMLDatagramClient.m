@@ -148,7 +148,7 @@
 	[messageConstructionString deleteCharactersInRange:rangeToDelete];
 	
 	//translate message
-	[msg.message translateToXML:messageConstructionString];
+	[msg.message serialize:messageConstructionString];
 	//get message length before encoding
 	int messageLengthWhenEncoded = [messageConstructionString lengthOfBytesUsingEncoding:NSISOLatin1StringEncoding];
 	
@@ -237,7 +237,7 @@
 	
 	/*NSLog(messageString);*/
 	
-	ElementState* incomingMessage = [ElementState translateFromXMLData:message translationScope:translationScope];
+	ElementState* incomingMessage = [translationScope deserializeData:message];
 	[incomingMessage autorelease];
 	
 	if([incomingMessage isKindOfClass:[ResponseMessage class]])

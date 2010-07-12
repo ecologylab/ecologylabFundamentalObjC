@@ -23,6 +23,20 @@
 @class ClassDescriptor;
 @class ElementState;
 
+typedef enum hints
+{
+	XML_ATTRIBUTE = 0, 
+	XML_LEAF = 1, 
+	XML_LEAF_CDATA = 2, 
+	XML_TEXT = 3, 
+	XML_TEXT_CDATA = 4, 
+	UNDEFINED = 5
+} XMLHint;
+
+
+
+
+
 /*!
 	 @class		 FieldDescriptor	
 	 @abstract   Class to hold relevant data structures and relevant 
@@ -38,6 +52,7 @@
 	bool				isCDATA;
 	bool				needsEscaping;
 	bool				isWrapped;	
+	XMLHint				xmlHint;
 	Ivar				*field;
 	Class				*elementClass;	
 	NSString			*tagName;
@@ -55,6 +70,7 @@
 @property (nonatomic, readwrite)		 bool isCDATA;
 @property (nonatomic, readwrite)		 bool needsEscaping;
 @property (nonatomic, readwrite)		 bool isWrapped;
+@property (nonatomic, readwrite)		 XMLHint xmlHint;
 @property (nonatomic, readwrite, retain) NSString *tagName;
 @property (nonatomic, readwrite, retain) NSString *collectionOrMapTagName;
 @property (nonatomic, readwrite, retain) NSMutableArray *otherTags;
@@ -65,6 +81,8 @@
 @property (nonatomic, readwrite, retain) NSMutableDictionary *tagClassDescriptors;
 
 #pragma mark FieldDescriptor - static accessors
+
++ (NSDictionary *) hintTypes;
 
 /*!
 	 @method     fieldDescriptor
@@ -174,6 +192,13 @@
  	 @param		 - 
 */
 - (void) setIsWrappedWithReference: (bool *) wrapped;
+
+/*!
+ @method     setIsWrappedWithReference
+ @discussion set the flag if the field is wrapped.
+ @param		 - 
+ */
+- (void) setXmlHintWithReference: (XMLHint *) p_xmlHint;
 
 /*!
 	 @method     writeElementStart

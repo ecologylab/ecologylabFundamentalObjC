@@ -24,8 +24,39 @@
 @synthesize isCDATA;
 @synthesize needsEscaping;
 @synthesize isWrapped;
+@synthesize xmlHint;
 @synthesize wrapperFD;
 @synthesize tagClassDescriptors;
+
+static NSDictionary *hints;
+
++ (NSDictionary *) hintTypes
+{
+	if(hints == nil)
+	{
+		NSArray *keyArray = [NSArray arrayWithObjects:	@"XML_ATTRIBUTE", 
+														@"XML_LEAF", 
+														@"XML_LEAF_CDATA", 
+														@"XML_TEXT", 
+														@"XML_TEXT_CDATA", 
+														@"UNDEFINED", nil];
+		
+		NSArray *objectArray = [NSArray arrayWithObjects:
+														[NSNumber numberWithInt:XML_ATTRIBUTE],
+														[NSNumber numberWithInt:XML_LEAF],
+														[NSNumber numberWithInt:XML_LEAF_CDATA],
+														[NSNumber numberWithInt:XML_TEXT],
+														[NSNumber numberWithInt:XML_TEXT_CDATA],
+														[NSNumber numberWithInt:UNDEFINED],
+														nil];
+		
+		hints = [NSDictionary dictionaryWithObjects:objectArray forKeys:keyArray];
+		
+		[hints retain];
+	}
+	
+	return hints;
+}
 
 + (id) fieldDescriptor 
 {
@@ -125,6 +156,11 @@
 - (void) setIsWrappedWithReference: (bool *) wrapped 
 {
 	self.isWrapped = *wrapped;
+}
+
+- (void) setXmlHintWithReference: (XMLHint *) p_xmlHint 
+{
+	self.xmlHint = *p_xmlHint;
 }
 
 - (void) writeElementStart: (NSMutableString *) output

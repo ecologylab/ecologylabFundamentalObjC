@@ -191,7 +191,7 @@
   
   NSLog(messageString);*/
   
-  ElementState* incomingMessage = [ElementState translateFromXMLData:message translationScope:self.translationScope];
+  ElementState* incomingMessage = [self.translationScope deserializeData:message];
  
   if([incomingMessage isKindOfClass:[ResponseMessage class]])
   {
@@ -304,7 +304,7 @@
   [messageConstructionString deleteCharactersInRange:rangeToDelete];
   
   //translate message
-  [request translateToXML:messageConstructionString];
+  [request serialize:messageConstructionString];
   //get message length before encoding
   int messageLengthWhenEncoded = [messageConstructionString lengthOfBytesUsingEncoding:NSISOLatin1StringEncoding];
   

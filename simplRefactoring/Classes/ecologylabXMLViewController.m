@@ -44,18 +44,17 @@
 - (void) viewDidLoad {
 	[super viewDidLoad];
 	
-	
 	//RssState Monomorphic test case
 //	//test.xml contains dummy Rss data which will deserialize and then serialize.
 	NSString *rssInput = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent: @"test.xml"];
 	
 	//Creating translation scope from RssTranslationScope.xml and deserializing test.xml
-	RssState *test = (RssState *)[ElementState translateFromXML: rssInput translationScope: [RssState getTranslationScope]];
+	RssState *test = (RssState *)[[RssState getTranslationScope] deserialize: rssInput];
 
 	NSMutableString *rssoutput = [NSMutableString string];
 	
 	//Serializing the data back to XML into an output MutableString buffer.
-	[test translateToXML:rssoutput];
+	[test serialize:rssoutput];
 	
 	//Throwing output to console
 	NSLog(rssoutput);	
@@ -66,13 +65,13 @@
 	//GameData.xml contains dummy xml data 
 	NSString *gameDataInput = [[[NSBundle mainBundle] resourcePath] 
 							   stringByAppendingPathComponent: @"GameData.xml"];
-	GameData *testGameData = (GameData *) [ElementState translateFromXML: gameDataInput translationScope: [GameData getTranslationScope]];
+	GameData *testGameData = (GameData *) [[GameData getTranslationScope] deserialize: gameDataInput];
 	
 	
 	NSMutableString *gamedataOutput = [NSMutableString string];
 	
 	//Serializing the data back to XML into an ouptut MutableString buffer.
-	[testGameData translateToXML:gamedataOutput];
+	[testGameData serialize:gamedataOutput];
 	
 	//Throwing output to console
 	NSLog(gamedataOutput);
@@ -84,13 +83,13 @@
 	//SchmannelTest.xml contains dummy xml data which will be deserialized and then serialized
 	NSString *schmannelInput = [[[NSBundle mainBundle] resourcePath] 
 								stringByAppendingPathComponent: @"SchmannelTest.xml"];
-	Schmannel *testSchmannel = (Schmannel *) [ElementState translateFromXML: schmannelInput translationScope: [Schmannel getTranslationScope]];
+	Schmannel *testSchmannel = (Schmannel *) [[Schmannel getTranslationScope] deserialize: schmannelInput];
 	
 	
 	NSMutableString *schmannelOutput = [NSMutableString string];
 	
 	//Serializing the data back to XML into an ouptut MutableString buffer.
-	[testSchmannel translateToXML:schmannelOutput];
+	[testSchmannel serialize:schmannelOutput];
 	
 	//Throwing output to console
 	NSLog(schmannelOutput);

@@ -42,26 +42,6 @@
 @property (nonatomic, readwrite, retain) ClassDescriptor	 *classDescriptor;
 @property (nonatomic, readwrite, retain) NSMutableDictionary *elementById;
 
-#pragma mark ElementState - static translateFromXML methods
-
-/*!
-	 @method     translateFromXML
-	 @discussion - 
- 	 @param		 NSString* 
- 	 @param		 TranslationScope*
-	 @result     ElementState*
-*/
-+ (ElementState *) translateFromXML: (NSString *) pathToFile translationScope: (TranslationScope *) translationScope;
-
-/*!
-	 @method     translateFromXMLData
-	 @discussion -
- 	 @param		 NSData*
- 	 @param		 TranslationScope*
-	 @result     ElementState*
-*/
-+ (ElementState *) translateFromXMLData: (NSData *) data translationScope: (TranslationScope *) translationScope;
-
 #pragma mark FieldDescriptor - instance methods for translateToXML
 
 /*!
@@ -70,14 +50,14 @@
  	 @param		 NSMutableString* 
  	 @param		 FieldDescriptor*
 */
-- (void) translateToXML: (NSMutableString *) output fieldDescriptor: (FieldDescriptor *) fieldDescriptor;
+- (void) serialize: (NSMutableString *) output fieldDescriptor: (FieldDescriptor *) fieldDescriptor;
 
 /*!
 	 @method     translateToXML
 	 @discussion -
  	 @param		 NSMutableString*
 */
-- (void) translateToXML: (NSMutableString *) output;
+- (void) serialize: (NSMutableString *) output;
 
 #pragma mark FieldDescriptor - instance methods to drive the marshalling processes.
 

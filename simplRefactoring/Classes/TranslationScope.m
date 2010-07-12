@@ -2,6 +2,7 @@
 #import "ClassDescriptor.h"
 #import "FieldDescriptor.h"
 #import "bsConstants.h"
+#import "ElementStateSAXHandler.h"
 
 
 @interface TranslationScope (private)
@@ -61,6 +62,25 @@
 	[super dealloc];
 }
 
+/*!
+ @function  translateFromXML
+ @abstract   none
+ @discussion  none
+ @param      none
+ @result     none
+ */
+- (ElementState *) deserialize: (NSString *) pathToFile
+{
+	ElementStateSAXHandler *elementStateSAXHandler = [ElementStateSAXHandler handlerWithTranslationScope: self];
+	return [elementStateSAXHandler parse: pathToFile];
+}
+
+- (ElementState *) deserializeData: (NSData *) data
+{
+	ElementStateSAXHandler *elementStateSAXHandler = [ElementStateSAXHandler handlerWithTranslationScope: self];
+	return [elementStateSAXHandler parseData: data];
+}
+
 @end
 
 @implementation TranslationScope (private)
@@ -98,7 +118,9 @@
 
 		StringType *stCollectionOrMapTagName = [StringType stringTypeWithString:[attributeDict valueForKey: FIELD_DESCRIPTOR_COLLECTION_TAG]];
 		BooleanType *btWrapped = [BooleanType booleanTypeWithString:[attributeDict valueForKey: FIELD_DESCRIPTOR_WRAPPED]];
-
+						
+		fieldDescriptor.xmlHint = [[[FieldDescriptor hintTypes] objectForKey:[attributeDict valueForKey: FIELD_DESCRIPTOR_HINT]] intValue];
+		
 		[stTagName setField: fieldDescriptor fieldName: "tagName"];
 		[ftField setField: fieldDescriptor fieldName: "field"];
 		[itType setField: fieldDescriptor fieldName: "type"];
@@ -107,8 +129,8 @@
 		[stCollectionOrMapTagName setField: fieldDescriptor fieldName: "collectionOrMapTagName"];
 		[btWrapped setField: fieldDescriptor fieldName: "isWrapped"];
 		[ctDescribedClass setField: fieldDescriptor fieldName: "elementClass"];
-		[fieldDescriptor setDeclaringClassDescriptor: classDescriptor];
 
+		[fieldDescriptor setDeclaringClassDescriptor: classDescriptor];
 		[classDescriptor addFieldDescriptor: fieldDescriptor];
 	}
 	else if ([elementName isEqualToString: TAG_CLASSES]) 
@@ -184,5 +206,4 @@
 		}
 	}
 }
-
 @end
