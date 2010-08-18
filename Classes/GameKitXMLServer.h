@@ -37,7 +37,11 @@
  @param sessionId session id for Gamekit Service
  @param displayName name of the server to advertised over bonjour
  @param trans Translation scope of the 
+ @param scope application scope
  */
--(id) initWithSessionID:(NSString*) sessionId displayName:(NSString*) name translationScope:(TranslationScope*) trans;
+-(id) initWithSessionID:(NSString*) sessionId 
+            displayName:(NSString*) name 
+       translationScope:(TranslationScope*) trans 
+       applicationScope:(Scope*) scope;
 
 @end
