@@ -45,7 +45,6 @@
 		ED66FCF5121C852C008591DC /* XMLAuthDatagramClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE751ED11A4627900878861 /* XMLAuthDatagramClient.m */; };
 		ED66FCF6121C852C008591DC /* ChatUpdateDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE4A880113606B3005517C6 /* ChatUpdateDelegate.m */; };
 		ED66FCF7121C852C008591DC /* ChatUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE4A6E71135F2F9005517C6 /* ChatUpdate.m */; };
-		ED66FCF8121C852C008591DC /* AppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE4A5B31135E09E005517C6 /* AppConfig.m */; };
 		ED66FCF9121C852C008591DC /* UITextView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE4A5B01135E09E005517C6 /* UITextView+Utils.m */; };
 		ED66FCFA121C852C008591DC /* MessageComposer.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D462E11A5ACE000BE854C /* MessageComposer.m */; };
 		ED66FCFB121C852C008591DC /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D463E11A5AD7100BE854C /* NSDataAdditions.m */; };
@@ -53,13 +52,106 @@
 		ED66FCFD121C852C008591DC /* Pong.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D464611A5ADAE00BE854C /* Pong.m */; };
 		ED66FCFE121C852C008591DC /* ChatAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0AEDEF115DEAB4004A03CC /* ChatAppDelegate.m */; };
 		ED66FCFF121C852C008591DC /* UserWithEmail.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE751D311A45D9200878861 /* UserWithEmail.m */; };
-		ED66FD00121C852C008591DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCACFC21135CF9F0076CCCC /* main.m */; };
 		ED66FD01121C852C008591DC /* ChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE4A5AC1135E08A005517C6 /* ChatRoomViewController.m */; };
 		ED66FD02121C852C008591DC /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE751C511A45D8100878861 /* Login.m */; };
 		ED66FD03121C852C008591DC /* AuthClientRegistryObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE751F111A467FF00878861 /* AuthClientRegistryObjects.m */; };
 		ED66FD04121C852C008591DC /* HeartBeater.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D464011A5AD7100BE854C /* HeartBeater.m */; };
 		ED66FD05121C852C008591DC /* ServerPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D463811A5AD4300BE854C /* ServerPicker.m */; };
 		ED66FD06121C852C008591DC /* ExplanationResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE751A611A34A0000878861 /* ExplanationResponse.m */; };
+		ED8E9048121C8952001E86BF /* ClassDescriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACF0F1135CF040076CCCC /* ClassDescriptor.h */; };
+		ED8E9049121C8952001E86BF /* Scope.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACEEA1135CF040076CCCC /* Scope.h */; };
+		ED8E904A121C8952001E86BF /* Type.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACF0D1135CF040076CCCC /* Type.h */; };
+		ED8E904B121C8952001E86BF /* XMLDatagramClient.h in Headers */ = {isa = PBXBuildFile; fileRef = ED05B1B01194A79F003EB3D2 /* XMLDatagramClient.h */; };
+		ED8E904C121C8952001E86BF /* Threat.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACEB71135CF040076CCCC /* Threat.h */; };
+		ED8E904D121C8952001E86BF /* ServerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = ED5D462C11A5ACE000BE854C /* ServerDelegate.h */; };
+		ED8E904E121C8952001E86BF /* ecologylabxml.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACF191135CF040076CCCC /* ecologylabxml.h */; };
+		ED8E904F121C8952001E86BF /* Login.h in Headers */ = {isa = PBXBuildFile; fileRef = EDE751C411A45D8100878861 /* Login.h */; };
+		ED8E9050121C8952001E86BF /* ReferenceType.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACEFC1135CF040076CCCC /* ReferenceType.h */; };
+		ED8E9051121C8952001E86BF /* RepellableThreat.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACEB31135CF040076CCCC /* RepellableThreat.h */; };
+		ED8E9052121C8952001E86BF /* ChatUpdate.h in Headers */ = {isa = PBXBuildFile; fileRef = EDE4A6E61135F2F9005517C6 /* ChatUpdate.h */; };
+		ED8E9053121C8952001E86BF /* FieldType.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACEF81135CF040076CCCC /* FieldType.h */; };
+		ED8E9054121C8952001E86BF /* RssState.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACEE51135CF040076CCCC /* RssState.h */; };
+		ED8E9055121C8952001E86BF /* ChatUpdateDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = EDE4A87F113606B3005517C6 /* ChatUpdateDelegate.h */; };
+		ED8E9056121C8952001E86BF /* ChatAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = ED0AEDF0115DEAB4004A03CC /* ChatAppDelegate.h */; };
+		ED8E9057121C8952001E86BF /* OkResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = EDE4A6DE1135F2DF005517C6 /* OkResponse.h */; };
+		ED8E9058121C8952001E86BF /* AsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = ED05B04C11934883003EB3D2 /* AsyncUdpSocket.h */; };
+		ED8E9059121C8952001E86BF /* ScalarType.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACF0A1135CF040076CCCC /* ScalarType.h */; };
+		ED8E905A121C8952001E86BF /* InitConnectionRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACECB1135CF040076CCCC /* InitConnectionRequest.h */; };
+		ED8E905B121C8952001E86BF /* Logout.h in Headers */ = {isa = PBXBuildFile; fileRef = EDE751C811A45D8100878861 /* Logout.h */; };
+		ED8E905C121C8952001E86BF /* IncomingMessageProcessor.h in Headers */ = {isa = PBXBuildFile; fileRef = ED5D462811A5ACE000BE854C /* IncomingMessageProcessor.h */; };
+		ED8E905D121C8952001E86BF /* SessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = ED5D462A11A5ACE000BE854C /* SessionManager.h */; };
+		ED8E905E121C8952001E86BF /* TranslationScope.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACF171135CF040076CCCC /* TranslationScope.h */; };
+		ED8E905F121C8952001E86BF /* ElementStateSAXHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACF1D1135CF040076CCCC /* ElementStateSAXHandler.h */; };
+		ED8E9060121C8952001E86BF /* DictionaryList.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACEE81135CF040076CCCC /* DictionaryList.h */; };
+		ED8E9061121C8952001E86BF /* XMLAuthDatagramClient.h in Headers */ = {isa = PBXBuildFile; fileRef = EDE751EC11A4627900878861 /* XMLAuthDatagramClient.h */; };
+		ED8E9063121C8952001E86BF /* ChatUpdateImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = EDBF6A9B11B836F600812C5C /* ChatUpdateImpl.h */; };
+		ED8E9064121C8952001E86BF /* types.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACF0C1135CF040076CCCC /* types.h */; };
+		ED8E9065121C8952001E86BF /* SchmItem.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACEDE1135CF040076CCCC /* SchmItem.h */; };
+		ED8E9066121C8952001E86BF /* ReferenceTypeType.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACEFA1135CF040076CCCC /* ReferenceTypeType.h */; };
+		ED8E9067121C8952001E86BF /* ResponseMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACED31135CF040076CCCC /* ResponseMessage.h */; };
+		ED8E9068121C8952001E86BF /* DoubleType.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACF081135CF040076CCCC /* DoubleType.h */; };
+		ED8E9069121C8952001E86BF /* ecologylabXMLAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACF1F1135CF040076CCCC /* ecologylabXMLAppDelegate.h */; };
+		ED8E906A121C8952001E86BF /* ChatTranslations.h in Headers */ = {isa = PBXBuildFile; fileRef = EDE4A79E1135FE10005517C6 /* ChatTranslations.h */; };
+		ED8E906B121C8952001E86BF /* DisconnectsDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = ED6701A11167DBE200AC2C8C /* DisconnectsDelegate.h */; };
+		ED8E906C121C8952001E86BF /* ExplanationResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = EDE751A511A34A0000878861 /* ExplanationResponse.h */; };
+		ED8E906D121C8952001E86BF /* AuthMessages.h in Headers */ = {isa = PBXBuildFile; fileRef = EDE751F611A4876600878861 /* AuthMessages.h */; };
+		ED8E906E121C8952001E86BF /* BooleanType.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACF061135CF040076CCCC /* BooleanType.h */; };
+		ED8E906F121C8952001E86BF /* ServiceMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACEC71135CF040076CCCC /* ServiceMessage.h */; };
+		ED8E9070121C8952001E86BF /* OrbitingThreat.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACEAF1135CF040076CCCC /* OrbitingThreat.h */; };
+		ED8E9071121C8952001E86BF /* FloatType.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACF001135CF040076CCCC /* FloatType.h */; };
+		ED8E9072121C8952001E86BF /* ServerPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = ED5D463711A5AD4300BE854C /* ServerPicker.h */; };
+		ED8E9073121C8952001E86BF /* GameKitXMLServer.h in Headers */ = {isa = PBXBuildFile; fileRef = ED5D463311A5AD4300BE854C /* GameKitXMLServer.h */; };
+		ED8E9074121C8952001E86BF /* Ping.h in Headers */ = {isa = PBXBuildFile; fileRef = ED5D464311A5ADAE00BE854C /* Ping.h */; };
+		ED8E9075121C8952001E86BF /* ConnectionDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = ED0AEDE4115DEA64004A03CC /* ConnectionDelegate.h */; };
+		ED8E9076121C8952001E86BF /* DisconnectRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACECD1135CF040076CCCC /* DisconnectRequest.h */; };
+		ED8E9077121C8952001E86BF /* NSDataAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = ED5D463D11A5AD7100BE854C /* NSDataAdditions.h */; };
+		ED8E9078121C8952001E86BF /* ChatViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EDE4A5A81135E08A005517C6 /* ChatViewController.h */; };
+		ED8E9079121C8952001E86BF /* ChatRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = EDE4A6E41135F2F9005517C6 /* ChatRequest.h */; };
+		ED8E907A121C8952001E86BF /* UpdateMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = EDE4A6E01135F2DF005517C6 /* UpdateMessage.h */; };
+		ED8E907B121C8952001E86BF /* ErrorResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACECF1135CF040076CCCC /* ErrorResponse.h */; };
+		ED8E907C121C8952001E86BF /* Connection.h in Headers */ = {isa = PBXBuildFile; fileRef = ED0AEDE2115DEA64004A03CC /* Connection.h */; };
+		ED8E907D121C8952001E86BF /* RequestMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACED11135CF040076CCCC /* RequestMessage.h */; };
+		ED8E907E121C8952001E86BF /* DefaultServicesTranslations.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACEC51135CF040076CCCC /* DefaultServicesTranslations.h */; };
+		ED8E907F121C8952001E86BF /* AuthClientRegistryObjects.h in Headers */ = {isa = PBXBuildFile; fileRef = EDE751F011A467FF00878861 /* AuthClientRegistryObjects.h */; };
+		ED8E9080121C8952001E86BF /* Pong.h in Headers */ = {isa = PBXBuildFile; fileRef = ED5D464511A5ADAE00BE854C /* Pong.h */; };
+		ED8E9082121C8952001E86BF /* ServerPickerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = ED5D463911A5AD4300BE854C /* ServerPickerDelegate.h */; };
+		ED8E9083121C8952001E86BF /* Channel.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACEE11135CF040076CCCC /* Channel.h */; };
+		ED8E9084121C8952001E86BF /* PatrollingThreat.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACEB11135CF040076CCCC /* PatrollingThreat.h */; };
+		ED8E9085121C8952001E86BF /* HistoryEchoRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACED71135CF040076CCCC /* HistoryEchoRequest.h */; };
+		ED8E9086121C8952001E86BF /* bsConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACF1B1135CF040076CCCC /* bsConstants.h */; };
+		ED8E9087121C8952001E86BF /* SingleSeekerThreat.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACEB51135CF040076CCCC /* SingleSeekerThreat.h */; };
+		ED8E9088121C8952001E86BF /* AuthClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = EDE751F311A46C2400878861 /* AuthClientDelegate.h */; };
+		ED8E9089121C8952001E86BF /* Item.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACEE31135CF040076CCCC /* Item.h */; };
+		ED8E908A121C8952001E86BF /* XMLClient.h in Headers */ = {isa = PBXBuildFile; fileRef = ED0AEDE5115DEA64004A03CC /* XMLClient.h */; };
+		ED8E908B121C8952001E86BF /* Entity.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACEAB1135CF040076CCCC /* Entity.h */; };
+		ED8E908C121C8952001E86BF /* GameData.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACEA71135CF040076CCCC /* GameData.h */; };
+		ED8E908D121C8952001E86BF /* ElementState.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACF131135CF040076CCCC /* ElementState.h */; };
+		ED8E908E121C8952001E86BF /* Schmannel.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACEDC1135CF040076CCCC /* Schmannel.h */; };
+		ED8E908F121C8952001E86BF /* UserWithEmail.h in Headers */ = {isa = PBXBuildFile; fileRef = EDE751D211A45D9200878861 /* UserWithEmail.h */; };
+		ED8E9090121C8952001E86BF /* UITextView+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = EDE4A5B11135E09E005517C6 /* UITextView+Utils.h */; };
+		ED8E9091121C8952001E86BF /* InitConnectionResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACEC91135CF040076CCCC /* InitConnectionResponse.h */; };
+		ED8E9092121C8952001E86BF /* LongType.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACF021135CF040076CCCC /* LongType.h */; };
+		ED8E9093121C8952001E86BF /* ParsedURLType.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACEF21135CF040076CCCC /* ParsedURLType.h */; };
+		ED8E9094121C8952001E86BF /* FieldDescriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACF111135CF040076CCCC /* FieldDescriptor.h */; };
+		ED8E9095121C8952001E86BF /* HistoryEchoResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACED51135CF040076CCCC /* HistoryEchoResponse.h */; };
+		ED8E9096121C8952001E86BF /* StringType.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACEF41135CF040076CCCC /* StringType.h */; };
+		ED8E9097121C8952001E86BF /* XMLTools.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACF151135CF040076CCCC /* XMLTools.h */; };
+		ED8E9098121C8952001E86BF /* BItem.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACEDA1135CF040076CCCC /* BItem.h */; };
+		ED8E9099121C8952001E86BF /* ParsedURL.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACEEE1135CF040076CCCC /* ParsedURL.h */; };
+		ED8E909A121C8952001E86BF /* Client.h in Headers */ = {isa = PBXBuildFile; fileRef = ED5D462F11A5ACE000BE854C /* Client.h */; };
+		ED8E909B121C8952001E86BF /* ChatRoomViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = ED0AEDF1115DEAB4004A03CC /* ChatRoomViewController.h */; };
+		ED8E909C121C8952001E86BF /* LoginStatusResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = EDE751C611A45D8100878861 /* LoginStatusResponse.h */; };
+		ED8E909D121C8952001E86BF /* HeartBeater.h in Headers */ = {isa = PBXBuildFile; fileRef = ED5D463F11A5AD7100BE854C /* HeartBeater.h */; };
+		ED8E909E121C8952001E86BF /* MessageComposer.h in Headers */ = {isa = PBXBuildFile; fileRef = ED5D462D11A5ACE000BE854C /* MessageComposer.h */; };
+		ED8E909F121C8952001E86BF /* LogoutStatusResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = EDE751CA11A45D8100878861 /* LogoutStatusResponse.h */; };
+		ED8E90A0121C8952001E86BF /* ClassType.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACEF61135CF040076CCCC /* ClassType.h */; };
+		ED8E90A1121C8952001E86BF /* IntType.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACF041135CF040076CCCC /* IntType.h */; };
+		ED8E90A2121C8952001E86BF /* GameKitXMLClient.h in Headers */ = {isa = PBXBuildFile; fileRef = ED5D463511A5AD4300BE854C /* GameKitXMLClient.h */; };
+		ED8E90A3121C8952001E86BF /* fTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCACF1C1135CF040076CCCC /* fTypes.h */; };
+		ED8E90A4121C8952001E86BF /* NetworkConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = ED0AEDDA115DEA64004A03CC /* NetworkConstants.h */; };
+		ED8E90A5121C8952001E86BF /* AuthClient.h in Headers */ = {isa = PBXBuildFile; fileRef = EDE751F411A46C7900878861 /* AuthClient.h */; };
+		ED8E90A6121C8952001E86BF /* User.h in Headers */ = {isa = PBXBuildFile; fileRef = EDE751D011A45D9200878861 /* User.h */; };
+		ED8E90A7121C8952001E86BF /* XMLClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = ED0AEDD9115DEA64004A03CC /* XMLClientDelegate.h */; };
 		EDBF6A9D11B836F600812C5C /* ChatUpdateImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBF6A9C11B836F600812C5C /* ChatUpdateImpl.m */; };
 		EDE4A4811135D8EB005517C6 /* BItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCACEDB1135CF040076CCCC /* BItem.m */; };
 		EDE4A4821135D8EB005517C6 /* BooleanType.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCACF071135CF040076CCCC /* BooleanType.m */; };
@@ -139,8 +231,6 @@
 		EDE4A5F31135E4E4005517C6 /* DisconnectRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCACECE1135CF040076CCCC /* DisconnectRequest.m */; };
 		EDE4A5F41135E4E4005517C6 /* DoubleType.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCACF091135CF040076CCCC /* DoubleType.m */; };
 		EDE4A5F51135E4E4005517C6 /* ecologylabxml.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCACF1A1135CF040076CCCC /* ecologylabxml.m */; };
-		EDE4A5F61135E4E4005517C6 /* ecologylabXMLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCACF201135CF040076CCCC /* ecologylabXMLAppDelegate.m */; };
-		EDE4A5F71135E4E4005517C6 /* ecologylabXMLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCACF221135CF040076CCCC /* ecologylabXMLViewController.m */; };
 		EDE4A5F81135E4E4005517C6 /* ElementState.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCACF141135CF040076CCCC /* ElementState.m */; };
 		EDE4A5F91135E4E4005517C6 /* ElementStateSAXHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCACF1E1135CF040076CCCC /* ElementStateSAXHandler.m */; };
 		EDE4A5FA1135E4E4005517C6 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCACEAC1135CF040076CCCC /* Entity.m */; };
@@ -176,7 +266,6 @@
 		EDE4A6191135E4E4005517C6 /* Threat.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCACEB81135CF040076CCCC /* Threat.m */; };
 		EDE4A61A1135E4E4005517C6 /* TranslationScope.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCACF181135CF040076CCCC /* TranslationScope.m */; };
 		EDE4A61C1135E4E4005517C6 /* XMLTools.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCACF161135CF040076CCCC /* XMLTools.m */; };
-		EDE4A6271135E67A005517C6 /* libecologylabXMLLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE4A5E81135E4A4005517C6 /* libecologylabXMLLib.a */; };
 		EDE4A67B1135E940005517C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCACFC21135CF9F0076CCCC /* main.m */; };
 		EDE4A6DD1135EF5E005517C6 /* ChatTranslations.xml in Resources */ = {isa = PBXBuildFile; fileRef = EDE4A6DC1135EF5E005517C6 /* ChatTranslations.xml */; };
 		EDE4A6E81135F2F9005517C6 /* ChatRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE4A6E51135F2F9005517C6 /* ChatRequest.m */; };
@@ -252,6 +341,7 @@
 		ED5D464511A5ADAE00BE854C /* Pong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pong.h; sourceTree = "<group>"; };
 		ED5D464611A5ADAE00BE854C /* Pong.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pong.m; sourceTree = "<group>"; };
 		ED6701A11167DBE200AC2C8C /* DisconnectsDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisconnectsDelegate.h; sourceTree = "<group>"; };
+		ED8E90F0121C8B59001E86BF /* ecologylabXMLLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = ecologylabXMLLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDBF6A9B11B836F600812C5C /* ChatUpdateImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatUpdateImpl.h; sourceTree = "<group>"; };
 		EDBF6A9C11B836F600812C5C /* ChatUpdateImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatUpdateImpl.m; sourceTree = "<group>"; };
 		EDCACEA71135CF040076CCCC /* GameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameData.h; sourceTree = "<group>"; };
@@ -383,7 +473,6 @@
 		EDE4A5BD1135E182005517C6 /* ChatClientTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatClientTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE4A5BF1135E182005517C6 /* ChatClientTutorial-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ChatClientTutorial-Info.plist"; sourceTree = "<group>"; };
 		EDE4A5DD1135E42F005517C6 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		EDE4A5E81135E4A4005517C6 /* libecologylabXMLLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libecologylabXMLLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE4A6DC1135EF5E005517C6 /* ChatTranslations.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ChatTranslations.xml; sourceTree = "<group>"; };
 		EDE4A6DE1135F2DF005517C6 /* OkResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OkResponse.h; sourceTree = "<group>"; };
 		EDE4A6DF1135F2DF005517C6 /* OkResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OkResponse.m; sourceTree = "<group>"; };
@@ -438,7 +527,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDE4A5DE1135E42F005517C6 /* CFNetwork.framework in Frameworks */,
-				EDE4A6271135E67A005517C6 /* libecologylabXMLLib.a in Frameworks */,
 				ED0AEDF5115DEAD9004A03CC /* GameKit.framework in Frameworks */,
 				ED05B14911934A6A003EB3D2 /* libz.dylib in Frameworks */,
 			);
@@ -849,7 +937,7 @@
 			children = (
 				EDCAD2091135D8870076CCCC /* ecologylabXML.app */,
 				EDE4A5BD1135E182005517C6 /* ChatClientTutorial.app */,
-				EDE4A5E81135E4A4005517C6 /* libecologylabXMLLib.a */,
+				ED8E90F0121C8B59001E86BF /* ecologylabXMLLib.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -972,6 +1060,100 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED8E9048121C8952001E86BF /* ClassDescriptor.h in Headers */,
+				ED8E9049121C8952001E86BF /* Scope.h in Headers */,
+				ED8E904A121C8952001E86BF /* Type.h in Headers */,
+				ED8E904B121C8952001E86BF /* XMLDatagramClient.h in Headers */,
+				ED8E904C121C8952001E86BF /* Threat.h in Headers */,
+				ED8E904D121C8952001E86BF /* ServerDelegate.h in Headers */,
+				ED8E904E121C8952001E86BF /* ecologylabxml.h in Headers */,
+				ED8E904F121C8952001E86BF /* Login.h in Headers */,
+				ED8E9050121C8952001E86BF /* ReferenceType.h in Headers */,
+				ED8E9051121C8952001E86BF /* RepellableThreat.h in Headers */,
+				ED8E9052121C8952001E86BF /* ChatUpdate.h in Headers */,
+				ED8E9053121C8952001E86BF /* FieldType.h in Headers */,
+				ED8E9054121C8952001E86BF /* RssState.h in Headers */,
+				ED8E9055121C8952001E86BF /* ChatUpdateDelegate.h in Headers */,
+				ED8E9056121C8952001E86BF /* ChatAppDelegate.h in Headers */,
+				ED8E9057121C8952001E86BF /* OkResponse.h in Headers */,
+				ED8E9058121C8952001E86BF /* AsyncUdpSocket.h in Headers */,
+				ED8E9059121C8952001E86BF /* ScalarType.h in Headers */,
+				ED8E905A121C8952001E86BF /* InitConnectionRequest.h in Headers */,
+				ED8E905B121C8952001E86BF /* Logout.h in Headers */,
+				ED8E905C121C8952001E86BF /* IncomingMessageProcessor.h in Headers */,
+				ED8E905D121C8952001E86BF /* SessionManager.h in Headers */,
+				ED8E905E121C8952001E86BF /* TranslationScope.h in Headers */,
+				ED8E905F121C8952001E86BF /* ElementStateSAXHandler.h in Headers */,
+				ED8E9060121C8952001E86BF /* DictionaryList.h in Headers */,
+				ED8E9061121C8952001E86BF /* XMLAuthDatagramClient.h in Headers */,
+				ED8E9063121C8952001E86BF /* ChatUpdateImpl.h in Headers */,
+				ED8E9064121C8952001E86BF /* types.h in Headers */,
+				ED8E9065121C8952001E86BF /* SchmItem.h in Headers */,
+				ED8E9066121C8952001E86BF /* ReferenceTypeType.h in Headers */,
+				ED8E9067121C8952001E86BF /* ResponseMessage.h in Headers */,
+				ED8E9068121C8952001E86BF /* DoubleType.h in Headers */,
+				ED8E9069121C8952001E86BF /* ecologylabXMLAppDelegate.h in Headers */,
+				ED8E906A121C8952001E86BF /* ChatTranslations.h in Headers */,
+				ED8E906B121C8952001E86BF /* DisconnectsDelegate.h in Headers */,
+				ED8E906C121C8952001E86BF /* ExplanationResponse.h in Headers */,
+				ED8E906D121C8952001E86BF /* AuthMessages.h in Headers */,
+				ED8E906E121C8952001E86BF /* BooleanType.h in Headers */,
+				ED8E906F121C8952001E86BF /* ServiceMessage.h in Headers */,
+				ED8E9070121C8952001E86BF /* OrbitingThreat.h in Headers */,
+				ED8E9071121C8952001E86BF /* FloatType.h in Headers */,
+				ED8E9072121C8952001E86BF /* ServerPicker.h in Headers */,
+				ED8E9073121C8952001E86BF /* GameKitXMLServer.h in Headers */,
+				ED8E9074121C8952001E86BF /* Ping.h in Headers */,
+				ED8E9075121C8952001E86BF /* ConnectionDelegate.h in Headers */,
+				ED8E9076121C8952001E86BF /* DisconnectRequest.h in Headers */,
+				ED8E9077121C8952001E86BF /* NSDataAdditions.h in Headers */,
+				ED8E9078121C8952001E86BF /* ChatViewController.h in Headers */,
+				ED8E9079121C8952001E86BF /* ChatRequest.h in Headers */,
+				ED8E907A121C8952001E86BF /* UpdateMessage.h in Headers */,
+				ED8E907B121C8952001E86BF /* ErrorResponse.h in Headers */,
+				ED8E907C121C8952001E86BF /* Connection.h in Headers */,
+				ED8E907D121C8952001E86BF /* RequestMessage.h in Headers */,
+				ED8E907E121C8952001E86BF /* DefaultServicesTranslations.h in Headers */,
+				ED8E907F121C8952001E86BF /* AuthClientRegistryObjects.h in Headers */,
+				ED8E9080121C8952001E86BF /* Pong.h in Headers */,
+				ED8E9082121C8952001E86BF /* ServerPickerDelegate.h in Headers */,
+				ED8E9083121C8952001E86BF /* Channel.h in Headers */,
+				ED8E9084121C8952001E86BF /* PatrollingThreat.h in Headers */,
+				ED8E9085121C8952001E86BF /* HistoryEchoRequest.h in Headers */,
+				ED8E9086121C8952001E86BF /* bsConstants.h in Headers */,
+				ED8E9087121C8952001E86BF /* SingleSeekerThreat.h in Headers */,
+				ED8E9088121C8952001E86BF /* AuthClientDelegate.h in Headers */,
+				ED8E9089121C8952001E86BF /* Item.h in Headers */,
+				ED8E908A121C8952001E86BF /* XMLClient.h in Headers */,
+				ED8E908B121C8952001E86BF /* Entity.h in Headers */,
+				ED8E908C121C8952001E86BF /* GameData.h in Headers */,
+				ED8E908D121C8952001E86BF /* ElementState.h in Headers */,
+				ED8E908E121C8952001E86BF /* Schmannel.h in Headers */,
+				ED8E908F121C8952001E86BF /* UserWithEmail.h in Headers */,
+				ED8E9090121C8952001E86BF /* UITextView+Utils.h in Headers */,
+				ED8E9091121C8952001E86BF /* InitConnectionResponse.h in Headers */,
+				ED8E9092121C8952001E86BF /* LongType.h in Headers */,
+				ED8E9093121C8952001E86BF /* ParsedURLType.h in Headers */,
+				ED8E9094121C8952001E86BF /* FieldDescriptor.h in Headers */,
+				ED8E9095121C8952001E86BF /* HistoryEchoResponse.h in Headers */,
+				ED8E9096121C8952001E86BF /* StringType.h in Headers */,
+				ED8E9097121C8952001E86BF /* XMLTools.h in Headers */,
+				ED8E9098121C8952001E86BF /* BItem.h in Headers */,
+				ED8E9099121C8952001E86BF /* ParsedURL.h in Headers */,
+				ED8E909A121C8952001E86BF /* Client.h in Headers */,
+				ED8E909B121C8952001E86BF /* ChatRoomViewController.h in Headers */,
+				ED8E909C121C8952001E86BF /* LoginStatusResponse.h in Headers */,
+				ED8E909D121C8952001E86BF /* HeartBeater.h in Headers */,
+				ED8E909E121C8952001E86BF /* MessageComposer.h in Headers */,
+				ED8E909F121C8952001E86BF /* LogoutStatusResponse.h in Headers */,
+				ED8E90A0121C8952001E86BF /* ClassType.h in Headers */,
+				ED8E90A1121C8952001E86BF /* IntType.h in Headers */,
+				ED8E90A2121C8952001E86BF /* GameKitXMLClient.h in Headers */,
+				ED8E90A3121C8952001E86BF /* fTypes.h in Headers */,
+				ED8E90A4121C8952001E86BF /* NetworkConstants.h in Headers */,
+				ED8E90A5121C8952001E86BF /* AuthClient.h in Headers */,
+				ED8E90A6121C8952001E86BF /* User.h in Headers */,
+				ED8E90A7121C8952001E86BF /* XMLClientDelegate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1027,7 +1209,7 @@
 			);
 			name = ecologylabXMLLib;
 			productName = Untitled;
-			productReference = EDE4A5E81135E4A4005517C6 /* libecologylabXMLLib.a */;
+			productReference = ED8E90F0121C8B59001E86BF /* ecologylabXMLLib.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -1225,7 +1407,6 @@
 				EDE4A6191135E4E4005517C6 /* Threat.m in Sources */,
 				EDE4A6091135E4E4005517C6 /* ParsedURL.m in Sources */,
 				EDE4A61C1135E4E4005517C6 /* XMLTools.m in Sources */,
-				EDE4A5F71135E4E4005517C6 /* ecologylabXMLViewController.m in Sources */,
 				EDE4A6101135E4E4005517C6 /* ResponseMessage.m in Sources */,
 				ED66FCF3121C852C008591DC /* XMLDatagramClient.m in Sources */,
 				ED66FCF4121C852C008591DC /* NetworkConstants.m in Sources */,
@@ -1241,7 +1422,6 @@
 				ED66FCF7121C852C008591DC /* ChatUpdate.m in Sources */,
 				EDE4A5EF1135E4E4005517C6 /* ClassType.m in Sources */,
 				EDE4A6121135E4E4005517C6 /* ScalarType.m in Sources */,
-				ED66FCF8121C852C008591DC /* AppConfig.m in Sources */,
 				EDE4A6161135E4E4005517C6 /* ServiceMessage.m in Sources */,
 				ED66FCF9121C852C008591DC /* UITextView+Utils.m in Sources */,
 				EDE4A6181135E4E4005517C6 /* StringType.m in Sources */,
@@ -1258,13 +1438,11 @@
 				EDE4A60F1135E4E4005517C6 /* RequestMessage.m in Sources */,
 				EDE4A60B1135E4E4005517C6 /* PatrollingThreat.m in Sources */,
 				ED66FCFF121C852C008591DC /* UserWithEmail.m in Sources */,
-				ED66FD00121C852C008591DC /* main.m in Sources */,
 				ED66FD01121C852C008591DC /* ChatRoomViewController.m in Sources */,
 				EDE4A5EB1135E4E4005517C6 /* BItem.m in Sources */,
 				EDE4A60C1135E4E4005517C6 /* ReferenceType.m in Sources */,
 				ED66FD02121C852C008591DC /* Login.m in Sources */,
 				EDE4AAC5113653B0005517C6 /* OkResponse.m in Sources */,
-				EDE4A5F61135E4E4005517C6 /* ecologylabXMLAppDelegate.m in Sources */,
 				ED66FD03121C852C008591DC /* AuthClientRegistryObjects.m in Sources */,
 				ED66FD04121C852C008591DC /* HeartBeater.m in Sources */,
 				ED66FD05121C852C008591DC /* ServerPicker.m in Sources */,
@@ -1288,6 +1466,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
 				SDKROOT = iphonesimulator4.0;
 			};
 			name = Debug;
@@ -1296,6 +1475,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
 				SDKROOT = iphonesimulator4.0;
 			};
 			name = Release;
@@ -1405,11 +1585,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_EXTENSION = a;
+				EXECUTABLE_PREFIX = "";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				PREBINDING = NO;
 				PRODUCT_NAME = ecologylabXMLLib;
+				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = dynamic;
 			};
 			name = Debug;
 		};
@@ -1419,9 +1602,12 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXECUTABLE_EXTENSION = a;
+				EXECUTABLE_PREFIX = "";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				PREBINDING = NO;
-				PRODUCT_NAME = Untitled;
+				PRODUCT_NAME = ecologylabXMLLib;
+				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = dynamic;
 				ZERO_LINK = NO;
 			};
 			name = Release;
