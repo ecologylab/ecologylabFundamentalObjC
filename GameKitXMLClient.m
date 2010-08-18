@@ -7,13 +7,15 @@
 //
 
 #import "GameKitXMLClient.h"
-#import "NetworkConstants.h"
+
 
 @interface GameKitXMLClient ()
 
 @property(retain, readwrite) Scope* scope;
 @property(retain, readwrite) GKSession* session;
 @property(assign, readwrite) BOOL connected;
+
+
 
 -(void) connect;
 -(void) reconnect;
@@ -74,22 +76,28 @@
 
 - (void) processData:(NSData *) data
 {
-	/*NSString* messageString = [[NSString alloc] initWithBytes:[data bytes] 
-                                                       length:[data length]
-													 encoding:NSISOLatin1StringEncoding];*/
+	NSString* messageString = [[[NSString alloc] initWithBytes:[data bytes] 
+														length:[data length]
+													  encoding:NSISOLatin1StringEncoding] autorelease];
+	
+	NSLog(@"%@", messageString);
 	
 	[processor receivedNetworkData:data];
 	
 	NSData* message = nil;
-	while ( (message = [processor getNextMessage] ))
+	while ( (message = [processor getNextMessage]))
 	{
+		/*messageString = [[NSString alloc] initWithBytes:[message bytes] 
+		 length:[message length]
+		 encoding:NSISOLatin1StringEncoding];*/
+		
 		ElementState* incomingMessage = [ElementState translateFromXMLData:message translationScope:translations];
 		
 		if([incomingMessage isKindOfClass:[ResponseMessage class]])
 		{
 			if([incomingMessage isKindOfClass:[InitConnectionResponse class]])
 			{
-				InitConnectionResponse* initResp = (InitConnectionResponse*) incomingMessage;
+				InitConnectionResponse* initResp = (InitConnectionResponse*)incomingMessage;
 				
 				if(sessionToken == nil)
 				{
@@ -140,6 +148,7 @@
 		[session disconnectFromAllPeers];
 		session.available = NO;
 		self.connected = NO;
+		reconnectAttempts = 0;
 	}
 }
 
@@ -159,7 +168,7 @@
 	}
 }
 
-/* Client methods */
+/* ServerDelegate methods */
 - (void) sendMessage:(RequestMessage*) message
 {
 	[self performSelector:@selector(sendMessageImpl:) withObject: message];
@@ -170,12 +179,18 @@
 {
 	if(state == GKPeerStateDisconnected && [peerID isEqualToString:serverId] )
 	{
-		self.connected = NO;
-		[delegate connectionTerminated:self];
+		if(!self.connected)
+		{
+			[delegate connectionAttemptFailed:self];
+		}
+		else
+		{
+			self.connected = NO;
+			[delegate connectionTerminated:self];
+		}
 		if(!userDisconnected)
 		{
 			[session disconnectFromAllPeers];
-			[self reconnect];
 		}
 	}
 	if(state == GKPeerStateConnected && [peerID isEqualToString:serverId])
@@ -195,12 +210,12 @@
 {
 	/* Shouldn't recieve any of these */
 	NSLog(@"Why am I, a client, recieving a connection request?");
-	self.connected = NO;
 }
 
 - (void)session:(GKSession *)session didFailWithError:(NSError *)error
 {
 	NSLog(@"Serious error occurred: %s", [error description]);
+	self.connected = NO;
 }
 
 - (void)session:(GKSession *)session connectionWithPeerFailed:(NSString *)peerID withError:(NSError *)error
@@ -209,7 +224,6 @@
 	{
 		NSLog(@"failed to connect to server: %@", [error description]);
 		[delegate connectionAttemptFailed:self];
-		[self reconnect];
 	}
 }
 
@@ -236,7 +250,7 @@
 
 -(void) cancelSelected;
 {
-	[delegate connectionTerminated:self];
+	[delegate connectionCancled:self];
 }
 
 -(void) setSession:(GKSession*) s
@@ -268,7 +282,7 @@
 -(void) pickedServer:(NSString*) srvrId onSession:(GKSession*) s
 {
 	self.session = s;
-		
+	
 	serverId = [srvrId copy];
 	
 	[self connect];
@@ -291,6 +305,8 @@
 
 -(void) dealloc
 {
+	self.session.delegate = nil;
+	[self.session setDataReceiveHandler:nil withContext:nil];
 	self.session = nil;
 	
 	[sessionId release];
