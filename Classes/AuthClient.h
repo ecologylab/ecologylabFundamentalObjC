@@ -12,7 +12,7 @@
 
 @protocol AuthClient<Client>
 
-@property(nonatomic, retain, readwrite) id<AuthClientDelegate> delegate;
+@property(nonatomic, retain, readwrite) id<AuthClientDelegate> authDelegate;
 
 -(void) login;
 -(void) logout;

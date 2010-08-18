@@ -19,7 +19,7 @@
 	
 }
 
-@property(nonatomic, readwrite, retain) id<AuthClientDelegate> delegate;
+@property(nonatomic, readwrite, retain) id<AuthClientDelegate> authDelegate;
 @property(nonatomic, readonly, assign) BOOL isLoggingIn;
 @property(nonatomic, readonly, assign) BOOL isLoggingOut;
 @property(nonatomic, retain, readwrite) User* user;
