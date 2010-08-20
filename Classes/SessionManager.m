@@ -131,10 +131,10 @@ NSString * const SESSION_MANAGER = @"SESSION_MANAGER";
 
 - (void) receivedNetworkData:(NSData*) incomingData;
 {
-	/*NSString* messageString = [[NSString alloc] initWithBytes:[incomingData bytes] 
+	NSString* messageString = [[[NSString alloc] initWithBytes:[incomingData bytes] 
                                                        length:[incomingData length]
-													 encoding:NSISOLatin1StringEncoding];
-	NSLog(messageString);*/
+													 encoding:NSISOLatin1StringEncoding] autorelease];
+	NSLog(messageString);
 	
 	[messageProcessor receivedNetworkData:incomingData];
 	NSData* messageData;

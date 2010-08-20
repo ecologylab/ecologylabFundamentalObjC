@@ -51,6 +51,7 @@
 	if ( (self ==[super init]) ) 
 	{
 		self.m_parent = parent;
+		mutableDictionary = [[NSMutableDictionary alloc] init];
 	}
 
 	return self;
