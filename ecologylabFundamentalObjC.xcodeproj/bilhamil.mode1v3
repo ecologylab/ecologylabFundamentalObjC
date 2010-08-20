@@ -229,8 +229,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -268,6 +266,12 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 							<array>
 								<string>EDCACE991135CEE10076CCCC</string>
+								<string>EDCACEA31135CF040076CCCC</string>
+								<string>EDCACEEC1135CF040076CCCC</string>
+								<string>EDCACEA41135CF040076CCCC</string>
+								<string>EDCACEB91135CF040076CCCC</string>
+								<string>ED0AEDCF115DEA64004A03CC</string>
+								<string>ED0AEDDC115DEA64004A03CC</string>
 								<string>EDCACF2F1135CF560076CCCC</string>
 								<string>EDCAD12B1135D82B0076CCCC</string>
 								<string>EDCACFBA1135CF880076CCCC</string>
@@ -279,8 +283,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>23</integer>
+									<integer>25</integer>
+									<integer>24</integer>
 									<integer>20</integer>
+									<integer>19</integer>
+									<integer>16</integer>
+									<integer>1</integer>
+									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -319,12 +328,14 @@
 							<key>Dock</key>
 							<array>
 								<dict>
+									<key>BecomeActive</key>
+									<true/>
 									<key>ContentConfiguration</key>
 									<dict>
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20306471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>XMLClient.m</string>
+										<string>GameKitXMLServer.h</string>
 										<key>PBXSplitModuleInNavigatorKey</key>
 										<dict>
 											<key>Split0</key>
@@ -332,11 +343,11 @@
 												<key>PBXProjectModuleGUID</key>
 												<string>1CE0B20406471E060097A5F4</string>
 												<key>PBXProjectModuleLabel</key>
-												<string>XMLClient.m</string>
+												<string>GameKitXMLServer.h</string>
 												<key>_historyCapacity</key>
 												<integer>0</integer>
 												<key>bookmark</key>
-												<string>EDF14F9D121F10850086AF99</string>
+												<string>EDF14FB6121F14CB0086AF99</string>
 												<key>history</key>
 												<array>
 													<string>EDCAD07F1135D3420076CCCC</string>
@@ -427,7 +438,13 @@
 													<string>ED5D469F11A5B0B600BE854C</string>
 													<string>ED5D46A011A5B0B600BE854C</string>
 													<string>ED5D46A111A5B0B600BE854C</string>
-													<string>EDF14F74121F10330086AF99</string>
+													<string>EDF14FA4121F14780086AF99</string>
+													<string>EDF14FAA121F14A50086AF99</string>
+													<string>EDF14FAB121F14A50086AF99</string>
+													<string>EDF14FAE121F14A50086AF99</string>
+													<string>EDF14FAF121F14A50086AF99</string>
+													<string>EDF14FB4121F14CB0086AF99</string>
+													<string>EDF14FB5121F14CB0086AF99</string>
 												</array>
 											</dict>
 											<key>SplitCount</key>
@@ -454,7 +471,7 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20306471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>XMLAuthDatagramClient.m</string>
+										<string>GameKitXMLServer.m</string>
 										<key>PBXSplitModuleInNavigatorKey</key>
 										<dict>
 											<key>Split0</key>
@@ -462,11 +479,11 @@
 												<key>PBXProjectModuleGUID</key>
 												<string>1CE0B20406471E060097A5F4</string>
 												<key>PBXProjectModuleLabel</key>
-												<string>XMLAuthDatagramClient.m</string>
+												<string>GameKitXMLServer.m</string>
 												<key>_historyCapacity</key>
 												<integer>0</integer>
 												<key>bookmark</key>
-												<string>EDF14F9E121F10850086AF99</string>
+												<string>EDF14FB7121F14CB0086AF99</string>
 												<key>history</key>
 												<array>
 													<string>EDE4A5731135D962005517C6</string>
@@ -564,13 +581,13 @@
 													<string>ED62951A11B6CD9A00161F80</string>
 													<string>ED62951B11B6CD9A00161F80</string>
 													<string>ED7AF64B11B6E93800BC0C83</string>
-													<string>ED7AF69611B6EB0700BC0C83</string>
 													<string>ED7AF69811B6EB0700BC0C83</string>
 													<string>ED7AF6BD11B6EBB100BC0C83</string>
 													<string>EDF14F5F121F0FE90086AF99</string>
 													<string>EDF14F60121F0FE90086AF99</string>
 													<string>EDF14F61121F0FE90086AF99</string>
-													<string>EDF14F75121F10330086AF99</string>
+													<string>EDF14FA7121F14780086AF99</string>
+													<string>EDF14FA8121F14780086AF99</string>
 												</array>
 											</dict>
 											<key>SplitCount</key>

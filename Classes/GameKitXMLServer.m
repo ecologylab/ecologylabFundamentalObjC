@@ -11,14 +11,18 @@
 @interface GameKitXMLServer ()
 
 @property(retain, readwrite) GKSession* session;
+@property(retain, readwrite) Scope* applicationScope;
 
 @end
 
 @implementation GameKitXMLServer
 
-@synthesize session, delegate;
+@synthesize session, delegate, applicationScope;
 
--(id)initWithSessionID:(NSString*) sessionId displayName:(NSString*) name translationScope:(TranslationScope*) trans
+-(id)initWithSessionID:(NSString*) sessionId 
+           displayName:(NSString*) name 
+      translationScope:(TranslationScope*) trans 
+      applicationScope:(Scope*) scope
 {
 	if( self = [super init] )
 	{
@@ -36,6 +40,8 @@
 		activePeerIdsToSessionManagers = [[NSMutableDictionary alloc] initWithCapacity:7];
 		
 		composer = [[MessageComposer alloc] init];
+		
+		self.applicationScope = scope;
 	}
 	return self;
 }
@@ -89,7 +95,7 @@
 													translationScope:translations delegate:self];
 		
 		NSValue* vPtr = [NSValue valueWithPointer:manager];
-
+		
 		[activePeerIdsToSessionManagers setObject:vPtr forKey:peerID];
 	}
 	else
@@ -157,8 +163,14 @@
 
 - (void)dealloc
 {
+	NSLog(@"Releasing server...");
+	
+	
 	[session disconnectFromAllPeers];
 	session.available = NO;
+	session.delegate = nil;
+	[session setDataReceiveHandler:nil withContext:nil];
+	
 	[session release];
 	
 	[activePeerIdsToSessionManagers release];
@@ -175,3 +187,4 @@
 	[super dealloc];
 }
 @end
+
