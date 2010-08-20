@@ -236,6 +236,10 @@
 		EDF14F6E121F101F0086AF99 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDCAD1261135D81F0076CCCC /* CoreGraphics.framework */; };
 		EDF14F6F121F101F0086AF99 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDCAD1291135D8240076CCCC /* CoreFoundation.framework */; };
 		EDF14F70121F101F0086AF99 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDCAD12B1135D82B0076CCCC /* UIKit.framework */; };
+		F05E2659121F121400D52C3F /* BasicOp.h in Headers */ = {isa = PBXBuildFile; fileRef = F05E2655121F121400D52C3F /* BasicOp.h */; };
+		F05E265A121F121400D52C3F /* BasicOp.m in Sources */ = {isa = PBXBuildFile; fileRef = F05E2656121F121400D52C3F /* BasicOp.m */; };
+		F05E265B121F121400D52C3F /* MixedInitiativeOp.h in Headers */ = {isa = PBXBuildFile; fileRef = F05E2657121F121400D52C3F /* MixedInitiativeOp.h */; };
+		F05E265C121F121400D52C3F /* MixedInitiativeOp.m in Sources */ = {isa = PBXBuildFile; fileRef = F05E2658121F121400D52C3F /* MixedInitiativeOp.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -458,6 +462,10 @@
 		EDE751F411A46C7900878861 /* AuthClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthClient.h; sourceTree = "<group>"; };
 		EDE751F611A4876600878861 /* AuthMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthMessages.h; sourceTree = "<group>"; };
 		EDE751F711A4876600878861 /* AuthMessages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthMessages.m; sourceTree = "<group>"; };
+		F05E2655121F121400D52C3F /* BasicOp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicOp.h; sourceTree = "<group>"; };
+		F05E2656121F121400D52C3F /* BasicOp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicOp.m; sourceTree = "<group>"; };
+		F05E2657121F121400D52C3F /* MixedInitiativeOp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixedInitiativeOp.h; sourceTree = "<group>"; };
+		F05E2658121F121400D52C3F /* MixedInitiativeOp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixedInitiativeOp.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -681,6 +689,7 @@
 		EDCACEB91135CF040076CCCC /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				F05E2654121F116500D52C3F /* Logging */,
 				ED0AEDCF115DEA64004A03CC /* Networking */,
 				EDCACEC31135CF040076CCCC /* Messages */,
 			);
@@ -1014,6 +1023,17 @@
 			name = Authentication;
 			sourceTree = "<group>";
 		};
+		F05E2654121F116500D52C3F /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				F05E2655121F121400D52C3F /* BasicOp.h */,
+				F05E2656121F121400D52C3F /* BasicOp.m */,
+				F05E2657121F121400D52C3F /* MixedInitiativeOp.h */,
+				F05E2658121F121400D52C3F /* MixedInitiativeOp.m */,
+			);
+			name = Logging;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1021,6 +1041,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F05E2659121F121400D52C3F /* BasicOp.h in Headers */,
+				F05E265B121F121400D52C3F /* MixedInitiativeOp.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1346,6 +1368,8 @@
 				EDE4A61A1135E4E4005517C6 /* TranslationScope.m in Sources */,
 				EDE4A5F61135E4E4005517C6 /* ecologylabXMLAppDelegate.m in Sources */,
 				EDE4A5F71135E4E4005517C6 /* ecologylabXMLViewController.m in Sources */,
+				F05E265A121F121400D52C3F /* BasicOp.m in Sources */,
+				F05E265C121F121400D52C3F /* MixedInitiativeOp.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1364,7 +1388,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				SDKROOT = iphonesimulator3.1.2;
+				SDKROOT = iphoneos4.0;
 			};
 			name = Debug;
 		};
