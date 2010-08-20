@@ -7,6 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55A8A88A11E78FBC00CFF2A0 /* Ping.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D464411A5ADAE00BE854C /* Ping.m */; };
+		55A8A88B11E78FBC00CFF2A0 /* Pong.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D464611A5ADAE00BE854C /* Pong.m */; };
+		55A8A88C11E78FBD00CFF2A0 /* AppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE4A5B31135E09E005517C6 /* AppConfig.m */; };
+		55A8A88D11E78FBE00CFF2A0 /* MessageComposer.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D462E11A5ACE000BE854C /* MessageComposer.m */; };
+		55A8A88E11E78FBF00CFF2A0 /* DefaultServicesTranslations.xml in Resources */ = {isa = PBXBuildFile; fileRef = EDCACEC41135CF040076CCCC /* DefaultServicesTranslations.xml */; };
+		55A8A88F11E78FC100CFF2A0 /* ChatRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE4A6E51135F2F9005517C6 /* ChatRequest.m */; };
+		55A8A89011E78FC200CFF2A0 /* AuthClientRegistryObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE751F111A467FF00878861 /* AuthClientRegistryObjects.m */; };
+		55A8A89111E78FC300CFF2A0 /* GameKitXMLClient.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D463611A5AD4300BE854C /* GameKitXMLClient.m */; };
+		55A8A89211E78FC400CFF2A0 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE751D111A45D9200878861 /* User.m */; };
+		55A8A89311E78FC600CFF2A0 /* ChatTranslations.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE4A79F1135FE10005517C6 /* ChatTranslations.m */; };
+		55A8A89411E78FC700CFF2A0 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D463E11A5AD7100BE854C /* NSDataAdditions.m */; };
+		55A8A89511E78FC800CFF2A0 /* ChatAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0AEDEF115DEAB4004A03CC /* ChatAppDelegate.m */; };
+		55A8A89611E78FC900CFF2A0 /* ExplanationResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE751A611A34A0000878861 /* ExplanationResponse.m */; };
+		55A8A89711E78FCB00CFF2A0 /* IncomingMessageProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D462911A5ACE000BE854C /* IncomingMessageProcessor.m */; };
+		55A8A89811E78FCC00CFF2A0 /* AuthMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE751F711A4876600878861 /* AuthMessages.m */; };
+		55A8A89911E78FCD00CFF2A0 /* XMLDatagramClient.m in Sources */ = {isa = PBXBuildFile; fileRef = ED05B1B11194A79F003EB3D2 /* XMLDatagramClient.m */; };
+		55A8A89A11E78FCE00CFF2A0 /* ChatUpdateDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE4A880113606B3005517C6 /* ChatUpdateDelegate.m */; };
+		55A8A89B11E78FD000CFF2A0 /* XMLAuthDatagramClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE751ED11A4627900878861 /* XMLAuthDatagramClient.m */; };
+		55A8A89D11E78FD200CFF2A0 /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0AEDE3115DEA64004A03CC /* Connection.m */; };
+		55A8A89E11E78FD600CFF2A0 /* ChatUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE4A6E71135F2F9005517C6 /* ChatUpdate.m */; };
+		55A8A89F11E78FD700CFF2A0 /* ChatUpdateImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBF6A9C11B836F600812C5C /* ChatUpdateImpl.m */; };
+		55A8A8A011E78FD800CFF2A0 /* ChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE4A5AC1135E08A005517C6 /* ChatRoomViewController.m */; };
+		55A8A8A111E78FD800CFF2A0 /* GameKitXMLServer.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D463411A5AD4300BE854C /* GameKitXMLServer.m */; };
+		55A8A8A211E78FDA00CFF2A0 /* Logout.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE751C911A45D8100878861 /* Logout.m */; };
+		55A8A8A311E78FDA00CFF2A0 /* SessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D462B11A5ACE000BE854C /* SessionManager.m */; };
+		55A8A8A411E78FDB00CFF2A0 /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = ED05B04D11934883003EB3D2 /* AsyncUdpSocket.m */; };
+		55A8A8A511E78FDC00CFF2A0 /* ecologylabXML.hdoc in Resources */ = {isa = PBXBuildFile; fileRef = EDCACF231135CF040076CCCC /* ecologylabXML.hdoc */; };
+		55A8A8A611E78FDD00CFF2A0 /* ServerPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D463811A5AD4300BE854C /* ServerPicker.m */; };
+		55A8A8A711E78FDD00CFF2A0 /* NetworkConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0AEDDB115DEA64004A03CC /* NetworkConstants.m */; };
+		55A8A8A811E78FDF00CFF2A0 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE751C511A45D8100878861 /* Login.m */; };
+		55A8A8A911E78FE000CFF2A0 /* HeartBeater.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D464011A5AD7100BE854C /* HeartBeater.m */; };
+		55A8A8AA11E78FE100CFF2A0 /* LogoutStatusResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE751CB11A45D8100878861 /* LogoutStatusResponse.m */; };
+		55A8A8AB11E78FE200CFF2A0 /* OkResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE4A6DF1135F2DF005517C6 /* OkResponse.m */; };
+		55A8A8AC11E78FE200CFF2A0 /* XMLClient.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0AEDE6115DEA64004A03CC /* XMLClient.m */; };
+		55A8A8AD11E78FE300CFF2A0 /* LoginStatusResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE751C711A45D8100878861 /* LoginStatusResponse.m */; };
+		55A8A8AE11E78FE400CFF2A0 /* ChatTranslations.xml in Resources */ = {isa = PBXBuildFile; fileRef = EDE4A6DC1135EF5E005517C6 /* ChatTranslations.xml */; };
+		55A8A8AF11E78FE700CFF2A0 /* UserWithEmail.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE751D311A45D9200878861 /* UserWithEmail.m */; };
+		55A8A8B111E7900C00CFF2A0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED05B14811934A6A003EB3D2 /* libz.dylib */; };
+		55A8A8B711E7903400CFF2A0 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED0AEDF4115DEAD9004A03CC /* GameKit.framework */; };
+		55A8A8B811E7903400CFF2A0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE4A5DD1135E42F005517C6 /* CFNetwork.framework */; };
+		55A8A8B911E7903500CFF2A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDCACFC61135CFE90076CCCC /* Foundation.framework */; };
 		ED05B04E11934883003EB3D2 /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = ED05B04D11934883003EB3D2 /* AsyncUdpSocket.m */; };
 		ED05B14911934A6A003EB3D2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED05B14811934A6A003EB3D2 /* libz.dylib */; };
 		ED05B1B21194A79F003EB3D2 /* XMLDatagramClient.m in Sources */ = {isa = PBXBuildFile; fileRef = ED05B1B11194A79F003EB3D2 /* XMLDatagramClient.m */; };
@@ -392,9 +433,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55A8A8B111E7900C00CFF2A0 /* libz.dylib in Frameworks */,
 				EDE4A54B1135D907005517C6 /* CoreGraphics.framework in Frameworks */,
 				EDE4A54C1135D907005517C6 /* CoreFoundation.framework in Frameworks */,
 				EDE4A54D1135D907005517C6 /* UIKit.framework in Frameworks */,
+				55A8A8B711E7903400CFF2A0 /* GameKit.framework in Frameworks */,
+				55A8A8B811E7903400CFF2A0 /* CFNetwork.framework in Frameworks */,
+				55A8A8B911E7903500CFF2A0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,11 +727,11 @@
 		EDCACEEC1135CF040076CCCC /* Types */ = {
 			isa = PBXGroup;
 			children = (
-				EDCACF0C1135CF040076CCCC /* types.h */,
-				EDCACF0D1135CF040076CCCC /* Type.h */,
 				EDCACEFE1135CF040076CCCC /* Scalar */,
 				EDCACEF01135CF040076CCCC /* Reference */,
 				EDCACEED1135CF040076CCCC /* Custom */,
+				EDCACF0C1135CF040076CCCC /* types.h */,
+				EDCACF0D1135CF040076CCCC /* Type.h */,
 			);
 			name = Types;
 			sourceTree = "<group>";
@@ -703,9 +748,9 @@
 		EDCACEF01135CF040076CCCC /* Reference */ = {
 			isa = PBXGroup;
 			children = (
+				EDCACEF11135CF040076CCCC /* Types */,
 				EDCACEFC1135CF040076CCCC /* ReferenceType.h */,
 				EDCACEFD1135CF040076CCCC /* ReferenceType.m */,
-				EDCACEF11135CF040076CCCC /* Types */,
 			);
 			name = Reference;
 			sourceTree = "<group>";
@@ -1031,6 +1076,9 @@
 				EDE4A4BC1135D8F5005517C6 /* MainWindow.xib in Resources */,
 				EDE4A4BD1135D8F5005517C6 /* ecologylabXML-Info.plist in Resources */,
 				EDE4A5A31135DE6E005517C6 /* ChatClientInfo.plist in Resources */,
+				55A8A88E11E78FBF00CFF2A0 /* DefaultServicesTranslations.xml in Resources */,
+				55A8A8A511E78FDC00CFF2A0 /* ecologylabXML.hdoc in Resources */,
+				55A8A8AE11E78FE400CFF2A0 /* ChatTranslations.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1102,6 +1150,40 @@
 				EDE4A4B01135D8EB005517C6 /* TranslationScope.m in Sources */,
 				EDE4A4B21135D8EB005517C6 /* XMLTools.m in Sources */,
 				EDE4A5B41135E09E005517C6 /* UITextView+Utils.m in Sources */,
+				55A8A88A11E78FBC00CFF2A0 /* Ping.m in Sources */,
+				55A8A88B11E78FBC00CFF2A0 /* Pong.m in Sources */,
+				55A8A88C11E78FBD00CFF2A0 /* AppConfig.m in Sources */,
+				55A8A88D11E78FBE00CFF2A0 /* MessageComposer.m in Sources */,
+				55A8A88F11E78FC100CFF2A0 /* ChatRequest.m in Sources */,
+				55A8A89011E78FC200CFF2A0 /* AuthClientRegistryObjects.m in Sources */,
+				55A8A89111E78FC300CFF2A0 /* GameKitXMLClient.m in Sources */,
+				55A8A89211E78FC400CFF2A0 /* User.m in Sources */,
+				55A8A89311E78FC600CFF2A0 /* ChatTranslations.m in Sources */,
+				55A8A89411E78FC700CFF2A0 /* NSDataAdditions.m in Sources */,
+				55A8A89511E78FC800CFF2A0 /* ChatAppDelegate.m in Sources */,
+				55A8A89611E78FC900CFF2A0 /* ExplanationResponse.m in Sources */,
+				55A8A89711E78FCB00CFF2A0 /* IncomingMessageProcessor.m in Sources */,
+				55A8A89811E78FCC00CFF2A0 /* AuthMessages.m in Sources */,
+				55A8A89911E78FCD00CFF2A0 /* XMLDatagramClient.m in Sources */,
+				55A8A89A11E78FCE00CFF2A0 /* ChatUpdateDelegate.m in Sources */,
+				55A8A89B11E78FD000CFF2A0 /* XMLAuthDatagramClient.m in Sources */,
+				55A8A89D11E78FD200CFF2A0 /* Connection.m in Sources */,
+				55A8A89E11E78FD600CFF2A0 /* ChatUpdate.m in Sources */,
+				55A8A89F11E78FD700CFF2A0 /* ChatUpdateImpl.m in Sources */,
+				55A8A8A011E78FD800CFF2A0 /* ChatRoomViewController.m in Sources */,
+				55A8A8A111E78FD800CFF2A0 /* GameKitXMLServer.m in Sources */,
+				55A8A8A211E78FDA00CFF2A0 /* Logout.m in Sources */,
+				55A8A8A311E78FDA00CFF2A0 /* SessionManager.m in Sources */,
+				55A8A8A411E78FDB00CFF2A0 /* AsyncUdpSocket.m in Sources */,
+				55A8A8A611E78FDD00CFF2A0 /* ServerPicker.m in Sources */,
+				55A8A8A711E78FDD00CFF2A0 /* NetworkConstants.m in Sources */,
+				55A8A8A811E78FDF00CFF2A0 /* Login.m in Sources */,
+				55A8A8A911E78FE000CFF2A0 /* HeartBeater.m in Sources */,
+				55A8A8AA11E78FE100CFF2A0 /* LogoutStatusResponse.m in Sources */,
+				55A8A8AB11E78FE200CFF2A0 /* OkResponse.m in Sources */,
+				55A8A8AC11E78FE200CFF2A0 /* XMLClient.m in Sources */,
+				55A8A8AD11E78FE300CFF2A0 /* LoginStatusResponse.m in Sources */,
+				55A8A8AF11E78FE700CFF2A0 /* UserWithEmail.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
