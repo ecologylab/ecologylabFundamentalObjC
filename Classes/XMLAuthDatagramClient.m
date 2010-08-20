@@ -23,7 +23,7 @@
 
 @implementation XMLAuthDatagramClient
 
-@synthesize isLoggingIn = loggingIn, isLoggingOut = loggingOut, user, delegate;
+@synthesize isLoggingIn = loggingIn, isLoggingOut = loggingOut, user, authDelegate;
 
 - (id)initWithHostAddress:(NSString*)host andPort:(UInt16) port 
 	  andTranslationScope:(TranslationScope*) transScope
@@ -37,7 +37,7 @@
 		self.isLoggingOut = NO;
 		
 		NSValue* selfPointerWrapper = [NSValue valueWithPointer: self];
-		[scope setObject:selfPointerWrapper forKey:MAIN_AUTHENTICABLE];
+		[self.scope setObject:selfPointerWrapper forKey:MAIN_AUTHENTICABLE];
 	}
 	return self;
 }
@@ -104,26 +104,26 @@
 {
 	self.isLoggingIn = NO;
 	self.isLoggingOut = NO;
-	[self.delegate loginSucceeded];
+	[self.authDelegate loginSucceeded];
 }
 
 -(void) loginFailed
 {
 	self.isLoggingIn = NO;
 	self.isLoggingOut = NO;
-	[self.delegate loginFailed];
+	[self.authDelegate loginFailed];
 }
 
 -(void) loggedOut
 {
 	self.isLoggingIn = NO;
 	self.isLoggingOut = NO;
-	[self.delegate loggedOut];
+	[self.authDelegate loggedOut];
 }
 
 -(NSString*) getExplanation
 {
-	NSString* tmp = [scope objectForKey:LOGIN_STATUS_STRING];
+	NSString* tmp = [self.scope objectForKey:LOGIN_STATUS_STRING];
 	
 	if(tmp == nil)
 	{

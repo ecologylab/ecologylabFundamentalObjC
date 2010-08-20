@@ -204,6 +204,38 @@
 		EDE751EE11A4627900878861 /* XMLAuthDatagramClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE751ED11A4627900878861 /* XMLAuthDatagramClient.m */; };
 		EDE751F211A467FF00878861 /* AuthClientRegistryObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE751F111A467FF00878861 /* AuthClientRegistryObjects.m */; };
 		EDE751F811A4876600878861 /* AuthMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE751F711A4876600878861 /* AuthMessages.m */; };
+		EDF14F2D121F05E40086AF99 /* UserWithEmail.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE751D311A45D9200878861 /* UserWithEmail.m */; };
+		EDF14F2E121F05E40086AF99 /* GameKitXMLServer.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D463411A5AD4300BE854C /* GameKitXMLServer.m */; };
+		EDF14F2F121F05E40086AF99 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE751C511A45D8100878861 /* Login.m */; };
+		EDF14F30121F05E40086AF99 /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = ED05B04D11934883003EB3D2 /* AsyncUdpSocket.m */; };
+		EDF14F31121F05E40086AF99 /* NetworkConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0AEDDB115DEA64004A03CC /* NetworkConstants.m */; };
+		EDF14F32121F05E40086AF99 /* ExplanationResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE751A611A34A0000878861 /* ExplanationResponse.m */; };
+		EDF14F33121F05E40086AF99 /* XMLAuthDatagramClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE751ED11A4627900878861 /* XMLAuthDatagramClient.m */; };
+		EDF14F34121F05E40086AF99 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE751D111A45D9200878861 /* User.m */; };
+		EDF14F35121F05E40086AF99 /* ServerPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D463811A5AD4300BE854C /* ServerPicker.m */; };
+		EDF14F36121F05E40086AF99 /* SessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D462B11A5ACE000BE854C /* SessionManager.m */; };
+		EDF14F37121F05E40086AF99 /* XMLClient.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0AEDE6115DEA64004A03CC /* XMLClient.m */; };
+		EDF14F38121F05E40086AF99 /* Logout.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE751C911A45D8100878861 /* Logout.m */; };
+		EDF14F39121F05E40086AF99 /* HeartBeater.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D464011A5AD7100BE854C /* HeartBeater.m */; };
+		EDF14F3A121F05E40086AF99 /* Pong.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D464611A5ADAE00BE854C /* Pong.m */; };
+		EDF14F3B121F05E40086AF99 /* Ping.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D464411A5ADAE00BE854C /* Ping.m */; };
+		EDF14F3C121F05E40086AF99 /* MessageComposer.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D462E11A5ACE000BE854C /* MessageComposer.m */; };
+		EDF14F3D121F05E40086AF99 /* AuthClientRegistryObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE751F111A467FF00878861 /* AuthClientRegistryObjects.m */; };
+		EDF14F3E121F05E40086AF99 /* IncomingMessageProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D462911A5ACE000BE854C /* IncomingMessageProcessor.m */; };
+		EDF14F3F121F05E40086AF99 /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0AEDE3115DEA64004A03CC /* Connection.m */; };
+		EDF14F40121F05E40086AF99 /* XMLDatagramClient.m in Sources */ = {isa = PBXBuildFile; fileRef = ED05B1B11194A79F003EB3D2 /* XMLDatagramClient.m */; };
+		EDF14F41121F05E40086AF99 /* LogoutStatusResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE751CB11A45D8100878861 /* LogoutStatusResponse.m */; };
+		EDF14F42121F05E40086AF99 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D463E11A5AD7100BE854C /* NSDataAdditions.m */; };
+		EDF14F43121F05E40086AF99 /* LoginStatusResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE751C711A45D8100878861 /* LoginStatusResponse.m */; };
+		EDF14F44121F05E40086AF99 /* GameKitXMLClient.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D463611A5AD4300BE854C /* GameKitXMLClient.m */; };
+		EDF14F45121F05E40086AF99 /* AuthMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE751F711A4876600878861 /* AuthMessages.m */; };
+		EDF14F6A121F101F0086AF99 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED05B14811934A6A003EB3D2 /* libz.dylib */; };
+		EDF14F6B121F101F0086AF99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDCACFC61135CFE90076CCCC /* Foundation.framework */; };
+		EDF14F6C121F101F0086AF99 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED0AEDF4115DEAD9004A03CC /* GameKit.framework */; };
+		EDF14F6D121F101F0086AF99 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE4A5DD1135E42F005517C6 /* CFNetwork.framework */; };
+		EDF14F6E121F101F0086AF99 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDCAD1261135D81F0076CCCC /* CoreGraphics.framework */; };
+		EDF14F6F121F101F0086AF99 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDCAD1291135D8240076CCCC /* CoreFoundation.framework */; };
+		EDF14F70121F101F0086AF99 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDCAD12B1135D82B0076CCCC /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -458,6 +490,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDF14F6A121F101F0086AF99 /* libz.dylib in Frameworks */,
+				EDF14F6B121F101F0086AF99 /* Foundation.framework in Frameworks */,
+				EDF14F6C121F101F0086AF99 /* GameKit.framework in Frameworks */,
+				EDF14F6D121F101F0086AF99 /* CFNetwork.framework in Frameworks */,
+				EDF14F6E121F101F0086AF99 /* CoreGraphics.framework in Frameworks */,
+				EDF14F6F121F101F0086AF99 /* CoreFoundation.framework in Frameworks */,
+				EDF14F70121F101F0086AF99 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1233,55 +1272,80 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDE4AAC5113653B0005517C6 /* OkResponse.m in Sources */,
-				EDE4AAC6113653B0005517C6 /* UpdateMessage.m in Sources */,
-				EDE4A5EB1135E4E4005517C6 /* BItem.m in Sources */,
-				EDE4A5EC1135E4E4005517C6 /* BooleanType.m in Sources */,
-				EDE4A5ED1135E4E4005517C6 /* Channel.m in Sources */,
-				EDE4A5EE1135E4E4005517C6 /* ClassDescriptor.m in Sources */,
-				EDE4A5EF1135E4E4005517C6 /* ClassType.m in Sources */,
-				EDE4A5F11135E4E4005517C6 /* DefaultServicesTranslations.m in Sources */,
-				EDE4A5F21135E4E4005517C6 /* DictionaryList.m in Sources */,
 				EDE4A5F31135E4E4005517C6 /* DisconnectRequest.m in Sources */,
-				EDE4A5F41135E4E4005517C6 /* DoubleType.m in Sources */,
-				EDE4A5F51135E4E4005517C6 /* ecologylabxml.m in Sources */,
-				EDE4A5F61135E4E4005517C6 /* ecologylabXMLAppDelegate.m in Sources */,
-				EDE4A5F71135E4E4005517C6 /* ecologylabXMLViewController.m in Sources */,
-				EDE4A5F81135E4E4005517C6 /* ElementState.m in Sources */,
-				EDE4A5F91135E4E4005517C6 /* ElementStateSAXHandler.m in Sources */,
-				EDE4A5FA1135E4E4005517C6 /* Entity.m in Sources */,
-				EDE4A5FB1135E4E4005517C6 /* ErrorResponse.m in Sources */,
-				EDE4A5FC1135E4E4005517C6 /* FieldDescriptor.m in Sources */,
-				EDE4A5FD1135E4E4005517C6 /* FieldType.m in Sources */,
-				EDE4A5FE1135E4E4005517C6 /* FloatType.m in Sources */,
-				EDE4A5FF1135E4E4005517C6 /* GameData.m in Sources */,
-				EDE4A6001135E4E4005517C6 /* HistoryEchoRequest.m in Sources */,
+				EDF14F2D121F05E40086AF99 /* UserWithEmail.m in Sources */,
 				EDE4A6011135E4E4005517C6 /* HistoryEchoResponse.m in Sources */,
+				EDE4A5F41135E4E4005517C6 /* DoubleType.m in Sources */,
+				EDF14F2E121F05E40086AF99 /* GameKitXMLServer.m in Sources */,
+				EDF14F2F121F05E40086AF99 /* Login.m in Sources */,
+				EDE4A60C1135E4E4005517C6 /* ReferenceType.m in Sources */,
+				EDE4A5FC1135E4E4005517C6 /* FieldDescriptor.m in Sources */,
+				EDE4A5FA1135E4E4005517C6 /* Entity.m in Sources */,
+				EDE4A60B1135E4E4005517C6 /* PatrollingThreat.m in Sources */,
+				EDE4A6081135E4E4005517C6 /* OrbitingThreat.m in Sources */,
+				EDE4A6141135E4E4005517C6 /* SchmItem.m in Sources */,
+				EDE4A5FD1135E4E4005517C6 /* FieldType.m in Sources */,
+				EDE4A6161135E4E4005517C6 /* ServiceMessage.m in Sources */,
+				EDE4A6091135E4E4005517C6 /* ParsedURL.m in Sources */,
+				EDE4A5F91135E4E4005517C6 /* ElementStateSAXHandler.m in Sources */,
+				EDE4A5F11135E4E4005517C6 /* DefaultServicesTranslations.m in Sources */,
+				EDE4A5EE1135E4E4005517C6 /* ClassDescriptor.m in Sources */,
+				EDE4A6151135E4E4005517C6 /* Scope.m in Sources */,
+				EDE4AAC5113653B0005517C6 /* OkResponse.m in Sources */,
+				EDF14F30121F05E40086AF99 /* AsyncUdpSocket.m in Sources */,
+				EDF14F31121F05E40086AF99 /* NetworkConstants.m in Sources */,
+				EDF14F32121F05E40086AF99 /* ExplanationResponse.m in Sources */,
+				EDE4AAC6113653B0005517C6 /* UpdateMessage.m in Sources */,
 				EDE4A6021135E4E4005517C6 /* InitConnectionRequest.m in Sources */,
-				EDE4A6031135E4E4005517C6 /* InitConnectionResponse.m in Sources */,
+				EDF14F33121F05E40086AF99 /* XMLAuthDatagramClient.m in Sources */,
+				EDE4A6131135E4E4005517C6 /* Schmannel.m in Sources */,
+				EDE4A5ED1135E4E4005517C6 /* Channel.m in Sources */,
+				EDF14F34121F05E40086AF99 /* User.m in Sources */,
+				EDF14F35121F05E40086AF99 /* ServerPicker.m in Sources */,
+				EDE4A5FE1135E4E4005517C6 /* FloatType.m in Sources */,
+				EDF14F36121F05E40086AF99 /* SessionManager.m in Sources */,
+				EDF14F37121F05E40086AF99 /* XMLClient.m in Sources */,
+				EDE4A5FB1135E4E4005517C6 /* ErrorResponse.m in Sources */,
+				EDF14F38121F05E40086AF99 /* Logout.m in Sources */,
+				EDE4A60D1135E4E4005517C6 /* ReferenceTypeType.m in Sources */,
+				EDE4A60A1135E4E4005517C6 /* ParsedURLType.m in Sources */,
+				EDE4A6171135E4E4005517C6 /* SingleSeekerThreat.m in Sources */,
+				EDF14F39121F05E40086AF99 /* HeartBeater.m in Sources */,
+				EDF14F3A121F05E40086AF99 /* Pong.m in Sources */,
+				EDE4A60E1135E4E4005517C6 /* RepellableThreat.m in Sources */,
+				EDE4A5EC1135E4E4005517C6 /* BooleanType.m in Sources */,
+				EDF14F3B121F05E40086AF99 /* Ping.m in Sources */,
+				EDE4A61C1135E4E4005517C6 /* XMLTools.m in Sources */,
+				EDE4A5F81135E4E4005517C6 /* ElementState.m in Sources */,
+				EDE4A6191135E4E4005517C6 /* Threat.m in Sources */,
+				EDF14F3C121F05E40086AF99 /* MessageComposer.m in Sources */,
+				EDF14F3D121F05E40086AF99 /* AuthClientRegistryObjects.m in Sources */,
+				EDF14F3E121F05E40086AF99 /* IncomingMessageProcessor.m in Sources */,
+				EDF14F3F121F05E40086AF99 /* Connection.m in Sources */,
 				EDE4A6041135E4E4005517C6 /* IntType.m in Sources */,
+				EDF14F40121F05E40086AF99 /* XMLDatagramClient.m in Sources */,
 				EDE4A6051135E4E4005517C6 /* Item.m in Sources */,
 				EDE4A6061135E4E4005517C6 /* LongType.m in Sources */,
-				EDE4A6081135E4E4005517C6 /* OrbitingThreat.m in Sources */,
-				EDE4A6091135E4E4005517C6 /* ParsedURL.m in Sources */,
-				EDE4A60A1135E4E4005517C6 /* ParsedURLType.m in Sources */,
-				EDE4A60B1135E4E4005517C6 /* PatrollingThreat.m in Sources */,
-				EDE4A60C1135E4E4005517C6 /* ReferenceType.m in Sources */,
-				EDE4A60D1135E4E4005517C6 /* ReferenceTypeType.m in Sources */,
-				EDE4A60E1135E4E4005517C6 /* RepellableThreat.m in Sources */,
-				EDE4A60F1135E4E4005517C6 /* RequestMessage.m in Sources */,
-				EDE4A6101135E4E4005517C6 /* ResponseMessage.m in Sources */,
 				EDE4A6111135E4E4005517C6 /* RssState.m in Sources */,
-				EDE4A6121135E4E4005517C6 /* ScalarType.m in Sources */,
-				EDE4A6131135E4E4005517C6 /* Schmannel.m in Sources */,
-				EDE4A6141135E4E4005517C6 /* SchmItem.m in Sources */,
-				EDE4A6151135E4E4005517C6 /* Scope.m in Sources */,
-				EDE4A6161135E4E4005517C6 /* ServiceMessage.m in Sources */,
-				EDE4A6171135E4E4005517C6 /* SingleSeekerThreat.m in Sources */,
+				EDE4A60F1135E4E4005517C6 /* RequestMessage.m in Sources */,
+				EDE4A5F51135E4E4005517C6 /* ecologylabxml.m in Sources */,
 				EDE4A6181135E4E4005517C6 /* StringType.m in Sources */,
-				EDE4A6191135E4E4005517C6 /* Threat.m in Sources */,
+				EDF14F41121F05E40086AF99 /* LogoutStatusResponse.m in Sources */,
+				EDE4A6001135E4E4005517C6 /* HistoryEchoRequest.m in Sources */,
+				EDE4A5FF1135E4E4005517C6 /* GameData.m in Sources */,
+				EDE4A6101135E4E4005517C6 /* ResponseMessage.m in Sources */,
+				EDE4A6031135E4E4005517C6 /* InitConnectionResponse.m in Sources */,
+				EDE4A5EB1135E4E4005517C6 /* BItem.m in Sources */,
+				EDE4A5F21135E4E4005517C6 /* DictionaryList.m in Sources */,
+				EDF14F42121F05E40086AF99 /* NSDataAdditions.m in Sources */,
+				EDF14F43121F05E40086AF99 /* LoginStatusResponse.m in Sources */,
+				EDF14F44121F05E40086AF99 /* GameKitXMLClient.m in Sources */,
+				EDE4A5EF1135E4E4005517C6 /* ClassType.m in Sources */,
+				EDF14F45121F05E40086AF99 /* AuthMessages.m in Sources */,
+				EDE4A6121135E4E4005517C6 /* ScalarType.m in Sources */,
 				EDE4A61A1135E4E4005517C6 /* TranslationScope.m in Sources */,
-				EDE4A61C1135E4E4005517C6 /* XMLTools.m in Sources */,
+				EDE4A5F61135E4E4005517C6 /* ecologylabXMLAppDelegate.m in Sources */,
+				EDE4A5F71135E4E4005517C6 /* ecologylabXMLViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1333,7 +1397,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = ecologylabXML;
-				SDKROOT = iphoneos3.1.2;
+				SDKROOT = iphoneos4.0;
 			};
 			name = Debug;
 		};
@@ -1357,7 +1421,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = ecologylabXML;
-				SDKROOT = iphoneos3.1.2;
+				SDKROOT = iphoneos4.0;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -1383,7 +1447,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = ChatClientTutorial;
-				SDKROOT = iphoneos3.1.2;
+				SDKROOT = iphoneos4.0;
 			};
 			name = Debug;
 		};
@@ -1407,7 +1471,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = ChatClientTutorial;
-				SDKROOT = iphoneos3.1.2;
+				SDKROOT = iphoneos4.0;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -1422,6 +1486,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				PREBINDING = NO;
 				PRODUCT_NAME = ecologylabXMLLib;
+				SDKROOT = iphonesimulator4.0;
 			};
 			name = Debug;
 		};
@@ -1431,9 +1496,11 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				PREBINDING = NO;
 				PRODUCT_NAME = Untitled;
+				SDKROOT = iphonesimulator4.0;
 				ZERO_LINK = NO;
 			};
 			name = Release;
