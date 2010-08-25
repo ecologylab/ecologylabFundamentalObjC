@@ -91,7 +91,7 @@
 		 length:[message length]
 		 encoding:NSISOLatin1StringEncoding];*/
 		
-		ElementState* incomingMessage = [ElementState translateFromXMLData:message translationScope:translations];
+		ElementState* incomingMessage = [translations deserializeData:message];
 		
 		if([incomingMessage isKindOfClass:[ResponseMessage class]])
 		{
