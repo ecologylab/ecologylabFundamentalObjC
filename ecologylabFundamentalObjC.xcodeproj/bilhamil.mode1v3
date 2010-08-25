@@ -272,20 +272,20 @@
 								<string>EDCACEB91135CF040076CCCC</string>
 								<string>ED0AEDCF115DEA64004A03CC</string>
 								<string>ED0AEDDC115DEA64004A03CC</string>
+								<string>ED0AEDD0115DEA64004A03CC</string>
+								<string>EDCACEC31135CF040076CCCC</string>
 								<string>EDCACF2F1135CF560076CCCC</string>
 								<string>EDCAD12B1135D82B0076CCCC</string>
 								<string>EDCACFBA1135CF880076CCCC</string>
 								<string>EDCACFC01135CF9F0076CCCC</string>
 								<string>1C37FBAC04509CD000000102</string>
-								<string>EDF14F7B121F10350086AF99</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>25</integer>
-									<integer>24</integer>
-									<integer>20</integer>
+									<integer>83</integer>
+									<integer>51</integer>
 									<integer>19</integer>
 									<integer>16</integer>
 									<integer>1</integer>
@@ -314,7 +314,7 @@
 							<real>297</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>2560 55 1920 1145 2560 0 1920 1200 </string>
+						<string>399 196 1920 1145 0 0 2560 1418 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -335,7 +335,7 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20306471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GameKitXMLServer.h</string>
+										<string>Pong.m</string>
 										<key>PBXSplitModuleInNavigatorKey</key>
 										<dict>
 											<key>Split0</key>
@@ -343,11 +343,11 @@
 												<key>PBXProjectModuleGUID</key>
 												<string>1CE0B20406471E060097A5F4</string>
 												<key>PBXProjectModuleLabel</key>
-												<string>GameKitXMLServer.h</string>
+												<string>Pong.m</string>
 												<key>_historyCapacity</key>
 												<integer>0</integer>
 												<key>bookmark</key>
-												<string>EDF14FB6121F14CB0086AF99</string>
+												<string>ED20F34C122590EF006F3C44</string>
 												<key>history</key>
 												<array>
 													<string>EDCAD07F1135D3420076CCCC</string>
@@ -440,11 +440,10 @@
 													<string>ED5D46A111A5B0B600BE854C</string>
 													<string>EDF14FA4121F14780086AF99</string>
 													<string>EDF14FAA121F14A50086AF99</string>
-													<string>EDF14FAB121F14A50086AF99</string>
 													<string>EDF14FAE121F14A50086AF99</string>
-													<string>EDF14FAF121F14A50086AF99</string>
 													<string>EDF14FB4121F14CB0086AF99</string>
-													<string>EDF14FB5121F14CB0086AF99</string>
+													<string>ED20F34A122590EF006F3C44</string>
+													<string>ED20F34B122590EF006F3C44</string>
 												</array>
 											</dict>
 											<key>SplitCount</key>
@@ -456,9 +455,9 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{0, 0}, {1574, 716}}</string>
+										<string>{{0, 0}, {1574, 678}}</string>
 										<key>RubberWindowFrame</key>
-										<string>2560 55 1920 1145 2560 0 1920 1200 </string>
+										<string>399 196 1920 1145 0 0 2560 1418 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXNavigatorGroup</string>
@@ -471,7 +470,7 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20306471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GameKitXMLServer.m</string>
+										<string>Pong.m</string>
 										<key>PBXSplitModuleInNavigatorKey</key>
 										<dict>
 											<key>Split0</key>
@@ -479,11 +478,11 @@
 												<key>PBXProjectModuleGUID</key>
 												<string>1CE0B20406471E060097A5F4</string>
 												<key>PBXProjectModuleLabel</key>
-												<string>GameKitXMLServer.m</string>
+												<string>Pong.m</string>
 												<key>_historyCapacity</key>
 												<integer>0</integer>
 												<key>bookmark</key>
-												<string>EDF14FB7121F14CB0086AF99</string>
+												<string>ED20F350122590EF006F3C44</string>
 												<key>history</key>
 												<array>
 													<string>EDE4A5731135D962005517C6</string>
@@ -579,15 +578,17 @@
 													<string>ED62951811B6CD9A00161F80</string>
 													<string>ED62951911B6CD9A00161F80</string>
 													<string>ED62951A11B6CD9A00161F80</string>
-													<string>ED62951B11B6CD9A00161F80</string>
 													<string>ED7AF64B11B6E93800BC0C83</string>
-													<string>ED7AF69811B6EB0700BC0C83</string>
 													<string>ED7AF6BD11B6EBB100BC0C83</string>
 													<string>EDF14F5F121F0FE90086AF99</string>
 													<string>EDF14F60121F0FE90086AF99</string>
 													<string>EDF14F61121F0FE90086AF99</string>
 													<string>EDF14FA7121F14780086AF99</string>
-													<string>EDF14FA8121F14780086AF99</string>
+													<string>ED20F32A12258EFC006F3C44</string>
+													<string>ED20F32B12258EFC006F3C44</string>
+													<string>ED20F34D122590EF006F3C44</string>
+													<string>ED20F34E122590EF006F3C44</string>
+													<string>ED20F34F122590EF006F3C44</string>
 												</array>
 											</dict>
 											<key>SplitCount</key>
@@ -599,9 +600,9 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{1579, 0}, {0, 716}}</string>
+										<string>{{1579, 0}, {0, 678}}</string>
 										<key>RubberWindowFrame</key>
-										<string>2560 55 1920 1145 2560 0 1920 1200 </string>
+										<string>399 196 1920 1145 0 0 2560 1418 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXNavigatorGroup</string>
@@ -610,7 +611,7 @@
 								</dict>
 							</array>
 							<key>Proportion</key>
-							<string>716pt</string>
+							<string>678pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -623,14 +624,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 721}, {1579, 383}}</string>
+								<string>{{0, 683}, {1579, 421}}</string>
 								<key>RubberWindowFrame</key>
-								<string>2560 55 1920 1145 2560 0 1920 1200 </string>
+								<string>399 196 1920 1145 0 0 2560 1418 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>383pt</string>
+							<string>421pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -651,10 +652,10 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>EDF14F9F121F10850086AF99</string>
+				<string>ED20F351122590EF006F3C44</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>EDF14FA0121F10850086AF99</string>
-				<string>EDF14FA1121F10850086AF99</string>
+				<string>ED20F352122590EF006F3C44</string>
+				<string>ED20F353122590EF006F3C44</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
@@ -828,7 +829,7 @@
 		<string>/Users/bilhamil/code/eclipse_workspace/Rummy Client/ecologylabObjC/ecologylabFundamentalObjC.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>2560 55 1920 1145 2560 0 1920 1200 </string>
+	<string>399 196 1920 1145 0 0 2560 1418 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -905,7 +906,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>EDCAD00C1135D1170076CCCC</string>
-				<string>EDF14FA2121F10850086AF99</string>
+				<string>ED20F354122590EF006F3C44</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

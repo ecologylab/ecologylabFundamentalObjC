@@ -24,7 +24,7 @@ static Pong* sharedInstance = nil;
 
 -(void) processResponse:(Scope*) scope
 {
-	NSLog(@"Pong!");
+	//NSLog(@"Pong!");
 }
 
 @end

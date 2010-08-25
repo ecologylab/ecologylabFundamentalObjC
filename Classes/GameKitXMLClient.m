@@ -76,11 +76,12 @@
 
 - (void) processData:(NSData *) data
 {
-	NSString* messageString = [[[NSString alloc] initWithBytes:[data bytes] 
+	/*NSString* messageString = [[[NSString alloc] initWithBytes:[data bytes] 
 														length:[data length]
 													  encoding:NSISOLatin1StringEncoding] autorelease];
 	
 	NSLog(@"%@", messageString);
+	*/
 	
 	[processor receivedNetworkData:data];
 	

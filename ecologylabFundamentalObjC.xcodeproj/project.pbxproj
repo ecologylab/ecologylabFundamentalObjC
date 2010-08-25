@@ -182,7 +182,7 @@
 		EDE4A6191135E4E4005517C6 /* Threat.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCACEB81135CF040076CCCC /* Threat.m */; };
 		EDE4A61A1135E4E4005517C6 /* TranslationScope.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCACF181135CF040076CCCC /* TranslationScope.m */; };
 		EDE4A61C1135E4E4005517C6 /* XMLTools.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCACF161135CF040076CCCC /* XMLTools.m */; };
-		EDE4A6271135E67A005517C6 /* libecologylabXMLLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE4A5E81135E4A4005517C6 /* libecologylabXMLLib.a */; };
+		EDE4A6271135E67A005517C6 /* libUntitled.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE4A5E81135E4A4005517C6 /* libUntitled.a */; };
 		EDE4A67B1135E940005517C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCACFC21135CF9F0076CCCC /* main.m */; };
 		EDE4A6DD1135EF5E005517C6 /* ChatTranslations.xml in Resources */ = {isa = PBXBuildFile; fileRef = EDE4A6DC1135EF5E005517C6 /* ChatTranslations.xml */; };
 		EDE4A6E81135F2F9005517C6 /* ChatRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE4A6E51135F2F9005517C6 /* ChatRequest.m */; };
@@ -425,7 +425,7 @@
 		EDE4A5BD1135E182005517C6 /* ChatClientTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatClientTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE4A5BF1135E182005517C6 /* ChatClientTutorial-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ChatClientTutorial-Info.plist"; sourceTree = "<group>"; };
 		EDE4A5DD1135E42F005517C6 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		EDE4A5E81135E4A4005517C6 /* libecologylabXMLLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libecologylabXMLLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDE4A5E81135E4A4005517C6 /* libUntitled.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUntitled.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE4A6DC1135EF5E005517C6 /* ChatTranslations.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ChatTranslations.xml; sourceTree = "<group>"; };
 		EDE4A6DE1135F2DF005517C6 /* OkResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OkResponse.h; sourceTree = "<group>"; };
 		EDE4A6DF1135F2DF005517C6 /* OkResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OkResponse.m; sourceTree = "<group>"; };
@@ -488,7 +488,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDE4A5DE1135E42F005517C6 /* CFNetwork.framework in Frameworks */,
-				EDE4A6271135E67A005517C6 /* libecologylabXMLLib.a in Frameworks */,
+				EDE4A6271135E67A005517C6 /* libUntitled.a in Frameworks */,
 				ED0AEDF5115DEAD9004A03CC /* GameKit.framework in Frameworks */,
 				ED05B14911934A6A003EB3D2 /* libz.dylib in Frameworks */,
 			);
@@ -907,7 +907,7 @@
 			children = (
 				EDCAD2091135D8870076CCCC /* ecologylabXML.app */,
 				EDE4A5BD1135E182005517C6 /* ChatClientTutorial.app */,
-				EDE4A5E81135E4A4005517C6 /* libecologylabXMLLib.a */,
+				EDE4A5E81135E4A4005517C6 /* libUntitled.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1098,7 +1098,7 @@
 			);
 			name = ecologylabXMLLib;
 			productName = Untitled;
-			productReference = EDE4A5E81135E4A4005517C6 /* libecologylabXMLLib.a */;
+			productReference = EDE4A5E81135E4A4005517C6 /* libUntitled.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
