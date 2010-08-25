@@ -76,16 +76,16 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 304028734;
-			PBXWorkspaceStateSaveDate = 304028734;
+			PBXPerProjectTemplateStateSaveDate = 304450313;
+			PBXWorkspaceStateSaveDate = 304450313;
 		};
 		perUserProjectItems = {
+			F01F60131225847F00126A51 /* PBXTextBookmark */ = F01F60131225847F00126A51 /* PBXTextBookmark */;
+			F01F607812258BCE00126A51 /* PBXTextBookmark */ = F01F607812258BCE00126A51 /* PBXTextBookmark */;
 			F05E268C121F175200D52C3F /* PBXTextBookmark */ = F05E268C121F175200D52C3F /* PBXTextBookmark */;
-			F071EEB5121F1C4500887B4E /* PBXTextBookmark */ = F071EEB5121F1C4500887B4E /* PBXTextBookmark */;
 			F0D8219F121F18270008AD57 /* PBXTextBookmark */ = F0D8219F121F18270008AD57 /* PBXTextBookmark */;
 			F0D821A0121F18270008AD57 /* PBXTextBookmark */ = F0D821A0121F18270008AD57 /* PBXTextBookmark */;
 			F0D821A1121F18270008AD57 /* PBXTextBookmark */ = F0D821A1121F18270008AD57 /* PBXTextBookmark */;
-			F0D821A3121F18270008AD57 /* PBXTextBookmark */ = F0D821A3121F18270008AD57 /* PBXTextBookmark */;
 		};
 		sourceControlManager = F0DBA212121F0FAD009E45AA /* Source Control */;
 		userBuildSettings = {
@@ -93,7 +93,7 @@
 	};
 	EDCACF131135CF040076CCCC /* ElementState.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1991, 1326}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1991, 1313}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 2184}";
 		};
@@ -112,6 +112,26 @@
 	};
 	EDE4A5E71135E4A4005517C6 /* ecologylabXMLLib */ = {
 		activeExec = 0;
+	};
+	F01F60131225847F00126A51 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EDCACF131135CF040076CCCC /* ElementState.h */;
+		name = "ElementState.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2184;
+		vrLoc = 0;
+	};
+	F01F607812258BCE00126A51 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EDCACF131135CF040076CCCC /* ElementState.h */;
+		name = "ElementState.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2184;
+		vrLoc = 0;
 	};
 	F05E2655121F121400D52C3F /* BasicOp.h */ = {
 		uiCtxt = {
@@ -144,16 +164,6 @@
 		vrLen = 347;
 		vrLoc = 0;
 	};
-	F071EEB5121F1C4500887B4E /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EDCACF131135CF040076CCCC /* ElementState.h */;
-		name = "ElementState.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 2184;
-		vrLoc = 0;
-	};
 	F0D8219F121F18270008AD57 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = ED5D463411A5AD4300BE854C /* GameKitXMLServer.m */;
@@ -182,16 +192,6 @@
 		rLoc = 0;
 		rType = 0;
 		vrLen = 710;
-		vrLoc = 0;
-	};
-	F0D821A3121F18270008AD57 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EDCACF131135CF040076CCCC /* ElementState.h */;
-		name = "ElementState.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 2184;
 		vrLoc = 0;
 	};
 	F0DBA206121F0F85009E45AA /* ecologylabXML */ = {
