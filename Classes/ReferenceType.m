@@ -8,8 +8,14 @@
 
 #import "ReferenceType.h"
 #import "FieldDescriptor.h"
+#import "ReferenceIntegerType.h"
 
 @implementation ReferenceType
+
++ (void) initialize 
+{
+	[ReferenceIntegerType class];
+}
 
 
 #pragma mark ReferenceType - Default constructor cannot be called.

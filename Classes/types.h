@@ -20,3 +20,4 @@
 #import "IntType.h"
 #import "LongType.h"
 #import "ReferenceTypeType.h"
+#import "ReferenceIntegerType.h"

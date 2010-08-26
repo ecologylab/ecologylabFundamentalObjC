@@ -56,6 +56,8 @@
 		ED0AEDEE115DEA64004A03CC /* XMLClient.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0AEDE6115DEA64004A03CC /* XMLClient.m */; };
 		ED0AEDF2115DEAB4004A03CC /* ChatAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0AEDEF115DEAB4004A03CC /* ChatAppDelegate.m */; };
 		ED0AEDF5115DEAD9004A03CC /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED0AEDF4115DEAD9004A03CC /* GameKit.framework */; };
+		ED55B2AF1226E0100004B820 /* ReferenceIntegerType.m in Sources */ = {isa = PBXBuildFile; fileRef = ED55B2AE1226E0100004B820 /* ReferenceIntegerType.m */; };
+		ED55B30C1226ECEB0004B820 /* ReferenceIntegerType.m in Sources */ = {isa = PBXBuildFile; fileRef = ED55B2AE1226E0100004B820 /* ReferenceIntegerType.m */; };
 		ED5D463011A5ACE000BE854C /* IncomingMessageProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D462911A5ACE000BE854C /* IncomingMessageProcessor.m */; };
 		ED5D463111A5ACE000BE854C /* SessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D462B11A5ACE000BE854C /* SessionManager.m */; };
 		ED5D463211A5ACE000BE854C /* MessageComposer.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D462E11A5ACE000BE854C /* MessageComposer.m */; };
@@ -270,6 +272,8 @@
 		ED0AEDF0115DEAB4004A03CC /* ChatAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatAppDelegate.h; sourceTree = "<group>"; };
 		ED0AEDF1115DEAB4004A03CC /* ChatRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatRoomViewController.h; sourceTree = "<group>"; };
 		ED0AEDF4115DEAD9004A03CC /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		ED55B2AD1226E0100004B820 /* ReferenceIntegerType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReferenceIntegerType.h; sourceTree = "<group>"; };
+		ED55B2AE1226E0100004B820 /* ReferenceIntegerType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReferenceIntegerType.m; sourceTree = "<group>"; };
 		ED5D462811A5ACE000BE854C /* IncomingMessageProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncomingMessageProcessor.h; sourceTree = "<group>"; };
 		ED5D462911A5ACE000BE854C /* IncomingMessageProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncomingMessageProcessor.m; sourceTree = "<group>"; };
 		ED5D462A11A5ACE000BE854C /* SessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionManager.h; sourceTree = "<group>"; };
@@ -816,6 +820,8 @@
 				EDCACEF91135CF040076CCCC /* FieldType.m */,
 				EDCACEFA1135CF040076CCCC /* ReferenceTypeType.h */,
 				EDCACEFB1135CF040076CCCC /* ReferenceTypeType.m */,
+				ED55B2AD1226E0100004B820 /* ReferenceIntegerType.h */,
+				ED55B2AE1226E0100004B820 /* ReferenceIntegerType.m */,
 			);
 			name = Types;
 			sourceTree = "<group>";
@@ -1287,6 +1293,7 @@
 				ED5D464711A5ADAE00BE854C /* Ping.m in Sources */,
 				ED5D464811A5ADAE00BE854C /* Pong.m in Sources */,
 				EDBF6A9D11B836F600812C5C /* ChatUpdateImpl.m in Sources */,
+				ED55B2AF1226E0100004B820 /* ReferenceIntegerType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1297,6 +1304,7 @@
 				EDE4A5F31135E4E4005517C6 /* DisconnectRequest.m in Sources */,
 				EDF14F2D121F05E40086AF99 /* UserWithEmail.m in Sources */,
 				EDE4A6011135E4E4005517C6 /* HistoryEchoResponse.m in Sources */,
+				ED55B30C1226ECEB0004B820 /* ReferenceIntegerType.m in Sources */,
 				EDE4A5F41135E4E4005517C6 /* DoubleType.m in Sources */,
 				EDF14F2E121F05E40086AF99 /* GameKitXMLServer.m in Sources */,
 				EDF14F2F121F05E40086AF99 /* Login.m in Sources */,

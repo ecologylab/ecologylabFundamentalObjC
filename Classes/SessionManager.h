@@ -39,7 +39,7 @@ extern NSString * const SESSION_MANAGER;
 
 @property(retain, readonly) NSString* clientID;
 @property(retain, readwrite) Scope* sessionScope;
-@property(retain, readwrite) id<ServerDelegate> serverDelegate;
+@property(assign, readwrite) id<ServerDelegate> serverDelegate;
 @property(assign, readonly) BOOL disconnected;
 @property(copy, readonly) NSString* sessionToken;
 
