@@ -7,8 +7,9 @@
 //
 #import <Foundation/Foundation.h>
 #import "ElementState.h"
+#import "RequestMessage.h"
 
-@interface DisconnectRequest : ElementState
+@interface DisconnectRequest : RequestMessage
 {
  
 }

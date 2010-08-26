@@ -18,4 +18,5 @@
 #import "ParsedURLType.h"
 #import "BooleanType.h"
 #import "IntType.h"
+#import "LongType.h"
 #import "ReferenceTypeType.h"
