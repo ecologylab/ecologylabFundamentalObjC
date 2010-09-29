@@ -8,6 +8,20 @@
 		);
 		codeSenseManager = 55803C761252B5F2006894DC /* Code sense */;
 		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					300,
+					1054,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
+				);
+			};
 			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
 				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
@@ -35,7 +49,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					1116,
+					1126,
 					60,
 					20,
 					48,
@@ -52,10 +66,24 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 307412760;
-			PBXWorkspaceStateSaveDate = 307412760;
+			PBXPerProjectTemplateStateSaveDate = 307476650;
+			PBXWorkspaceStateSaveDate = 307476650;
 		};
 		perUserProjectItems = {
+			556549281253B40B0056B2CE /* PBXTextBookmark */ = 556549281253B40B0056B2CE /* PBXTextBookmark */;
+			5565493B1253B4C00056B2CE /* PBXTextBookmark */ = 5565493B1253B4C00056B2CE /* PBXTextBookmark */;
+			5565493C1253B4C00056B2CE /* PBXTextBookmark */ = 5565493C1253B4C00056B2CE /* PBXTextBookmark */;
+			5565493D1253B4C00056B2CE /* PBXTextBookmark */ = 5565493D1253B4C00056B2CE /* PBXTextBookmark */;
+			5565493E1253B4C00056B2CE /* PBXTextBookmark */ = 5565493E1253B4C00056B2CE /* PBXTextBookmark */;
+			5565493F1253B4C00056B2CE /* PBXTextBookmark */ = 5565493F1253B4C00056B2CE /* PBXTextBookmark */;
+			556549401253B4C00056B2CE /* PBXTextBookmark */ = 556549401253B4C00056B2CE /* PBXTextBookmark */;
+			556549431253B4C00056B2CE /* PBXTextBookmark */ = 556549431253B4C00056B2CE /* PBXTextBookmark */;
+			556549461253B4C00056B2CE /* PBXTextBookmark */ = 556549461253B4C00056B2CE /* PBXTextBookmark */;
+			556549471253B4C00056B2CE /* PBXTextBookmark */ = 556549471253B4C00056B2CE /* PBXTextBookmark */;
+			556549481253B4C00056B2CE /* PBXTextBookmark */ = 556549481253B4C00056B2CE /* PBXTextBookmark */;
+			556549491253B4C00056B2CE /* PBXTextBookmark */ = 556549491253B4C00056B2CE /* PBXTextBookmark */;
+			556549991253B89B0056B2CE /* PBXTextBookmark */ = 556549991253B89B0056B2CE /* PBXTextBookmark */;
+			556549A01253B8C20056B2CE /* PBXTextBookmark */ = 556549A01253B8C20056B2CE /* PBXTextBookmark */;
 			55803DCC1252B7ED006894DC /* PBXTextBookmark */ = 55803DCC1252B7ED006894DC /* PBXTextBookmark */;
 			55803DCD1252B7ED006894DC /* PBXTextBookmark */ = 55803DCD1252B7ED006894DC /* PBXTextBookmark */;
 			55803DCF1252B7ED006894DC /* PBXTextBookmark */ = 55803DCF1252B7ED006894DC /* PBXTextBookmark */;
@@ -83,19 +111,154 @@
 			55803DF21252BE47006894DC /* PBXTextBookmark */ = 55803DF21252BE47006894DC /* PBXTextBookmark */;
 			55803DF41252BE47006894DC /* PBXTextBookmark */ = 55803DF41252BE47006894DC /* PBXTextBookmark */;
 			55803DF51252BE47006894DC /* PBXTextBookmark */ = 55803DF51252BE47006894DC /* PBXTextBookmark */;
-			55803E071252BF0E006894DC /* PBXTextBookmark */ = 55803E071252BF0E006894DC /* PBXTextBookmark */;
 			55803E081252BF0E006894DC /* PBXTextBookmark */ = 55803E081252BF0E006894DC /* PBXTextBookmark */;
 			55803E091252BF0E006894DC /* PBXTextBookmark */ = 55803E091252BF0E006894DC /* PBXTextBookmark */;
 			55803E0A1252BF0E006894DC /* PBXTextBookmark */ = 55803E0A1252BF0E006894DC /* PBXTextBookmark */;
 			55803E0C1252BF0E006894DC /* PBXTextBookmark */ = 55803E0C1252BF0E006894DC /* PBXTextBookmark */;
-			55803E1A1252C07B006894DC /* PBXTextBookmark */ = 55803E1A1252C07B006894DC /* PBXTextBookmark */;
-			55803E1B1252C07B006894DC /* PBXTextBookmark */ = 55803E1B1252C07B006894DC /* PBXTextBookmark */;
-			55803E1C1252C07B006894DC /* PBXTextBookmark */ = 55803E1C1252C07B006894DC /* PBXTextBookmark */;
-			55803E1D1252C07B006894DC /* PBXTextBookmark */ = 55803E1D1252C07B006894DC /* PBXTextBookmark */;
 		};
 		sourceControlManager = 55803C751252B5F2006894DC /* Source Control */;
 		userBuildSettings = {
 		};
+	};
+	556549281253B40B0056B2CE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 55803CA41252B616006894DC /* HistoryEchoResponse.m */;
+		name = "HistoryEchoResponse.m: 34";
+		rLen = 82;
+		rLoc = 690;
+		rType = 0;
+		vrLen = 803;
+		vrLoc = 0;
+	};
+	5565493B1253B4C00056B2CE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 55803CE01252B616006894DC /* Connection.h */;
+		name = "Connection.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1060;
+		vrLoc = 0;
+	};
+	5565493C1253B4C00056B2CE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 55803CF01252B616006894DC /* ElementState.h */;
+		name = "ElementState.h: 11";
+		rLen = 0;
+		rLoc = 397;
+		rType = 0;
+		vrLen = 1388;
+		vrLoc = 0;
+	};
+	5565493D1253B4C00056B2CE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 55803CF11252B616006894DC /* ElementState.m */;
+		name = "ElementState.m: 19";
+		rLen = 0;
+		rLoc = 400;
+		rType = 0;
+		vrLen = 927;
+		vrLoc = 0;
+	};
+	5565493E1253B4C00056B2CE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 55803CBF1252B616006894DC /* XMLAuthDatagramClient.h */;
+		name = "XMLAuthDatagramClient.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1353;
+		vrLoc = 0;
+	};
+	5565493F1253B4C00056B2CE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 55803CD81252B616006894DC /* GameKitXMLClient.h */;
+		name = "GameKitXMLClient.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1054;
+		vrLoc = 0;
+	};
+	556549401253B4C00056B2CE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 55803CD91252B616006894DC /* GameKitXMLClient.m */;
+		name = "GameKitXMLClient.m: 254";
+		rLen = 36;
+		rLoc = 6406;
+		rType = 0;
+		vrLen = 809;
+		vrLoc = 5946;
+	};
+	556549431253B4C00056B2CE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 55803CE01252B616006894DC /* Connection.h */;
+		name = "Connection.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1060;
+		vrLoc = 0;
+	};
+	556549461253B4C00056B2CE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 55803CBF1252B616006894DC /* XMLAuthDatagramClient.h */;
+		name = "XMLAuthDatagramClient.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1353;
+		vrLoc = 0;
+	};
+	556549471253B4C00056B2CE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 55803CD81252B616006894DC /* GameKitXMLClient.h */;
+		name = "GameKitXMLClient.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1054;
+		vrLoc = 0;
+	};
+	556549481253B4C00056B2CE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 55803CD91252B616006894DC /* GameKitXMLClient.m */;
+		name = "GameKitXMLClient.m: 254";
+		rLen = 36;
+		rLoc = 6406;
+		rType = 0;
+		vrLen = 809;
+		vrLoc = 5946;
+	};
+	556549491253B4C00056B2CE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 55803CDA1252B616006894DC /* GameKitXMLServer.h */;
+		name = "GameKitXMLServer.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1240;
+		vrLoc = 0;
+	};
+	556549991253B89B0056B2CE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 55803CDA1252B616006894DC /* GameKitXMLServer.h */;
+		name = "GameKitXMLServer.h: 17";
+		rLen = 0;
+		rLoc = 369;
+		rType = 0;
+		vrLen = 1240;
+		vrLoc = 0;
+	};
+	556549A01253B8C20056B2CE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 55803CDA1252B616006894DC /* GameKitXMLServer.h */;
+		name = "GameKitXMLServer.h: 17";
+		rLen = 0;
+		rLoc = 369;
+		rType = 0;
+		vrLen = 1240;
+		vrLoc = 0;
 	};
 	55803C751252B5F2006894DC /* Source Control */ = {
 		isa = PBXSourceControlManager;
@@ -110,6 +273,12 @@
 		indexTemplatePath = "";
 	};
 	55803CA41252B616006894DC /* HistoryEchoResponse.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = HistoryEchoResponse.m;
+		path = /Users/nabeelshahzad/Documents/ttecWorkspace/iPhoneTTeCLoG/ecologylabFundamentalObjC/ecologylab/oodss/messages/HistoryEchoResponse.m;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1344, 720}}";
 			sepNavSelRange = "{690, 82}";
@@ -118,6 +287,12 @@
 		};
 	};
 	55803CB91252B616006894DC /* AuthClient.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = AuthClient.h;
+		path = /Users/nabeelshahzad/Documents/ttecWorkspace/iPhoneTTeCLoG/ecologylabFundamentalObjC/ecologylab/oodss/networking/authentication/AuthClient.h;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1334, 720}}";
 			sepNavSelRange = "{0, 0}";
@@ -125,6 +300,12 @@
 		};
 	};
 	55803CBA1252B616006894DC /* AuthClientDelegate.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = AuthClientDelegate.h;
+		path = /Users/nabeelshahzad/Documents/ttecWorkspace/iPhoneTTeCLoG/ecologylabFundamentalObjC/ecologylab/oodss/networking/authentication/AuthClientDelegate.h;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1208, 960}}";
 			sepNavSelRange = "{0, 0}";
@@ -132,6 +313,12 @@
 		};
 	};
 	55803CBB1252B616006894DC /* AuthClientRegistryObjects.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = AuthClientRegistryObjects.h;
+		path = /Users/nabeelshahzad/Documents/ttecWorkspace/iPhoneTTeCLoG/ecologylabFundamentalObjC/ecologylab/oodss/networking/authentication/AuthClientRegistryObjects.h;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1208, 960}}";
 			sepNavSelRange = "{0, 0}";
@@ -139,6 +326,12 @@
 		};
 	};
 	55803CBC1252B616006894DC /* AuthClientRegistryObjects.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = AuthClientRegistryObjects.m;
+		path = /Users/nabeelshahzad/Documents/ttecWorkspace/iPhoneTTeCLoG/ecologylabFundamentalObjC/ecologylab/oodss/networking/authentication/AuthClientRegistryObjects.m;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1208, 960}}";
 			sepNavSelRange = "{0, 0}";
@@ -146,6 +339,12 @@
 		};
 	};
 	55803CBD1252B616006894DC /* AuthMessages.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = AuthMessages.h;
+		path = /Users/nabeelshahzad/Documents/ttecWorkspace/iPhoneTTeCLoG/ecologylabFundamentalObjC/ecologylab/oodss/networking/authentication/AuthMessages.h;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1208, 960}}";
 			sepNavSelRange = "{0, 0}";
@@ -153,48 +352,116 @@
 		};
 	};
 	55803CBE1252B616006894DC /* AuthMessages.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = AuthMessages.m;
+		path = /Users/nabeelshahzad/Documents/ttecWorkspace/iPhoneTTeCLoG/ecologylabFundamentalObjC/ecologylab/oodss/networking/authentication/AuthMessages.m;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1334, 720}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 1072}";
 		};
 	};
+	55803CBF1252B616006894DC /* XMLAuthDatagramClient.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = XMLAuthDatagramClient.h;
+		path = /Users/nabeelshahzad/Documents/ttecWorkspace/iPhoneTTeCLoG/ecologylabFundamentalObjC/ecologylab/oodss/networking/authentication/XMLAuthDatagramClient.h;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1344, 799}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1353}";
+		};
+	};
 	55803CC01252B616006894DC /* XMLAuthDatagramClient.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = XMLAuthDatagramClient.m;
+		path = /Users/nabeelshahzad/Documents/ttecWorkspace/iPhoneTTeCLoG/ecologylabFundamentalObjC/ecologylab/oodss/networking/authentication/XMLAuthDatagramClient.m;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1334, 2006}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 1174}";
 		};
 	};
-	55803CD51252B616006894DC /* SessionManager.m */ = {
+	55803CD81252B616006894DC /* GameKitXMLClient.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = GameKitXMLClient.h;
+		path = /Users/nabeelshahzad/Documents/ttecWorkspace/iPhoneTTeCLoG/ecologylabFundamentalObjC/ecologylab/oodss/networking/gamekit/GameKitXMLClient.h;
+		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1895, 2856}}";
-			sepNavSelRange = "{1035, 55}";
-			sepNavVisRange = "{607, 865}";
+			sepNavIntBoundsRect = "{{0, 0}, {1344, 1598}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1054}";
 		};
 	};
 	55803CD91252B616006894DC /* GameKitXMLClient.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = GameKitXMLClient.m;
+		path = /Users/nabeelshahzad/Documents/ttecWorkspace/iPhoneTTeCLoG/ecologylabFundamentalObjC/ecologylab/oodss/networking/gamekit/GameKitXMLClient.m;
+		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1895, 5474}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1344, 5780}}";
 			sepNavSelRange = "{6406, 36}";
-			sepNavVisRange = "{6036, 638}";
+			sepNavVisRange = "{5946, 809}";
+		};
+	};
+	55803CDA1252B616006894DC /* GameKitXMLServer.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = GameKitXMLServer.h;
+		path = /Users/nabeelshahzad/Documents/ttecWorkspace/iPhoneTTeCLoG/ecologylabFundamentalObjC/ecologylab/oodss/networking/gamekit/GameKitXMLServer.h;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1344, 799}}";
+			sepNavSelRange = "{369, 0}";
+			sepNavVisRange = "{0, 1240}";
+		};
+	};
+	55803CE01252B616006894DC /* Connection.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = Connection.h;
+		path = /Users/nabeelshahzad/Documents/ttecWorkspace/iPhoneTTeCLoG/ecologylabFundamentalObjC/ecologylab/oodss/networking/tcp/Connection.h;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1344, 1003}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1060}";
 		};
 	};
 	55803CE61252B616006894DC /* AsyncUdpSocket.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = AsyncUdpSocket.h;
+		path = /Users/nabeelshahzad/Documents/ttecWorkspace/iPhoneTTeCLoG/ecologylabFundamentalObjC/ecologylab/oodss/networking/udp/AsyncUdpSocket.h;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1334, 6494}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 1433}";
 		};
 	};
-	55803CE91252B616006894DC /* XMLDatagramClient.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1895, 5389}}";
-			sepNavSelRange = "{5969, 34}";
-			sepNavVisRange = "{5396, 1057}";
-		};
-	};
 	55803CEB1252B616006894DC /* bsConstants.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = bsConstants.h;
+		path = /Users/nabeelshahzad/Documents/ttecWorkspace/iPhoneTTeCLoG/ecologylabFundamentalObjC/ecologylab/serialization/bsConstants.h;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1334, 720}}";
 			sepNavSelRange = "{206, 0}";
@@ -202,20 +469,38 @@
 		};
 	};
 	55803CF01252B616006894DC /* ElementState.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = ElementState.h;
+		path = /Users/nabeelshahzad/Documents/ttecWorkspace/iPhoneTTeCLoG/ecologylabFundamentalObjC/ecologylab/serialization/ElementState.h;
+		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1334, 1530}}";
-			sepNavSelRange = "{565, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1344, 1530}}";
+			sepNavSelRange = "{397, 0}";
 			sepNavVisRange = "{0, 1388}";
 		};
 	};
 	55803CF11252B616006894DC /* ElementState.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = ElementState.m;
+		path = /Users/nabeelshahzad/Documents/ttecWorkspace/iPhoneTTeCLoG/ecologylabFundamentalObjC/ecologylab/serialization/ElementState.m;
+		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1334, 3043}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1344, 3043}}";
 			sepNavSelRange = "{400, 0}";
 			sepNavVisRange = "{0, 927}";
 		};
 	};
 	55803CF21252B616006894DC /* ElementStateSAXHandler.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = ElementStateSAXHandler.h;
+		path = /Users/nabeelshahzad/Documents/ttecWorkspace/iPhoneTTeCLoG/ecologylabFundamentalObjC/ecologylab/serialization/ElementStateSAXHandler.h;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1334, 2754}}";
 			sepNavSelRange = "{0, 0}";
@@ -223,6 +508,12 @@
 		};
 	};
 	55803CFA1252B616006894DC /* TranslationScope.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = TranslationScope.h;
+		path = /Users/nabeelshahzad/Documents/ttecWorkspace/iPhoneTTeCLoG/ecologylabFundamentalObjC/ecologylab/serialization/TranslationScope.h;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1208, 1275}}";
 			sepNavSelRange = "{2240, 51}";
@@ -230,6 +521,12 @@
 		};
 	};
 	55803CFB1252B616006894DC /* TranslationScope.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = TranslationScope.m;
+		path = /Users/nabeelshahzad/Documents/ttecWorkspace/iPhoneTTeCLoG/ecologylabFundamentalObjC/ecologylab/serialization/TranslationScope.m;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1604, 3791}}";
 			sepNavSelRange = "{2196, 0}";
@@ -237,6 +534,12 @@
 		};
 	};
 	55803D1D1252B616006894DC /* XMLTools.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = XMLTools.h;
+		path = /Users/nabeelshahzad/Documents/ttecWorkspace/iPhoneTTeCLoG/ecologylabFundamentalObjC/ecologylab/serialization/XMLTools.h;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1208, 1394}}";
 			sepNavSelRange = "{0, 0}";
@@ -244,6 +547,12 @@
 		};
 	};
 	55803D1E1252B616006894DC /* XMLTools.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = XMLTools.m;
+		path = /Users/nabeelshahzad/Documents/ttecWorkspace/iPhoneTTeCLoG/ecologylabFundamentalObjC/ecologylab/serialization/XMLTools.m;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1284, 969}}";
 			sepNavSelRange = "{0, 0}";
@@ -520,16 +829,6 @@
 		vrLen = 1100;
 		vrLoc = 0;
 	};
-	55803E071252BF0E006894DC /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 55803CF11252B616006894DC /* ElementState.m */;
-		name = "ElementState.m: 19";
-		rLen = 0;
-		rLoc = 400;
-		rType = 0;
-		vrLen = 927;
-		vrLoc = 0;
-	};
 	55803E081252BF0E006894DC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 55803CB91252B616006894DC /* AuthClient.h */;
@@ -568,44 +867,6 @@
 		rLoc = 0;
 		rType = 0;
 		vrLen = 1072;
-		vrLoc = 0;
-	};
-	55803E1A1252C07B006894DC /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 55803CF01252B616006894DC /* ElementState.h */;
-		name = "ElementState.h: 20";
-		rLen = 0;
-		rLoc = 565;
-		rType = 0;
-		vrLen = 1388;
-		vrLoc = 0;
-	};
-	55803E1B1252C07B006894DC /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		comments = "warning: '-performSelector:withObject:afterDelay:' not found in protocol(s)";
-		fRef = 55803CA41252B616006894DC /* HistoryEchoResponse.m */;
-		rLen = 1;
-		rLoc = 33;
-		rType = 1;
-	};
-	55803E1C1252C07B006894DC /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 55803CF01252B616006894DC /* ElementState.h */;
-		name = "ElementState.h: 20";
-		rLen = 0;
-		rLoc = 565;
-		rType = 0;
-		vrLen = 1388;
-		vrLoc = 0;
-	};
-	55803E1D1252C07B006894DC /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 55803CA41252B616006894DC /* HistoryEchoResponse.m */;
-		name = "HistoryEchoResponse.m: 34";
-		rLen = 82;
-		rLoc = 690;
-		rType = 0;
-		vrLen = 803;
 		vrLoc = 0;
 	};
 	D2AAC07D0554694100DB518D /* ecologylabFundamentalObjC */ = {
