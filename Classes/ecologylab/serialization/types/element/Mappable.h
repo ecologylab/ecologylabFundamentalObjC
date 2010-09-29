@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 
-@interface Mappable : NSObject {
+@protocol Mappable 
 
-}
+(id) key; 
 
 @end

@@ -155,7 +155,6 @@
 		55654ADD1253B8DF0056B2CE /* XMLTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 55654A4A1253B8DE0056B2CE /* XMLTools.h */; };
 		55654ADE1253B8DF0056B2CE /* XMLTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 55654A4B1253B8DE0056B2CE /* XMLTools.m */; };
 		55CDE9351253F603002C2A2B /* Mappable.h in Headers */ = {isa = PBXBuildFile; fileRef = 55CDE9331253F603002C2A2B /* Mappable.h */; };
-		55CDE9361253F603002C2A2B /* Mappable.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CDE9341253F603002C2A2B /* Mappable.m */; };
 		AA747D9F0F9514B9006C5449 /* ecologylabFundamentalObjC_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ecologylabFundamentalObjC_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -310,7 +309,6 @@
 		55654A4A1253B8DE0056B2CE /* XMLTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLTools.h; sourceTree = "<group>"; };
 		55654A4B1253B8DE0056B2CE /* XMLTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLTools.m; sourceTree = "<group>"; };
 		55CDE9331253F603002C2A2B /* Mappable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mappable.h; path = element/Mappable.h; sourceTree = "<group>"; };
-		55CDE9341253F603002C2A2B /* Mappable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Mappable.m; path = element/Mappable.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* ecologylabFundamentalObjC_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ecologylabFundamentalObjC_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libecologylabFundamentalObjC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libecologylabFundamentalObjC.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -684,7 +682,6 @@
 			isa = PBXGroup;
 			children = (
 				55CDE9331253F603002C2A2B /* Mappable.h */,
-				55CDE9341253F603002C2A2B /* Mappable.m */,
 			);
 			name = element;
 			sourceTree = "<group>";
@@ -891,7 +888,6 @@
 				55654AD81253B8DF0056B2CE /* IntType.m in Sources */,
 				55654ADA1253B8DF0056B2CE /* LongType.m in Sources */,
 				55654ADE1253B8DF0056B2CE /* XMLTools.m in Sources */,
-				55CDE9361253F603002C2A2B /* Mappable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
