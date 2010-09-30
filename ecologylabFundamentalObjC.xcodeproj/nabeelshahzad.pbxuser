@@ -2,7 +2,7 @@
 {
 	0867D690FE84028FC02AAC07 /* Project object */ = {
 		activeBuildConfigurationName = Debug;
-		activeSDKPreference = iphonesimulator3.2;
+		activeSDKPreference = iphonesimulator4.1;
 		activeTarget = D2AAC07D0554694100DB518D /* ecologylabFundamentalObjC */;
 		addToTargets = (
 			D2AAC07D0554694100DB518D /* ecologylabFundamentalObjC */,

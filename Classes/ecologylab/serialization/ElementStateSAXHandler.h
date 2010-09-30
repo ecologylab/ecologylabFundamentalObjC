@@ -24,7 +24,7 @@
  @discussion -
 */
 
-@interface ElementStateSAXHandler : NSObject 
+@interface ElementStateSAXHandler : NSObject<NSXMLParserDelegate> 
 {
 	TranslationScope	*translationScope;
 	ElementState		*root;

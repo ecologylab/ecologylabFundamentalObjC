@@ -17,7 +17,7 @@
 #import "Client.h"
 #import "ServerPicker.h"
 #import "ServerPickerDelegate.h"
-
+#import "TranslationScope.h"
 #import "UpdateMessage.h"
 #import "ResponseMessage.h"
 #import "DisconnectRequest.h"
