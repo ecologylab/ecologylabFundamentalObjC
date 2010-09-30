@@ -39,7 +39,7 @@ static NSMutableDictionary *globalClassDescriptorsMap;
 
 + (id) classDescriptor: (Class) cls 
 {
-	return [globalClassDescriptorsMap valueForKey:[NSString stringWithCString: class_getName(cls)]];
+	return [globalClassDescriptorsMap valueForKey:[NSString stringWithUTF8String: class_getName(cls)]];
 }
 
 + (id) classDescriptorWithField: (Ivar) field
@@ -113,7 +113,7 @@ static NSMutableDictionary *globalClassDescriptorsMap;
 
 - (NSString *) describedClassName 
 {
-	return [NSString stringWithCString: class_getName(*describedClass)];
+	return [NSString stringWithUTF8String: class_getName(*describedClass)];
 }
 
 - (id) getInstance 

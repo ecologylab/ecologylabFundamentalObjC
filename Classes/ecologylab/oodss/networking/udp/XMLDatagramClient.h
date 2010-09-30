@@ -14,6 +14,7 @@
 #import "XMLClientDelegate.h"
 #import "Client.h"
 
+
 @interface MessageWithMetadata : NSObject {
 	RequestMessage* message;
 	long uid;

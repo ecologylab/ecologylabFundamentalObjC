@@ -7,8 +7,8 @@
 //
 
 #import "XMLDatagramClient.h"
-#import "NSDataAdditions.h"
 #import "NetworkConstants.h"
+#import "NSDataAdditions.h"
 
 @implementation MessageWithMetadata
 
@@ -19,6 +19,7 @@
 	message = [req retain];
 	uid = u;
 	transmissionCount = -1;
+	return self;
 }
 
 -(void) resetDate
@@ -318,6 +319,8 @@
 			
 		}
 	}
+	
+	return NO;
 }
 
 -(void) dealloc

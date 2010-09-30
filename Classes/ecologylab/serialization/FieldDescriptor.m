@@ -272,7 +272,7 @@ static NSDictionary *hints;
 	if (field == nil) 
 		return nil;
 	else
-		return [NSString stringWithCString: ivar_getName(*field)];
+		return [NSString stringWithUTF8String: ivar_getName(*field)];
 }
 
 - (ElementState *) constructChildElementState: (ElementState *) elementState tagName: (NSString *) elementName 

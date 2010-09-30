@@ -523,10 +523,10 @@
 				556549F91253B8DE0056B2CE /* IncomingMessageProcessor.m */,
 				556549FA1253B8DE0056B2CE /* MessageComposer.h */,
 				556549FB1253B8DE0056B2CE /* MessageComposer.m */,
-				556549FC1253B8DE0056B2CE /* NetworkConstants.h */,
-				556549FD1253B8DE0056B2CE /* NetworkConstants.m */,
 				556549FE1253B8DE0056B2CE /* NSDataAdditions.h */,
 				556549FF1253B8DE0056B2CE /* NSDataAdditions.m */,
+				556549FC1253B8DE0056B2CE /* NetworkConstants.h */,
+				556549FD1253B8DE0056B2CE /* NetworkConstants.m */,
 				55654A001253B8DE0056B2CE /* ServerDelegate.h */,
 				55654A011253B8DE0056B2CE /* SessionManager.h */,
 				55654A021253B8DE0056B2CE /* SessionManager.m */,
@@ -914,8 +914,10 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ecologylabFundamentalObjC_Prefix.pch;
+				HEADER_SEARCH_PATHS = "";
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = ecologylabFundamentalObjC;
+				USER_HEADER_SEARCH_PATHS = "./Classes/**";
 			};
 			name = Debug;
 		};
@@ -944,6 +946,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
 				SDKROOT = iphonesimulator4.1;
+				USER_HEADER_SEARCH_PATHS = "./Classes/**";
 			};
 			name = Debug;
 		};
