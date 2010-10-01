@@ -109,6 +109,54 @@
 }
 
 - (id)initWithHostAddress:(NSString*)host andPort:(UInt16) port 
+	  andTranslationScope:(TranslationScope*) transScope 
+				andScope :(Scope *) pScope
+			doCompression:(BOOL) compress
+{
+	if((self = [super init]))
+	{
+		self.translationScope = transScope;
+		scope = pScope;
+		self.doCompress = compress;
+		
+		NSValue* selfPointerWrapper = [NSValue valueWithPointer: self];
+		[scope setObject:selfPointerWrapper forKey:OODSS_CLIENT];
+		
+		currentUIDIndex = 0;
+		uidToMessage = [[NSMutableDictionary alloc] initWithCapacity:10];
+		recieveQueue = [[NSMutableArray alloc] initWithCapacity:10];
+		receivePending = NO;
+		timeout = 5.0;
+		
+		messageConstructionString = [[NSMutableString alloc] initWithCapacity:(1024*4)];
+		
+		NSError* err;
+		socket = [[AsyncUdpSocket alloc] initWithDelegate:self];
+		if(!(socket))
+		{
+			NSLog(@"Failed to connect to %@ on port: %d", host, port);
+			[self autorelease];
+			return nil;
+		}
+		
+		if(![socket connectToHost:host onPort:port error:&err])
+		{
+			NSLog(@"Failed to connect to %@ on port: %d because: %@", host, port, [err localizedDescription]);
+			[self autorelease];
+			return nil;
+		}
+		
+		InitConnectionRequest* req = [[InitConnectionRequest alloc] init];
+		
+		[self sendMessage:req];
+		
+		[req release];
+		
+	}
+	return self;	
+}
+
+- (id)initWithHostAddress:(NSString*)host andPort:(UInt16) port 
 	  andTranslationScope:(TranslationScope*) transScope
 {
 	return [self initWithHostAddress:host andPort:port andTranslationScope:transScope doCompression:YES];

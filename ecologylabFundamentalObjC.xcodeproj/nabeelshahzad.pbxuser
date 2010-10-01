@@ -54,7 +54,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					980,
+					888,
 					20,
 					48,
 					43,
@@ -221,6 +221,12 @@
 			55FA6DC1125510C2007F8BAF /* PBXTextBookmark */ = 55FA6DC1125510C2007F8BAF /* PBXTextBookmark */;
 			55FA6DC2125510C2007F8BAF /* PBXTextBookmark */ = 55FA6DC2125510C2007F8BAF /* PBXTextBookmark */;
 			55FA6DC3125510C2007F8BAF /* PBXTextBookmark */ = 55FA6DC3125510C2007F8BAF /* PBXTextBookmark */;
+			55FA6DF012554E0C007F8BAF /* PBXTextBookmark */ = 55FA6DF012554E0C007F8BAF /* PBXTextBookmark */;
+			55FA6DF112554E0C007F8BAF /* PBXTextBookmark */ = 55FA6DF112554E0C007F8BAF /* PBXTextBookmark */;
+			55FA6DF212554E0C007F8BAF /* PBXTextBookmark */ = 55FA6DF212554E0C007F8BAF /* PBXTextBookmark */;
+			55FA6DF312554E0C007F8BAF /* PBXTextBookmark */ = 55FA6DF312554E0C007F8BAF /* PBXTextBookmark */;
+			55FA6DF412554E0C007F8BAF /* PBXTextBookmark */ = 55FA6DF412554E0C007F8BAF /* PBXTextBookmark */;
+			55FA6DF512554E0C007F8BAF /* PBXTextBookmark */ = 55FA6DF512554E0C007F8BAF /* PBXTextBookmark */;
 		};
 		sourceControlManager = 55803C751252B5F2006894DC /* Source Control */;
 		userBuildSettings = {
@@ -368,8 +374,8 @@
 	};
 	556549E61253B8DE0056B2CE /* AuthClient.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1344, 720}}";
-			sepNavSelRange = "{0, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1271, 960}}";
+			sepNavSelRange = "{393, 15}";
 			sepNavVisRange = "{0, 495}";
 		};
 	};
@@ -389,16 +395,16 @@
 	};
 	556549EC1253B8DE0056B2CE /* XMLAuthDatagramClient.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1158, 816}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1368}";
+			sepNavIntBoundsRect = "{{0, 0}, {1271, 960}}";
+			sepNavSelRange = "{1361, 5}";
+			sepNavVisRange = "{0, 1390}";
 		};
 	};
 	556549ED1253B8DE0056B2CE /* XMLAuthDatagramClient.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1158, 2176}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1175}";
+			sepNavIntBoundsRect = "{{0, 0}, {1066, 2006}}";
+			sepNavSelRange = "{530, 0}";
+			sepNavVisRange = "{217, 1720}";
 		};
 	};
 	556549F41253B8DE0056B2CE /* Client.h */ = {
@@ -503,16 +509,16 @@
 	};
 	55654A151253B8DE0056B2CE /* XMLDatagramClient.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1158, 2159}}";
-			sepNavSelRange = "{839, 0}";
-			sepNavVisRange = "{170, 1045}";
+			sepNavIntBoundsRect = "{{0, 0}, {1066, 2244}}";
+			sepNavSelRange = "{2267, 0}";
+			sepNavVisRange = "{1061, 2057}";
 		};
 	};
 	55654A161253B8DE0056B2CE /* XMLDatagramClient.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1158, 5542}}";
-			sepNavSelRange = "{4953, 0}";
-			sepNavVisRange = "{3754, 1793}";
+			sepNavIntBoundsRect = "{{0, 0}, {1895, 5491}}";
+			sepNavSelRange = "{4594, 0}";
+			sepNavVisRange = "{3950, 1276}";
 		};
 	};
 	55654A1B1253B8DE0056B2CE /* ecologylabxml.h */ = {
@@ -1009,7 +1015,7 @@
 		fRef = 55654A151253B8DE0056B2CE /* XMLDatagramClient.h */;
 		name = "XMLDatagramClient.h: 73";
 		rLen = 13;
-		rLoc = 2207;
+		rLoc = 2734;
 		rType = 0;
 		vrLen = 1797;
 		vrLoc = 1418;
@@ -1306,7 +1312,7 @@
 		isa = PBXTextBookmark;
 		fRef = 55FA6C2E12550152007F8BAF /* XMLDatagramClient.m */;
 		rLen = 1;
-		rLoc = 169;
+		rLoc = 217;
 		rType = 1;
 	};
 	55FA6C6E1255048D007F8BAF /* PBXTextBookmark */ = {
@@ -1334,7 +1340,7 @@
 		fRef = 55654A151253B8DE0056B2CE /* XMLDatagramClient.h */;
 		name = "XMLDatagramClient.h: 73";
 		rLen = 13;
-		rLoc = 2207;
+		rLoc = 2734;
 		rType = 0;
 		vrLen = 1796;
 		vrLoc = 1418;
@@ -1344,7 +1350,7 @@
 		fRef = 55654A161253B8DE0056B2CE /* XMLDatagramClient.m */;
 		name = "XMLDatagramClient.m: 142";
 		rLen = 50;
-		rLoc = 3377;
+		rLoc = 4647;
 		rType = 0;
 		vrLen = 1756;
 		vrLoc = 3371;
@@ -1465,7 +1471,7 @@
 		fRef = 55654A161253B8DE0056B2CE /* XMLDatagramClient.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 169;
+		rLoc = 217;
 		rType = 1;
 	};
 	55FA6CB8125509D2007F8BAF /* PBXTextBookmark */ = {
@@ -1473,7 +1479,7 @@
 		fRef = 55654A161253B8DE0056B2CE /* XMLDatagramClient.m */;
 		name = "XMLDatagramClient.m: 172";
 		rLen = 0;
-		rLoc = 4594;
+		rLoc = 5864;
 		rType = 0;
 		vrLen = 1644;
 		vrLoc = 3371;
@@ -1483,7 +1489,7 @@
 		fRef = 55654A161253B8DE0056B2CE /* XMLDatagramClient.m */;
 		name = "XMLDatagramClient.m: 172";
 		rLen = 0;
-		rLoc = 4594;
+		rLoc = 5864;
 		rType = 0;
 		vrLen = 1644;
 		vrLoc = 3371;
@@ -1559,7 +1565,7 @@
 		fRef = 55654A151253B8DE0056B2CE /* XMLDatagramClient.h */;
 		name = "XMLDatagramClient.h: 73";
 		rLen = 13;
-		rLoc = 2207;
+		rLoc = 2734;
 		rType = 0;
 		vrLen = 1160;
 		vrLoc = 0;
@@ -1580,7 +1586,7 @@
 		fRef = 55654A161253B8DE0056B2CE /* XMLDatagramClient.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 169;
+		rLoc = 217;
 		rType = 1;
 	};
 	55FA6D5512550DDB007F8BAF /* PBXTextBookmark */ = {
@@ -1588,7 +1594,7 @@
 		fRef = 55654A161253B8DE0056B2CE /* XMLDatagramClient.m */;
 		name = "XMLDatagramClient.m: 170";
 		rLen = 0;
-		rLoc = 4594;
+		rLoc = 5864;
 		rType = 0;
 		vrLen = 1153;
 		vrLoc = 3950;
@@ -1674,7 +1680,7 @@
 		fRef = 55654A161253B8DE0056B2CE /* XMLDatagramClient.m */;
 		name = "XMLDatagramClient.m: 176";
 		rLen = 76;
-		rLoc = 4594;
+		rLoc = 5864;
 		rType = 0;
 		vrLen = 1537;
 		vrLoc = 4164;
@@ -1684,7 +1690,7 @@
 		fRef = 55FA6C2E12550152007F8BAF /* XMLDatagramClient.m */;
 		name = "XMLDatagramClient.m: 176";
 		rLen = 76;
-		rLoc = 4594;
+		rLoc = 5864;
 		rType = 0;
 		vrLen = 1537;
 		vrLoc = 4164;
@@ -1694,7 +1700,7 @@
 		fRef = 55FA6C2E12550152007F8BAF /* XMLDatagramClient.m */;
 		name = "XMLDatagramClient.m: 176";
 		rLen = 76;
-		rLoc = 4594;
+		rLoc = 5864;
 		rType = 0;
 		vrLen = 1537;
 		vrLoc = 4164;
@@ -1704,7 +1710,7 @@
 		fRef = 55654A161253B8DE0056B2CE /* XMLDatagramClient.m */;
 		name = "XMLDatagramClient.m: 176";
 		rLen = 76;
-		rLoc = 4594;
+		rLoc = 5864;
 		rType = 0;
 		vrLen = 1537;
 		vrLoc = 4164;
@@ -1804,7 +1810,7 @@
 		fRef = 55654A161253B8DE0056B2CE /* XMLDatagramClient.m */;
 		name = "XMLDatagramClient.m: 169";
 		rLen = 0;
-		rLoc = 4592;
+		rLoc = 5862;
 		rType = 0;
 		vrLen = 1785;
 		vrLoc = 3457;
@@ -1824,7 +1830,7 @@
 		fRef = 55654A161253B8DE0056B2CE /* XMLDatagramClient.m */;
 		name = "XMLDatagramClient.m: 169";
 		rLen = 0;
-		rLoc = 4592;
+		rLoc = 5862;
 		rType = 0;
 		vrLen = 836;
 		vrLoc = 60;
@@ -1834,10 +1840,70 @@
 		fRef = 55654A161253B8DE0056B2CE /* XMLDatagramClient.m */;
 		name = "XMLDatagramClient.m: 180";
 		rLen = 0;
-		rLoc = 4953;
+		rLoc = 6223;
 		rType = 0;
 		vrLen = 1793;
 		vrLoc = 3754;
+	};
+	55FA6DF012554E0C007F8BAF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 55654A161253B8DE0056B2CE /* XMLDatagramClient.m */;
+		name = "XMLDatagramClient.m: 180";
+		rLen = 0;
+		rLoc = 6223;
+		rType = 0;
+		vrLen = 1679;
+		vrLoc = 3868;
+	};
+	55FA6DF112554E0C007F8BAF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 55654A151253B8DE0056B2CE /* XMLDatagramClient.h */;
+		name = "XMLDatagramClient.h: 32";
+		rLen = 0;
+		rLoc = 839;
+		rType = 0;
+		vrLen = 1045;
+		vrLoc = 170;
+	};
+	55FA6DF212554E0C007F8BAF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 556549E61253B8DE0056B2CE /* AuthClient.h */;
+		name = "AuthClient.h: 17";
+		rLen = 15;
+		rLoc = 393;
+		rType = 0;
+		vrLen = 495;
+		vrLoc = 0;
+	};
+	55FA6DF312554E0C007F8BAF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 556549EC1253B8DE0056B2CE /* XMLAuthDatagramClient.h */;
+		name = "XMLAuthDatagramClient.h: 44";
+		rLen = 5;
+		rLoc = 1361;
+		rType = 0;
+		vrLen = 1390;
+		vrLoc = 0;
+	};
+	55FA6DF412554E0C007F8BAF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 556549ED1253B8DE0056B2CE /* XMLAuthDatagramClient.m */;
+		name = "XMLAuthDatagramClient.m: 19";
+		rLen = 26;
+		rLoc = 471;
+		rType = 0;
+		vrLen = 1702;
+		vrLoc = 0;
+	};
+	55FA6DF512554E0C007F8BAF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 556549ED1253B8DE0056B2CE /* XMLAuthDatagramClient.m */;
+		name = "XMLAuthDatagramClient.m: 23";
+		rLen = 0;
+		rLoc = 530;
+		rType = 0;
+		vrLen = 1702;
+		vrLoc = 0;
 	};
 	D2AAC07D0554694100DB518D /* ecologylabFundamentalObjC */ = {
 		activeExec = 0;

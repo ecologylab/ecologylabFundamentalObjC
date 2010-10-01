@@ -43,5 +43,6 @@
 -(NSString*) getExplanation;
 -(void) login;
 -(void) logout;
+-(void) setEntry : (User *) entry;
 
 @end

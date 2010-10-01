@@ -26,6 +26,11 @@
 	return [[[User alloc] initWithUserData:p_userKey withPassword:p_password withLevel:p_level withUID:p_uid] autorelease];	
 }
 
++ (id) userWithUserName : (NSString *) p_userName withPassword : (NSString *) p_password;
+{
+	return [[[User alloc] initWithUserName:p_userName withPassword:p_password] autorelease];	
+}
+
 - (id) initWithUserData : (NSString *) p_userKey withPassword : (NSString *) p_password withLevel : (int) p_level withUID : (long) p_uid
 {
 	if(( self = [super init] ))
@@ -36,6 +41,17 @@
 		self.uid = p_uid;
 	}
 	return self;
+}
+
+- (id) initWithUserName:p_userName withPassword:p_password
+{
+	if(( self = [super init] ))
+	{
+		self.userKey = p_userName;
+		self.password = p_password;
+	}
+	return self;
+	
 }
 
 - (void) dealloc {

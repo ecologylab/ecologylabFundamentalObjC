@@ -53,7 +53,10 @@
 - (void) setLevelWithReference: (int *) p_level;
 - (void) setUidWithReference: (long *) p_uid;
 
++ (id) userWithUserName : (NSString *) p_userName withPassword : (NSString *) p_password;
 + (id) userWithUserData : (NSString *) p_userKey withPassword : (NSString *) p_password withLevel : (int) p_level withUID : (long) p_uid;
+
++ (id) initWithUserName : (NSString *) p_userName withPassword : (NSString *) p_password;
 - (id) initWithUserData : (NSString *) p_userKey withPassword : (NSString *) p_password withLevel : (int) p_level withUID : (long) p_uid;
 
 @end

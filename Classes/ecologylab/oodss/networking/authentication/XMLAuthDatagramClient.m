@@ -133,6 +133,11 @@
 	return tmp;
 }
 
+-(void) setEntry : (User *) entry
+{
+	self.user = entry;
+}
+
 -(void) dealloc
 {
 	self.user = nil;

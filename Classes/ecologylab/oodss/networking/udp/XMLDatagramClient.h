@@ -60,6 +60,19 @@
 @property(nonatomic, readonly, retain) TranslationScope* translationScope;
 @property(nonatomic, readwrite, assign) NSTimeInterval timeout;
 
+/*!
+ @abstract Initializes the client. Starts the connection process.
+ @discussion This method intitializes the client and uses compression if specified.
+ @param host The server's address
+ @param port The server's port
+ @param transScope The translation scope to be used by the client
+ @param compress Whether or not to use compression.
+ */
+- (id)initWithHostAddress:(NSString*)host andPort:(UInt16) port 
+	  andTranslationScope:(TranslationScope*) transScope 
+				andScope :(Scope *) pScope
+			doCompression:(BOOL) compress;
+
 
 /*!
  @abstract Initializes the client. Starts the connection process.
