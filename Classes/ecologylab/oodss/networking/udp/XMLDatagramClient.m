@@ -116,7 +116,7 @@
 	if((self = [super init]))
 	{
 		self.translationScope = transScope;
-		scope = pScope;
+		self.scope = pScope;
 		self.doCompress = compress;
 		
 		NSValue* selfPointerWrapper = [NSValue valueWithPointer: self];
