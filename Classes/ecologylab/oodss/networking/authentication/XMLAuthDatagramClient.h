@@ -22,9 +22,9 @@
 }
 
 @property(nonatomic, readwrite, retain) id<AuthClientDelegate> authDelegate;
-@property(nonatomic, readonly, assign) BOOL isLoggingIn;
-@property(nonatomic, readonly, assign) BOOL isLoggingOut;
-@property(nonatomic, retain, readwrite) User* user;
+@property(nonatomic, readwrite, assign) BOOL isLoggingIn;
+@property(nonatomic, readwrite, assign) BOOL isLoggingOut;
+@property(nonatomic, readwrite, retain) User* user;
 
 - (id)initWithHostAddress:(NSString*)host andPort:(UInt16) port 
 	  andTranslationScope:(TranslationScope*) transScope
@@ -44,5 +44,9 @@
 -(void) login;
 -(void) logout;
 -(void) setEntry : (User *) entry;
+
+
+-(void) sendLoginMessage;
+-(void) sendLogoutMessage;
 
 @end

@@ -11,15 +11,6 @@
 #import "Login.h"
 #import "Logout.h"
 
-@interface XMLAuthDatagramClient (Private)
-
-@property(readwrite, assign) BOOL isLoggingIn;
-@property(readwrite, assign) BOOL isLoggingOut;
-
--(void) sendLoginMessage;
--(void) sendLogoutMessage;
-
-@end
 
 @implementation XMLAuthDatagramClient
 
