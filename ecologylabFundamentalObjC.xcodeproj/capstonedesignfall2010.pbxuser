@@ -53,8 +53,8 @@
 			PBXWorkspaceStateSaveDate = 308789735;
 		};
 		perUserProjectItems = {
-			1F4FD9DD1267C00300869DB5 = 1F4FD9DD1267C00300869DB5 /* PBXTextBookmark */;
-			1F6080CB1267BE0800A424A3 = 1F6080CB1267BE0800A424A3 /* PBXTextBookmark */;
+			1F4FD9DD1267C00300869DB5 /* PBXTextBookmark */ = 1F4FD9DD1267C00300869DB5 /* PBXTextBookmark */;
+			1F4FDA141267C26C00869DB5 /* PBXTextBookmark */ = 1F4FDA141267C26C00869DB5 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 1F60803A1267B39800A424A3 /* Source Control */;
 		userBuildSettings = {
@@ -68,6 +68,16 @@
 		rLoc = 0;
 		rType = 0;
 		vrLen = 547;
+		vrLoc = 0;
+	};
+	1F4FDA141267C26C00869DB5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 55654A091253B8DE0056B2CE /* ServerPicker.h */;
+		name = "ServerPicker.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 526;
 		vrLoc = 0;
 	};
 	1F60803A1267B39800A424A3 /* Source Control */ = {
@@ -84,21 +94,11 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
-	1F6080CB1267BE0800A424A3 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 55654A091253B8DE0056B2CE /* ServerPicker.h */;
-		name = "ServerPicker.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 581;
-		vrLoc = 0;
-	};
 	55654A091253B8DE0056B2CE /* ServerPicker.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {768, 364}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 547}";
+			sepNavVisRange = "{0, 526}";
 		};
 	};
 	D2AAC07D0554694100DB518D /* ecologylabFundamentalObjC */ = {
