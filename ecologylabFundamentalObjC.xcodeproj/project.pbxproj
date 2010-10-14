@@ -945,7 +945,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				SDKROOT = iphonesimulator4.1;
+				SDKROOT = iphonesimulator4.0;
 				USER_HEADER_SEARCH_PATHS = "./Classes/**";
 			};
 			name = Debug;
@@ -959,7 +959,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				SDKROOT = iphoneos3.1.3;
+				SDKROOT = iphoneos4.1;
 			};
 			name = Release;
 		};
