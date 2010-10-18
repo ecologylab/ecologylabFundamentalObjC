@@ -3,7 +3,8 @@
 @implementation UpdateMessage
 
 
-+ (void) initialize {
++ (void) initialize 
+{
 	[UpdateMessage class];
 }
 

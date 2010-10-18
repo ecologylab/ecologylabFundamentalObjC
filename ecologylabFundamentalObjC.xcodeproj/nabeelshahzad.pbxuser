@@ -93,11 +93,10 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 308701659;
-			PBXWorkspaceStateSaveDate = 308701659;
+			PBXPerProjectTemplateStateSaveDate = 309059057;
+			PBXWorkspaceStateSaveDate = 309059057;
 		};
 		perUserProjectItems = {
-			55050F57126669B300876DF7 /* PBXTextBookmark */ = 55050F57126669B300876DF7 /* PBXTextBookmark */;
 			55050F67126669E900876DF7 /* PBXTextBookmark */ = 55050F67126669E900876DF7 /* PBXTextBookmark */;
 			55203B6F125A9A6F0059E66A /* PBXTextBookmark */ = 55203B6F125A9A6F0059E66A /* PBXTextBookmark */;
 			55203B70125A9A6F0059E66A /* PBXTextBookmark */ = 55203B70125A9A6F0059E66A /* PBXTextBookmark */;
@@ -128,6 +127,7 @@
 			55654C1C1253C0820056B2CE /* PBXTextBookmark */ = 55654C1C1253C0820056B2CE /* PBXTextBookmark */;
 			55654C231253C0820056B2CE /* PBXTextBookmark */ = 55654C231253C0820056B2CE /* PBXTextBookmark */;
 			55654C241253C0820056B2CE /* PBXTextBookmark */ = 55654C241253C0820056B2CE /* PBXTextBookmark */;
+			556BC9A2126BE795005B7ACA /* PBXTextBookmark */ = 556BC9A2126BE795005B7ACA /* PBXTextBookmark */;
 			559E4B10125D5527009DBF97 /* PBXTextBookmark */ = 559E4B10125D5527009DBF97 /* PBXTextBookmark */;
 			559E4B11125D5527009DBF97 /* PBXTextBookmark */ = 559E4B11125D5527009DBF97 /* PBXTextBookmark */;
 			559E4B12125D5527009DBF97 /* PBXTextBookmark */ = 559E4B12125D5527009DBF97 /* PBXTextBookmark */;
@@ -181,22 +181,12 @@
 		userBuildSettings = {
 		};
 	};
-	55050F57126669B300876DF7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 556549E31253B8DE0056B2CE /* UpdateMessage.m */;
-		name = "UpdateMessage.m: 14";
-		rLen = 0;
-		rLoc = 153;
-		rType = 0;
-		vrLen = 160;
-		vrLoc = 0;
-	};
 	55050F67126669E900876DF7 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 556549E31253B8DE0056B2CE /* UpdateMessage.m */;
 		name = "UpdateMessage.m: 14";
 		rLen = 0;
-		rLoc = 153;
+		rLoc = 154;
 		rType = 0;
 		vrLen = 160;
 		vrLoc = 0;
@@ -537,9 +527,9 @@
 	};
 	556549E31253B8DE0056B2CE /* UpdateMessage.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {910, 775}}";
+			sepNavIntBoundsRect = "{{0, 0}, {910, 769}}";
 			sepNavSelRange = "{153, 0}";
-			sepNavVisRange = "{0, 160}";
+			sepNavVisRange = "{0, 161}";
 		};
 	};
 	556549E61253B8DE0056B2CE /* AuthClient.h */ = {
@@ -1018,6 +1008,16 @@
 		rLoc = 0;
 		rType = 0;
 		vrLen = 443;
+		vrLoc = 0;
+	};
+	556BC9A2126BE795005B7ACA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 556549E31253B8DE0056B2CE /* UpdateMessage.m */;
+		name = "UpdateMessage.m: 14";
+		rLen = 0;
+		rLoc = 153;
+		rType = 0;
+		vrLen = 161;
 		vrLoc = 0;
 	};
 	55803C751252B5F2006894DC /* Source Control */ = {
