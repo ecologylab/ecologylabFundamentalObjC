@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55640997126E06730094A7A9 /* ByteType.h in Headers */ = {isa = PBXBuildFile; fileRef = 55640995126E06730094A7A9 /* ByteType.h */; };
+		55640998126E06730094A7A9 /* ByteType.m in Sources */ = {isa = PBXBuildFile; fileRef = 55640996126E06730094A7A9 /* ByteType.m */; };
 		55654A4C1253B8DF0056B2CE /* DictionaryList.h in Headers */ = {isa = PBXBuildFile; fileRef = 556549A61253B8DE0056B2CE /* DictionaryList.h */; };
 		55654A4D1253B8DF0056B2CE /* DictionaryList.m in Sources */ = {isa = PBXBuildFile; fileRef = 556549A71253B8DE0056B2CE /* DictionaryList.m */; };
 		55654A4E1253B8DF0056B2CE /* Scope.h in Headers */ = {isa = PBXBuildFile; fileRef = 556549A81253B8DE0056B2CE /* Scope.h */; };
@@ -160,6 +162,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55640995126E06730094A7A9 /* ByteType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ByteType.h; sourceTree = "<group>"; };
+		55640996126E06730094A7A9 /* ByteType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ByteType.m; sourceTree = "<group>"; };
 		556549A61253B8DE0056B2CE /* DictionaryList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionaryList.h; sourceTree = "<group>"; };
 		556549A71253B8DE0056B2CE /* DictionaryList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryList.m; sourceTree = "<group>"; };
 		556549A81253B8DE0056B2CE /* Scope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scope.h; sourceTree = "<group>"; };
@@ -674,6 +678,8 @@
 				55654A451253B8DE0056B2CE /* IntType.m */,
 				55654A461253B8DE0056B2CE /* LongType.h */,
 				55654A471253B8DE0056B2CE /* LongType.m */,
+				55640995126E06730094A7A9 /* ByteType.h */,
+				55640996126E06730094A7A9 /* ByteType.m */,
 			);
 			path = types;
 			sourceTree = "<group>";
@@ -775,6 +781,7 @@
 				55654ADC1253B8DF0056B2CE /* types.h in Headers */,
 				55654ADD1253B8DF0056B2CE /* XMLTools.h in Headers */,
 				55CDE9351253F603002C2A2B /* Mappable.h in Headers */,
+				55640997126E06730094A7A9 /* ByteType.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -894,6 +901,7 @@
 				55654AD81253B8DF0056B2CE /* IntType.m in Sources */,
 				55654ADA1253B8DF0056B2CE /* LongType.m in Sources */,
 				55654ADE1253B8DF0056B2CE /* XMLTools.m in Sources */,
+				55640998126E06730094A7A9 /* ByteType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
