@@ -11,6 +11,7 @@
 #import "DoubleType.h"
 #import "FloatType.h"
 #import "IntType.h"
+#import "ByteType.h"
 #import "LongType.h"
 #import "BooleanType.h"
 
@@ -23,6 +24,7 @@
 	[FloatType class];
 	[LongType class];
 	[IntType class];
+	[ByteType class];
 	[BooleanType class];
 }
 
