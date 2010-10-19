@@ -174,4 +174,9 @@
 	}
 }
 
+- (void) deserializationPostHook
+{
+	
+}
+
 @end

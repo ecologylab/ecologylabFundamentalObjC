@@ -97,5 +97,7 @@
  */
 - (void) translateAttributes: (TranslationScope *) translationScope withAttrib: (NSDictionary *) attributes context: (ElementState *) context;
 
+- (void) deserializationPostHook;
+
 
 @end

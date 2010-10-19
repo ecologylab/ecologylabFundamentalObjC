@@ -229,6 +229,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -278,11 +280,15 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
+									<integer>20</integer>
+									<integer>6</integer>
+									<integer>2</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {352, 1086}}</string>
+							<string>{{0, 0}, {352, 1173}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -294,7 +300,7 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {369, 1104}}</string>
+						<string>{{0, 0}, {369, 1191}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
 							<string>SCMStatusColumn</string>
@@ -303,7 +309,7 @@
 							<real>330</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>733 142 1345 1145 0 0 2560 1418 </string>
+						<string>733 55 1489 1232 0 0 2560 1418 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -314,14 +320,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>UpdateMessage.m</string>
+								<string>ElementStateSAXHandler.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -329,11 +333,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>UpdateMessage.m</string>
+										<string>ElementStateSAXHandler.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>556BC9A2126BE795005B7ACA</string>
+										<string>556BCB45126D1099005B7ACA</string>
 										<key>history</key>
 										<array>
 											<string>55654AF21253B9AB0056B2CE</string>
@@ -349,7 +353,6 @@
 											<string>55654B691253BCAA0056B2CE</string>
 											<string>55654B6A1253BCAA0056B2CE</string>
 											<string>55654B6B1253BCAA0056B2CE</string>
-											<string>55654B941253BD460056B2CE</string>
 											<string>55654B961253BD460056B2CE</string>
 											<string>55654C1C1253C0820056B2CE</string>
 											<string>55654C231253C0820056B2CE</string>
@@ -366,8 +369,6 @@
 											<string>55FA6DB31255102E007F8BAF</string>
 											<string>55FA6DB51255102E007F8BAF</string>
 											<string>55D6B9971259106600AAFDEC</string>
-											<string>55D6B9981259106600AAFDEC</string>
-											<string>55203B6F125A9A6F0059E66A</string>
 											<string>55203B70125A9A6F0059E66A</string>
 											<string>55203BF4125AA13E0059E66A</string>
 											<string>55203BF7125AA13E0059E66A</string>
@@ -376,8 +377,6 @@
 											<string>55203CD5125AB0220059E66A</string>
 											<string>55203CD6125AB0220059E66A</string>
 											<string>55203CD7125AB0220059E66A</string>
-											<string>55203CD9125AB0220059E66A</string>
-											<string>55203CDA125AB0220059E66A</string>
 											<string>559E4B10125D5527009DBF97</string>
 											<string>559E4B11125D5527009DBF97</string>
 											<string>559E4B12125D5527009DBF97</string>
@@ -413,7 +412,12 @@
 											<string>559E4C9C125D835F009DBF97</string>
 											<string>559E4C9D125D835F009DBF97</string>
 											<string>559E4C9E125D835F009DBF97</string>
-											<string>55050F67126669E900876DF7</string>
+											<string>556BCA73126CE78F005B7ACA</string>
+											<string>556BCA79126CE84E005B7ACA</string>
+											<string>556BCA7A126CE84E005B7ACA</string>
+											<string>556BCB43126D1099005B7ACA</string>
+											<string>556BCB44126D1099005B7ACA</string>
+											<string>556BCAC7126CEB15005B7ACA</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -425,14 +429,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {971, 801}}</string>
+								<string>{{0, 0}, {1115, 872}}</string>
 								<key>RubberWindowFrame</key>
-								<string>733 142 1345 1145 0 0 2560 1418 </string>
+								<string>733 55 1489 1232 0 0 2560 1418 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>801pt</string>
+							<string>872pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -445,18 +449,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 806}, {971, 298}}</string>
+								<string>{{0, 877}, {1115, 314}}</string>
 								<key>RubberWindowFrame</key>
-								<string>733 142 1345 1145 0 0 2560 1418 </string>
+								<string>733 55 1489 1232 0 0 2560 1418 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>298pt</string>
+							<string>314pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>971pt</string>
+					<string>1115pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -471,9 +475,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>556BC963126BDDFE005B7ACA</string>
+				<string>556BCB46126D1099005B7ACA</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>556BC964126BDDFE005B7ACA</string>
+				<string>556BCB47126D1099005B7ACA</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -613,7 +617,7 @@
 		<string>/Users/nabeelshahzad/Documents/ttecWorkspace/iPhoneTTeCLoG/ecologylabFundamentalObjC/ecologylabFundamentalObjC.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>733 142 1345 1145 0 0 2560 1418 </string>
+	<string>733 55 1489 1232 0 0 2560 1418 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -690,7 +694,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>55803DB71252B638006894DC</string>
-				<string>556BC965126BDDFE005B7ACA</string>
+				<string>556BCB48126D1099005B7ACA</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

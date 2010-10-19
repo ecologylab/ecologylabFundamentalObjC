@@ -55,6 +55,11 @@
 	return root;
 }
 
+- (void) parserDidEndDocument: (NSXMLParser *) parser
+{
+	[root deserializationPostHook];
+}
+
 - (void) parserDidStartDocument: (NSXMLParser *) parser
 {
 	
@@ -164,6 +169,7 @@
 		case MAP_ELEMENT:
 		case COMPOSITE_ELEMENT:
 		case COLLECTION_ELEMENT:
+			[currentElementState deserializationPostHook];
 			currentElementState     = parentElementState;
 			break;
 
