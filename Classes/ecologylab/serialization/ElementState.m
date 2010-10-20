@@ -105,6 +105,11 @@
 						[childFd writeWrap: output close: NO];
 					}
 
+					if([thatCollection isKindOfClass:[NSDictionary class]])
+					{
+						thatCollection = [((NSDictionary *)thatCollection) allValues];
+					}
+					
 					for (id next in thatCollection) 
 					{
 						if (isScalar) 
@@ -175,6 +180,11 @@
 }
 
 - (void) deserializationPostHook
+{
+	
+}
+
+- (void) createChildHook : (ElementState *) pChild
 {
 	
 }

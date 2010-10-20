@@ -312,7 +312,17 @@ static NSDictionary *hints;
 
 - (id) getMap: (ElementState *) elementState 
 {
-	return nil;
+	NSObject *collection = nil;
+	
+	collection = object_getIvar(elementState, *field);
+	
+	if (collection == nil)
+	{
+		collection = [[NSMutableDictionary dictionary] retain];
+		object_setIvar(elementState, *field, collection);
+	}
+	
+	return collection;
 }
 
 - (void) addLeafNodeToCollection: (ElementState *) elementState leafNodeValue: (NSString *) leafNodeValue

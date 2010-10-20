@@ -7,7 +7,7 @@
 //
 
 #import "ElementStateSAXHandler.h"
-
+#import "Mappable.h"
 
 @implementation ElementStateSAXHandler
 
@@ -167,6 +167,12 @@
 	switch (currentFdType)
 	{
 		case MAP_ELEMENT:
+			if([currentElementState conformsToProtocol : @protocol(Mappable)])
+			{
+				id key = [(id<Mappable>) currentElementState key];
+				NSMutableDictionary *dictionary = [currentFieldDescriptor getMap : parentElementState];
+				[dictionary setObject : currentElementState forKey : key];
+			}
 		case COMPOSITE_ELEMENT:
 		case COLLECTION_ELEMENT:
 			[currentElementState deserializationPostHook];

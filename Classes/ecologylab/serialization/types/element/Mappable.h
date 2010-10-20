@@ -11,6 +11,6 @@
 
 @protocol Mappable 
 
-(id) key; 
+- (id) key; 
 
 @end

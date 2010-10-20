@@ -13,14 +13,10 @@
 		<field_descriptor field="uid" tag_name="uid" type="1"
 			scalar_type="LongType"></field_descriptor>
 	</class_descriptor>
-	<class_descriptor described_class="class ecologylab.services.messages.OkResponse"
+	<class_descriptor described_class="ecologylab.oodss.messages.OkResponse"
 		tag_name="ok_response">
-		<field_descriptor
-			field="protected long ecologylab.services.messages.ServiceMessage.timeStamp"
-			tag_name="time_stamp" type="1" scalar_type="LongType"></field_descriptor>
-		<field_descriptor
-			field="protected long ecologylab.services.messages.ServiceMessage.uid"
-			tag_name="uid" type="1" scalar_type="LongType"></field_descriptor>
+		<field_descriptor field="timeStamp" tag_name="time_stamp"
+			type="18" scalar_type="LongType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
 	</class_descriptor>
 	<class_descriptor described_class="class ecologylab.services.messages.UpdateMessage"
 		tag_name="update_message">
