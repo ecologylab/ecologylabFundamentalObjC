@@ -175,6 +175,10 @@
 			}
 		case COMPOSITE_ELEMENT:
 		case COLLECTION_ELEMENT:
+			if (parentElementState != nil)
+			{
+				[parentElementState createChildHook:currentElementState];
+			}
 			[currentElementState deserializationPostHook];
 			currentElementState     = parentElementState;
 			break;
