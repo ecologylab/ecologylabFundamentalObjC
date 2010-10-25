@@ -25,7 +25,7 @@
      @discussion TranslationScopes are the abstraction which binds which classes are bound to which	
                  tags in the XML representation of runtime objects. 
 */
-@interface TranslationScope : NSObject<NSXMLParserDelegate>
+@interface TranslationScope : NSObject
 {
 	NSString			*name;
 	NSMutableDictionary *entriesByTag;
