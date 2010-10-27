@@ -7,7 +7,7 @@
 //
 
 #import "ParsedURLType.h"
-#import "FieldDescriptor.h"
+#import "ParsedURL.h"
 
 @implementation ParsedURLType
 
@@ -23,7 +23,7 @@
 
 - (void) setInstance: (NSString *) value 
 {
-	m_value = [NSURL URLWithString: value];
+	m_value = [ParsedURL parsedURLWithURL:[NSURL URLWithString: value]];
 }
 
 @end

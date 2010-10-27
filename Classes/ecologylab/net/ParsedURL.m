@@ -122,7 +122,7 @@
 
 - (NSURL *) url 
 {
-	return nil;
+	return url;
 }
 
 - (NSURL *) hashUrl 

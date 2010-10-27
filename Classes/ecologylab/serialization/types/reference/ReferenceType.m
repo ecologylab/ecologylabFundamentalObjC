@@ -45,7 +45,8 @@
 
 - (void) setField: (id) object fieldName: (NSString *) fn value: (id) value 
 {
-	m_value = value;
+	[self setInstance: value];
+  [m_value retain];
 	object_setInstanceVariable(object, [fn cStringUsingEncoding: NSASCIIStringEncoding], m_value);
 }
 
