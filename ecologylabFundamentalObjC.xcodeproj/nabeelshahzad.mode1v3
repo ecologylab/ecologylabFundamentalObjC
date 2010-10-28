@@ -230,6 +230,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -266,21 +268,12 @@
 						<dict>
 							<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 							<array>
-								<string>0867D691FE84028FC02AAC07</string>
-								<string>08FB77AEFE84172EC02AAC07</string>
-								<string>556549A41253B8DE0056B2CE</string>
-								<string>55654A171253B8DE0056B2CE</string>
-								<string>55654A291253B8DE0056B2CE</string>
-								<string>55CDE9381253F60F002C2A2B</string>
-								<string>55654A3A1253B8DE0056B2CE</string>
-								<string>55654A3D1253B8DE0056B2CE</string>
 								<string>1C37FBAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -306,7 +299,7 @@
 							<real>330</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>755 129 1489 1145 0 0 2560 1418 </string>
+						<string>469 237 1489 1145 0 0 2560 1418 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -317,14 +310,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Connection.h</string>
+								<string>LongType.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -332,11 +323,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Connection.h</string>
+										<string>LongType.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>5583D98E12722DFE00F3F58F</string>
+										<string>5583D9981272428600F3F58F</string>
 										<key>history</key>
 										<array>
 											<string>55654AF21253B9AB0056B2CE</string>
@@ -420,7 +411,8 @@
 											<string>559E4BE1126E87A80086DFD5</string>
 											<string>55C9514612710AFD006C81AF</string>
 											<string>55C9514712710AFD006C81AF</string>
-											<string>55C95207127143A8006C81AF</string>
+											<string>5583D9961272428600F3F58F</string>
+											<string>5583D9971272428600F3F58F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -434,7 +426,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1115, 774}}</string>
 								<key>RubberWindowFrame</key>
-								<string>755 129 1489 1145 0 0 2560 1418 </string>
+								<string>469 237 1489 1145 0 0 2560 1418 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -454,7 +446,7 @@
 								<key>Frame</key>
 								<string>{{0, 779}, {1115, 325}}</string>
 								<key>RubberWindowFrame</key>
-								<string>755 129 1489 1145 0 0 2560 1418 </string>
+								<string>469 237 1489 1145 0 0 2560 1418 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -620,7 +612,7 @@
 		<string>/Users/nabeelshahzad/Documents/ttecWorkspace/iPhoneTTeCLoG/ecologylabFundamentalObjC/ecologylabFundamentalObjC.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>755 129 1489 1145 0 0 2560 1418 </string>
+	<string>469 237 1489 1145 0 0 2560 1418 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
