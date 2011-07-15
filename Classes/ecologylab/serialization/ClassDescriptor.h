@@ -7,7 +7,7 @@
 				objects to their XML representation.
 	@updated    05/24/10
 	@created	01/05/10
-	@author		Nabeel Shahzad
+	@author		Nabeel Shahzad test
  	@copyright  Interface Ecology Lab
 */
 
