@@ -98,7 +98,19 @@
 		5538EEC0145A3221008173D8 /* XMLTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE6E145A3221008173D8 /* XMLTools.h */; };
 		5538EEC1145A3221008173D8 /* XMLTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE6F145A3221008173D8 /* XMLTools.m */; };
 		5538EEC2145A3221008173D8 /* XMLTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE6F145A3221008173D8 /* XMLTools.m */; };
+		5538EEC5145A3590008173D8 /* TranslationContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EEC3145A358F008173D8 /* TranslationContext.h */; };
+		5538EEC6145A3590008173D8 /* TranslationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EEC4145A358F008173D8 /* TranslationContext.m */; };
+		5538EEC7145A3590008173D8 /* TranslationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EEC4145A358F008173D8 /* TranslationContext.m */; };
+		5538EECA145A35DD008173D8 /* ScalarUnmarshallingContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EEC9145A35DD008173D8 /* ScalarUnmarshallingContext.h */; };
+		5538EECD145A38AC008173D8 /* MultiMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EECB145A38AC008173D8 /* MultiMap.h */; };
+		5538EECE145A38AC008173D8 /* MultiMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EECC145A38AC008173D8 /* MultiMap.m */; };
+		5538EECF145A38AC008173D8 /* MultiMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EECC145A38AC008173D8 /* MultiMap.m */; };
 		55DDB1A2145A27A900D7991C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55DDB1A1145A27A900D7991C /* Foundation.framework */; };
+		55F9F81B145A481000F4AFBD /* XmlStreamReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F9F819145A481000F4AFBD /* XmlStreamReader.h */; };
+		55F9F81C145A481000F4AFBD /* XmlStreamReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F9F81A145A481000F4AFBD /* XmlStreamReader.m */; };
+		55F9F81D145A481400F4AFBD /* XmlStreamReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F9F81A145A481000F4AFBD /* XmlStreamReader.m */; };
+		55F9F81F145A4B4800F4AFBD /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F9F81E145A4B4800F4AFBD /* libxml2.dylib */; };
+		55F9F820145A4B6300F4AFBD /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F9F81E145A4B4800F4AFBD /* libxml2.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -170,9 +182,17 @@
 		5538EE6D145A3221008173D8 /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = types.h; sourceTree = "<group>"; };
 		5538EE6E145A3221008173D8 /* XMLTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLTools.h; sourceTree = "<group>"; };
 		5538EE6F145A3221008173D8 /* XMLTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLTools.m; sourceTree = "<group>"; };
+		5538EEC3145A358F008173D8 /* TranslationContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TranslationContext.h; path = Graph/TranslationContext.h; sourceTree = "<group>"; };
+		5538EEC4145A358F008173D8 /* TranslationContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TranslationContext.m; path = Graph/TranslationContext.m; sourceTree = "<group>"; };
+		5538EEC9145A35DD008173D8 /* ScalarUnmarshallingContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScalarUnmarshallingContext.h; path = Graph/ScalarUnmarshallingContext.h; sourceTree = "<group>"; };
+		5538EECB145A38AC008173D8 /* MultiMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultiMap.h; path = Graph/MultiMap.h; sourceTree = "<group>"; };
+		5538EECC145A38AC008173D8 /* MultiMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MultiMap.m; path = Graph/MultiMap.m; sourceTree = "<group>"; };
 		55DDB19E145A27A900D7991C /* libSimplSerialization.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSimplSerialization.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		55DDB1A1145A27A900D7991C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		55DDB1A5145A27A900D7991C /* SimplSerialization-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimplSerialization-Prefix.pch"; sourceTree = "<group>"; };
+		55F9F819145A481000F4AFBD /* XmlStreamReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XmlStreamReader.h; path = Deserializers/Parsers/Xml/XmlStreamReader.h; sourceTree = "<group>"; };
+		55F9F81A145A481000F4AFBD /* XmlStreamReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XmlStreamReader.m; path = Deserializers/Parsers/Xml/XmlStreamReader.m; sourceTree = "<group>"; };
+		55F9F81E145A4B4800F4AFBD /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +200,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55F9F820145A4B6300F4AFBD /* libxml2.dylib in Frameworks */,
 				5538EDFD145A2993008173D8 /* UIKit.framework in Frameworks */,
 				5538EDFE145A2993008173D8 /* Foundation.framework in Frameworks */,
 				5538EE00145A2993008173D8 /* CoreGraphics.framework in Frameworks */,
@@ -191,6 +212,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55F9F81F145A4B4800F4AFBD /* libxml2.dylib in Frameworks */,
 				55DDB1A2145A27A900D7991C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,6 +265,8 @@
 		5538EE36145A3221008173D8 /* Serialization */ = {
 			isa = PBXGroup;
 			children = (
+				55F9F816145A47A500F4AFBD /* Deserializers */,
+				5538EEC8145A3594008173D8 /* Graph */,
 				5538EE48145A3221008173D8 /* Types */,
 				5538EE37145A3221008173D8 /* bsConstants.h */,
 				5538EE38145A3221008173D8 /* ClassDescriptor.h */,
@@ -255,12 +279,12 @@
 				5538EE3F145A3221008173D8 /* ElementStateSAXHandler.m */,
 				5538EE40145A3221008173D8 /* FieldDescriptor.h */,
 				5538EE41145A3221008173D8 /* FieldDescriptor.m */,
+				5538EE46145A3221008173D8 /* SimplTypesScope.h */,
+				5538EE47145A3221008173D8 /* SimplTypesScope.m */,
 				5538EE42145A3221008173D8 /* fTypes.h */,
 				5538EE43145A3221008173D8 /* SaverState.h */,
 				5538EE44145A3221008173D8 /* SaverState.m */,
 				5538EE45145A3221008173D8 /* Schmannel.h */,
-				5538EE46145A3221008173D8 /* SimplTypesScope.h */,
-				5538EE47145A3221008173D8 /* SimplTypesScope.m */,
 				5538EE6E145A3221008173D8 /* XMLTools.h */,
 				5538EE6F145A3221008173D8 /* XMLTools.m */,
 			);
@@ -346,9 +370,22 @@
 			path = Types;
 			sourceTree = "<group>";
 		};
+		5538EEC8145A3594008173D8 /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				5538EEC3145A358F008173D8 /* TranslationContext.h */,
+				5538EEC4145A358F008173D8 /* TranslationContext.m */,
+				5538EEC9145A35DD008173D8 /* ScalarUnmarshallingContext.h */,
+				5538EECB145A38AC008173D8 /* MultiMap.h */,
+				5538EECC145A38AC008173D8 /* MultiMap.m */,
+			);
+			name = Graph;
+			sourceTree = "<group>";
+		};
 		55DDB193145A27A900D7991C = {
 			isa = PBXGroup;
 			children = (
+				55F9F81E145A4B4800F4AFBD /* libxml2.dylib */,
 				55DDB1A3145A27A900D7991C /* SimplSerialization */,
 				5538EE01145A2993008173D8 /* SimplSerializationTests */,
 				55DDB1A0145A27A900D7991C /* Frameworks */,
@@ -395,6 +432,31 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		55F9F816145A47A500F4AFBD /* Deserializers */ = {
+			isa = PBXGroup;
+			children = (
+				55F9F817145A47EE00F4AFBD /* Parsers */,
+			);
+			name = Deserializers;
+			sourceTree = "<group>";
+		};
+		55F9F817145A47EE00F4AFBD /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				55F9F818145A47FC00F4AFBD /* Xml */,
+			);
+			name = Parsers;
+			sourceTree = "<group>";
+		};
+		55F9F818145A47FC00F4AFBD /* Xml */ = {
+			isa = PBXGroup;
+			children = (
+				55F9F819145A481000F4AFBD /* XmlStreamReader.h */,
+				55F9F81A145A481000F4AFBD /* XmlStreamReader.m */,
+			);
+			name = Xml;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -433,6 +495,10 @@
 				5538EEBE145A3221008173D8 /* Type.h in Headers */,
 				5538EEBF145A3221008173D8 /* types.h in Headers */,
 				5538EEC0145A3221008173D8 /* XMLTools.h in Headers */,
+				5538EEC5145A3590008173D8 /* TranslationContext.h in Headers */,
+				5538EECA145A35DD008173D8 /* ScalarUnmarshallingContext.h in Headers */,
+				5538EECD145A38AC008173D8 /* MultiMap.h in Headers */,
+				55F9F81B145A481000F4AFBD /* XmlStreamReader.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,6 +611,9 @@
 				5538EEBA145A3221008173D8 /* IntType.m in Sources */,
 				5538EEBD145A3221008173D8 /* LongType.m in Sources */,
 				5538EEC2145A3221008173D8 /* XMLTools.m in Sources */,
+				5538EEC7145A3590008173D8 /* TranslationContext.m in Sources */,
+				5538EECF145A38AC008173D8 /* MultiMap.m in Sources */,
+				55F9F81D145A481400F4AFBD /* XmlStreamReader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,6 +647,9 @@
 				5538EEB9145A3221008173D8 /* IntType.m in Sources */,
 				5538EEBC145A3221008173D8 /* LongType.m in Sources */,
 				5538EEC1145A3221008173D8 /* XMLTools.m in Sources */,
+				5538EEC6145A3590008173D8 /* TranslationContext.m in Sources */,
+				5538EECE145A38AC008173D8 /* MultiMap.m in Sources */,
+				55F9F81C145A481000F4AFBD /* XmlStreamReader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,6 +677,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimplSerializationTests/SimplSerializationTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2/**";
 				INFOPLIST_FILE = "SimplSerializationTests/SimplSerializationTests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-all_load",
@@ -626,6 +699,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimplSerializationTests/SimplSerializationTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2/**";
 				INFOPLIST_FILE = "SimplSerializationTests/SimplSerializationTests-Info.plist";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = (
@@ -684,6 +758,7 @@
 				DSTROOT = /tmp/SimplSerialization.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimplSerialization/SimplSerialization-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2/**";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -696,6 +771,7 @@
 				DSTROOT = /tmp/SimplSerialization.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimplSerialization/SimplSerialization-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2/**";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

@@ -14,7 +14,8 @@
 
 @implementation MyClass
 
-- (void)testStrings {       
+- (void)testStrings 
+{       
     NSString *string1 = @"a string";
     GHTestLog(@"I can log to the GHUnit test console: %@", string1);
     
