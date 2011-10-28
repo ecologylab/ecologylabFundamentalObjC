@@ -1,0 +1,379 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5538EDFD145A2993008173D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5538EDFC145A2993008173D8 /* UIKit.framework */; };
+		5538EDFE145A2993008173D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55DDB1A1145A27A900D7991C /* Foundation.framework */; };
+		5538EE00145A2993008173D8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5538EDFF145A2993008173D8 /* CoreGraphics.framework */; };
+		5538EE06145A2993008173D8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5538EE04145A2993008173D8 /* InfoPlist.strings */; };
+		5538EE08145A2993008173D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE07145A2993008173D8 /* main.m */; };
+		5538EE1E145A29C6008173D8 /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5538EE1D145A29C6008173D8 /* GHUnitIOS.framework */; };
+		5538EE22145A2B09008173D8 /* MyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE21145A2B09008173D8 /* MyClass.m */; };
+		55DDB1A2145A27A900D7991C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55DDB1A1145A27A900D7991C /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5538EDFA145A2993008173D8 /* SimplSerializationTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplSerializationTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5538EDFC145A2993008173D8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5538EDFF145A2993008173D8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5538EE03145A2993008173D8 /* SimplSerializationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimplSerializationTests-Info.plist"; sourceTree = "<group>"; };
+		5538EE05145A2993008173D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5538EE07145A2993008173D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5538EE09145A2993008173D8 /* SimplSerializationTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimplSerializationTests-Prefix.pch"; sourceTree = "<group>"; };
+		5538EE1D145A29C6008173D8 /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GHUnitIOS.framework; sourceTree = "<group>"; };
+		5538EE21145A2B09008173D8 /* MyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyClass.m; sourceTree = "<group>"; };
+		55DDB19E145A27A900D7991C /* libSimplSerialization.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSimplSerialization.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		55DDB1A1145A27A900D7991C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		55DDB1A5145A27A900D7991C /* SimplSerialization-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimplSerialization-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5538EDF7145A2993008173D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5538EDFD145A2993008173D8 /* UIKit.framework in Frameworks */,
+				5538EDFE145A2993008173D8 /* Foundation.framework in Frameworks */,
+				5538EE00145A2993008173D8 /* CoreGraphics.framework in Frameworks */,
+				5538EE1E145A29C6008173D8 /* GHUnitIOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55DDB19B145A27A900D7991C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55DDB1A2145A27A900D7991C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5538EE01145A2993008173D8 /* SimplSerializationTests */ = {
+			isa = PBXGroup;
+			children = (
+				5538EE21145A2B09008173D8 /* MyClass.m */,
+				5538EE02145A2993008173D8 /* Supporting Files */,
+			);
+			path = SimplSerializationTests;
+			sourceTree = "<group>";
+		};
+		5538EE02145A2993008173D8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5538EE03145A2993008173D8 /* SimplSerializationTests-Info.plist */,
+				5538EE04145A2993008173D8 /* InfoPlist.strings */,
+				5538EE07145A2993008173D8 /* main.m */,
+				5538EE09145A2993008173D8 /* SimplSerializationTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55DDB193145A27A900D7991C = {
+			isa = PBXGroup;
+			children = (
+				55DDB1A3145A27A900D7991C /* SimplSerialization */,
+				5538EE01145A2993008173D8 /* SimplSerializationTests */,
+				55DDB1A0145A27A900D7991C /* Frameworks */,
+				55DDB19F145A27A900D7991C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		55DDB19F145A27A900D7991C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55DDB19E145A27A900D7991C /* libSimplSerialization.a */,
+				5538EDFA145A2993008173D8 /* SimplSerializationTests.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55DDB1A0145A27A900D7991C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5538EE1D145A29C6008173D8 /* GHUnitIOS.framework */,
+				55DDB1A1145A27A900D7991C /* Foundation.framework */,
+				5538EDFC145A2993008173D8 /* UIKit.framework */,
+				5538EDFF145A2993008173D8 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55DDB1A3145A27A900D7991C /* SimplSerialization */ = {
+			isa = PBXGroup;
+			children = (
+				55DDB1A4145A27A900D7991C /* Supporting Files */,
+			);
+			path = SimplSerialization;
+			sourceTree = "<group>";
+		};
+		55DDB1A4145A27A900D7991C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55DDB1A5145A27A900D7991C /* SimplSerialization-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		55DDB19C145A27A900D7991C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5538EDF9145A2993008173D8 /* SimplSerializationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5538EE1B145A2993008173D8 /* Build configuration list for PBXNativeTarget "SimplSerializationTests" */;
+			buildPhases = (
+				5538EDF6145A2993008173D8 /* Sources */,
+				5538EDF7145A2993008173D8 /* Frameworks */,
+				5538EDF8145A2993008173D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimplSerializationTests;
+			productName = SimplSerializationTests;
+			productReference = 5538EDFA145A2993008173D8 /* SimplSerializationTests.app */;
+			productType = "com.apple.product-type.application";
+		};
+		55DDB19D145A27A900D7991C /* SimplSerialization */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55DDB1AB145A27A900D7991C /* Build configuration list for PBXNativeTarget "SimplSerialization" */;
+			buildPhases = (
+				55DDB19A145A27A900D7991C /* Sources */,
+				55DDB19B145A27A900D7991C /* Frameworks */,
+				55DDB19C145A27A900D7991C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimplSerialization;
+			productName = SimplSerialization;
+			productReference = 55DDB19E145A27A900D7991C /* libSimplSerialization.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55DDB195145A27A900D7991C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Texas A&M University";
+			};
+			buildConfigurationList = 55DDB198145A27A900D7991C /* Build configuration list for PBXProject "SimplSerialization" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 55DDB193145A27A900D7991C;
+			productRefGroup = 55DDB19F145A27A900D7991C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55DDB19D145A27A900D7991C /* SimplSerialization */,
+				5538EDF9145A2993008173D8 /* SimplSerializationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5538EDF8145A2993008173D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5538EE06145A2993008173D8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5538EDF6145A2993008173D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5538EE08145A2993008173D8 /* main.m in Sources */,
+				5538EE22145A2B09008173D8 /* MyClass.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55DDB19A145A27A900D7991C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5538EE04145A2993008173D8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5538EE05145A2993008173D8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5538EE19145A2993008173D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimplSerializationTests/SimplSerializationTests-Prefix.pch";
+				INFOPLIST_FILE = "SimplSerializationTests/SimplSerializationTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5538EE1A145A2993008173D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimplSerializationTests/SimplSerializationTests-Prefix.pch";
+				INFOPLIST_FILE = "SimplSerializationTests/SimplSerializationTests-Info.plist";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		55DDB1A9145A27A900D7991C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		55DDB1AA145A27A900D7991C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55DDB1AC145A27A900D7991C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SimplSerialization.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimplSerialization/SimplSerialization-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		55DDB1AD145A27A900D7991C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SimplSerialization.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimplSerialization/SimplSerialization-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5538EE1B145A2993008173D8 /* Build configuration list for PBXNativeTarget "SimplSerializationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5538EE19145A2993008173D8 /* Debug */,
+				5538EE1A145A2993008173D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		55DDB198145A27A900D7991C /* Build configuration list for PBXProject "SimplSerialization" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55DDB1A9145A27A900D7991C /* Debug */,
+				55DDB1AA145A27A900D7991C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55DDB1AB145A27A900D7991C /* Build configuration list for PBXNativeTarget "SimplSerialization" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55DDB1AC145A27A900D7991C /* Debug */,
+				55DDB1AD145A27A900D7991C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 55DDB195145A27A900D7991C /* Project object */;
+}
