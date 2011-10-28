@@ -14,6 +14,7 @@
 		5538EE08145A2993008173D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE07145A2993008173D8 /* main.m */; };
 		5538EE1E145A29C6008173D8 /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5538EE1D145A29C6008173D8 /* GHUnitIOS.framework */; };
 		5538EE22145A2B09008173D8 /* MyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE21145A2B09008173D8 /* MyClass.m */; };
+		5538EE2C145A3114008173D8 /* AnotherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE2B145A3114008173D8 /* AnotherTest.m */; };
 		55DDB1A2145A27A900D7991C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55DDB1A1145A27A900D7991C /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,8 @@
 		5538EE09145A2993008173D8 /* SimplSerializationTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimplSerializationTests-Prefix.pch"; sourceTree = "<group>"; };
 		5538EE1D145A29C6008173D8 /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GHUnitIOS.framework; sourceTree = "<group>"; };
 		5538EE21145A2B09008173D8 /* MyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyClass.m; sourceTree = "<group>"; };
+		5538EE2A145A3114008173D8 /* AnotherTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnotherTest.h; sourceTree = "<group>"; };
+		5538EE2B145A3114008173D8 /* AnotherTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnotherTest.m; sourceTree = "<group>"; };
 		55DDB19E145A27A900D7991C /* libSimplSerialization.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSimplSerialization.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		55DDB1A1145A27A900D7991C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		55DDB1A5145A27A900D7991C /* SimplSerialization-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimplSerialization-Prefix.pch"; sourceTree = "<group>"; };
@@ -58,8 +61,10 @@
 		5538EE01145A2993008173D8 /* SimplSerializationTests */ = {
 			isa = PBXGroup;
 			children = (
-				5538EE21145A2B09008173D8 /* MyClass.m */,
 				5538EE02145A2993008173D8 /* Supporting Files */,
+				5538EE21145A2B09008173D8 /* MyClass.m */,
+				5538EE2A145A3114008173D8 /* AnotherTest.h */,
+				5538EE2B145A3114008173D8 /* AnotherTest.m */,
 			);
 			path = SimplSerializationTests;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 			files = (
 				5538EE08145A2993008173D8 /* main.m in Sources */,
 				5538EE22145A2B09008173D8 /* MyClass.m in Sources */,
+				5538EE2C145A3114008173D8 /* AnotherTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +360,7 @@
 				5538EE1A145A2993008173D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		55DDB198145A27A900D7991C /* Build configuration list for PBXProject "SimplSerialization" */ = {
 			isa = XCConfigurationList;
