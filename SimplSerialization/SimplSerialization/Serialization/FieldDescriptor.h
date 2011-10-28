@@ -15,7 +15,7 @@
 #import <objc/runtime.h>
 #import <Foundation/Foundation.h>
 #import "Type.h"
-#import "fTypes.h"
+#import "FieldTypes.h"
 
 #define START_CDATA "<![CDATA["
 #define END_CDATA	"]]>"

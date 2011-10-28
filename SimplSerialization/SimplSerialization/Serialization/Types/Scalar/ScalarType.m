@@ -51,13 +51,13 @@
 
 - (void) setField: (id) object fieldName: (const char *) fn 
 {
-	objc_msgSend(object, sel_getUid([XMLTools getSetterFunction: fn]), m_value);
+	objc_msgSend(object, sel_getUid([XmlTools getSetterFunction: fn]), m_value);
 }
 
 - (void) setField: (id) object fieldName: (NSString *) fn value: (id) value 
 {
 	[self setInstance:[value description]];	
-	objc_msgSend(object, sel_getUid([XMLTools getSetterFunction:[fn cStringUsingEncoding: NSASCIIStringEncoding]]), m_value);
+	objc_msgSend(object, sel_getUid([XmlTools getSetterFunction:[fn cStringUsingEncoding: NSASCIIStringEncoding]]), m_value);
 }
 
 - (void) appendValue: (NSMutableString *) buffy fieldDescriptor: (FieldDescriptor *) fd context: (id) context 

@@ -6,10 +6,10 @@
 //  Copyright 2010 Interface Ecology Lab. All rights reserved.
 //
 
-#import "XMLTools.h"
+#import "XmlTools.h"
 
 
-@implementation XMLTools
+@implementation XmlTools
 
 + (NSString *) getClassSimpleName : (NSString *) classFullName 
 {
@@ -19,7 +19,7 @@
 
 + (Class) getClass: (NSString *) className 
 {
-	return (Class)objc_getClass([[XMLTools getClassSimpleName: className] cStringUsingEncoding: NSASCIIStringEncoding]);
+	return (Class)objc_getClass([[XmlTools getClassSimpleName: className] cStringUsingEncoding: NSASCIIStringEncoding]);
 }
 
 + (const char *) getSetterFunction: (const char *) fieldName
@@ -33,7 +33,7 @@
 
 + (id <Type>) typeWithString: (NSString *) value 
 {
-	Class type = [XMLTools getClass: value];
+	Class type = [XmlTools getClass: value];
 	return class_createInstance(type, 0);
 }
 

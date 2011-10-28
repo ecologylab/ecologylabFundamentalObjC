@@ -15,7 +15,7 @@
 #import <objc/runtime.h>
 #import <Foundation/Foundation.h>
 #import "DictionaryList.h"
-#import "XMLTools.h"
+#import "XmlTools.h"
 
 @class SimplTypesScope;
 @class FieldDescriptor;

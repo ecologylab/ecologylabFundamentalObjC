@@ -15,7 +15,7 @@
 #import "ClassDescriptor.h"
 #import "SimplTypesScope.h"
 #import "ElementState.h"
-#import "XMLTools.h"
+#import "XmlTools.h"
 #import "types.h"
 
 /*!

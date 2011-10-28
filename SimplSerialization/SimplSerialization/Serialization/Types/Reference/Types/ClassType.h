@@ -13,7 +13,7 @@
 #import <objc/message.h>
 #import <Foundation/Foundation.h>
 #import "ReferenceType.h"
-#import "XMLTools.h"
+#import "XmlTools.h"
 
 /*!
 	 @class		 ClassType	

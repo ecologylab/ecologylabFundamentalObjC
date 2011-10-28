@@ -14,9 +14,8 @@
 }
 
 + (id) multiMap;
-- (id) init;
-
-@property(nonatomic, readonly, retain) NSMutableDictionary *map;
-        
+- (bool) put : (NSObject *) key andValue : (NSObject *) value;
+- (int) contains : (NSObject *) key andValue : (NSObject *) value;
+- (NSObject *) get : (NSObject *) key;
 
 @end

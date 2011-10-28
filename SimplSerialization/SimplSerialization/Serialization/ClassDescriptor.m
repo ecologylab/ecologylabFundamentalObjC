@@ -44,7 +44,7 @@ static NSMutableDictionary *globalClassDescriptorsMap;
 
 + (id) classDescriptorWithField: (Ivar) field
 {
-	return [globalClassDescriptorsMap valueForKey:[XMLTools getTypeFromField: field]];
+	return [globalClassDescriptorsMap valueForKey:[XmlTools getTypeFromField: field]];
 }
 
 + (id) classDescriptorWithName: (NSString *) className 
@@ -118,7 +118,7 @@ static NSMutableDictionary *globalClassDescriptorsMap;
 
 - (id) getInstance 
 {
-	return [XMLTools getInstance: describedClass];
+	return [XmlTools getInstance: describedClass];
 }
 
 - (FieldDescriptor *) getFieldDescriptorByTag:  (NSString *) elementName scope: (SimplTypesScope *) translationScope elementState: (ElementState *) elementState 

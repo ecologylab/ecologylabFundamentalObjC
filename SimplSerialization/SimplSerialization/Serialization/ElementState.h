@@ -14,8 +14,8 @@
 #import <objc/message.h>
 #import <Foundation/Foundation.h>
 
-#import "fTypes.h"
-#import "XMLTools.h"
+#import "FieldTypes.h"
+#import "XmlTools.h"
 
 @class FieldDescriptor;
 @class ClassDescriptor;

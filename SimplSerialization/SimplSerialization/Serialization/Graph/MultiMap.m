@@ -8,10 +8,15 @@
 
 #import "MultiMap.h"
 
-@interface MultiMap(Private) 
+#import "ClassDescriptor.h"
+
+// private members
+@interface MultiMap() 
 
 @property(nonatomic, readwrite, retain) NSMutableDictionary* map;
-- (void) somePrivateMethod;
+
+- (id) init;
+- (int) containsValue : (NSMutableArray *) collection andValue : (NSObject *) value;
 
 @end
 
@@ -34,6 +39,49 @@
     }
     
     return self;
+}
+
+
+- (bool) put : (NSObject *) key andValue : (NSObject *) value
+{
+    if ([map objectForKey:key] != nil)
+    {
+        NSMutableArray *collection = [NSMutableArray arrayWithCapacity:1];
+        [collection addObject:value];
+        [map setObject:value forKey:key];
+        return true;
+    }
+    else
+    {
+        NSMutableArray *collection = [map objectForKey:key];
+        if([self containsValue:collection andValue:value] != -1)
+        {
+            [collection addObject:value];
+            return true;
+        }
+    }
+    return false;
+}
+
+
+- (int) contains : (NSObject *) key andValue : (NSObject *) value
+{
+    if ([map objectForKey:key] != nil)
+    {
+        NSMutableArray *collection = [map objectForKey:key];
+        return [self containsValue:collection andValue:value];
+    }
+    else return -1;
+}
+
+- (int) containsValue : (NSMutableArray *) collection andValue : (NSObject *) value
+{
+    
+}
+
+- (NSObject *) get : (NSObject *) key
+{
+    return [map objectForKey:key];
 }
 
 @end

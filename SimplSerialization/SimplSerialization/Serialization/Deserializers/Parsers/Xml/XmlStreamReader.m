@@ -43,7 +43,8 @@
  * Returns a string containing the value of the specified attribute, or NULL
  *    in case of error. The string must be deallocated by the caller.
  */
-- (id) getAttribute:(NSString *) paramName{
+- (id) getAttribute:(NSString *) paramName
+{
     xmlChar *attribute = xmlTextReaderGetAttribute(xmlReader, (xmlChar *)[paramName UTF8String]);
     
     if(attribute != NULL){

@@ -13,7 +13,7 @@
 #import <Foundation/Foundation.h>
 
 #import "Type.h"
-#import "XMLTools.h"
+#import "XmlTools.h"
 
 @class FieldDescriptor;
 
