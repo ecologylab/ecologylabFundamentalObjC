@@ -45,9 +45,9 @@
 		5538EE8B145A3221008173D8 /* SaverState.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE44145A3221008173D8 /* SaverState.m */; };
 		5538EE8C145A3221008173D8 /* SaverState.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE44145A3221008173D8 /* SaverState.m */; };
 		5538EE8D145A3221008173D8 /* Schmannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE45145A3221008173D8 /* Schmannel.h */; };
-		5538EE8E145A3221008173D8 /* TranslationScope.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE46145A3221008173D8 /* TranslationScope.h */; };
-		5538EE8F145A3221008173D8 /* TranslationScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE47145A3221008173D8 /* TranslationScope.m */; };
-		5538EE90145A3221008173D8 /* TranslationScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE47145A3221008173D8 /* TranslationScope.m */; };
+		5538EE8E145A3221008173D8 /* SimplTypesScope.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE46145A3221008173D8 /* SimplTypesScope.h */; };
+		5538EE8F145A3221008173D8 /* SimplTypesScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE47145A3221008173D8 /* SimplTypesScope.m */; };
+		5538EE90145A3221008173D8 /* SimplTypesScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE47145A3221008173D8 /* SimplTypesScope.m */; };
 		5538EE91145A3221008173D8 /* Mappable.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE4A145A3221008173D8 /* Mappable.h */; };
 		5538EE92145A3221008173D8 /* Mappable.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE4B145A3221008173D8 /* Mappable.m */; };
 		5538EE93145A3221008173D8 /* Mappable.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE4B145A3221008173D8 /* Mappable.m */; };
@@ -134,10 +134,10 @@
 		5538EE43145A3221008173D8 /* SaverState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaverState.h; sourceTree = "<group>"; };
 		5538EE44145A3221008173D8 /* SaverState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaverState.m; sourceTree = "<group>"; };
 		5538EE45145A3221008173D8 /* Schmannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Schmannel.h; sourceTree = "<group>"; };
-		5538EE46145A3221008173D8 /* TranslationScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TranslationScope.h; sourceTree = "<group>"; };
-		5538EE47145A3221008173D8 /* TranslationScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TranslationScope.m; sourceTree = "<group>"; };
-		5538EE4A145A3221008173D8 /* Mappable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mappable.h; sourceTree = "<group>"; };
-		5538EE4B145A3221008173D8 /* Mappable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mappable.m; sourceTree = "<group>"; };
+		5538EE46145A3221008173D8 /* SimplTypesScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplTypesScope.h; sourceTree = "<group>"; };
+		5538EE47145A3221008173D8 /* SimplTypesScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplTypesScope.m; sourceTree = "<group>"; };
+		5538EE4A145A3221008173D8 /* Mappable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Mappable.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5538EE4B145A3221008173D8 /* Mappable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Mappable.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5538EE4D145A3221008173D8 /* ReferenceType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReferenceType.h; sourceTree = "<group>"; };
 		5538EE4E145A3221008173D8 /* ReferenceType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReferenceType.m; sourceTree = "<group>"; };
 		5538EE50145A3221008173D8 /* ClassType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassType.h; sourceTree = "<group>"; };
@@ -146,8 +146,8 @@
 		5538EE53145A3221008173D8 /* FieldType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FieldType.m; sourceTree = "<group>"; };
 		5538EE54145A3221008173D8 /* ParsedURLType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsedURLType.h; sourceTree = "<group>"; };
 		5538EE55145A3221008173D8 /* ParsedURLType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsedURLType.m; sourceTree = "<group>"; };
-		5538EE56145A3221008173D8 /* ReferenceIntegerType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReferenceIntegerType.h; sourceTree = "<group>"; };
-		5538EE57145A3221008173D8 /* ReferenceIntegerType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReferenceIntegerType.m; sourceTree = "<group>"; };
+		5538EE56145A3221008173D8 /* ReferenceIntegerType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ReferenceIntegerType.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5538EE57145A3221008173D8 /* ReferenceIntegerType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ReferenceIntegerType.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5538EE58145A3221008173D8 /* ReferenceTypeType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReferenceTypeType.h; sourceTree = "<group>"; };
 		5538EE59145A3221008173D8 /* ReferenceTypeType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReferenceTypeType.m; sourceTree = "<group>"; };
 		5538EE5A145A3221008173D8 /* StringType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringType.h; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 		5538EE60145A3221008173D8 /* BooleanType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BooleanType.h; sourceTree = "<group>"; };
 		5538EE61145A3221008173D8 /* BooleanType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BooleanType.m; sourceTree = "<group>"; };
 		5538EE62145A3221008173D8 /* ByteType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ByteType.h; sourceTree = "<group>"; };
-		5538EE63145A3221008173D8 /* ByteType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ByteType.m; sourceTree = "<group>"; };
+		5538EE63145A3221008173D8 /* ByteType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ByteType.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5538EE64145A3221008173D8 /* DoubleType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleType.h; sourceTree = "<group>"; };
 		5538EE65145A3221008173D8 /* DoubleType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubleType.m; sourceTree = "<group>"; };
 		5538EE66145A3221008173D8 /* FloatType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatType.h; sourceTree = "<group>"; };
@@ -243,6 +243,7 @@
 		5538EE36145A3221008173D8 /* Serialization */ = {
 			isa = PBXGroup;
 			children = (
+				5538EE48145A3221008173D8 /* Types */,
 				5538EE37145A3221008173D8 /* bsConstants.h */,
 				5538EE38145A3221008173D8 /* ClassDescriptor.h */,
 				5538EE39145A3221008173D8 /* ClassDescriptor.m */,
@@ -258,9 +259,8 @@
 				5538EE43145A3221008173D8 /* SaverState.h */,
 				5538EE44145A3221008173D8 /* SaverState.m */,
 				5538EE45145A3221008173D8 /* Schmannel.h */,
-				5538EE46145A3221008173D8 /* TranslationScope.h */,
-				5538EE47145A3221008173D8 /* TranslationScope.m */,
-				5538EE48145A3221008173D8 /* Types */,
+				5538EE46145A3221008173D8 /* SimplTypesScope.h */,
+				5538EE47145A3221008173D8 /* SimplTypesScope.m */,
 				5538EE6E145A3221008173D8 /* XMLTools.h */,
 				5538EE6F145A3221008173D8 /* XMLTools.m */,
 			);
@@ -414,7 +414,7 @@
 				5538EE89145A3221008173D8 /* fTypes.h in Headers */,
 				5538EE8A145A3221008173D8 /* SaverState.h in Headers */,
 				5538EE8D145A3221008173D8 /* Schmannel.h in Headers */,
-				5538EE8E145A3221008173D8 /* TranslationScope.h in Headers */,
+				5538EE8E145A3221008173D8 /* SimplTypesScope.h in Headers */,
 				5538EE91145A3221008173D8 /* Mappable.h in Headers */,
 				5538EE94145A3221008173D8 /* ReferenceType.h in Headers */,
 				5538EE97145A3221008173D8 /* ClassType.h in Headers */,
@@ -528,7 +528,7 @@
 				5538EE85145A3221008173D8 /* ElementStateSAXHandler.m in Sources */,
 				5538EE88145A3221008173D8 /* FieldDescriptor.m in Sources */,
 				5538EE8C145A3221008173D8 /* SaverState.m in Sources */,
-				5538EE90145A3221008173D8 /* TranslationScope.m in Sources */,
+				5538EE90145A3221008173D8 /* SimplTypesScope.m in Sources */,
 				5538EE93145A3221008173D8 /* Mappable.m in Sources */,
 				5538EE96145A3221008173D8 /* ReferenceType.m in Sources */,
 				5538EE99145A3221008173D8 /* ClassType.m in Sources */,
@@ -561,7 +561,7 @@
 				5538EE84145A3221008173D8 /* ElementStateSAXHandler.m in Sources */,
 				5538EE87145A3221008173D8 /* FieldDescriptor.m in Sources */,
 				5538EE8B145A3221008173D8 /* SaverState.m in Sources */,
-				5538EE8F145A3221008173D8 /* TranslationScope.m in Sources */,
+				5538EE8F145A3221008173D8 /* SimplTypesScope.m in Sources */,
 				5538EE92145A3221008173D8 /* Mappable.m in Sources */,
 				5538EE95145A3221008173D8 /* ReferenceType.m in Sources */,
 				5538EE98145A3221008173D8 /* ClassType.m in Sources */,

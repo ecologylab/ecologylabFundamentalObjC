@@ -20,7 +20,7 @@
 
 @protocol Type
 
-- (id)initWithString : (NSString *)value;
+- (id) initWithString : (NSString *)value;
 - (id) getValueFromString: (NSString *) value;
 - (id) getInstance;
 - (void) setField: (id) object fieldName: (const char *) fn;

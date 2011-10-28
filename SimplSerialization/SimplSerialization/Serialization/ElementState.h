@@ -19,7 +19,7 @@
 
 @class FieldDescriptor;
 @class ClassDescriptor;
-@class TranslationScope;
+@class SimplTypesScope;
 @class ElementStateSAXHandler;
 
 
@@ -95,7 +95,7 @@
  	 @param		 NSDictionary*
  	 @param		 ElementState*
  */
-- (void) translateAttributes: (TranslationScope *) translationScope withAttrib: (NSDictionary *) attributes context: (ElementState *) context;
+- (void) translateAttributes: (SimplTypesScope *) translationScope withAttrib: (NSDictionary *) attributes context: (ElementState *) context;
 
 - (void) deserializationPostHook;
 - (void) createChildHook : (ElementState *) pChild;

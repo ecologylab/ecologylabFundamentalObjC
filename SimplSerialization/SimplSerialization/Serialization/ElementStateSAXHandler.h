@@ -13,7 +13,7 @@
 #import <Foundation/Foundation.h>
 #import "FieldDescriptor.h"
 #import "ClassDescriptor.h"
-#import "TranslationScope.h"
+#import "SimplTypesScope.h"
 #import "ElementState.h"
 #import "XMLTools.h"
 #import "types.h"
@@ -26,7 +26,7 @@
 
 @interface ElementStateSAXHandler : NSObject
 {
-	TranslationScope	*translationScope;
+	SimplTypesScope	*translationScope;
 	ElementState		*root;
 	ElementState		*currentElementState;
 	FieldDescriptor		*currentFieldDescriptor;
@@ -41,7 +41,7 @@
 	 @discussion Simple mehtod to initialize the class data structures. 
 	 @result     initilized FieldDescriptor
 */
-+ (id) handlerWithTranslationScope: (TranslationScope *) scope;
++ (id) handlerWithTranslationScope: (SimplTypesScope *) scope;
 
 /*!
 	 @method     initWithTranslationScope
@@ -49,7 +49,7 @@
 	 @discussion Simple mehtod to initialize the class data structures. 
 	 @result     initilized FieldDescriptor
 */
-- (id) initWithTranslationScope: (TranslationScope *) scope;
+- (id) initWithTranslationScope: (SimplTypesScope *) scope;
 
 /*!
 	 @method     currentClassDescriptor

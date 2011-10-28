@@ -11,12 +11,12 @@
 
 @implementation ElementStateSAXHandler
 
-+ (id) handlerWithTranslationScope : (TranslationScope *) scope 
++ (id) handlerWithTranslationScope : (SimplTypesScope *) scope 
 {
 	return [[[ElementStateSAXHandler alloc] initWithTranslationScope: scope] autorelease];
 }
 
-- (id) initWithTranslationScope: (TranslationScope *) scope 
+- (id) initWithTranslationScope: (SimplTypesScope *) scope 
 {
 	if ( (self = [super init]) ) 
 	{

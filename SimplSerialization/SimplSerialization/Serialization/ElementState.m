@@ -9,7 +9,7 @@
 #import "ElementState.h"
 #import "FieldDescriptor.h"
 #import "ClassDescriptor.h"
-#import "TranslationScope.h"
+#import "SimplTypesScope.h"
 #import "ElementStateSAXHandler.h"
 
 @implementation ElementState
@@ -153,7 +153,7 @@
 	[childElementState setClassDescriptor:[ClassDescriptor classDescriptor:[childElementState class]]];
 }
 
-- (void) translateAttributes: (TranslationScope *) translationScope withAttrib: (NSDictionary *) attributes context: (ElementState *) context 
+- (void) translateAttributes: (SimplTypesScope *) translationScope withAttrib: (NSDictionary *) attributes context: (ElementState *) context 
 {
 	int numAttributes = [attributes count];
 

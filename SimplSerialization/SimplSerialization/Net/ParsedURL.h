@@ -11,7 +11,7 @@
 #import <Foundation/Foundation.h>
 
 @class ElementState;
-@class TranslationScope;
+@class SimplTypesScope;
 
 @interface ParsedURL : NSObject 
 {
@@ -41,7 +41,7 @@
 - (BOOL) isNotFileOrExisits;
 - (ParsedURL *) getRelative: (NSString *) relativeURLPath;
 - (ParsedURL *) getRelative: (NSString *) relativeURLPath withErrorDescription: (NSString *) errorDescription;
-- (ElementState *) translateFromXML: (TranslationScope *) TranslationScope;
+- (ElementState *) translateFromXML: (SimplTypesScope *) TranslationScope;
 - (NSString *) description;
 - (NSString *) lc;
 - (NSString *) suffix;

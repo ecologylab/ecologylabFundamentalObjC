@@ -7,7 +7,7 @@
 //
 
 #import "ClassDescriptor.h"
-#import "TranslationScope.h"
+#import "SimplTypesScope.h"
 #import "FieldDescriptor.h"
 
 static NSMutableDictionary *globalClassDescriptorsMap;
@@ -121,7 +121,7 @@ static NSMutableDictionary *globalClassDescriptorsMap;
 	return [XMLTools getInstance: describedClass];
 }
 
-- (FieldDescriptor *) getFieldDescriptorByTag:  (NSString *) elementName scope: (TranslationScope *) translationScope elementState: (ElementState *) elementState 
+- (FieldDescriptor *) getFieldDescriptorByTag:  (NSString *) elementName scope: (SimplTypesScope *) translationScope elementState: (ElementState *) elementState 
 {	
 	return [allFieldDescriptorsByTagNames objectForKey: elementName];
 }

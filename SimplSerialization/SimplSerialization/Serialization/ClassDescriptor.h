@@ -17,7 +17,7 @@
 #import "DictionaryList.h"
 #import "XMLTools.h"
 
-@class TranslationScope;
+@class SimplTypesScope;
 @class FieldDescriptor;
 
 /*!
@@ -154,7 +154,7 @@
 	@param		ElementState : deprecated not used. 
 	@result		FieldDescriptor with the tag name or nil if doesnot exists.
 */
-- (FieldDescriptor *) getFieldDescriptorByTag:  (NSString *) elementName scope: (TranslationScope *) translationScope elementState: (ElementState *) elementState;
+- (FieldDescriptor *) getFieldDescriptorByTag:  (NSString *) elementName scope: (SimplTypesScope *) translationScope elementState: (ElementState *) elementState;
 
 #pragma mark ClassDescriptor - static accessors
 

@@ -80,7 +80,7 @@
 	return nil;
 }
 
-- (ElementState *) translateFromXML: (TranslationScope *) TranslationScope 
+- (ElementState *) translateFromXML: (SimplTypesScope *) TranslationScope 
 {
 	return nil;
 }
