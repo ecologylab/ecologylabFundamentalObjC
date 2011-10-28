@@ -15,6 +15,89 @@
 		5538EE1E145A29C6008173D8 /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5538EE1D145A29C6008173D8 /* GHUnitIOS.framework */; };
 		5538EE22145A2B09008173D8 /* MyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE21145A2B09008173D8 /* MyClass.m */; };
 		5538EE2C145A3114008173D8 /* AnotherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE2B145A3114008173D8 /* AnotherTest.m */; };
+		5538EE70145A3221008173D8 /* DictionaryList.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE2F145A3221008173D8 /* DictionaryList.h */; };
+		5538EE71145A3221008173D8 /* DictionaryList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE30145A3221008173D8 /* DictionaryList.m */; };
+		5538EE72145A3221008173D8 /* DictionaryList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE30145A3221008173D8 /* DictionaryList.m */; };
+		5538EE73145A3221008173D8 /* Scope.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE31145A3221008173D8 /* Scope.h */; };
+		5538EE74145A3221008173D8 /* Scope.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE32145A3221008173D8 /* Scope.m */; };
+		5538EE75145A3221008173D8 /* Scope.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE32145A3221008173D8 /* Scope.m */; };
+		5538EE76145A3221008173D8 /* ParsedURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE34145A3221008173D8 /* ParsedURL.h */; };
+		5538EE77145A3221008173D8 /* ParsedURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE35145A3221008173D8 /* ParsedURL.m */; };
+		5538EE78145A3221008173D8 /* ParsedURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE35145A3221008173D8 /* ParsedURL.m */; };
+		5538EE79145A3221008173D8 /* bsConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE37145A3221008173D8 /* bsConstants.h */; };
+		5538EE7A145A3221008173D8 /* ClassDescriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE38145A3221008173D8 /* ClassDescriptor.h */; };
+		5538EE7B145A3221008173D8 /* ClassDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE39145A3221008173D8 /* ClassDescriptor.m */; };
+		5538EE7C145A3221008173D8 /* ClassDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE39145A3221008173D8 /* ClassDescriptor.m */; };
+		5538EE7D145A3221008173D8 /* ecologylabxml.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE3A145A3221008173D8 /* ecologylabxml.h */; };
+		5538EE7E145A3221008173D8 /* ecologylabxml.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE3B145A3221008173D8 /* ecologylabxml.m */; };
+		5538EE7F145A3221008173D8 /* ecologylabxml.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE3B145A3221008173D8 /* ecologylabxml.m */; };
+		5538EE80145A3221008173D8 /* ElementState.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE3C145A3221008173D8 /* ElementState.h */; };
+		5538EE81145A3221008173D8 /* ElementState.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE3D145A3221008173D8 /* ElementState.m */; };
+		5538EE82145A3221008173D8 /* ElementState.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE3D145A3221008173D8 /* ElementState.m */; };
+		5538EE83145A3221008173D8 /* ElementStateSAXHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE3E145A3221008173D8 /* ElementStateSAXHandler.h */; };
+		5538EE84145A3221008173D8 /* ElementStateSAXHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE3F145A3221008173D8 /* ElementStateSAXHandler.m */; };
+		5538EE85145A3221008173D8 /* ElementStateSAXHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE3F145A3221008173D8 /* ElementStateSAXHandler.m */; };
+		5538EE86145A3221008173D8 /* FieldDescriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE40145A3221008173D8 /* FieldDescriptor.h */; };
+		5538EE87145A3221008173D8 /* FieldDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE41145A3221008173D8 /* FieldDescriptor.m */; };
+		5538EE88145A3221008173D8 /* FieldDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE41145A3221008173D8 /* FieldDescriptor.m */; };
+		5538EE89145A3221008173D8 /* fTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE42145A3221008173D8 /* fTypes.h */; };
+		5538EE8A145A3221008173D8 /* SaverState.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE43145A3221008173D8 /* SaverState.h */; };
+		5538EE8B145A3221008173D8 /* SaverState.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE44145A3221008173D8 /* SaverState.m */; };
+		5538EE8C145A3221008173D8 /* SaverState.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE44145A3221008173D8 /* SaverState.m */; };
+		5538EE8D145A3221008173D8 /* Schmannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE45145A3221008173D8 /* Schmannel.h */; };
+		5538EE8E145A3221008173D8 /* TranslationScope.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE46145A3221008173D8 /* TranslationScope.h */; };
+		5538EE8F145A3221008173D8 /* TranslationScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE47145A3221008173D8 /* TranslationScope.m */; };
+		5538EE90145A3221008173D8 /* TranslationScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE47145A3221008173D8 /* TranslationScope.m */; };
+		5538EE91145A3221008173D8 /* Mappable.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE4A145A3221008173D8 /* Mappable.h */; };
+		5538EE92145A3221008173D8 /* Mappable.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE4B145A3221008173D8 /* Mappable.m */; };
+		5538EE93145A3221008173D8 /* Mappable.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE4B145A3221008173D8 /* Mappable.m */; };
+		5538EE94145A3221008173D8 /* ReferenceType.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE4D145A3221008173D8 /* ReferenceType.h */; };
+		5538EE95145A3221008173D8 /* ReferenceType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE4E145A3221008173D8 /* ReferenceType.m */; };
+		5538EE96145A3221008173D8 /* ReferenceType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE4E145A3221008173D8 /* ReferenceType.m */; };
+		5538EE97145A3221008173D8 /* ClassType.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE50145A3221008173D8 /* ClassType.h */; };
+		5538EE98145A3221008173D8 /* ClassType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE51145A3221008173D8 /* ClassType.m */; };
+		5538EE99145A3221008173D8 /* ClassType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE51145A3221008173D8 /* ClassType.m */; };
+		5538EE9A145A3221008173D8 /* FieldType.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE52145A3221008173D8 /* FieldType.h */; };
+		5538EE9B145A3221008173D8 /* FieldType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE53145A3221008173D8 /* FieldType.m */; };
+		5538EE9C145A3221008173D8 /* FieldType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE53145A3221008173D8 /* FieldType.m */; };
+		5538EE9D145A3221008173D8 /* ParsedURLType.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE54145A3221008173D8 /* ParsedURLType.h */; };
+		5538EE9E145A3221008173D8 /* ParsedURLType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE55145A3221008173D8 /* ParsedURLType.m */; };
+		5538EE9F145A3221008173D8 /* ParsedURLType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE55145A3221008173D8 /* ParsedURLType.m */; };
+		5538EEA0145A3221008173D8 /* ReferenceIntegerType.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE56145A3221008173D8 /* ReferenceIntegerType.h */; };
+		5538EEA1145A3221008173D8 /* ReferenceIntegerType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE57145A3221008173D8 /* ReferenceIntegerType.m */; };
+		5538EEA2145A3221008173D8 /* ReferenceIntegerType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE57145A3221008173D8 /* ReferenceIntegerType.m */; };
+		5538EEA3145A3221008173D8 /* ReferenceTypeType.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE58145A3221008173D8 /* ReferenceTypeType.h */; };
+		5538EEA4145A3221008173D8 /* ReferenceTypeType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE59145A3221008173D8 /* ReferenceTypeType.m */; };
+		5538EEA5145A3221008173D8 /* ReferenceTypeType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE59145A3221008173D8 /* ReferenceTypeType.m */; };
+		5538EEA6145A3221008173D8 /* StringType.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE5A145A3221008173D8 /* StringType.h */; };
+		5538EEA7145A3221008173D8 /* StringType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE5B145A3221008173D8 /* StringType.m */; };
+		5538EEA8145A3221008173D8 /* StringType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE5B145A3221008173D8 /* StringType.m */; };
+		5538EEA9145A3221008173D8 /* ScalarType.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE5D145A3221008173D8 /* ScalarType.h */; };
+		5538EEAA145A3221008173D8 /* ScalarType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE5E145A3221008173D8 /* ScalarType.m */; };
+		5538EEAB145A3221008173D8 /* ScalarType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE5E145A3221008173D8 /* ScalarType.m */; };
+		5538EEAC145A3221008173D8 /* BooleanType.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE60145A3221008173D8 /* BooleanType.h */; };
+		5538EEAD145A3221008173D8 /* BooleanType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE61145A3221008173D8 /* BooleanType.m */; };
+		5538EEAE145A3221008173D8 /* BooleanType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE61145A3221008173D8 /* BooleanType.m */; };
+		5538EEAF145A3221008173D8 /* ByteType.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE62145A3221008173D8 /* ByteType.h */; };
+		5538EEB0145A3221008173D8 /* ByteType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE63145A3221008173D8 /* ByteType.m */; };
+		5538EEB1145A3221008173D8 /* ByteType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE63145A3221008173D8 /* ByteType.m */; };
+		5538EEB2145A3221008173D8 /* DoubleType.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE64145A3221008173D8 /* DoubleType.h */; };
+		5538EEB3145A3221008173D8 /* DoubleType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE65145A3221008173D8 /* DoubleType.m */; };
+		5538EEB4145A3221008173D8 /* DoubleType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE65145A3221008173D8 /* DoubleType.m */; };
+		5538EEB5145A3221008173D8 /* FloatType.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE66145A3221008173D8 /* FloatType.h */; };
+		5538EEB6145A3221008173D8 /* FloatType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE67145A3221008173D8 /* FloatType.m */; };
+		5538EEB7145A3221008173D8 /* FloatType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE67145A3221008173D8 /* FloatType.m */; };
+		5538EEB8145A3221008173D8 /* IntType.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE68145A3221008173D8 /* IntType.h */; };
+		5538EEB9145A3221008173D8 /* IntType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE69145A3221008173D8 /* IntType.m */; };
+		5538EEBA145A3221008173D8 /* IntType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE69145A3221008173D8 /* IntType.m */; };
+		5538EEBB145A3221008173D8 /* LongType.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE6A145A3221008173D8 /* LongType.h */; };
+		5538EEBC145A3221008173D8 /* LongType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE6B145A3221008173D8 /* LongType.m */; };
+		5538EEBD145A3221008173D8 /* LongType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE6B145A3221008173D8 /* LongType.m */; };
+		5538EEBE145A3221008173D8 /* Type.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE6C145A3221008173D8 /* Type.h */; };
+		5538EEBF145A3221008173D8 /* types.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE6D145A3221008173D8 /* types.h */; };
+		5538EEC0145A3221008173D8 /* XMLTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE6E145A3221008173D8 /* XMLTools.h */; };
+		5538EEC1145A3221008173D8 /* XMLTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE6F145A3221008173D8 /* XMLTools.m */; };
+		5538EEC2145A3221008173D8 /* XMLTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE6F145A3221008173D8 /* XMLTools.m */; };
 		55DDB1A2145A27A900D7991C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55DDB1A1145A27A900D7991C /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +113,63 @@
 		5538EE21145A2B09008173D8 /* MyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyClass.m; sourceTree = "<group>"; };
 		5538EE2A145A3114008173D8 /* AnotherTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnotherTest.h; sourceTree = "<group>"; };
 		5538EE2B145A3114008173D8 /* AnotherTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnotherTest.m; sourceTree = "<group>"; };
+		5538EE2F145A3221008173D8 /* DictionaryList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionaryList.h; sourceTree = "<group>"; };
+		5538EE30145A3221008173D8 /* DictionaryList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryList.m; sourceTree = "<group>"; };
+		5538EE31145A3221008173D8 /* Scope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scope.h; sourceTree = "<group>"; };
+		5538EE32145A3221008173D8 /* Scope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scope.m; sourceTree = "<group>"; };
+		5538EE34145A3221008173D8 /* ParsedURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsedURL.h; sourceTree = "<group>"; };
+		5538EE35145A3221008173D8 /* ParsedURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsedURL.m; sourceTree = "<group>"; };
+		5538EE37145A3221008173D8 /* bsConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bsConstants.h; sourceTree = "<group>"; };
+		5538EE38145A3221008173D8 /* ClassDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassDescriptor.h; sourceTree = "<group>"; };
+		5538EE39145A3221008173D8 /* ClassDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassDescriptor.m; sourceTree = "<group>"; };
+		5538EE3A145A3221008173D8 /* ecologylabxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ecologylabxml.h; sourceTree = "<group>"; };
+		5538EE3B145A3221008173D8 /* ecologylabxml.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ecologylabxml.m; sourceTree = "<group>"; };
+		5538EE3C145A3221008173D8 /* ElementState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElementState.h; sourceTree = "<group>"; };
+		5538EE3D145A3221008173D8 /* ElementState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElementState.m; sourceTree = "<group>"; };
+		5538EE3E145A3221008173D8 /* ElementStateSAXHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElementStateSAXHandler.h; sourceTree = "<group>"; };
+		5538EE3F145A3221008173D8 /* ElementStateSAXHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElementStateSAXHandler.m; sourceTree = "<group>"; };
+		5538EE40145A3221008173D8 /* FieldDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FieldDescriptor.h; sourceTree = "<group>"; };
+		5538EE41145A3221008173D8 /* FieldDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FieldDescriptor.m; sourceTree = "<group>"; };
+		5538EE42145A3221008173D8 /* fTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fTypes.h; sourceTree = "<group>"; };
+		5538EE43145A3221008173D8 /* SaverState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaverState.h; sourceTree = "<group>"; };
+		5538EE44145A3221008173D8 /* SaverState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaverState.m; sourceTree = "<group>"; };
+		5538EE45145A3221008173D8 /* Schmannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Schmannel.h; sourceTree = "<group>"; };
+		5538EE46145A3221008173D8 /* TranslationScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TranslationScope.h; sourceTree = "<group>"; };
+		5538EE47145A3221008173D8 /* TranslationScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TranslationScope.m; sourceTree = "<group>"; };
+		5538EE4A145A3221008173D8 /* Mappable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mappable.h; sourceTree = "<group>"; };
+		5538EE4B145A3221008173D8 /* Mappable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mappable.m; sourceTree = "<group>"; };
+		5538EE4D145A3221008173D8 /* ReferenceType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReferenceType.h; sourceTree = "<group>"; };
+		5538EE4E145A3221008173D8 /* ReferenceType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReferenceType.m; sourceTree = "<group>"; };
+		5538EE50145A3221008173D8 /* ClassType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassType.h; sourceTree = "<group>"; };
+		5538EE51145A3221008173D8 /* ClassType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassType.m; sourceTree = "<group>"; };
+		5538EE52145A3221008173D8 /* FieldType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FieldType.h; sourceTree = "<group>"; };
+		5538EE53145A3221008173D8 /* FieldType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FieldType.m; sourceTree = "<group>"; };
+		5538EE54145A3221008173D8 /* ParsedURLType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsedURLType.h; sourceTree = "<group>"; };
+		5538EE55145A3221008173D8 /* ParsedURLType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsedURLType.m; sourceTree = "<group>"; };
+		5538EE56145A3221008173D8 /* ReferenceIntegerType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReferenceIntegerType.h; sourceTree = "<group>"; };
+		5538EE57145A3221008173D8 /* ReferenceIntegerType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReferenceIntegerType.m; sourceTree = "<group>"; };
+		5538EE58145A3221008173D8 /* ReferenceTypeType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReferenceTypeType.h; sourceTree = "<group>"; };
+		5538EE59145A3221008173D8 /* ReferenceTypeType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReferenceTypeType.m; sourceTree = "<group>"; };
+		5538EE5A145A3221008173D8 /* StringType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringType.h; sourceTree = "<group>"; };
+		5538EE5B145A3221008173D8 /* StringType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringType.m; sourceTree = "<group>"; };
+		5538EE5D145A3221008173D8 /* ScalarType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScalarType.h; sourceTree = "<group>"; };
+		5538EE5E145A3221008173D8 /* ScalarType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScalarType.m; sourceTree = "<group>"; };
+		5538EE60145A3221008173D8 /* BooleanType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BooleanType.h; sourceTree = "<group>"; };
+		5538EE61145A3221008173D8 /* BooleanType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BooleanType.m; sourceTree = "<group>"; };
+		5538EE62145A3221008173D8 /* ByteType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ByteType.h; sourceTree = "<group>"; };
+		5538EE63145A3221008173D8 /* ByteType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ByteType.m; sourceTree = "<group>"; };
+		5538EE64145A3221008173D8 /* DoubleType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleType.h; sourceTree = "<group>"; };
+		5538EE65145A3221008173D8 /* DoubleType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubleType.m; sourceTree = "<group>"; };
+		5538EE66145A3221008173D8 /* FloatType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatType.h; sourceTree = "<group>"; };
+		5538EE67145A3221008173D8 /* FloatType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloatType.m; sourceTree = "<group>"; };
+		5538EE68145A3221008173D8 /* IntType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntType.h; sourceTree = "<group>"; };
+		5538EE69145A3221008173D8 /* IntType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntType.m; sourceTree = "<group>"; };
+		5538EE6A145A3221008173D8 /* LongType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LongType.h; sourceTree = "<group>"; };
+		5538EE6B145A3221008173D8 /* LongType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LongType.m; sourceTree = "<group>"; };
+		5538EE6C145A3221008173D8 /* Type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Type.h; sourceTree = "<group>"; };
+		5538EE6D145A3221008173D8 /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = types.h; sourceTree = "<group>"; };
+		5538EE6E145A3221008173D8 /* XMLTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLTools.h; sourceTree = "<group>"; };
+		5538EE6F145A3221008173D8 /* XMLTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLTools.m; sourceTree = "<group>"; };
 		55DDB19E145A27A900D7991C /* libSimplSerialization.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSimplSerialization.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		55DDB1A1145A27A900D7991C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		55DDB1A5145A27A900D7991C /* SimplSerialization-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimplSerialization-Prefix.pch"; sourceTree = "<group>"; };
@@ -80,6 +220,132 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5538EE2E145A3221008173D8 /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				5538EE2F145A3221008173D8 /* DictionaryList.h */,
+				5538EE30145A3221008173D8 /* DictionaryList.m */,
+				5538EE31145A3221008173D8 /* Scope.h */,
+				5538EE32145A3221008173D8 /* Scope.m */,
+			);
+			path = Collections;
+			sourceTree = "<group>";
+		};
+		5538EE33145A3221008173D8 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				5538EE34145A3221008173D8 /* ParsedURL.h */,
+				5538EE35145A3221008173D8 /* ParsedURL.m */,
+			);
+			path = Net;
+			sourceTree = "<group>";
+		};
+		5538EE36145A3221008173D8 /* Serialization */ = {
+			isa = PBXGroup;
+			children = (
+				5538EE37145A3221008173D8 /* bsConstants.h */,
+				5538EE38145A3221008173D8 /* ClassDescriptor.h */,
+				5538EE39145A3221008173D8 /* ClassDescriptor.m */,
+				5538EE3A145A3221008173D8 /* ecologylabxml.h */,
+				5538EE3B145A3221008173D8 /* ecologylabxml.m */,
+				5538EE3C145A3221008173D8 /* ElementState.h */,
+				5538EE3D145A3221008173D8 /* ElementState.m */,
+				5538EE3E145A3221008173D8 /* ElementStateSAXHandler.h */,
+				5538EE3F145A3221008173D8 /* ElementStateSAXHandler.m */,
+				5538EE40145A3221008173D8 /* FieldDescriptor.h */,
+				5538EE41145A3221008173D8 /* FieldDescriptor.m */,
+				5538EE42145A3221008173D8 /* fTypes.h */,
+				5538EE43145A3221008173D8 /* SaverState.h */,
+				5538EE44145A3221008173D8 /* SaverState.m */,
+				5538EE45145A3221008173D8 /* Schmannel.h */,
+				5538EE46145A3221008173D8 /* TranslationScope.h */,
+				5538EE47145A3221008173D8 /* TranslationScope.m */,
+				5538EE48145A3221008173D8 /* Types */,
+				5538EE6E145A3221008173D8 /* XMLTools.h */,
+				5538EE6F145A3221008173D8 /* XMLTools.m */,
+			);
+			path = Serialization;
+			sourceTree = "<group>";
+		};
+		5538EE48145A3221008173D8 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				5538EE49145A3221008173D8 /* Element */,
+				5538EE4C145A3221008173D8 /* Reference */,
+				5538EE5C145A3221008173D8 /* Scalar */,
+				5538EE6C145A3221008173D8 /* Type.h */,
+				5538EE6D145A3221008173D8 /* types.h */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		5538EE49145A3221008173D8 /* Element */ = {
+			isa = PBXGroup;
+			children = (
+				5538EE4A145A3221008173D8 /* Mappable.h */,
+				5538EE4B145A3221008173D8 /* Mappable.m */,
+			);
+			path = Element;
+			sourceTree = "<group>";
+		};
+		5538EE4C145A3221008173D8 /* Reference */ = {
+			isa = PBXGroup;
+			children = (
+				5538EE4D145A3221008173D8 /* ReferenceType.h */,
+				5538EE4E145A3221008173D8 /* ReferenceType.m */,
+				5538EE4F145A3221008173D8 /* Types */,
+			);
+			path = Reference;
+			sourceTree = "<group>";
+		};
+		5538EE4F145A3221008173D8 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				5538EE50145A3221008173D8 /* ClassType.h */,
+				5538EE51145A3221008173D8 /* ClassType.m */,
+				5538EE52145A3221008173D8 /* FieldType.h */,
+				5538EE53145A3221008173D8 /* FieldType.m */,
+				5538EE54145A3221008173D8 /* ParsedURLType.h */,
+				5538EE55145A3221008173D8 /* ParsedURLType.m */,
+				5538EE56145A3221008173D8 /* ReferenceIntegerType.h */,
+				5538EE57145A3221008173D8 /* ReferenceIntegerType.m */,
+				5538EE58145A3221008173D8 /* ReferenceTypeType.h */,
+				5538EE59145A3221008173D8 /* ReferenceTypeType.m */,
+				5538EE5A145A3221008173D8 /* StringType.h */,
+				5538EE5B145A3221008173D8 /* StringType.m */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		5538EE5C145A3221008173D8 /* Scalar */ = {
+			isa = PBXGroup;
+			children = (
+				5538EE5D145A3221008173D8 /* ScalarType.h */,
+				5538EE5E145A3221008173D8 /* ScalarType.m */,
+				5538EE5F145A3221008173D8 /* Types */,
+			);
+			path = Scalar;
+			sourceTree = "<group>";
+		};
+		5538EE5F145A3221008173D8 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				5538EE60145A3221008173D8 /* BooleanType.h */,
+				5538EE61145A3221008173D8 /* BooleanType.m */,
+				5538EE62145A3221008173D8 /* ByteType.h */,
+				5538EE63145A3221008173D8 /* ByteType.m */,
+				5538EE64145A3221008173D8 /* DoubleType.h */,
+				5538EE65145A3221008173D8 /* DoubleType.m */,
+				5538EE66145A3221008173D8 /* FloatType.h */,
+				5538EE67145A3221008173D8 /* FloatType.m */,
+				5538EE68145A3221008173D8 /* IntType.h */,
+				5538EE69145A3221008173D8 /* IntType.m */,
+				5538EE6A145A3221008173D8 /* LongType.h */,
+				5538EE6B145A3221008173D8 /* LongType.m */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
 		55DDB193145A27A900D7991C = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +379,9 @@
 		55DDB1A3145A27A900D7991C /* SimplSerialization */ = {
 			isa = PBXGroup;
 			children = (
+				5538EE2E145A3221008173D8 /* Collections */,
+				5538EE33145A3221008173D8 /* Net */,
+				5538EE36145A3221008173D8 /* Serialization */,
 				55DDB1A4145A27A900D7991C /* Supporting Files */,
 			);
 			path = SimplSerialization;
@@ -133,6 +402,37 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5538EE70145A3221008173D8 /* DictionaryList.h in Headers */,
+				5538EE73145A3221008173D8 /* Scope.h in Headers */,
+				5538EE76145A3221008173D8 /* ParsedURL.h in Headers */,
+				5538EE79145A3221008173D8 /* bsConstants.h in Headers */,
+				5538EE7A145A3221008173D8 /* ClassDescriptor.h in Headers */,
+				5538EE7D145A3221008173D8 /* ecologylabxml.h in Headers */,
+				5538EE80145A3221008173D8 /* ElementState.h in Headers */,
+				5538EE83145A3221008173D8 /* ElementStateSAXHandler.h in Headers */,
+				5538EE86145A3221008173D8 /* FieldDescriptor.h in Headers */,
+				5538EE89145A3221008173D8 /* fTypes.h in Headers */,
+				5538EE8A145A3221008173D8 /* SaverState.h in Headers */,
+				5538EE8D145A3221008173D8 /* Schmannel.h in Headers */,
+				5538EE8E145A3221008173D8 /* TranslationScope.h in Headers */,
+				5538EE91145A3221008173D8 /* Mappable.h in Headers */,
+				5538EE94145A3221008173D8 /* ReferenceType.h in Headers */,
+				5538EE97145A3221008173D8 /* ClassType.h in Headers */,
+				5538EE9A145A3221008173D8 /* FieldType.h in Headers */,
+				5538EE9D145A3221008173D8 /* ParsedURLType.h in Headers */,
+				5538EEA0145A3221008173D8 /* ReferenceIntegerType.h in Headers */,
+				5538EEA3145A3221008173D8 /* ReferenceTypeType.h in Headers */,
+				5538EEA6145A3221008173D8 /* StringType.h in Headers */,
+				5538EEA9145A3221008173D8 /* ScalarType.h in Headers */,
+				5538EEAC145A3221008173D8 /* BooleanType.h in Headers */,
+				5538EEAF145A3221008173D8 /* ByteType.h in Headers */,
+				5538EEB2145A3221008173D8 /* DoubleType.h in Headers */,
+				5538EEB5145A3221008173D8 /* FloatType.h in Headers */,
+				5538EEB8145A3221008173D8 /* IntType.h in Headers */,
+				5538EEBB145A3221008173D8 /* LongType.h in Headers */,
+				5538EEBE145A3221008173D8 /* Type.h in Headers */,
+				5538EEBF145A3221008173D8 /* types.h in Headers */,
+				5538EEC0145A3221008173D8 /* XMLTools.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +519,32 @@
 				5538EE08145A2993008173D8 /* main.m in Sources */,
 				5538EE22145A2B09008173D8 /* MyClass.m in Sources */,
 				5538EE2C145A3114008173D8 /* AnotherTest.m in Sources */,
+				5538EE72145A3221008173D8 /* DictionaryList.m in Sources */,
+				5538EE75145A3221008173D8 /* Scope.m in Sources */,
+				5538EE78145A3221008173D8 /* ParsedURL.m in Sources */,
+				5538EE7C145A3221008173D8 /* ClassDescriptor.m in Sources */,
+				5538EE7F145A3221008173D8 /* ecologylabxml.m in Sources */,
+				5538EE82145A3221008173D8 /* ElementState.m in Sources */,
+				5538EE85145A3221008173D8 /* ElementStateSAXHandler.m in Sources */,
+				5538EE88145A3221008173D8 /* FieldDescriptor.m in Sources */,
+				5538EE8C145A3221008173D8 /* SaverState.m in Sources */,
+				5538EE90145A3221008173D8 /* TranslationScope.m in Sources */,
+				5538EE93145A3221008173D8 /* Mappable.m in Sources */,
+				5538EE96145A3221008173D8 /* ReferenceType.m in Sources */,
+				5538EE99145A3221008173D8 /* ClassType.m in Sources */,
+				5538EE9C145A3221008173D8 /* FieldType.m in Sources */,
+				5538EE9F145A3221008173D8 /* ParsedURLType.m in Sources */,
+				5538EEA2145A3221008173D8 /* ReferenceIntegerType.m in Sources */,
+				5538EEA5145A3221008173D8 /* ReferenceTypeType.m in Sources */,
+				5538EEA8145A3221008173D8 /* StringType.m in Sources */,
+				5538EEAB145A3221008173D8 /* ScalarType.m in Sources */,
+				5538EEAE145A3221008173D8 /* BooleanType.m in Sources */,
+				5538EEB1145A3221008173D8 /* ByteType.m in Sources */,
+				5538EEB4145A3221008173D8 /* DoubleType.m in Sources */,
+				5538EEB7145A3221008173D8 /* FloatType.m in Sources */,
+				5538EEBA145A3221008173D8 /* IntType.m in Sources */,
+				5538EEBD145A3221008173D8 /* LongType.m in Sources */,
+				5538EEC2145A3221008173D8 /* XMLTools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +552,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5538EE71145A3221008173D8 /* DictionaryList.m in Sources */,
+				5538EE74145A3221008173D8 /* Scope.m in Sources */,
+				5538EE77145A3221008173D8 /* ParsedURL.m in Sources */,
+				5538EE7B145A3221008173D8 /* ClassDescriptor.m in Sources */,
+				5538EE7E145A3221008173D8 /* ecologylabxml.m in Sources */,
+				5538EE81145A3221008173D8 /* ElementState.m in Sources */,
+				5538EE84145A3221008173D8 /* ElementStateSAXHandler.m in Sources */,
+				5538EE87145A3221008173D8 /* FieldDescriptor.m in Sources */,
+				5538EE8B145A3221008173D8 /* SaverState.m in Sources */,
+				5538EE8F145A3221008173D8 /* TranslationScope.m in Sources */,
+				5538EE92145A3221008173D8 /* Mappable.m in Sources */,
+				5538EE95145A3221008173D8 /* ReferenceType.m in Sources */,
+				5538EE98145A3221008173D8 /* ClassType.m in Sources */,
+				5538EE9B145A3221008173D8 /* FieldType.m in Sources */,
+				5538EE9E145A3221008173D8 /* ParsedURLType.m in Sources */,
+				5538EEA1145A3221008173D8 /* ReferenceIntegerType.m in Sources */,
+				5538EEA4145A3221008173D8 /* ReferenceTypeType.m in Sources */,
+				5538EEA7145A3221008173D8 /* StringType.m in Sources */,
+				5538EEAA145A3221008173D8 /* ScalarType.m in Sources */,
+				5538EEAD145A3221008173D8 /* BooleanType.m in Sources */,
+				5538EEB0145A3221008173D8 /* ByteType.m in Sources */,
+				5538EEB3145A3221008173D8 /* DoubleType.m in Sources */,
+				5538EEB6145A3221008173D8 /* FloatType.m in Sources */,
+				5538EEB9145A3221008173D8 /* IntType.m in Sources */,
+				5538EEBC145A3221008173D8 /* LongType.m in Sources */,
+				5538EEC1145A3221008173D8 /* XMLTools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
