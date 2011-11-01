@@ -8,6 +8,7 @@
 
 #import "XmlStreamReader.h"
 
+
 @implementation XmlStreamReader
 
 @dynamic eof;
@@ -15,8 +16,10 @@
 @dynamic nodeType;
 @dynamic read;
 @dynamic readElementContentAsString;
+@dynamic isEmptyElement;
 
-- (void) dealloc{
+- (void) dealloc
+{
     xmlFreeTextReader(xmlReader);
     [super dealloc];
 }
@@ -30,7 +33,8 @@
  *
  * Returns 0 or -1 in case of error
  */
-- (void) close{
+- (void) close
+{
     xmlTextReaderClose(xmlReader);
 }
 
@@ -45,6 +49,7 @@
  */
 - (id) getAttribute:(NSString *) paramName
 {
+    
     xmlChar *attribute = xmlTextReaderGetAttribute(xmlReader, (xmlChar *)[paramName UTF8String]);
     
     if(attribute != NULL){
@@ -64,6 +69,8 @@
 {
     return xmlTextReaderReadState(xmlReader) == XML_TEXTREADER_MODE_EOF;
 }
+
+
 
 /**
  * Initializing the xml stream reader with some uri
@@ -86,10 +93,12 @@
  * Returns the local name or NULL if not available,
  *   if non NULL it need to be freed by the caller.
  */
-- (NSString *) localName{
+- (NSString *) localName
+{
     xmlChar *lclName = xmlTextReaderLocalName(xmlReader);
     
-    if(lclName != NULL){
+    if(lclName != NULL)
+    {
         NSString *rtString = [NSString stringWithUTF8String:(const char *)lclName];
         free(lclName);
         return rtString;
@@ -127,10 +136,12 @@
  *         or NULL if the reader is positioned on any other type of node.
  *         The string must be deallocated by the caller.
  */
-- (NSString *) readElementContentAsString{
+- (NSString *) readElementContentAsString
+{
     xmlChar *content = xmlTextReaderReadString(xmlReader);
     
-    if(content != NULL){
+    if(content != NULL)
+    {
         NSString *rtString = [NSString stringWithUTF8String:(const char *)content];
         free(content);
         return rtString;
@@ -148,8 +159,14 @@
  *
  * Returns 1 in case of success, -1 in case of error, 0 if not found
  */
-- (int) readToFollowing:(NSString *) localname namespace:(NSString *) namespaceURI{
+- (int) readToFollowing:(NSString *) localname namespace:(NSString *) namespaceURI
+{
     return xmlTextReaderMoveToAttributeNs(xmlReader, (xmlChar *)[localname UTF8String], (xmlChar *)[namespaceURI UTF8String]);
+}
+
+- (bool) isIsEmptyElement
+{
+    return xmlTextReaderIsEmptyElement(xmlReader);
 }
 
 @end

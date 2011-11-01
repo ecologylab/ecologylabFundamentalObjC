@@ -23,7 +23,7 @@
 
 - (void) setInstance: (NSString *) value 
 {
-	m_value = [XmlTools typeWithString: value];
+	m_value = [SimplTools typeWithString: value];
 }
 
 @end

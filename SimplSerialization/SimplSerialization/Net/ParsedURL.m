@@ -13,7 +13,7 @@
 
 + (id) parsedURLWithURL : (NSURL *) newURL 
 {
-	return [[[ParsedURL alloc] iniWithURL: newURL] autorelease];
+	return [[ParsedURL alloc] iniWithURL: newURL] ;
 }
 
 + (id) parsedURLWithFile: (NSFileHandle *) fileHandle 

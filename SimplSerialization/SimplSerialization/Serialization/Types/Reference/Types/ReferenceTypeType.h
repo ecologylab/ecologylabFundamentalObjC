@@ -12,7 +12,7 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 #import <Foundation/Foundation.h>
-#import "XmlTools.h"
+#import "SimplTools.h"
 #import "ReferenceType.h"
 
 /*!

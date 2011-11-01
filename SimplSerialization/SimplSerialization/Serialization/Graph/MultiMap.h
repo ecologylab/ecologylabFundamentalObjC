@@ -17,5 +17,6 @@
 - (bool) put : (NSObject *) key andValue : (NSObject *) value;
 - (int) contains : (NSObject *) key andValue : (NSObject *) value;
 - (NSObject *) get : (NSObject *) key;
+- (int) size;
 
 @end

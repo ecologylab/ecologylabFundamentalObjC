@@ -16,7 +16,6 @@
 #import <Foundation/Foundation.h>
 
 @class FieldDescriptor;
-@class ElementState;
 
 @protocol Type
 
@@ -25,8 +24,9 @@
 - (id) getInstance;
 - (void) setField: (id) object fieldName: (const char *) fn;
 - (void) setField: (id) object fieldName: (NSString *) fn value: (id) value;
-- (void) appendValue: (NSMutableString *) buffy fieldDescriptor: (FieldDescriptor *) fd context: (id) context;
-- (void) appendValue: (NSMutableString *) buffy context: (id) context;
-- (BOOL) isDefaultValue: (FieldDescriptor *) fieldDescriptor context: (ElementState *) elementState;
+- (void) appendValue: (NSMutableString *) outputString fieldDescriptor: (FieldDescriptor *) fd context: (id) context;
+- (void) appendValue: (NSMutableString *) outputString context: (id) context;
+- (BOOL) isDefaultValue: (FieldDescriptor *) fieldDescriptor context: (NSObject *) elementState;
+- (BOOL) isDefaultValue: (NSString *) value;
 
 @end

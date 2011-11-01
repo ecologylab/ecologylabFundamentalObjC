@@ -19,6 +19,7 @@
 @property (nonatomic, readonly, assign) xmlElementType nodeType;
 @property (nonatomic, readonly, assign) BOOL read;
 @property (nonatomic, readonly, retain) NSString *readElementContentAsString;
+@property (nonatomic, readonly, assign) BOOL isEmptyElement;
 
 - (void) close;
 - (id) getAttribute:(NSString *) paramName;

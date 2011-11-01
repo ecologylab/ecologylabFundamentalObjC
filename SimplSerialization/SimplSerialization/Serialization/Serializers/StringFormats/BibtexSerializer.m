@@ -1,39 +1,40 @@
 //
-//  JsonSerializer.m
+//  BibtexSerializer.m
 //  SimplSerialization
 //
-//  Created by Nabeel Shahzad on 10/28/11.
+//  Created by Nabeel Shahzad on 10/31/11.
 //  Copyright (c) 2011 Texas A&M University. All rights reserved.
 //
 
-#import "JsonSerializer.h"
+#import "BibtexSerializer.h"
 
-@interface JsonSerializer()
+
+@interface BibtexSerializer()
 {
     
 }
 @end
 
-@implementation JsonSerializer
+@implementation BibtexSerializer
 
 
-+ (id) jsonSerializer
++ (id) bibtexSerializer
 {
-    return [[[JsonSerializer alloc] init] autorelease];
+    return [[[BibtexSerializer alloc] init] autorelease];
 }
 
 - (id) init
 {
     if ((self = [super init]))
     {
-       
+        
     }
     return self;
 }
 
 - (void) serialize : (NSObject *) object andString : (NSMutableString *) outputString andContext : (TranslationContext *) translationContext
 {
-    //TODO: implement json serialization logic here. 
+    //TODO: implement bibtex serialization logic here. 
 }
 
 @end

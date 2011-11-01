@@ -24,7 +24,7 @@
 - (void) setInstance: (NSString *) value 
 {
 	Class *cPtr = malloc( sizeof(Class) );
-	*cPtr = [XmlTools getClass: value];
+	*cPtr = [SimplTools getClass: value];
 	m_value = (id)cPtr;
 }
 

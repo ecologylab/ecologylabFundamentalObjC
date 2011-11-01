@@ -33,6 +33,7 @@
 - (void) markAsUmarshalled : (NSString *) key andObject : (NSObject *) object;
 - (void) resolveGraph : (NSObject *) object;
 - (bool) alreadyVisited : (NSObject *) object;
+- (bool) alreadyMarshalled: (NSObject *) object;
 - (void) mapObject : (NSObject *) object;
 - (bool) needsHashCode : (NSObject *) object;
 - (bool) isGraph;

@@ -22,7 +22,7 @@
 	 @discussion XMLTools class contains static utility functions which are used by simpl serialization
 				 to perform reflection and XML related operations on data structures
 */
-@interface XmlTools : NSObject 
+@interface SimplTools : NSObject 
 {
 	
 }
@@ -82,5 +82,10 @@
 	 @result     -
 */
 + (id) getInstance: (Class *) getInstance;
+
+
++ (id) getCollection : (NSObject  *) collectionObject;
+
++ (void) writeOnStream: (NSOutputStream *) outputStream andString : (NSString*) dataString;
 
 @end

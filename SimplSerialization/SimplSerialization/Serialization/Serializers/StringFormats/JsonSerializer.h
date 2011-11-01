@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface JsonSerializer : NSObject
+#import "TranslationContext.h"
+#import "StringSerializer.h"
+
+
+@interface JsonSerializer : StringSerializer
+
+
++ (id) jsonSerializer;
+- (void) serialize : (NSObject *) object andString : (NSMutableString *) outputString andContext : (TranslationContext *) translationContext;
 
 @end

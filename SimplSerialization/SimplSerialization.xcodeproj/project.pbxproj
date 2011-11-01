@@ -14,7 +14,6 @@
 		5538EE08145A2993008173D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE07145A2993008173D8 /* main.m */; };
 		5538EE1E145A29C6008173D8 /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5538EE1D145A29C6008173D8 /* GHUnitIOS.framework */; };
 		5538EE22145A2B09008173D8 /* MyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE21145A2B09008173D8 /* MyClass.m */; };
-		5538EE2C145A3114008173D8 /* AnotherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE2B145A3114008173D8 /* AnotherTest.m */; };
 		5538EE70145A3221008173D8 /* DictionaryList.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE2F145A3221008173D8 /* DictionaryList.h */; };
 		5538EE71145A3221008173D8 /* DictionaryList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE30145A3221008173D8 /* DictionaryList.m */; };
 		5538EE72145A3221008173D8 /* DictionaryList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE30145A3221008173D8 /* DictionaryList.m */; };
@@ -88,9 +87,9 @@
 		5538EEBD145A3221008173D8 /* LongType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE6B145A3221008173D8 /* LongType.m */; };
 		5538EEBE145A3221008173D8 /* Type.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE6C145A3221008173D8 /* Type.h */; };
 		5538EEBF145A3221008173D8 /* types.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE6D145A3221008173D8 /* types.h */; };
-		5538EEC0145A3221008173D8 /* XmlTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE6E145A3221008173D8 /* XmlTools.h */; };
-		5538EEC1145A3221008173D8 /* XmlTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE6F145A3221008173D8 /* XmlTools.m */; };
-		5538EEC2145A3221008173D8 /* XmlTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE6F145A3221008173D8 /* XmlTools.m */; };
+		5538EEC0145A3221008173D8 /* SimplTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EE6E145A3221008173D8 /* SimplTools.h */; };
+		5538EEC1145A3221008173D8 /* SimplTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE6F145A3221008173D8 /* SimplTools.m */; };
+		5538EEC2145A3221008173D8 /* SimplTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EE6F145A3221008173D8 /* SimplTools.m */; };
 		5538EEC5145A3590008173D8 /* TranslationContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EEC3145A358F008173D8 /* TranslationContext.h */; };
 		5538EEC6145A3590008173D8 /* TranslationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EEC4145A358F008173D8 /* TranslationContext.m */; };
 		5538EEC7145A3590008173D8 /* TranslationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EEC4145A358F008173D8 /* TranslationContext.m */; };
@@ -98,6 +97,25 @@
 		5538EECD145A38AC008173D8 /* MultiMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EECB145A38AC008173D8 /* MultiMap.h */; };
 		5538EECE145A38AC008173D8 /* MultiMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EECC145A38AC008173D8 /* MultiMap.m */; };
 		5538EECF145A38AC008173D8 /* MultiMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EECC145A38AC008173D8 /* MultiMap.m */; };
+		55D2C475145F1B9E00CBF4F7 /* XmlPullDeserializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 55D2C473145F1B9E00CBF4F7 /* XmlPullDeserializer.h */; };
+		55D2C476145F1B9E00CBF4F7 /* XmlPullDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D2C474145F1B9E00CBF4F7 /* XmlPullDeserializer.m */; };
+		55D2C477145F1B9E00CBF4F7 /* XmlPullDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D2C474145F1B9E00CBF4F7 /* XmlPullDeserializer.m */; };
+		55D2C47B145F1BB200CBF4F7 /* StringPullDeserializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 55D2C479145F1BB200CBF4F7 /* StringPullDeserializer.h */; };
+		55D2C47C145F1BB200CBF4F7 /* StringPullDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D2C47A145F1BB200CBF4F7 /* StringPullDeserializer.m */; };
+		55D2C47D145F1BB200CBF4F7 /* StringPullDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D2C47A145F1BB200CBF4F7 /* StringPullDeserializer.m */; };
+		55D2C480145F1BC300CBF4F7 /* BinaryPullDeserializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 55D2C47E145F1BC300CBF4F7 /* BinaryPullDeserializer.h */; };
+		55D2C481145F1BC300CBF4F7 /* BinaryPullDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D2C47F145F1BC300CBF4F7 /* BinaryPullDeserializer.m */; };
+		55D2C482145F1BC300CBF4F7 /* BinaryPullDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D2C47F145F1BC300CBF4F7 /* BinaryPullDeserializer.m */; };
+		55D2C485145F1BD700CBF4F7 /* TlvPullDeserializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 55D2C483145F1BD700CBF4F7 /* TlvPullDeserializer.h */; };
+		55D2C486145F1BD700CBF4F7 /* TlvPullDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D2C484145F1BD700CBF4F7 /* TlvPullDeserializer.m */; };
+		55D2C487145F1BD700CBF4F7 /* TlvPullDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D2C484145F1BD700CBF4F7 /* TlvPullDeserializer.m */; };
+		55D2C48A145F1E1300CBF4F7 /* SimplEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = 55D2C488145F1E1300CBF4F7 /* SimplEnums.h */; };
+		55D2C497145F235900CBF4F7 /* BibtexSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 55D2C495145F235900CBF4F7 /* BibtexSerializer.h */; };
+		55D2C498145F235900CBF4F7 /* BibtexSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D2C496145F235900CBF4F7 /* BibtexSerializer.m */; };
+		55D2C499145F235900CBF4F7 /* BibtexSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D2C496145F235900CBF4F7 /* BibtexSerializer.m */; };
+		55D2C49B145F391A00CBF4F7 /* DeserializationHookStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 55D2C49A145F391A00CBF4F7 /* DeserializationHookStrategy.h */; };
+		55D2C49D145F3E9700CBF4F7 /* SimplDeserializationPre.h in Headers */ = {isa = PBXBuildFile; fileRef = 55D2C49C145F3E9600CBF4F7 /* SimplDeserializationPre.h */; };
+		55D2C49F145F3EA600CBF4F7 /* SimplDeserializationPost.h in Headers */ = {isa = PBXBuildFile; fileRef = 55D2C49E145F3EA600CBF4F7 /* SimplDeserializationPost.h */; };
 		55DDB1A2145A27A900D7991C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55DDB1A1145A27A900D7991C /* Foundation.framework */; };
 		55F9F81B145A481000F4AFBD /* XmlStreamReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F9F819145A481000F4AFBD /* XmlStreamReader.h */; };
 		55F9F81C145A481000F4AFBD /* XmlStreamReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F9F81A145A481000F4AFBD /* XmlStreamReader.m */; };
@@ -139,8 +157,6 @@
 		5538EE09145A2993008173D8 /* SimplSerializationTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimplSerializationTests-Prefix.pch"; sourceTree = "<group>"; };
 		5538EE1D145A29C6008173D8 /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GHUnitIOS.framework; sourceTree = "<group>"; };
 		5538EE21145A2B09008173D8 /* MyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyClass.m; sourceTree = "<group>"; };
-		5538EE2A145A3114008173D8 /* AnotherTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnotherTest.h; sourceTree = "<group>"; };
-		5538EE2B145A3114008173D8 /* AnotherTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnotherTest.m; sourceTree = "<group>"; };
 		5538EE2F145A3221008173D8 /* DictionaryList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionaryList.h; sourceTree = "<group>"; };
 		5538EE30145A3221008173D8 /* DictionaryList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryList.m; sourceTree = "<group>"; };
 		5538EE31145A3221008173D8 /* Scope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scope.h; sourceTree = "<group>"; };
@@ -191,13 +207,27 @@
 		5538EE6B145A3221008173D8 /* LongType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LongType.m; sourceTree = "<group>"; };
 		5538EE6C145A3221008173D8 /* Type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Type.h; sourceTree = "<group>"; };
 		5538EE6D145A3221008173D8 /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = types.h; sourceTree = "<group>"; };
-		5538EE6E145A3221008173D8 /* XmlTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlTools.h; sourceTree = "<group>"; };
-		5538EE6F145A3221008173D8 /* XmlTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlTools.m; sourceTree = "<group>"; };
+		5538EE6E145A3221008173D8 /* SimplTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplTools.h; sourceTree = "<group>"; };
+		5538EE6F145A3221008173D8 /* SimplTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplTools.m; sourceTree = "<group>"; };
 		5538EEC3145A358F008173D8 /* TranslationContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TranslationContext.h; path = Graph/TranslationContext.h; sourceTree = "<group>"; };
 		5538EEC4145A358F008173D8 /* TranslationContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TranslationContext.m; path = Graph/TranslationContext.m; sourceTree = "<group>"; };
 		5538EEC9145A35DD008173D8 /* ScalarUnmarshallingContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScalarUnmarshallingContext.h; path = Graph/ScalarUnmarshallingContext.h; sourceTree = "<group>"; };
 		5538EECB145A38AC008173D8 /* MultiMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultiMap.h; path = Graph/MultiMap.h; sourceTree = "<group>"; };
 		5538EECC145A38AC008173D8 /* MultiMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MultiMap.m; path = Graph/MultiMap.m; sourceTree = "<group>"; };
+		55D2C473145F1B9E00CBF4F7 /* XmlPullDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XmlPullDeserializer.h; path = Deserializers/StringFormats/XmlPullDeserializer.h; sourceTree = "<group>"; };
+		55D2C474145F1B9E00CBF4F7 /* XmlPullDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XmlPullDeserializer.m; path = Deserializers/StringFormats/XmlPullDeserializer.m; sourceTree = "<group>"; };
+		55D2C479145F1BB200CBF4F7 /* StringPullDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StringPullDeserializer.h; path = Deserializers/StringFormats/StringPullDeserializer.h; sourceTree = "<group>"; };
+		55D2C47A145F1BB200CBF4F7 /* StringPullDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StringPullDeserializer.m; path = Deserializers/StringFormats/StringPullDeserializer.m; sourceTree = "<group>"; };
+		55D2C47E145F1BC300CBF4F7 /* BinaryPullDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BinaryPullDeserializer.h; path = Deserializers/BinaryFormats/BinaryPullDeserializer.h; sourceTree = "<group>"; };
+		55D2C47F145F1BC300CBF4F7 /* BinaryPullDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BinaryPullDeserializer.m; path = Deserializers/BinaryFormats/BinaryPullDeserializer.m; sourceTree = "<group>"; };
+		55D2C483145F1BD700CBF4F7 /* TlvPullDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TlvPullDeserializer.h; path = Deserializers/BinaryFormats/TlvPullDeserializer.h; sourceTree = "<group>"; };
+		55D2C484145F1BD700CBF4F7 /* TlvPullDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TlvPullDeserializer.m; path = Deserializers/BinaryFormats/TlvPullDeserializer.m; sourceTree = "<group>"; };
+		55D2C488145F1E1300CBF4F7 /* SimplEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplEnums.h; sourceTree = "<group>"; };
+		55D2C495145F235900CBF4F7 /* BibtexSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BibtexSerializer.h; path = Serializers/StringFormats/BibtexSerializer.h; sourceTree = "<group>"; };
+		55D2C496145F235900CBF4F7 /* BibtexSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BibtexSerializer.m; path = Serializers/StringFormats/BibtexSerializer.m; sourceTree = "<group>"; };
+		55D2C49A145F391A00CBF4F7 /* DeserializationHookStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeserializationHookStrategy.h; path = Deserializers/DeserializationHookStrategy.h; sourceTree = "<group>"; };
+		55D2C49C145F3E9600CBF4F7 /* SimplDeserializationPre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimplDeserializationPre.h; path = Deserializers/SimplDeserializationPre.h; sourceTree = "<group>"; };
+		55D2C49E145F3EA600CBF4F7 /* SimplDeserializationPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimplDeserializationPost.h; path = Deserializers/SimplDeserializationPost.h; sourceTree = "<group>"; };
 		55DDB19E145A27A900D7991C /* libSimplSerialization.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSimplSerialization.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		55DDB1A1145A27A900D7991C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		55DDB1A5145A27A900D7991C /* SimplSerialization-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimplSerialization-Prefix.pch"; sourceTree = "<group>"; };
@@ -252,8 +282,6 @@
 			children = (
 				5538EE02145A2993008173D8 /* Supporting Files */,
 				5538EE21145A2B09008173D8 /* MyClass.m */,
-				5538EE2A145A3114008173D8 /* AnotherTest.h */,
-				5538EE2B145A3114008173D8 /* AnotherTest.m */,
 			);
 			path = SimplSerializationTests;
 			sourceTree = "<group>";
@@ -308,8 +336,9 @@
 				5538EE46145A3221008173D8 /* SimplTypesScope.h */,
 				5538EE47145A3221008173D8 /* SimplTypesScope.m */,
 				5538EE42145A3221008173D8 /* FieldTypes.h */,
-				5538EE6E145A3221008173D8 /* XmlTools.h */,
-				5538EE6F145A3221008173D8 /* XmlTools.m */,
+				5538EE6E145A3221008173D8 /* SimplTools.h */,
+				5538EE6F145A3221008173D8 /* SimplTools.m */,
+				55D2C488145F1E1300CBF4F7 /* SimplEnums.h */,
 			);
 			path = Serialization;
 			sourceTree = "<group>";
@@ -367,9 +396,9 @@
 		5538EE5C145A3221008173D8 /* Scalar */ = {
 			isa = PBXGroup;
 			children = (
+				5538EE5F145A3221008173D8 /* Types */,
 				5538EE5D145A3221008173D8 /* ScalarType.h */,
 				5538EE5E145A3221008173D8 /* ScalarType.m */,
-				5538EE5F145A3221008173D8 /* Types */,
 			);
 			path = Scalar;
 			sourceTree = "<group>";
@@ -463,6 +492,9 @@
 				55F9F85E145B101400F4AFBD /* StringFormats */,
 				55F9F860145B113D00F4AFBD /* PullDeserializer.h */,
 				55F9F861145B113D00F4AFBD /* PullDeserializer.m */,
+				55D2C49A145F391A00CBF4F7 /* DeserializationHookStrategy.h */,
+				55D2C49C145F3E9600CBF4F7 /* SimplDeserializationPre.h */,
+				55D2C49E145F3EA600CBF4F7 /* SimplDeserializationPost.h */,
 			);
 			name = Deserializers;
 			sourceTree = "<group>";
@@ -517,6 +549,8 @@
 				55F9F84B145B0F7300F4AFBD /* XmlSerializer.m */,
 				55F9F84F145B0F8600F4AFBD /* JsonSerializer.h */,
 				55F9F850145B0F8600F4AFBD /* JsonSerializer.m */,
+				55D2C495145F235900CBF4F7 /* BibtexSerializer.h */,
+				55D2C496145F235900CBF4F7 /* BibtexSerializer.m */,
 			);
 			name = StringFormats;
 			sourceTree = "<group>";
@@ -524,6 +558,10 @@
 		55F9F85E145B101400F4AFBD /* StringFormats */ = {
 			isa = PBXGroup;
 			children = (
+				55D2C473145F1B9E00CBF4F7 /* XmlPullDeserializer.h */,
+				55D2C474145F1B9E00CBF4F7 /* XmlPullDeserializer.m */,
+				55D2C479145F1BB200CBF4F7 /* StringPullDeserializer.h */,
+				55D2C47A145F1BB200CBF4F7 /* StringPullDeserializer.m */,
 			);
 			name = StringFormats;
 			sourceTree = "<group>";
@@ -531,6 +569,10 @@
 		55F9F85F145B101700F4AFBD /* BinaryFormats */ = {
 			isa = PBXGroup;
 			children = (
+				55D2C47E145F1BC300CBF4F7 /* BinaryPullDeserializer.h */,
+				55D2C47F145F1BC300CBF4F7 /* BinaryPullDeserializer.m */,
+				55D2C483145F1BD700CBF4F7 /* TlvPullDeserializer.h */,
+				55D2C484145F1BD700CBF4F7 /* TlvPullDeserializer.m */,
 			);
 			name = BinaryFormats;
 			sourceTree = "<group>";
@@ -569,7 +611,7 @@
 				5538EEBB145A3221008173D8 /* LongType.h in Headers */,
 				5538EEBE145A3221008173D8 /* Type.h in Headers */,
 				5538EEBF145A3221008173D8 /* types.h in Headers */,
-				5538EEC0145A3221008173D8 /* XmlTools.h in Headers */,
+				5538EEC0145A3221008173D8 /* SimplTools.h in Headers */,
 				5538EEC5145A3590008173D8 /* TranslationContext.h in Headers */,
 				5538EECA145A35DD008173D8 /* ScalarUnmarshallingContext.h in Headers */,
 				5538EECD145A38AC008173D8 /* MultiMap.h in Headers */,
@@ -583,6 +625,15 @@
 				55F9F856145B0F9D00F4AFBD /* BinarySerializer.h in Headers */,
 				55F9F85B145B0FB000F4AFBD /* TlvSerializer.h in Headers */,
 				55F9F862145B113D00F4AFBD /* PullDeserializer.h in Headers */,
+				55D2C475145F1B9E00CBF4F7 /* XmlPullDeserializer.h in Headers */,
+				55D2C47B145F1BB200CBF4F7 /* StringPullDeserializer.h in Headers */,
+				55D2C480145F1BC300CBF4F7 /* BinaryPullDeserializer.h in Headers */,
+				55D2C485145F1BD700CBF4F7 /* TlvPullDeserializer.h in Headers */,
+				55D2C48A145F1E1300CBF4F7 /* SimplEnums.h in Headers */,
+				55D2C497145F235900CBF4F7 /* BibtexSerializer.h in Headers */,
+				55D2C49B145F391A00CBF4F7 /* DeserializationHookStrategy.h in Headers */,
+				55D2C49D145F3E9700CBF4F7 /* SimplDeserializationPre.h in Headers */,
+				55D2C49F145F3EA600CBF4F7 /* SimplDeserializationPost.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,7 +719,6 @@
 			files = (
 				5538EE08145A2993008173D8 /* main.m in Sources */,
 				5538EE22145A2B09008173D8 /* MyClass.m in Sources */,
-				5538EE2C145A3114008173D8 /* AnotherTest.m in Sources */,
 				5538EE72145A3221008173D8 /* DictionaryList.m in Sources */,
 				5538EE75145A3221008173D8 /* Scope.m in Sources */,
 				5538EE78145A3221008173D8 /* ParsedURL.m in Sources */,
@@ -692,7 +742,7 @@
 				5538EEB7145A3221008173D8 /* FloatType.m in Sources */,
 				5538EEBA145A3221008173D8 /* IntType.m in Sources */,
 				5538EEBD145A3221008173D8 /* LongType.m in Sources */,
-				5538EEC2145A3221008173D8 /* XmlTools.m in Sources */,
+				5538EEC2145A3221008173D8 /* SimplTools.m in Sources */,
 				5538EEC7145A3590008173D8 /* TranslationContext.m in Sources */,
 				5538EECF145A38AC008173D8 /* MultiMap.m in Sources */,
 				55F9F81D145A481400F4AFBD /* XmlStreamReader.m in Sources */,
@@ -703,6 +753,11 @@
 				55F9F858145B0F9D00F4AFBD /* BinarySerializer.m in Sources */,
 				55F9F85D145B0FB000F4AFBD /* TlvSerializer.m in Sources */,
 				55F9F864145B113D00F4AFBD /* PullDeserializer.m in Sources */,
+				55D2C477145F1B9E00CBF4F7 /* XmlPullDeserializer.m in Sources */,
+				55D2C47D145F1BB200CBF4F7 /* StringPullDeserializer.m in Sources */,
+				55D2C482145F1BC300CBF4F7 /* BinaryPullDeserializer.m in Sources */,
+				55D2C487145F1BD700CBF4F7 /* TlvPullDeserializer.m in Sources */,
+				55D2C499145F235900CBF4F7 /* BibtexSerializer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -733,7 +788,7 @@
 				5538EEB6145A3221008173D8 /* FloatType.m in Sources */,
 				5538EEB9145A3221008173D8 /* IntType.m in Sources */,
 				5538EEBC145A3221008173D8 /* LongType.m in Sources */,
-				5538EEC1145A3221008173D8 /* XmlTools.m in Sources */,
+				5538EEC1145A3221008173D8 /* SimplTools.m in Sources */,
 				5538EEC6145A3590008173D8 /* TranslationContext.m in Sources */,
 				5538EECE145A38AC008173D8 /* MultiMap.m in Sources */,
 				55F9F81C145A481000F4AFBD /* XmlStreamReader.m in Sources */,
@@ -744,6 +799,11 @@
 				55F9F857145B0F9D00F4AFBD /* BinarySerializer.m in Sources */,
 				55F9F85C145B0FB000F4AFBD /* TlvSerializer.m in Sources */,
 				55F9F863145B113D00F4AFBD /* PullDeserializer.m in Sources */,
+				55D2C476145F1B9E00CBF4F7 /* XmlPullDeserializer.m in Sources */,
+				55D2C47C145F1BB200CBF4F7 /* StringPullDeserializer.m in Sources */,
+				55D2C481145F1BC300CBF4F7 /* BinaryPullDeserializer.m in Sources */,
+				55D2C486145F1BD700CBF4F7 /* TlvPullDeserializer.m in Sources */,
+				55D2C498145F235900CBF4F7 /* BibtexSerializer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

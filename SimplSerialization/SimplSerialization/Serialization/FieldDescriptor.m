@@ -27,6 +27,7 @@
 @synthesize xmlHint;
 @synthesize wrapperFD;
 @synthesize tagClassDescriptors;
+@synthesize compositeTagName;
 
 static NSDictionary *hints;
 
@@ -181,6 +182,24 @@ static NSDictionary *hints;
 	}
 }
 
+- (bool) isDefaultValueFromContext : (NSObject *) object
+{
+    if(object != nil)
+    {
+        return [scalarType isDefaultValue: self context: object];
+    }
+    return false;
+}
+
+- (bool) isDefaultValue : (NSString *) value
+{
+    if(value != nil)
+    {
+        return [scalarType isDefaultValue: value];
+    }
+    return false;
+}
+
 - (void) appendLeaf: (NSMutableString *) output elementState: (ElementState *) elementState 
 {
 	if (elementState != nil)
@@ -228,6 +247,13 @@ static NSDictionary *hints;
 	}
 }
 
+- (void) appendValue: (NSMutableString *) outputString andObject: (NSObject *) object
+{
+    [scalarType appendValue: outputString fieldDescriptor: self context: object];
+}
+
+
+
 - (BOOL) isTagNameFromClassName 
 {
 	return tagClasses != nil;
@@ -245,7 +271,12 @@ static NSDictionary *hints;
 
 - (NSString *) elementStart
 {
-	return [self isCollection] ? collectionOrMapTagName : tagName;
+	return [self isCollection] ? collectionOrMapTagName : [self isNested] ? compositeTagName : tagName;
+}
+
+- (bool) isNested
+{
+    return type == COMPOSITE_ELEMENT;
 }
 
 - (BOOL) isCollection 
@@ -274,6 +305,13 @@ static NSDictionary *hints;
 	else
 		return [NSString stringWithUTF8String : ivar_getName(*field)];
 }
+
+- (NSObject *) getObject : (NSObject *) object
+{
+    return [object valueForKey:[self getFieldName]];
+}
+
+
 
 - (ElementState *) constructChildElementState: (ElementState *) elementState tagName: (NSString *) elementName 
 {
@@ -369,7 +407,13 @@ static NSDictionary *hints;
 
 - (void) setField: (id) object value: (id) value 
 {
-	[scalarType setField: object fieldName:[self getFieldName] value: value];
+	[scalarType setField: object fieldName:[self getFieldName] value: value];    
 }
+
+- (void) appendCollectionScalarValue : (NSMutableString *) outputString andObject : (NSObject *) object
+{
+    [scalarType appendValue:outputString context:object];
+}
+
 
 @end

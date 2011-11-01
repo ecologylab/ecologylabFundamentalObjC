@@ -53,7 +53,7 @@
 	 @param		 - 
 	 @result     -
 */
-- (void) appendValue: (NSMutableString *) buffy fieldDescriptor: (FieldDescriptor *) fd context: (id) context;
+- (void) appendValue: (NSOutputStream *) outputStream fieldDescriptor: (FieldDescriptor *) fd context: (id) context;
 
 /*!
 	 @method     getInstance

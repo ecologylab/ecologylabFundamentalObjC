@@ -51,30 +51,35 @@
 
 - (void) setField: (id) object fieldName: (const char *) fn 
 {
-	objc_msgSend(object, sel_getUid([XmlTools getSetterFunction: fn]), m_value);
+	objc_msgSend(object, sel_getUid([SimplTools getSetterFunction: fn]), m_value);
 }
 
 - (void) setField: (id) object fieldName: (NSString *) fn value: (id) value 
 {
 	[self setInstance:[value description]];	
-	objc_msgSend(object, sel_getUid([XmlTools getSetterFunction:[fn cStringUsingEncoding: NSASCIIStringEncoding]]), m_value);
+	objc_msgSend(object, sel_getUid([SimplTools getSetterFunction:[fn cStringUsingEncoding: NSASCIIStringEncoding]]), m_value);
 }
 
-- (void) appendValue: (NSMutableString *) buffy fieldDescriptor: (FieldDescriptor *) fd context: (id) context 
+- (void) appendValue: (NSMutableString *) outputString fieldDescriptor: (FieldDescriptor *) fd context: (id) context 
 {
 	id instance = [context valueForKey:[fd getFieldName]];
-	[self appendValue: buffy context: instance];
+	[self appendValue: outputString context: instance];
 }
 
-- (void) appendValue: (NSMutableString *) buffy context: (id) instance 
+- (void) appendValue: (NSMutableString *) outputString context: (id) instance 
 {
-	[buffy appendFormat:[instance description]];
+    [outputString appendString :[instance description]];
 }
 
 - (BOOL) isDefaultValue: (FieldDescriptor *) fieldDescriptor context: (ElementState *) elementState 
 {
 	id instance = [elementState valueForKey:[fieldDescriptor getFieldName]];
 	return instance == nil ||[[instance description] isEqualToString: DEFAULT_VALUE_STRING];
+}
+
+- (BOOL) isDefaultValue: (NSString *) value
+{
+    return [DEFAULT_VALUE_STRING isEqual:value];
 }
 
 - (id) getValueFromString: (NSString *) value 

@@ -1,21 +1,21 @@
 //
-//  XmlSerializer.h
+//  BibtexSerializer.h
 //  SimplSerialization
 //
-//  Created by Nabeel Shahzad on 10/28/11.
+//  Created by Nabeel Shahzad on 10/31/11.
 //  Copyright (c) 2011 Texas A&M University. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+
 #import "TranslationContext.h"
 #import "StringSerializer.h"
 
-@interface XmlSerializer : StringSerializer
-{
-    bool isRoot;
-}
 
-+ (id) xmlSerializer;
+@interface BibtexSerializer  : StringSerializer
+
+
++ (id) bibtexSerializer;
 - (void) serialize : (NSObject *) object andString : (NSMutableString *) outputString andContext : (TranslationContext *) translationContext;
 
 @end

@@ -13,7 +13,7 @@
 #import <Foundation/Foundation.h>
 
 #import "Type.h"
-#import "XmlTools.h"
+#import "SimplTools.h"
 
 @class FieldDescriptor;
 
@@ -59,7 +59,7 @@
 	 @param		 - 
 	 @result     -
 */
-- (void) appendValue: (NSMutableString *) buffy fieldDescriptor: (FieldDescriptor *) fd context: (id) context;
+- (void) appendValue: (NSMutableString *) outputString fieldDescriptor: (FieldDescriptor *) fd context: (id) context;
 
 /*!
 	 @method     getInstance

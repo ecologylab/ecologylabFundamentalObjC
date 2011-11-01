@@ -76,7 +76,38 @@
 
 - (int) containsValue : (NSMutableArray *) collection andValue : (NSObject *) value
 {
+    ClassDescriptor* classDescriptor = [ClassDescriptor classDescriptorWithObject:value];
     
+    int index = 0;
+    if ([classDescriptor isStrictObjectGraphRequired])
+    {
+        for (NSObject* item in collection)
+        {
+            if (item == value)
+            {
+                return index;
+            }
+            index ++;
+        }
+        return -1;
+    }
+    else
+    {
+        for (NSObject* item in collection)
+        {
+            if ([item isEqual:value])
+            {
+                return index;
+            }
+            index ++;
+        }
+        return -1;
+    }
+}
+
+- (int) size 
+{
+    return [map count];
 }
 
 - (NSObject *) get : (NSObject *) key

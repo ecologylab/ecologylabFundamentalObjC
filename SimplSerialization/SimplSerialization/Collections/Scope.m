@@ -38,7 +38,7 @@
 #pragma mark NSScope - instance initializers
 
 - (id) init {
-	if ( (self ==[super init]) ) 
+	if ( (self =[super init]) ) 
 	{
 		mutableDictionary = [[NSMutableDictionary alloc] init];
 	}
@@ -48,7 +48,7 @@
 
 - (id) initWithParent: (NSDictionary *) parent 
 {
-	if ( (self ==[super init]) ) 
+	if ( (self =[super init]) ) 
 	{
 		self.m_parent = parent;
 		mutableDictionary = [[NSMutableDictionary alloc] init];
@@ -59,7 +59,7 @@
 
 - (id) initWithCapacity: (NSUInteger) capacity 
 {
-	if ( (self ==[super init]) ) 
+	if ( (self =[super init]) ) 
 	{
 		mutableDictionary = [[NSMutableDictionary alloc] initWithCapacity: capacity];
 	}
@@ -69,7 +69,7 @@
 
 - (id) initWithParentAndCapacity: (NSDictionary *) parent withCapacity: (NSUInteger) capacity 
 {
-	if ( (self ==[super init]) ) 
+	if ( (self =[super init]) ) 
 	{
 		self.m_parent = parent;
 		mutableDictionary = [[NSMutableDictionary alloc] initWithCapacity: capacity];

@@ -23,6 +23,7 @@ static NSMutableDictionary *globalClassDescriptorsMap;
 @synthesize elementFieldDescriptors;
 @synthesize allFieldDescriptorsByTagNames; 
 @synthesize pseudoFieldDescriptor; 
+@synthesize isStrictObjectGraphRequired;
 
 #pragma mark ClassDescriptor - static initializer & accessors
 
@@ -36,15 +37,20 @@ static NSMutableDictionary *globalClassDescriptorsMap;
 	return globalClassDescriptorsMap;
 }
 
++ (id) classDescriptorWithObject : (NSObject *) object 
+{
+	return [ClassDescriptor classDescriptor : [object class]];
+}
 
-+ (id) classDescriptor: (Class) cls 
+
++ (id) classDescriptor : (Class) cls 
 {
 	return [globalClassDescriptorsMap valueForKey:[NSString stringWithUTF8String: class_getName(cls)]];
 }
 
 + (id) classDescriptorWithField: (Ivar) field
 {
-	return [globalClassDescriptorsMap valueForKey:[XmlTools getTypeFromField: field]];
+	return [globalClassDescriptorsMap valueForKey:[SimplTools getTypeFromField: field]];
 }
 
 + (id) classDescriptorWithName: (NSString *) className 
@@ -118,7 +124,7 @@ static NSMutableDictionary *globalClassDescriptorsMap;
 
 - (id) getInstance 
 {
-	return [XmlTools getInstance: describedClass];
+	return [SimplTools getInstance: describedClass];
 }
 
 - (FieldDescriptor *) getFieldDescriptorByTag:  (NSString *) elementName scope: (SimplTypesScope *) translationScope elementState: (ElementState *) elementState 

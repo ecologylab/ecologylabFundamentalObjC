@@ -20,6 +20,10 @@
 #define START_CDATA "<![CDATA["
 #define END_CDATA	"]]>"
 
+#define SIMPL_NAMESPACE	" xmlns:simpl=\"http://ecologylab.net/research/simplGuide/serialization/index.html\""
+#define SIMPL_ID "simpl:id"
+#define SIMPL_REF "simpl:ref"
+
 @class ClassDescriptor;
 @class ElementState;
 
@@ -73,12 +77,14 @@ typedef enum hints
 @property (nonatomic, readwrite)		 XMLHint xmlHint;
 @property (nonatomic, readwrite, retain) NSString *tagName;
 @property (nonatomic, readwrite, retain) NSString *collectionOrMapTagName;
+@property (nonatomic, readwrite, retain) NSString *compositeTagName;
 @property (nonatomic, readwrite, retain) NSMutableArray *otherTags;
 @property (nonatomic, readwrite, retain) NSMutableDictionary *tagClasses;
 @property (nonatomic, readwrite, retain) ClassDescriptor *declaringClassDescriptor;
 @property (nonatomic, readwrite, retain) id <Type> scalarType;
 @property (nonatomic, readwrite, retain) FieldDescriptor *wrapperFD;
 @property (nonatomic, readwrite, retain) NSMutableDictionary *tagClassDescriptors;
+
 
 #pragma mark FieldDescriptor - static accessors
 
@@ -361,5 +367,16 @@ typedef enum hints
 - (NSString *) getFieldName;
 
 
+- (NSObject *) getObject : (NSObject *) object;
+
+- (bool) isNested;
+
+- (bool) isDefaultValueFromContext : (NSObject *) object;
+
+- (bool) isDefaultValue : (NSString *) value;
+
+- (void) appendCollectionScalarValue : (NSMutableString *) outputString andObject : (NSObject *) object;
+
+- (void) appendValue: (NSMutableString *) outputString andObject: (NSObject *) object;
 
 @end

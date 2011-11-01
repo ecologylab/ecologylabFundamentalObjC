@@ -15,7 +15,7 @@
 #import <objc/runtime.h>
 #import <Foundation/Foundation.h>
 #import "DictionaryList.h"
-#import "XmlTools.h"
+#import "SimplTools.h"
 
 @class SimplTypesScope;
 @class FieldDescriptor;
@@ -39,6 +39,7 @@
 	DictionaryList		 *fieldDescriptorsByFieldName;
 	FieldDescriptor		 *pseudoFieldDescriptor;
 	NSMutableDictionary  *allFieldDescriptorsByTagNames; 
+    bool                 isStrictObjectGraphRequired;
 }
 
 //Proporties.
@@ -52,6 +53,7 @@
 @property (nonatomic, readwrite, retain) NSMutableArray		*elementFieldDescriptors;
 @property (nonatomic, readwrite, retain) DictionaryList		*fieldDescriptorsByFieldName;
 @property (nonatomic, readwrite, retain) FieldDescriptor	*pseudoFieldDescriptor;
+@property (nonatomic, readonly)          bool               isStrictObjectGraphRequired;
 
 #pragma mark ClassDescriptor - class initializer
 
@@ -64,6 +66,7 @@
 	@result		returns an initialized ClassDescritor object
 */
 + (id) classDescriptor;
++ (id) classDescriptorWithObject : (NSObject *) object;
 
 #pragma mark ClassDescriptor - instance functions
 
@@ -154,7 +157,7 @@
 	@param		ElementState : deprecated not used. 
 	@result		FieldDescriptor with the tag name or nil if doesnot exists.
 */
-- (FieldDescriptor *) getFieldDescriptorByTag:  (NSString *) elementName scope: (SimplTypesScope *) translationScope elementState: (ElementState *) elementState;
+- (FieldDescriptor *) getFieldDescriptorByTag:  (NSString *) elementName scope: (SimplTypesScope *) translationScope elementState: (NSObject *) elementState;
 
 #pragma mark ClassDescriptor - static accessors
 

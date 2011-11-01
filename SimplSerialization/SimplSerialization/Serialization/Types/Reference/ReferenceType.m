@@ -9,6 +9,7 @@
 #import "ReferenceType.h"
 #import "FieldDescriptor.h"
 #import "ReferenceIntegerType.h"
+#import "SimplTools.h"
 
 @implementation ReferenceType
 
@@ -50,21 +51,26 @@
 	object_setInstanceVariable(object, [fn cStringUsingEncoding: NSASCIIStringEncoding], m_value);
 }
 
-- (void) appendValue: (NSMutableString *) buffy fieldDescriptor: (FieldDescriptor *) fd context: (id) context 
+- (void) appendValue: (NSMutableString *) outputString fieldDescriptor: (FieldDescriptor *) fd context: (id) context 
 {
 	id instance = [context valueForKey:[fd getFieldName]];
-	[self appendValue: buffy context: instance];
+	[self appendValue: outputString context: instance];
 }
 
-- (void) appendValue: (NSMutableString *) buffy context: (id) instance 
+- (void) appendValue: (NSMutableString *) outputString context: (id) instance 
 {
-	[buffy appendFormat:[instance description]];
+    [outputString appendString:[instance description]];
 }
 
 - (BOOL) isDefaultValue: (FieldDescriptor *) fieldDescriptor context: (ElementState *) elementState 
 {
 	id instance = [elementState valueForKey:[fieldDescriptor getFieldName]];
 	return instance == nil;
+}
+
+- (BOOL) isDefaultValue: (NSString *) value
+{
+	return [DEFAULT_VALUE_STRING isEqual:value];
 }
 
 - (id) getValueFromString: (NSString *) value 

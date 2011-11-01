@@ -7,6 +7,7 @@
 //
 
 #import "TranslationContext.h"
+#import "ClassDescriptor.h"
 
 @interface TranslationContext () 
 
@@ -89,8 +90,21 @@
     
 }
 
+- (NSNumber *) objectHash : (NSObject *) object
+{
+    return [NSNumber numberWithInt:[object hash]];
+}
+
 - (void) resolveGraphRecursive : (NSObject *) object
 {
+    [visitedElements put:[self objectHash:object] andValue:object];
+    NSMutableArray* elementFieldDescriptor = [ClassDescriptor classDescriptor : [object class]]; 
+    
+    for(NSObject* object in elementFieldDescriptor)
+    {
+        // TODO: recursive graph resolve logic here. 
+    }
+    
     
 }
 
@@ -103,50 +117,69 @@
 
 - (void) initMaps
 {
-    
+    marshalledObjects = [MultiMap multiMap]; 
+    visitedElements = [MultiMap multiMap];
+    needsAttributeHashCode = [MultiMap multiMap];
+    unmarshalledObjects = [MultiMap multiMap];    
 }
 
 - (void) markAsUmarshalled : (NSString *) key andObject : (NSObject *) object
 {
-    
+    [marshalledObjects put:key andValue:object];
 }
+
 - (void) resolveGraph : (NSObject *) object
 {
-    
+    [self resolveGraphRecursive:object];    
 }
+
 - (bool) alreadyVisited : (NSObject *) object
 {
-    
+    return [visitedElements contains:[NSNumber numberWithInt:[object hash]] andValue:object] != -1;
+}
+
+- (bool) alreadyMarshalled: (NSObject *) object
+{
+    return [marshalledObjects contains:[NSNumber numberWithInt:[object hash]] andValue:object] != -1;
 }
 
 - (void) mapObject : (NSObject *) object
 {
-    
+    if(object != nil)
+    {
+        [marshalledObjects put:[NSNumber numberWithInt:[object hash]] andValue:object];
+    }
 }
 
 - (bool) needsHashCode : (NSObject *) object
 {
-    
+    return [needsAttributeHashCode contains:[NSNumber numberWithInt:[object hash]] andValue:object] != -1;
 }
 
 - (bool) isGraph
 {
-    
+    return [needsAttributeHashCode size] > 0;
 }
 
 - (NSObject *) getFromMap : (NSString *) key
 {
-    
+    return [unmarshalledObjects get:key];
 }
 
 - (NSString *) getSimplId : (NSObject *) object
 {
+    int objectHash = [object hash];
+    int orderedIndex = [marshalledObjects contains:[NSNumber numberWithInt:[object hash]] andValue:object];
     
+    if(orderedIndex > 0)
+        return  [NSString stringWithFormat:@"%d,%d", objectHash, orderedIndex];
+    else
+        return [NSString stringWithFormat:@"%d", objectHash];
 }
 
 - (NSString *) getDelimiter;
 {
-    
+    return delimeter;
 }
 
 - (ParsedURL *) purlContext

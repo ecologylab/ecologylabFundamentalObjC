@@ -15,7 +15,7 @@
 #import <Foundation/Foundation.h>
 
 #import "FieldTypes.h"
-#import "XmlTools.h"
+#import "SimplTools.h"
 
 @class FieldDescriptor;
 @class ClassDescriptor;
