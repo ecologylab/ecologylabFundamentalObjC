@@ -16,6 +16,8 @@
 #import <Foundation/Foundation.h>
 #import "DictionaryList.h"
 #import "SimplTools.h"
+#import "DescriptorBase.h"
+
 
 @class SimplTypesScope;
 @class FieldDescriptor;
@@ -28,32 +30,37 @@
 				 to perform serialization of a class. They also hold information about the class and its 
 				 fields.
 */
-@interface ClassDescriptor : NSObject
-{
-	Class				 *describedClass;
-	NSString			 *tagName;
-	NSString			 *decribedClassSimpleName;
-	NSString			 *describedClassPackageName;
-	NSMutableArray		 *attributeFieldDescriptors;
-	NSMutableArray		 *elementFieldDescriptors;
-	DictionaryList		 *fieldDescriptorsByFieldName;
-	FieldDescriptor		 *pseudoFieldDescriptor;
-	NSMutableDictionary  *allFieldDescriptorsByTagNames; 
-    bool                 isStrictObjectGraphRequired;
+@interface ClassDescriptor : DescriptorBase
+{     
+	Class*              describedClass;
+	
+    NSString*           decribedClassSimpleName;
+	NSString*           describedClassPackageName;
+    
+    ClassDescriptor*        superClass;
+	NSMutableArray*         attributeFieldDescriptors;
+	NSMutableArray*         elementFieldDescriptors;
+	DictionaryList*         fieldDescriptorsByFieldName;
+	FieldDescriptor*        pseudoFieldDescriptor;
+	NSMutableDictionary*    allFieldDescriptorsByTagNames; 
+    bool                    isStrictObjectGraphRequired;
+    FieldDescriptor*        scalarTextFd;
 }
 
 //Proporties.
 //TODO : some properties are read only. Need to fix this. 
 @property (nonatomic, readwrite)		 Class				*describedClass;
-@property (nonatomic, readwrite, retain) NSString			*tagName;
 @property (nonatomic, readwrite, retain) NSString			*decribedClassSimpleName;
 @property (nonatomic, readwrite, retain) NSString			*describedClassPackageName;
 @property (nonatomic, readwrite, retain) NSDictionary		*allFieldDescriptorsByTagNames;
 @property (nonatomic, readwrite, retain) NSMutableArray		*attributeFieldDescriptors;
 @property (nonatomic, readwrite, retain) NSMutableArray		*elementFieldDescriptors;
+@property (nonatomic, readwrite, retain) NSMutableArray		*allFieldDescriptors;
 @property (nonatomic, readwrite, retain) DictionaryList		*fieldDescriptorsByFieldName;
 @property (nonatomic, readwrite, retain) FieldDescriptor	*pseudoFieldDescriptor;
+@property (nonatomic, readwrite, retain) FieldDescriptor	*scalarTextFd;
 @property (nonatomic, readonly)          bool               isStrictObjectGraphRequired;
+@property (nonatomic, readonly, assign)  bool               hasScalarTextFd;
 
 #pragma mark ClassDescriptor - class initializer
 
@@ -148,16 +155,8 @@
 */
 - (FieldDescriptor *)	pseudoFieldDescriptor;
 
-/*!
-	@method     getFieldDescriptorByTag
-	@abstract   Gets a field descriptor by its tag name
-	@discussion Gets the field descriptor by its tag name from the global all field descriptor map.
-	@param		NSString tag Name
-	@param		TranslationScope : deprecated not used.		
-	@param		ElementState : deprecated not used. 
-	@result		FieldDescriptor with the tag name or nil if doesnot exists.
-*/
-- (FieldDescriptor *) getFieldDescriptorByTag:  (NSString *) elementName scope: (SimplTypesScope *) translationScope elementState: (NSObject *) elementState;
+
+- (FieldDescriptor *) getFieldDescriptorByTag:  (NSString *) fieldDescriptorTag;
 
 #pragma mark ClassDescriptor - static accessors
 

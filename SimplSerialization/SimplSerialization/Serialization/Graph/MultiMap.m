@@ -44,7 +44,7 @@
 
 - (bool) put : (NSObject *) key andValue : (NSObject *) value
 {
-    if ([map objectForKey:key] != nil)
+    if ([map objectForKey:key] == nil)
     {
         NSMutableArray *collection = [NSMutableArray arrayWithCapacity:1];
         [collection addObject:value];

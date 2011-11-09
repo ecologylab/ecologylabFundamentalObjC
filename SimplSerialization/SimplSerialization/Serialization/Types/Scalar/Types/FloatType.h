@@ -1,38 +1,16 @@
-/*!
-	 @header	 FloatType
-	 @abstract   -
-	 @discussion -
-	 @updated    05/24/10
-	 @created	 01/05/10
-	 @author	 Nabeel Shahzad
-	 @copyright  Interface Ecology Lab
- */
+//
+//  FloatType.h
+//  SimplSerialization
+//
+//  Created by Nabeel Shahzad on 11/7/11.
+//  Copyright (c) 2011 Texas A&M University. All rights reserved.
+//
 
-#import <stdio.h>
-#import <objc/runtime.h>
-#import <objc/message.h>
 #import <Foundation/Foundation.h>
-
 #import "ScalarType.h"
 
-@class FieldDescriptor;
-
-/*!
-	 @class		 FloatType	
-	 @abstract   -
-	 @discussion -
-*/
-@interface FloatType : ScalarType 
-{
-	
-}
-
-/*!
-	 @method     floatTypeWithString
-	 @discussion -
-	 @param		 - 
-	 @result     -
-*/
-+ (id) floatTypeWithString: (NSString *) value;
+@interface FloatType : ScalarType
+    
++ (id) floatType;
 
 @end

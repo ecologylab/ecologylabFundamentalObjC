@@ -15,7 +15,7 @@ static NSMutableDictionary *globalClassDescriptorsMap;
 @implementation ClassDescriptor
 
 @synthesize describedClass;
-@synthesize tagName;
+
 @synthesize decribedClassSimpleName;
 @synthesize describedClassPackageName;
 @synthesize fieldDescriptorsByFieldName;
@@ -24,6 +24,10 @@ static NSMutableDictionary *globalClassDescriptorsMap;
 @synthesize allFieldDescriptorsByTagNames; 
 @synthesize pseudoFieldDescriptor; 
 @synthesize isStrictObjectGraphRequired;
+@synthesize scalarTextFd;
+
+@dynamic    hasScalarTextFd;
+@dynamic    allFieldDescriptors;
 
 #pragma mark ClassDescriptor - static initializer & accessors
 
@@ -45,7 +49,8 @@ static NSMutableDictionary *globalClassDescriptorsMap;
 
 + (id) classDescriptor : (Class) cls 
 {
-	return [globalClassDescriptorsMap valueForKey:[NSString stringWithUTF8String: class_getName(cls)]];
+    NSString* className = [NSString stringWithUTF8String: class_getName(cls)];
+	return [globalClassDescriptorsMap valueForKey:className];
 }
 
 + (id) classDescriptorWithField: (Ivar) field
@@ -105,7 +110,7 @@ static NSMutableDictionary *globalClassDescriptorsMap;
 	[fieldDescriptorsByFieldName setObject: fieldDescriptor forKey: tempTagName];
 	[allFieldDescriptorsByTagNames setObject: fieldDescriptor forKey: tempTagName];
 
-	if (fieldDescriptor.type == SCALAR && fieldDescriptor.xmlHint == XML_ATTRIBUTE)
+	if (fieldDescriptor.type == SCALAR && fieldDescriptor.xmlHint == XmlAttribute)
 		[attributeFieldDescriptors addObject: fieldDescriptor];
 	else
 		[elementFieldDescriptors addObject: fieldDescriptor];
@@ -124,12 +129,12 @@ static NSMutableDictionary *globalClassDescriptorsMap;
 
 - (id) getInstance 
 {
-	return [SimplTools getInstance: describedClass];
+	return [SimplTools getInstanceByClassName: self.decribedClassSimpleName];
 }
 
-- (FieldDescriptor *) getFieldDescriptorByTag:  (NSString *) elementName scope: (SimplTypesScope *) translationScope elementState: (ElementState *) elementState 
+- (FieldDescriptor *) getFieldDescriptorByTag:  (NSString *) fieldDescriptorTag
 {	
-	return [allFieldDescriptorsByTagNames objectForKey: elementName];
+	return [allFieldDescriptorsByTagNames objectForKey: fieldDescriptorTag];
 }
 
 - (void) addFieldDescriptorMapping: (FieldDescriptor *) fieldDescriptor
@@ -137,9 +142,9 @@ static NSMutableDictionary *globalClassDescriptorsMap;
 	NSString *fdTagName = [fieldDescriptor tagName];
 	if (fdTagName != nil) 
 	{
-		id previousValue = [allFieldDescriptorsByTagNames objectForKey: fdTagName];
+		FieldDescriptor* previousValue = [allFieldDescriptorsByTagNames objectForKey: fdTagName];
 		[allFieldDescriptorsByTagNames setValue: fieldDescriptor forKey: fdTagName];
-		if (previousValue != nil) NSLog(@"tag <%@>:\t field[%@] overrides field[%@%]", fdTagName, [fieldDescriptor getFieldName], [previousValue getFieldName]);
+		if (previousValue != nil) NSLog(@"tag <%@>:\t field[%@] overrides field[%@]", fdTagName, fieldDescriptor.name, previousValue.name);
 	}
 }
 
@@ -148,10 +153,23 @@ static NSMutableDictionary *globalClassDescriptorsMap;
 	NSString *fdTagName = tName;
 	if (fdTagName != nil) 
 	{
-		id previousValue = [allFieldDescriptorsByTagNames objectForKey: fdTagName];
+		FieldDescriptor* previousValue = [allFieldDescriptorsByTagNames objectForKey: fdTagName];
 		[allFieldDescriptorsByTagNames setValue: fieldDescriptor forKey: fdTagName];
-		if (previousValue != nil) NSLog(@"tag <%@>:\t field[%@] overrides field[%@%]", fdTagName, [fieldDescriptor getFieldName], [previousValue getFieldName]);
+		if (previousValue != nil) NSLog(@"tag <%@>:\t field[%@] overrides field[%@]", fdTagName, fieldDescriptor.name, previousValue.name);
 	}
 }
+
+- (bool) hasScalarTextFd
+{
+    return scalarTextFd != nil;
+}
+
+- (NSArray *) allFieldDescriptors
+{
+    return nil;
+}
+
+
+
 
 @end

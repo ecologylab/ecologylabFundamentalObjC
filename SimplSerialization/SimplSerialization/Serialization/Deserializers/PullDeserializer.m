@@ -9,6 +9,7 @@
 #import "PullDeserializer.h"
 #import "SimplDeserializationPre.h"
 #import "SimplDeserializationPost.h"
+#import "XmlPullDeserializer.h"
 
 @interface PullDeserializer()
 
@@ -50,11 +51,11 @@
 }
 
 
-+ (id) formatDeserializer : (SimplTypesScope *) scope andContext : (TranslationContext *) context andFormat : (Format) inputFormat
++ (PullDeserializer*) formatDeserializer : (SimplTypesScope *) scope andContext : (TranslationContext *) context andFormat : (Format) inputFormat
 {
     switch (inputFormat) {
         case kFXml:
-            
+            return [XmlPullDeserializer xmlPullDeserializer:scope andContext:context];
             break;
             
         default:
@@ -63,11 +64,11 @@
     return nil;
 }
 
-+ (id) stringDeserializer : (SimplTypesScope *) scope andContext : (TranslationContext *) context andFormat : (Format) inputFormat
++ (StringPullDeserializer *) stringDeserializer : (SimplTypesScope *) scope andContext : (TranslationContext *) context andStringFormat : (StringFormat) inputFormat
 {
     switch (inputFormat) {
         case kSFXml:
-            
+            return [XmlPullDeserializer xmlPullDeserializer:scope andContext:context];
             break;
             
         default:
@@ -76,12 +77,12 @@
     return nil;
 }
 
-+ (id) binaryDeserializer : (SimplTypesScope *) scope andContext : (TranslationContext *) context andFormat : (Format) inputFormat
++ (PullDeserializer*) binaryDeserializer : (SimplTypesScope *) scope andContext : (TranslationContext *) context andBinaryFormat : (BinaryFormat) inputFormat
 {
     switch (inputFormat) 
     {
         case kBFTlv:
-            
+            //TODO: define methods
             break;
             
         default:

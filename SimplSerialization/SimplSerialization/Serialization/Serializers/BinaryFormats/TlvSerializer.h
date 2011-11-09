@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BinarySerializer.h"
+#import "TranslationContext.h"
 
-@interface TlvSerializer : NSObject
+@interface TlvSerializer : BinarySerializer
+
++ (id) tlvSerializer;
+- (void) serialize : (NSObject *) object andString : (NSData *) outputString andContext : (TranslationContext *) translationContext;
 
 @end

@@ -1,38 +1,16 @@
-/*!
-	 @header	 IntType
-	 @abstract   -
-	 @discussion -
-	 @updated    05/24/10
-	 @created	 01/05/10
-	 @author	 Nabeel Shahzad
-	 @copyright  Interface Ecology Lab
- */
+//
+//  IntType.h
+//  SimplSerialization
+//
+//  Created by Nabeel Shahzad on 11/7/11.
+//  Copyright (c) 2011 Texas A&M University. All rights reserved.
+//
 
-#import <stdio.h>
-#import <objc/runtime.h>
-#import <objc/message.h>
 #import <Foundation/Foundation.h>
+#import "SimplType.h"
 
-#import "ScalarType.h"
+@interface IntType : SimplType
 
-@class FieldDescriptor;
-
-/*!
-	 @class		 IntType	
-	 @abstract   -
-	 @discussion -
-*/
-@interface IntType : ScalarType 
-{
-	
-}
-
-/*!
-	 @method     intTypeWithString
-	 @discussion -
-	 @param		 - 
-	 @result     -
-*/
-+ (id) intTypeWithString: (NSString *) value;
++ (id) intType;
 
 @end

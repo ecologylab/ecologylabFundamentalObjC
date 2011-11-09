@@ -20,7 +20,7 @@
         case kFXml:
             return [XmlSerializer xmlSerializer];
             break;
-            // add json, tlv, bibtex
+            // TODO: add json, tlv, bibtex
         default:
             break;
     }
@@ -33,7 +33,7 @@
         case kSFXml:            
             return [XmlSerializer xmlSerializer];
             break;
-            //add json bibtex
+            // TODO: add json bibtex
             
         default:
             break;
@@ -45,7 +45,7 @@
 {
     switch (inputFormat) {
         case kBFTlv:
-            // add tlv serializer initializer
+            // TODO: add tlv serializer initializer
             break;
             
         default:
@@ -63,12 +63,24 @@
 
 - (void) serialize : (NSObject *) object andData : (NSData *) outputData andContext : (TranslationContext *) translationContext
 {
-    // abstract method must be overloaded by derived serializers. 
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                   reason:[NSString stringWithFormat:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)]
+                                 userInfo:nil];
 }
 
 - (bool) alreadySerialized: (NSObject *) object andContext : (TranslationContext *) translationContext
 {
     return [translationContext alreadyMarshalled : object];
 }
+
+- (void) serializationPostHook: (NSObject *) object andContext : (TranslationContext *) translationContext 
+{
+    //TODO: impelement me
+}  
+
+- (void) serializationPreHook: (NSObject *) object andContext : (TranslationContext *) translationContext 
+{
+    //TODO: impelement me
+}  
 
 @end

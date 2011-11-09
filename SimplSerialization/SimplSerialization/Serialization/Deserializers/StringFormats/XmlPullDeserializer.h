@@ -15,7 +15,9 @@
     @private XmlStreamReader* xmlReader;    
 }
 
-
++ (id) xmlPullDeserializer : (SimplTypesScope *) scope andContext : (TranslationContext *) context;
++ (id) xmlPullDeserializer : (SimplTypesScope *) scope andContext : (TranslationContext *) context andStrategy : (id<DeserializationHookStrategy>) strategy;
+- (id) initWithSimplTypesScope : (SimplTypesScope *) scope andContext : (TranslationContext *) context andStrategy : (id<DeserializationHookStrategy>) strategy;
 
 - (NSObject *) parseString : (NSString *) inputString;
 

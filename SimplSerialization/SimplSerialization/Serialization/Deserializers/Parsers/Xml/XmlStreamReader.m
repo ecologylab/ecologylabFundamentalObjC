@@ -17,12 +17,33 @@
 @dynamic read;
 @dynamic readElementContentAsString;
 @dynamic isEmptyElement;
+@dynamic moveToNextAttribute;
+@dynamic name;
+@dynamic value;
+@dynamic moveToElement;
 
 - (void) dealloc
 {
     xmlFreeTextReader(xmlReader);
     [super dealloc];
 }
+
+
++ (id) xmlStreamReaderWithString : (NSString *) inputString
+{
+    return [[XmlStreamReader alloc] initWithString:inputString];
+}
+
++ (id) xmlStreamReaderWithData : (NSData *) inputData
+{
+    return [[XmlStreamReader alloc] initWithData:inputData];
+}
+
++ (id) xmlStreamReaderWithFilePath : (NSString *) filePath
+{
+    return [[XmlStreamReader alloc] initWithPath:filePath];
+}
+
 
 /**
  * xmlTextReaderClose:
@@ -76,14 +97,36 @@
  * Initializing the xml stream reader with some uri
  * or local path.
  */
-- (id) initWithPath:(NSString *) path{
-    if(self = [super init]){
+- (id) initWithPath:(NSString *) path
+{
+    if(self = [super init])
+    {
         xmlReader = xmlNewTextReaderFilename([path UTF8String]);
         if(xmlReader == NULL)
             return nil;
     }
     return self;
 }
+
+- (id) initWithString : (NSString *) dataString
+{
+    if(self = [super init])
+    {
+        xmlReader = xmlReaderForDoc((const unsigned char*)[dataString UTF8String], "", nil, (XML_PARSE_NOWARNING));
+    }
+    return self;
+    
+}
+
+- (id) initWithData : (NSData *) data
+{
+    if(self = [super init])
+    {
+        xmlReader = xmlReaderForMemory([data bytes], [data length], "", nil, (XML_PARSE_NOWARNING));
+    }
+    return self;
+}
+
 
 /**
  * @reader:  the xmlTextReaderPtr used
@@ -106,9 +149,10 @@
     return NULL;
 }
 
-- (xmlElementType) nodeType
+- (xmlReaderTypes) nodeType
 {
-    return xmlTextReaderNodeType(xmlReader);
+    int t = xmlTextReaderNodeType(xmlReader);
+    return t;
 }
 
 /**
@@ -164,9 +208,60 @@
     return xmlTextReaderMoveToAttributeNs(xmlReader, (xmlChar *)[localname UTF8String], (xmlChar *)[namespaceURI UTF8String]);
 }
 
-- (bool) isIsEmptyElement
+
+- (BOOL) moveToNextAttribute
+{
+    return xmlTextReaderMoveToNextAttribute(xmlReader);
+}
+
+- (BOOL) isEmptyElement
 {
     return xmlTextReaderIsEmptyElement(xmlReader);
 }
+
+- (NSString *) name
+{
+    return [NSString stringWithUTF8String:(const char *)xmlTextReaderName(xmlReader)];
+}
+
+- (NSString *) value
+{
+    return [NSString stringWithUTF8String:(const char *)xmlTextReaderValue(xmlReader)];
+}
+
+- (BOOL) moveToElement
+{    
+    return xmlTextReaderMoveToElement(xmlReader);
+}
+
+- (void) skipCurrentTag
+{
+    NSString* tagName = self.name;    
+    if(tagName == NULL) return;
+    
+    NSMutableArray* startElement = [NSMutableArray array];
+    [startElement addObject:tagName];
+    
+    while(self.read)
+    {
+        switch (self.nodeType) 
+        {
+            case XML_READER_TYPE_ELEMENT:
+                if([self.name isEqualToString:tagName])
+                    [startElement addObject:tagName];
+                break;
+            case XML_READER_TYPE_END_ELEMENT:
+                if([self.name isEqualToString:tagName])
+                    [startElement removeLastObject];                    
+                break;       
+            default:
+                break;                
+        }
+        
+        if(startElement.count <= 0)
+            break;
+    }
+}
+
 
 @end

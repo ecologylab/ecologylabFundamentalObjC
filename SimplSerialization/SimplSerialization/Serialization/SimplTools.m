@@ -54,24 +54,26 @@
 	return class_createInstance(*class, 0);
 }
 
++ (id) getInstanceByClassName: (NSString *) className
+{
+    return class_createInstance([SimplTools getClass: className], 0);
+}
+
 + (id) getCollection : (NSObject  *) collectionObject
 {
     if([collectionObject isKindOfClass:[NSDictionary class]])
      return [((NSDictionary *)collectionObject) allValues];
     
-    if([collectionObject isKindOfClass:[NSDictionary class]])
+    if([collectionObject isKindOfClass:[NSArray class]])
         return ((NSArray *)collectionObject);
 
-    return nil;
-    
+    return nil;    
 }
-
 
 + (void) writeOnStream: (NSOutputStream *) outputStream andString : (NSString*) dataString
 {
     const uint8_t *rawString=(const uint8_t *)[dataString UTF8String];
-    [outputStream write:rawString maxLength:[dataString length]];
-    
+    [outputStream write:rawString maxLength:[dataString length]];    
 }
 
 @end

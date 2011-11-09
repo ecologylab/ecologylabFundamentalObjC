@@ -1,30 +1,32 @@
 //
 //  FloatType.m
-//  ecologylabXML
+//  SimplSerialization
 //
-//  Created by Nabeel Shahzad on 1/8/10.
-//  Copyright 2010 Interface Ecology Lab. All rights reserved.
+//  Created by Nabeel Shahzad on 11/7/11.
+//  Copyright (c) 2011 Texas A&M University. All rights reserved.
 //
 
 #import "FloatType.h"
 
 @implementation FloatType
 
-+ (id) floatTypeWithString : (NSString *) value 
++ (id) floatType
 {
-	return [[[FloatType alloc] initWithString: value] autorelease];
+    return [[[FloatType alloc] init] autorelease];
 }
 
-- (void) setDefaultValue 
+- (id) init
 {
-	DEFAULT_VALUE_STRING = @"0";
+    if((self = [super initWithSimpleName:@"float"]))
+    {
+        
+    }
+    return self;
 }
 
-- (void) setInstance: (NSString *) value 
+- (bool) isDefaultValue : (id) valueObject
 {
-	float *fValue = malloc( sizeof(float) );
-	*fValue = [value floatValue];
-	m_value = (id)fValue;
+    return [valueObject floatValue] == 0;
 }
 
 @end

@@ -28,7 +28,7 @@
 + (id) translationContextWithFile : (NSFileHandle *) fileDirContext;
 + (id) translationContextWithParsedUrl : (ParsedURL *) purlContext;
 
-- (void) setBAseDirFile : (NSFileHandle *) fileDirContext;
+- (void) setBaseDirFile : (NSFileHandle *) fileDirContext;
 - (void) initMaps; 
 - (void) markAsUmarshalled : (NSString *) key andObject : (NSObject *) object;
 - (void) resolveGraph : (NSObject *) object;

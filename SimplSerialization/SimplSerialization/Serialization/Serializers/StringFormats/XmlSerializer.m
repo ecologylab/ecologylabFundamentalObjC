@@ -80,6 +80,38 @@
         [self writeSimplRef : object andFieldDescriptor: rootFieldDescriptor andString: outputString andContext: translationContext];
         return;
     }
+    
+    [translationContext mapObject:object];
+    
+    [self serializationPreHook : object andContext : translationContext];
+    
+    [self writeObjectStart:rootFieldDescriptor andString:outputString];
+    
+    ClassDescriptor* rootClassDescriptor = [ClassDescriptor classDescriptorWithObject:object];
+    
+    [self serializeAttributes:object andString:outputString andContext:translationContext andClassDescriptor:rootClassDescriptor];
+    
+    NSMutableArray* elementFieldDescriptors = [rootClassDescriptor elementFieldDescriptors];
+    
+    bool hasXmlText = rootClassDescriptor.hasScalarTextFd;
+    bool hasElements = elementFieldDescriptors.count;
+    
+    if(!hasElements && !hasXmlText)
+    {
+        [self writeCompleteClose:outputString];
+    }
+    else
+    {
+        [self writeClose:outputString];
+        
+        if(hasXmlText)
+        {
+            [self writeValueAsText:object andFieldDescriptor:rootClassDescriptor.scalarTextFd andString:outputString];
+        }
+        
+        [self serializeFields:object andString:outputString andContext:translationContext andElementFieldDescriptors:elementFieldDescriptors];
+        [self writeObjectClose:rootFieldDescriptor andString:outputString];
+    }    
 }
 
 
@@ -220,7 +252,7 @@
 
 - (void) writeValueAsLeaf : (NSObject *) object andFieldDescriptor: (FieldDescriptor *) fd andString: (NSMutableString *) outputString andContext : (TranslationContext *) translationContext
 {
-    if([fd isDefaultValueFromContext: object])
+    if(![fd isDefaultValueFromContext: object])
     {
         
         [outputString appendString: @"<"];
@@ -259,7 +291,7 @@
     if([fd isDefaultValueFromContext: object])
     {
         if([fd isCDATA])
-            [outputString appendString: @START_CDATA];
+            [outputString appendString: @ START_CDATA];
         [fd appendValue:outputString andObject:object];
         if([fd isCDATA])
             [outputString appendString: @END_CDATA];
@@ -275,7 +307,7 @@
 {
     if (object != nil)
     {
-        if([fd isDefaultValueFromContext: object])
+        if(![fd isDefaultValueFromContext: object])
         {
             [outputString appendString: @" "];
             [outputString appendString: [fd tagName]];

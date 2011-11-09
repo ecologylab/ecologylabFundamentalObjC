@@ -97,19 +97,19 @@
 
 - (void) resolveGraphRecursive : (NSObject *) object
 {
-    [visitedElements put:[self objectHash:object] andValue:object];
-    NSMutableArray* elementFieldDescriptor = [ClassDescriptor classDescriptor : [object class]]; 
-    
-    for(NSObject* object in elementFieldDescriptor)
-    {
-        // TODO: recursive graph resolve logic here. 
-    }
+//    [visitedElements put:[self objectHash:object] andValue:object];
+//    NSMutableArray* elementFieldDescriptor = [ClassDescriptor classDescriptor : [object class]]; 
+//    
+//    for(NSObject* object in elementFieldDescriptor)
+//    {
+//        // TODO: recursive graph resolve logic here. 
+//    }
     
     
 }
 
 // public methods 
-- (void) setBAseDirFile : (NSFileHandle *) fileDirContext
+- (void) setBaseDirFile : (NSFileHandle *) fileDirContext
 {
     baseDirFile = fileDirContext;
     baseDirPurl = [ParsedURL parsedURLWithFile:fileDirContext];
@@ -125,7 +125,7 @@
 
 - (void) markAsUmarshalled : (NSString *) key andObject : (NSObject *) object
 {
-    [marshalledObjects put:key andValue:object];
+    [unmarshalledObjects put:key andValue:object];
 }
 
 - (void) resolveGraph : (NSObject *) object

@@ -9,11 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "FormatSerializer.h"
 
+
+
 @interface StringSerializer : FormatSerializer
 
 
 - (void) serialize : (NSObject *) object andData : (NSData *) outputData andContext : (TranslationContext *) translationContext;
-- (void) serialize : (NSObject *) object andString : (NSMutableString *) outputString andContext : (TranslationContext *) translationContext;
 - (NSString *) serialize : (NSObject *) object andContext : (TranslationContext *) translationContext;
+
+// abstract method
+- (void) serialize : (NSObject *) object andString : (NSMutableString *) outputString andContext : (TranslationContext *) translationContext;
 
 @end

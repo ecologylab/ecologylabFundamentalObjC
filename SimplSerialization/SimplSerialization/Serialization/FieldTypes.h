@@ -1,5 +1,5 @@
 /*!
-	 @header	 fTypes.h
+	 @header	 FieldTypes.h
 	 @abstract   Defines constants for types of field descriptors
 	 @updated    05/24/10
 	 @created	 01/05/10

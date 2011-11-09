@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "TranslationContext.h"
-#import "SimplEnums.h"
+#import "SimplDefs.h"
 
 //abstract class
 @interface FormatSerializer : NSObject
@@ -19,9 +19,13 @@
 + (id) serializerWithBinaryFormat : (BinaryFormat) inputFormat;
                            
 - (void) serialize : (NSObject *) object andData : (NSData *) outputData;
+
+// abstract method
 - (void) serialize : (NSObject *) object andData : (NSData *) outputData andContext : (TranslationContext *) translationContext;
 
 - (bool) alreadySerialized: (NSObject *) object andContext : (TranslationContext *) translationContext;
+- (void) serializationPostHook: (NSObject *) object andContext : (TranslationContext *) translationContext;  
+- (void) serializationPreHook: (NSObject *) object andContext : (TranslationContext *) translationContext;  
                                                         
 
 

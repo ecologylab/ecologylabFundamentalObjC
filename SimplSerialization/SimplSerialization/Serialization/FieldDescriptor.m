@@ -8,17 +8,15 @@
 
 #import "FieldDescriptor.h"
 #import "ClassDescriptor.h"
-#import "ElementState.h"
+#import "SimplDefs.h"
 
 @implementation FieldDescriptor
 
-@synthesize field;
-@synthesize elementClass;
-@synthesize tagName;
+
 @synthesize collectionOrMapTagName;
-@synthesize otherTags;
 @synthesize tagClasses;
 @synthesize declaringClassDescriptor;
+@synthesize elementClassDescriptor;
 @synthesize type;
 @synthesize scalarType;
 @synthesize isCDATA;
@@ -26,7 +24,7 @@
 @synthesize isWrapped;
 @synthesize xmlHint;
 @synthesize wrapperFD;
-@synthesize tagClassDescriptors;
+@synthesize polymorphClassDescriptors;
 @synthesize compositeTagName;
 
 static NSDictionary *hints;
@@ -43,12 +41,12 @@ static NSDictionary *hints;
 														@"UNDEFINED", nil];
 		
 		NSArray *objectArray = [NSArray arrayWithObjects:
-														[NSNumber numberWithInt:XML_ATTRIBUTE],
-														[NSNumber numberWithInt:XML_LEAF],
-														[NSNumber numberWithInt:XML_LEAF_CDATA],
-														[NSNumber numberWithInt:XML_TEXT],
-														[NSNumber numberWithInt:XML_TEXT_CDATA],
-														[NSNumber numberWithInt:UNDEFINED],
+														[NSNumber numberWithInt:XmlAttribute],
+														[NSNumber numberWithInt:XmlLeaf],
+														[NSNumber numberWithInt:XmlLeafCdata],
+														[NSNumber numberWithInt:XmlText],
+														[NSNumber numberWithInt:XmlTextCdata],
+														[NSNumber numberWithInt:Undefined],
 														nil];
 		
 		hints = [NSDictionary dictionaryWithObjects:objectArray forKeys:keyArray];
@@ -57,6 +55,11 @@ static NSDictionary *hints;
 	}
 	
 	return hints;
+}
+
++ (int) hintFromValue : (NSString *) hintValue
+{
+    return [[[FieldDescriptor hintTypes] objectForKey:hintValue] intValue];
 }
 
 + (id) fieldDescriptor 
@@ -112,7 +115,6 @@ static NSDictionary *hints;
 	{
 		self.tagName = [NSString stringWithString: elementName];
 		self.type = IGNORED_ELEMENT;
-		self.field = nil;
 		self.scalarType = nil;
 		self.declaringClassDescriptor = nil;
 		self.isWrapped = NO;
@@ -127,7 +129,6 @@ static NSDictionary *hints;
 		self.declaringClassDescriptor = classDescriptor;
 		self.tagName = [NSString stringWithString:[classDescriptor tagName]];
 		self.type = PSEUDO_FIELD_DESCRIPTOR;
-		self.field = nil;
 		self.scalarType = nil;
 		self.isWrapped = NO;
 	}
@@ -139,54 +140,18 @@ static NSDictionary *hints;
 	return wrapperFD;
 }
 
-- (void) setTypeWithReference: (int *) t 
+- (id) getChildClassDescriptor: (NSString *) tag
 {
-	self.type = *t;
+    ClassDescriptor* childClassDescriptor = ![self isPolymorphic] ? elementClassDescriptor : [polymorphClassDescriptors objectForKey: tag];    
+    return childClassDescriptor;
 }
 
-- (void) setIsCDATAWithReference: (bool *) isCData
-{
-	self.isCDATA = *isCData;
-}
-
-- (void) setNeedsEscapingWithReference: (bool *) nEscaping 
-{
-	self.needsEscaping = *nEscaping;
-}
-
-- (void) setIsWrappedWithReference: (bool *) wrapped 
-{
-	self.isWrapped = *wrapped;
-}
-
-- (void) setXmlHintWithReference: (XMLHint *) p_xmlHint 
-{
-	self.xmlHint = *p_xmlHint;
-}
-
-- (void) writeElementStart: (NSMutableString *) output
-{
-	[output appendFormat: @"<%@", [self elementStart]];
-}
-
-- (void) appendValueAsAttribute: (NSMutableString *) output elementState: (ElementState *) elementState 
-{
-	if (elementState != nil) 
-	{
-		if (![scalarType isDefaultValue: self context: elementState]) 
-		{
-			[output appendFormat: @" %@=\"%", tagName];
-			[scalarType appendValue: output fieldDescriptor: self context: elementState];
-			[output appendString: @"\""];
-		}
-	}
-}
 
 - (bool) isDefaultValueFromContext : (NSObject *) object
 {
     if(object != nil)
     {
-        return [scalarType isDefaultValue: self context: object];
+        return [scalarType isDefaultValue:self andObject:object];
     }
     return false;
 }
@@ -200,73 +165,15 @@ static NSDictionary *hints;
     return false;
 }
 
-- (void) appendLeaf: (NSMutableString *) output elementState: (ElementState *) elementState 
-{
-	if (elementState != nil)
-	{
-		if (![scalarType isDefaultValue: self context: elementState]) 
-		{
-			[self writeOpenTag: output];
-
-			if (isCDATA)
-				[output appendFormat: @"%@", START_CDATA];
-
-			[scalarType appendValue: output fieldDescriptor: self context: elementState];
-
-			if (isCDATA)
-				[output appendFormat: @"%@", END_CDATA];
-
-			[self writeCloseTag: output];
-		}
-	}
-}
-
-- (void) writeWrap: (NSMutableString *) output close: (BOOL) close 
-{
-	[output appendString: @"<"];
-	if (close)
-		[output appendString: @"/"];
-	[output appendFormat: @"%@>", tagName];
-}
-
-- (void) appendCollectionLeaf: (NSMutableString *) output elementState: (NSObject *) instance 
-{
-	if (instance != nil) 
-	{
-		[self writeOpenTag: output];
-
-		if (isCDATA)
-			[output appendFormat: @"%@", START_CDATA];
-
-		[scalarType appendValue: output context: instance];
-
-		if (isCDATA)
-			[output appendFormat: @"%@", END_CDATA];
-
-		[self writeCloseTag: output];
-	}
-}
 
 - (void) appendValue: (NSMutableString *) outputString andObject: (NSObject *) object
 {
-    [scalarType appendValue: outputString fieldDescriptor: self context: object];
+    [scalarType appendValue:outputString andFieldDescriptor:self andObject:object];
 }
-
-
 
 - (BOOL) isTagNameFromClassName 
 {
 	return tagClasses != nil;
-}
-
-- (void) writeOpenTag: (NSMutableString *) output 
-{
-	[output appendFormat: @"<%@>", [self elementStart]];
-}
-
-- (void) writeCloseTag: (NSMutableString *) output 
-{
-	[output appendFormat: @"</%@>", [self elementStart]];
 }
 
 - (NSString *) elementStart
@@ -293,77 +200,47 @@ static NSDictionary *hints;
 	}
 }
 
-- (Ivar) getField 
-{
-	return *field;
-}
-
-- (NSString *) getFieldName
-{
-	if (field == nil) 
-		return nil;
-	else
-		return [NSString stringWithUTF8String : ivar_getName(*field)];
-}
-
 - (NSObject *) getObject : (NSObject *) object
 {
-    return [object valueForKey:[self getFieldName]];
+    return [object valueForKey:self.name];
 }
 
-
-
-- (ElementState *) constructChildElementState: (ElementState *) elementState tagName: (NSString *) elementName 
-{
-	
-	ClassDescriptor *elementClassDescriptor = ![self isPolymorphic] ? [ClassDescriptor classDescriptor: *elementClass] : [tagClassDescriptors objectForKey:elementName];
-
-	id result = [elementClassDescriptor getInstance];
-	
-	if (result != nil) 
-	{
-		[elementState setupChildElementState: result];
-	}	
-	
-	return result;
-}
-		
 - (BOOL) isPolymorphic 
 {
-	return tagClassDescriptors != nil;
+	return polymorphClassDescriptors != nil;
 }
 
-- (id) automaticLazyGetCollectionOrMap: (ElementState *) elementState
+- (id) automaticLazyGetCollectionOrMap: (NSObject *) object
 {
 	NSObject *collection = nil;
 
-	collection = object_getIvar(elementState, *field);
+	collection = [object valueForKey:self.name];
 	
 	if (collection == nil)
 	{
 		collection = [[NSMutableArray array] retain];
-		object_setIvar(elementState, *field, collection);
+		[object setValue:collection forKey:self.name];
 	}
 	
 	return collection;
 }
 
-- (id) getMap: (ElementState *) elementState 
+- (id) getMap: (NSObject *) object 
 {
-	NSObject *collection = nil;
-	
-	collection = object_getIvar(elementState, *field);
+    NSObject *collection = nil;
+    
+	collection = [object valueForKey:self.name];
 	
 	if (collection == nil)
 	{
 		collection = [[NSMutableDictionary dictionary] retain];
-		object_setIvar(elementState, *field, collection);
+		[object setValue:collection forKey:self.name];
 	}
 	
 	return collection;
 }
 
-- (void) addLeafNodeToCollection: (ElementState *) elementState leafNodeValue: (NSString *) leafNodeValue
+- (void) addLeafNodeToCollection: (NSObject *) object leafNodeValue: (NSString *) leafNodeValue
 {
 	if (leafNodeValue == nil)
 	{
@@ -374,45 +251,40 @@ static NSDictionary *hints;
 		id typeConvertedValue = [scalarType getValueFromString: leafNodeValue];
 		if (typeConvertedValue != nil)
 		{
-			NSMutableArray *collection = [self automaticLazyGetCollectionOrMap: elementState];
+			NSMutableArray *collection = [self automaticLazyGetCollectionOrMap: object];
 			[collection addObject: typeConvertedValue];
 		}
 	}
 }
 
-- (void) addTagClass : (NSString*) name tagClass :  (Class *) tagClass 
+- (void) addTagClassDescriptor : (NSString*) tag tagClass :  (ClassDescriptor *) tagClassDescriptor 
 {
-	if(tagClasses == nil)
+	if(polymorphClassDescriptors == nil)
 	{
-		self.tagClasses = [NSMutableDictionary dictionary];
+		self.polymorphClassDescriptors = [NSMutableDictionary dictionary];
 	}
 	
-	[tagClasses setObject:*tagClass forKey:name];
+	[polymorphClassDescriptors setObject:tagClassDescriptor forKey:tag];	
 }
 
-- (void) addTagClassDescriptor : (NSString*) name tagClass :  (ClassDescriptor *) tagClassDescriptor 
+- (void) setFieldToNestedObject: (NSObject *) object andChildObject: (NSObject *) childObject 
 {
-	if(tagClassDescriptors == nil)
-	{
-		self.tagClassDescriptors = [NSMutableDictionary dictionary];
-	}
-	
-	[tagClassDescriptors setObject:tagClassDescriptor forKey:name];	
+    [object setValue:childObject forKey:self.name];
 }
 
-- (void) setFieldToNestedObject: (ElementState *) elementState childES: (ElementState *) childElementState 
+- (void) setFieldToScalar: (NSObject *) object andValue : (NSString *) value;
 {
-	object_setIvar(elementState, *field, childElementState);
+    [scalarType setField:object andFieldName:self.name andValue:value];
 }
 
 - (void) setField: (id) object value: (id) value 
 {
-	[scalarType setField: object fieldName:[self getFieldName] value: value];    
+    [scalarType setField:object andFieldName:self.name andValue:value];
 }
 
 - (void) appendCollectionScalarValue : (NSMutableString *) outputString andObject : (NSObject *) object
 {
-    [scalarType appendValue:outputString context:object];
+    [scalarType appendValue:outputString andValue:object];
 }
 
 

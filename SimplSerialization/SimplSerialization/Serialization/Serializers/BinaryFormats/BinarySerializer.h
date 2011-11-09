@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FormatSerializer.h"
 
-@interface BinarySerializer : NSObject
+@interface BinarySerializer : FormatSerializer
 
 @end

@@ -10,4 +10,6 @@
 
 @protocol SimplSerializationPost <NSObject>
 
+//TODO: define methods
+
 @end

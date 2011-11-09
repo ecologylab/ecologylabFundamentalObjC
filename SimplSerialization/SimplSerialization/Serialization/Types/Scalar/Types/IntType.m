@@ -1,30 +1,32 @@
 //
 //  IntType.m
-//  ecologylabXML
+//  SimplSerialization
 //
-//  Created by Nabeel Shahzad on 1/8/10.
-//  Copyright 2010 Interface Ecology Lab. All rights reserved.
+//  Created by Nabeel Shahzad on 11/7/11.
+//  Copyright (c) 2011 Texas A&M University. All rights reserved.
 //
 
 #import "IntType.h"
 
 @implementation IntType
 
-+ (id) intTypeWithString : (NSString *) value 
++ (id) intType
 {
-	return [[[IntType alloc] initWithString: value] autorelease];
+    return [[[IntType alloc] init] autorelease];
 }
 
-- (void) setDefaultValue 
+- (id) init
 {
-	DEFAULT_VALUE_STRING = @"0";
+    if((self = [super initWithSimpleName:@"Int"]))
+    {
+        
+    }
+    return self;
 }
 
-- (void) setInstance: (NSString *) value 
+- (bool) isDefaultValue : (id) valueObject
 {
-	int *iValue = malloc( sizeof(int) );
-	*iValue = [value intValue];
-	m_value = (id)iValue;
+    return [valueObject intValue] == 0;
 }
 
 @end

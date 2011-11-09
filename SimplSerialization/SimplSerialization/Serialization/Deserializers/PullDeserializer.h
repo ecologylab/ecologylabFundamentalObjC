@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SimplEnums.h"
+#import "SimplDefs.h"
 #import "TranslationContext.h"
 #import "DeserializationHookStrategy.h"
 #import "SimplTypesScope.h"
+
+
+@class StringPullDeserializer;
 
 @interface PullDeserializer : NSObject
 {
@@ -23,9 +26,14 @@
 @property(nonatomic, readwrite, retain) TranslationContext* translationContext;
 @property(nonatomic, readwrite, retain) id<DeserializationHookStrategy>  deserializationHookStrategy;
 
-+ (id) formatDeserializer : (SimplTypesScope *) scope andContext : (TranslationContext *) context andFormat : (Format) inputFormat;
-+ (id) stringDeserializer : (SimplTypesScope *) scope andContext : (TranslationContext *) context andFormat : (Format) inputFormat;
-+ (id) binaryDeserializer : (SimplTypesScope *) scope andContext : (TranslationContext *) context andFormat : (Format) inputFormat;
+
+
++ (PullDeserializer*) formatDeserializer : (SimplTypesScope *) scope andContext : (TranslationContext *) context andFormat : (Format) inputFormat;
++ (StringPullDeserializer*) stringDeserializer : (SimplTypesScope *) scope andContext : (TranslationContext *) context andStringFormat : (StringFormat) inputFormat;
++ (PullDeserializer*) binaryDeserializer : (SimplTypesScope *) scope andContext : (TranslationContext *) context andBinaryFormat : (BinaryFormat) inputFormat;
+
+
+- (id) initWithSimplTypesScope : (SimplTypesScope *) scope andContext : (TranslationContext *) context andStrategy : (id<DeserializationHookStrategy>) strategy;
 
 //abstact method
 - (NSObject *) parse : (NSData *) inputData;

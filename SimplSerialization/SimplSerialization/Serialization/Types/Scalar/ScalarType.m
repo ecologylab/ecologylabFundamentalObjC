@@ -1,116 +1,57 @@
 //
-//  ScalarType.m
-//  ecologylabXML
+//  NewScalarType.m
+//  SimplSerialization
 //
-//  Created by ecologylab on 1/20/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Created by Nabeel Shahzad on 11/7/11.
+//  Copyright (c) 2011 Texas A&M University. All rights reserved.
 //
 
 #import "ScalarType.h"
 #import "FieldDescriptor.h"
-#import "DoubleType.h"
-#import "FloatType.h"
-#import "IntType.h"
-#import "ByteType.h"
-#import "LongType.h"
-#import "BooleanType.h"
-
 
 @implementation ScalarType
 
-+ (void) initialize 
+
+- (id) initWithSimpleName:(NSString *)name
 {
-	[DoubleType class];	
-	[FloatType class];
-	[LongType class];
-	[IntType class];
-	[ByteType class];
-	[BooleanType class];
+    if ((self = [super initWithSimpleName:name]))
+    {
+    
+    }
+    return self;
+}
+
+- (void) setField : (NSObject *) object andFieldName : (NSString *) fieldName andValue : (NSString *) value
+{
+    // default definition. do we have to implement an override or this works fine? 
+    [object setValue:value forKey:fieldName];
+}
+
+- (void) appendValue : (NSMutableString *) outputString andFieldDescriptor : (FieldDescriptor *) fd andObject : (NSObject *) object
+{
+    id value = [object valueForKey:fd.name];
+    [self appendValue:outputString andValue : value];
+}
+
+- (void) appendValue : (NSMutableString *) outputString andValue : (id) valueObject
+{
+    // default definition. do we have to implement an override or this works fine? 
+    [outputString appendString :[valueObject stringValue]];
+}
+
+- (bool) isDefaultValue : (FieldDescriptor *) fd andObject : (NSObject *) object
+{
+    id valueObject = [object valueForKey:fd.name];
+    return [self isDefaultValue:valueObject];
+}
+
+- (bool) isDefaultValue : (id) valueObject
+{
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                   reason:[NSString stringWithFormat:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)]
+                                 userInfo:nil];
 }
 
 
-#pragma mark AbstractScalarType - Default constructor cannot be called.
-
-- (id) init 
-{
-	[self doesNotRecognizeSelector: _cmd];
-	[self release];
-	return nil;
-}
-
-#pragma mark AbstractScalarType - construction for the abstract class
-- (id) initWithString: (NSString *) value 
-{
-	if ( (self = [super init]) ) 
-	{		
-		[self setInstance: value];
-		[self setDefaultValue];
-	}
-	return self;
-}
-
-- (void) setField: (id) object fieldName: (const char *) fn 
-{
-	objc_msgSend(object, sel_getUid([SimplTools getSetterFunction: fn]), m_value);
-}
-
-- (void) setField: (id) object fieldName: (NSString *) fn value: (id) value 
-{
-	[self setInstance:[value description]];	
-	objc_msgSend(object, sel_getUid([SimplTools getSetterFunction:[fn cStringUsingEncoding: NSASCIIStringEncoding]]), m_value);
-}
-
-- (void) appendValue: (NSMutableString *) outputString fieldDescriptor: (FieldDescriptor *) fd context: (id) context 
-{
-	id instance = [context valueForKey:[fd getFieldName]];
-	[self appendValue: outputString context: instance];
-}
-
-- (void) appendValue: (NSMutableString *) outputString context: (id) instance 
-{
-    [outputString appendString :[instance description]];
-}
-
-- (BOOL) isDefaultValue: (FieldDescriptor *) fieldDescriptor context: (ElementState *) elementState 
-{
-	id instance = [elementState valueForKey:[fieldDescriptor getFieldName]];
-	return instance == nil ||[[instance description] isEqualToString: DEFAULT_VALUE_STRING];
-}
-
-- (BOOL) isDefaultValue: (NSString *) value
-{
-    return [DEFAULT_VALUE_STRING isEqual:value];
-}
-
-- (id) getValueFromString: (NSString *) value 
-{
-	[self setInstance: value];
-	return m_value;
-}
-
-- (id) getInstance 
-{
-	return m_value;
-}
-
-#pragma mark AbstractScalarType - Abstract Functions (Inherting class must overload these functions)
-
-- (void) setDefaultValue 
-{
-	[self doesNotRecognizeSelector: _cmd];
-}
-
-- (void) setInstance: (NSString *) value 
-{
-	[self doesNotRecognizeSelector: _cmd];
-}
-
--(void) dealloc
-{
-	free(m_value);
-	[DEFAULT_VALUE_STRING release];
-	
-	[super dealloc];
-}
 
 @end
