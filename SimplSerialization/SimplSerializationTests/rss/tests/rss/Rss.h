@@ -40,5 +40,7 @@
 
 - (void) setVersionWithReference: (float *) p_version;
 
++ (NSObject *) getPopulatedObject;
+
 @end
 

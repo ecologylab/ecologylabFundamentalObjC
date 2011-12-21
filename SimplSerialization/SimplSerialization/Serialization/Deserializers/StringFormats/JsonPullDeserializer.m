@@ -10,4 +10,31 @@
 
 @implementation JsonPullDeserializer
 
+
+
++ (id) jsonPullDeserializer : (SimplTypesScope *) scope andContext : (TranslationContext *) context
+{
+   return [[[JsonPullDeserializer alloc] initWithSimplTypesScope:scope andContext:context andStrategy:nil] autorelease];
+}
+
++ (id) jsonPullDeserializer : (SimplTypesScope *) scope andContext : (TranslationContext *) context andStrategy : (id<DeserializationHookStrategy>) strategy
+{
+    return [[[JsonPullDeserializer alloc] initWithSimplTypesScope:scope andContext:context andStrategy:strategy] autorelease];
+}
+
+- (id) initWithSimplTypesScope : (SimplTypesScope *) scope andContext : (TranslationContext *) context andStrategy : (id<DeserializationHookStrategy>) strategy
+{
+    if(( self = [super initWithSimplTypesScope:scope andContext:context andStrategy:strategy]))
+    {
+        
+    }
+    return self;
+}
+
+- (NSObject *) parseString : (NSString *) inputString
+{
+    // TODO: implement this
+    return nil;
+}
+
 @end

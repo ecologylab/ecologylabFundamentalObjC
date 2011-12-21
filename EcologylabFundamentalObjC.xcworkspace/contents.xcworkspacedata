@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:EcologylabSemantics/EcologylabSemantics.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:SimplOODSS/SimplOODSS.xcodeproj">
    </FileRef>
    <FileRef

@@ -75,6 +75,45 @@
 		5538EECD145A38AC008173D8 /* MultiMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EECB145A38AC008173D8 /* MultiMap.h */; };
 		5538EECE145A38AC008173D8 /* MultiMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EECC145A38AC008173D8 /* MultiMap.m */; };
 		5538EECF145A38AC008173D8 /* MultiMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EECC145A38AC008173D8 /* MultiMap.m */; };
+		55759EA014997D7E000F1CE8 /* ClassA.m in Sources */ = {isa = PBXBuildFile; fileRef = 55759E8214997D7D000F1CE8 /* ClassA.m */; };
+		55759EA114997D7E000F1CE8 /* ClassB.m in Sources */ = {isa = PBXBuildFile; fileRef = 55759E8414997D7D000F1CE8 /* ClassB.m */; };
+		55759EA214997D7E000F1CE8 /* ClassC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55759E8614997D7D000F1CE8 /* ClassC.m */; };
+		55759EA314997D7E000F1CE8 /* ClassD.m in Sources */ = {isa = PBXBuildFile; fileRef = 55759E8814997D7D000F1CE8 /* ClassD.m */; };
+		55759EA414997D7E000F1CE8 /* ClassX.m in Sources */ = {isa = PBXBuildFile; fileRef = 55759E8A14997D7D000F1CE8 /* ClassX.m */; };
+		55759EA514997D7E000F1CE8 /* ClassDes.m in Sources */ = {isa = PBXBuildFile; fileRef = 55759E8D14997D7E000F1CE8 /* ClassDes.m */; };
+		55759EA614997D7E000F1CE8 /* FieldDes.m in Sources */ = {isa = PBXBuildFile; fileRef = 55759E8F14997D7E000F1CE8 /* FieldDes.m */; };
+		55759EA714997D7E000F1CE8 /* TranslationS.m in Sources */ = {isa = PBXBuildFile; fileRef = 55759E9114997D7E000F1CE8 /* TranslationS.m */; };
+		55759EA814997D7E000F1CE8 /* Faculty.m in Sources */ = {isa = PBXBuildFile; fileRef = 55759E9414997D7E000F1CE8 /* Faculty.m */; };
+		55759EA914997D7E000F1CE8 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 55759E9614997D7E000F1CE8 /* Person.m */; };
+		55759EAA14997D7E000F1CE8 /* PersonDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 55759E9814997D7E000F1CE8 /* PersonDirectory.m */; };
+		55759EAB14997D7E000F1CE8 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 55759E9A14997D7E000F1CE8 /* Student.m */; };
+		55759EAC14997D7E000F1CE8 /* StudentDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 55759E9C14997D7E000F1CE8 /* StudentDirectory.m */; };
+		55759EAD14997D7E000F1CE8 /* ScalarCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 55759E9F14997D7E000F1CE8 /* ScalarCollection.m */; };
+		55759EB0149A638B000F1CE8 /* TestingUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 55759EAF149A638B000F1CE8 /* TestingUtils.m */; };
+		55759EB3149A862D000F1CE8 /* PersonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 55759EB2149A862D000F1CE8 /* PersonTest.m */; };
+		55759EF7149A8A0F000F1CE8 /* classDTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 55759EE8149A8A0F000F1CE8 /* classDTScope.m */; };
+		55759EF8149A8A0F000F1CE8 /* facultyTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 55759EEA149A8A0F000F1CE8 /* facultyTScope.m */; };
+		55759EF9149A8A0F000F1CE8 /* personDirectoryTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 55759EEC149A8A0F000F1CE8 /* personDirectoryTScope.m */; };
+		55759EFA149A8A0F000F1CE8 /* personTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 55759EEE149A8A0F000F1CE8 /* personTScope.m */; };
+		55759EFB149A8A0F000F1CE8 /* scalarCollectionTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 55759EF0149A8A0F000F1CE8 /* scalarCollectionTScope.m */; };
+		55759EFC149A8A0F000F1CE8 /* studentDirectoryTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 55759EF2149A8A0F000F1CE8 /* studentDirectoryTScope.m */; };
+		55759EFD149A8A0F000F1CE8 /* studentTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 55759EF4149A8A0F000F1CE8 /* studentTScope.m */; };
+		55759EFE149A8A0F000F1CE8 /* testingMapWithinMapsTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 55759EF6149A8A0F000F1CE8 /* testingMapWithinMapsTScope.m */; };
+		55759F02149A9A00000F1CE8 /* personTScope.xml in Resources */ = {isa = PBXBuildFile; fileRef = 55759F01149A9A00000F1CE8 /* personTScope.xml */; };
+		55759F05149A9BF8000F1CE8 /* FacultyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 55759F04149A9BF8000F1CE8 /* FacultyTest.m */; };
+		55759F07149A9CA8000F1CE8 /* facultyTScope.xml in Resources */ = {isa = PBXBuildFile; fileRef = 55759F06149A9CA7000F1CE8 /* facultyTScope.xml */; };
+		5594E897149FCD0500274B9E /* SimplEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = 5594E895149FCD0500274B9E /* SimplEnum.h */; };
+		5594E898149FCD0500274B9E /* SimplEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = 5594E896149FCD0500274B9E /* SimplEnum.m */; };
+		5594E8A8149FD2DB00274B9E /* VisibilityEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = 5594E89A149FCEC100274B9E /* VisibilityEnum.m */; };
+		5594E8A9149FD2F700274B9E /* VisibilityEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = 5594E899149FCEC100274B9E /* VisibilityEnum.h */; };
+		5594E8AA149FD2F900274B9E /* VisibilityEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = 5594E89A149FCEC100274B9E /* VisibilityEnum.m */; };
+		5594E8AB149FD31200274B9E /* SimplEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = 5594E896149FCD0500274B9E /* SimplEnum.m */; };
+		5594E8AE149FD33D00274B9E /* AnotherEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = 5594E8AD149FD33D00274B9E /* AnotherEnum.m */; };
+		5594E8B1149FD3E200274B9E /* EnumTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5594E8B0149FD3E200274B9E /* EnumTest.m */; };
+		5594E8FA14A1410400274B9E /* SBJsonTokeniser.h in Headers */ = {isa = PBXBuildFile; fileRef = 5594E8F614A1410400274B9E /* SBJsonTokeniser.h */; };
+		5594E8FB14A1410400274B9E /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5594E8F714A1410400274B9E /* SBJsonTokeniser.m */; };
+		5594E8FC14A1410400274B9E /* SBJsonUTF8Stream.h in Headers */ = {isa = PBXBuildFile; fileRef = 5594E8F814A1410400274B9E /* SBJsonUTF8Stream.h */; };
+		5594E8FD14A1410400274B9E /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 5594E8F914A1410400274B9E /* SBJsonUTF8Stream.m */; };
 		55A18A3F14675BD90079BC27 /* SimplBaseType.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A18A3D14675BD90079BC27 /* SimplBaseType.h */; };
 		55A18A4014675BD90079BC27 /* SimplBaseType.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A18A3E14675BD90079BC27 /* SimplBaseType.m */; };
 		55A18A4114675BD90079BC27 /* SimplBaseType.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A18A3E14675BD90079BC27 /* SimplBaseType.m */; };
@@ -98,7 +137,6 @@
 		55D0E84C1461D45A00A9F9B8 /* RssSimplTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 55D0E8401461D45A00A9F9B8 /* RssSimplTypes.h */; };
 		55D0E84D1461D45A00A9F9B8 /* RssSimplTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D0E8411461D45A00A9F9B8 /* RssSimplTypes.m */; };
 		55D0E84E1461D45A00A9F9B8 /* RssSimplTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D0E8411461D45A00A9F9B8 /* RssSimplTypes.m */; };
-		55D0E8521461D4EA00A9F9B8 /* RssTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D0E8501461D4E900A9F9B8 /* RssTest.m */; };
 		55D0E8531461D4EA00A9F9B8 /* RssTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D0E8501461D4E900A9F9B8 /* RssTest.m */; };
 		55D0E8561461D5FE00A9F9B8 /* JsonPullDeserializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 55D0E8541461D5FE00A9F9B8 /* JsonPullDeserializer.h */; };
 		55D0E8571461D5FE00A9F9B8 /* JsonPullDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D0E8551461D5FE00A9F9B8 /* JsonPullDeserializer.m */; };
@@ -208,6 +246,67 @@
 		5538EEC9145A35DD008173D8 /* ScalarUnmarshallingContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScalarUnmarshallingContext.h; path = Graph/ScalarUnmarshallingContext.h; sourceTree = "<group>"; };
 		5538EECB145A38AC008173D8 /* MultiMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultiMap.h; path = Graph/MultiMap.h; sourceTree = "<group>"; };
 		5538EECC145A38AC008173D8 /* MultiMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MultiMap.m; path = Graph/MultiMap.m; sourceTree = "<group>"; };
+		55759E8114997D7D000F1CE8 /* ClassA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassA.h; sourceTree = "<group>"; };
+		55759E8214997D7D000F1CE8 /* ClassA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassA.m; sourceTree = "<group>"; };
+		55759E8314997D7D000F1CE8 /* ClassB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassB.h; sourceTree = "<group>"; };
+		55759E8414997D7D000F1CE8 /* ClassB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassB.m; sourceTree = "<group>"; };
+		55759E8514997D7D000F1CE8 /* ClassC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassC.h; sourceTree = "<group>"; };
+		55759E8614997D7D000F1CE8 /* ClassC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassC.m; sourceTree = "<group>"; };
+		55759E8714997D7D000F1CE8 /* ClassD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassD.h; sourceTree = "<group>"; };
+		55759E8814997D7D000F1CE8 /* ClassD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassD.m; sourceTree = "<group>"; };
+		55759E8914997D7D000F1CE8 /* ClassX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassX.h; sourceTree = "<group>"; };
+		55759E8A14997D7D000F1CE8 /* ClassX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassX.m; sourceTree = "<group>"; };
+		55759E8C14997D7E000F1CE8 /* ClassDes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassDes.h; sourceTree = "<group>"; };
+		55759E8D14997D7E000F1CE8 /* ClassDes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassDes.m; sourceTree = "<group>"; };
+		55759E8E14997D7E000F1CE8 /* FieldDes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FieldDes.h; sourceTree = "<group>"; };
+		55759E8F14997D7E000F1CE8 /* FieldDes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FieldDes.m; sourceTree = "<group>"; };
+		55759E9014997D7E000F1CE8 /* TranslationS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TranslationS.h; sourceTree = "<group>"; };
+		55759E9114997D7E000F1CE8 /* TranslationS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TranslationS.m; sourceTree = "<group>"; };
+		55759E9314997D7E000F1CE8 /* Faculty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Faculty.h; sourceTree = "<group>"; };
+		55759E9414997D7E000F1CE8 /* Faculty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Faculty.m; sourceTree = "<group>"; };
+		55759E9514997D7E000F1CE8 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		55759E9614997D7E000F1CE8 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		55759E9714997D7E000F1CE8 /* PersonDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonDirectory.h; sourceTree = "<group>"; };
+		55759E9814997D7E000F1CE8 /* PersonDirectory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonDirectory.m; sourceTree = "<group>"; };
+		55759E9914997D7E000F1CE8 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		55759E9A14997D7E000F1CE8 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		55759E9B14997D7E000F1CE8 /* StudentDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentDirectory.h; sourceTree = "<group>"; };
+		55759E9C14997D7E000F1CE8 /* StudentDirectory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentDirectory.m; sourceTree = "<group>"; };
+		55759E9E14997D7E000F1CE8 /* ScalarCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScalarCollection.h; sourceTree = "<group>"; };
+		55759E9F14997D7E000F1CE8 /* ScalarCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScalarCollection.m; sourceTree = "<group>"; };
+		55759EAE149A638B000F1CE8 /* TestingUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestingUtils.h; sourceTree = "<group>"; };
+		55759EAF149A638B000F1CE8 /* TestingUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestingUtils.m; sourceTree = "<group>"; };
+		55759EB2149A862D000F1CE8 /* PersonTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonTest.m; sourceTree = "<group>"; };
+		55759EE7149A8A0F000F1CE8 /* classDTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = classDTScope.h; sourceTree = "<group>"; };
+		55759EE8149A8A0F000F1CE8 /* classDTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = classDTScope.m; sourceTree = "<group>"; };
+		55759EE9149A8A0F000F1CE8 /* facultyTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = facultyTScope.h; sourceTree = "<group>"; };
+		55759EEA149A8A0F000F1CE8 /* facultyTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = facultyTScope.m; sourceTree = "<group>"; };
+		55759EEB149A8A0F000F1CE8 /* personDirectoryTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = personDirectoryTScope.h; sourceTree = "<group>"; };
+		55759EEC149A8A0F000F1CE8 /* personDirectoryTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = personDirectoryTScope.m; sourceTree = "<group>"; };
+		55759EED149A8A0F000F1CE8 /* personTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = personTScope.h; sourceTree = "<group>"; };
+		55759EEE149A8A0F000F1CE8 /* personTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = personTScope.m; sourceTree = "<group>"; };
+		55759EEF149A8A0F000F1CE8 /* scalarCollectionTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scalarCollectionTScope.h; sourceTree = "<group>"; };
+		55759EF0149A8A0F000F1CE8 /* scalarCollectionTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scalarCollectionTScope.m; sourceTree = "<group>"; };
+		55759EF1149A8A0F000F1CE8 /* studentDirectoryTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = studentDirectoryTScope.h; sourceTree = "<group>"; };
+		55759EF2149A8A0F000F1CE8 /* studentDirectoryTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = studentDirectoryTScope.m; sourceTree = "<group>"; };
+		55759EF3149A8A0F000F1CE8 /* studentTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = studentTScope.h; sourceTree = "<group>"; };
+		55759EF4149A8A0F000F1CE8 /* studentTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = studentTScope.m; sourceTree = "<group>"; };
+		55759EF5149A8A0F000F1CE8 /* testingMapWithinMapsTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testingMapWithinMapsTScope.h; sourceTree = "<group>"; };
+		55759EF6149A8A0F000F1CE8 /* testingMapWithinMapsTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testingMapWithinMapsTScope.m; sourceTree = "<group>"; };
+		55759F01149A9A00000F1CE8 /* personTScope.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = personTScope.xml; sourceTree = "<group>"; };
+		55759F04149A9BF8000F1CE8 /* FacultyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacultyTest.m; sourceTree = "<group>"; };
+		55759F06149A9CA7000F1CE8 /* facultyTScope.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = facultyTScope.xml; sourceTree = "<group>"; };
+		5594E895149FCD0500274B9E /* SimplEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplEnum.h; sourceTree = "<group>"; };
+		5594E896149FCD0500274B9E /* SimplEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplEnum.m; sourceTree = "<group>"; };
+		5594E899149FCEC100274B9E /* VisibilityEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisibilityEnum.h; sourceTree = "<group>"; };
+		5594E89A149FCEC100274B9E /* VisibilityEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisibilityEnum.m; sourceTree = "<group>"; };
+		5594E8AC149FD33D00274B9E /* AnotherEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnotherEnum.h; sourceTree = "<group>"; };
+		5594E8AD149FD33D00274B9E /* AnotherEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnotherEnum.m; sourceTree = "<group>"; };
+		5594E8B0149FD3E200274B9E /* EnumTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnumTest.m; sourceTree = "<group>"; };
+		5594E8F614A1410400274B9E /* SBJsonTokeniser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonTokeniser.h; sourceTree = "<group>"; };
+		5594E8F714A1410400274B9E /* SBJsonTokeniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonTokeniser.m; sourceTree = "<group>"; };
+		5594E8F814A1410400274B9E /* SBJsonUTF8Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonUTF8Stream.h; sourceTree = "<group>"; };
+		5594E8F914A1410400274B9E /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
 		55A18A3D14675BD90079BC27 /* SimplBaseType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplBaseType.h; sourceTree = "<group>"; };
 		55A18A3E14675BD90079BC27 /* SimplBaseType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplBaseType.m; sourceTree = "<group>"; };
 		55A18A4314675CB10079BC27 /* DescriptorBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescriptorBase.h; sourceTree = "<group>"; };
@@ -295,10 +394,26 @@
 		5538EE01145A2993008173D8 /* SimplSerializationTests */ = {
 			isa = PBXGroup;
 			children = (
+				55759F06149A9CA7000F1CE8 /* facultyTScope.xml */,
+				55759F01149A9A00000F1CE8 /* personTScope.xml */,
+				55759EE6149A8A0F000F1CE8 /* tscope */,
+				55759E7F14997D7D000F1CE8 /* graph */,
+				55759E8B14997D7D000F1CE8 /* maps */,
+				55759E9214997D7E000F1CE8 /* person */,
+				55759E9D14997D7E000F1CE8 /* scalar */,
 				55D0E8351461D45A00A9F9B8 /* rss */,
 				5538EE02145A2993008173D8 /* Supporting Files */,
 				5538EE21145A2B09008173D8 /* MyClass.m */,
 				55D0E8501461D4E900A9F9B8 /* RssTest.m */,
+				55759EB2149A862D000F1CE8 /* PersonTest.m */,
+				55759F04149A9BF8000F1CE8 /* FacultyTest.m */,
+				5594E8B0149FD3E200274B9E /* EnumTest.m */,
+				55759EAE149A638B000F1CE8 /* TestingUtils.h */,
+				55759EAF149A638B000F1CE8 /* TestingUtils.m */,
+				5594E899149FCEC100274B9E /* VisibilityEnum.h */,
+				5594E89A149FCEC100274B9E /* VisibilityEnum.m */,
+				5594E8AC149FD33D00274B9E /* AnotherEnum.h */,
+				5594E8AD149FD33D00274B9E /* AnotherEnum.m */,
 			);
 			path = SimplSerializationTests;
 			sourceTree = "<group>";
@@ -396,6 +511,8 @@
 				552E7722146863BC00297B71 /* ReferenceType.m */,
 				552E773014688F2200297B71 /* CollectionType.h */,
 				552E773114688F2200297B71 /* CollectionType.m */,
+				5594E895149FCD0500274B9E /* SimplEnum.h */,
+				5594E896149FCD0500274B9E /* SimplEnum.m */,
 			);
 			path = Scalar;
 			sourceTree = "<group>";
@@ -427,9 +544,100 @@
 			name = Graph;
 			sourceTree = "<group>";
 		};
+		55759E7F14997D7D000F1CE8 /* graph */ = {
+			isa = PBXGroup;
+			children = (
+				55759E8014997D7D000F1CE8 /* diamond */,
+			);
+			path = graph;
+			sourceTree = "<group>";
+		};
+		55759E8014997D7D000F1CE8 /* diamond */ = {
+			isa = PBXGroup;
+			children = (
+				55759E8114997D7D000F1CE8 /* ClassA.h */,
+				55759E8214997D7D000F1CE8 /* ClassA.m */,
+				55759E8314997D7D000F1CE8 /* ClassB.h */,
+				55759E8414997D7D000F1CE8 /* ClassB.m */,
+				55759E8514997D7D000F1CE8 /* ClassC.h */,
+				55759E8614997D7D000F1CE8 /* ClassC.m */,
+				55759E8714997D7D000F1CE8 /* ClassD.h */,
+				55759E8814997D7D000F1CE8 /* ClassD.m */,
+				55759E8914997D7D000F1CE8 /* ClassX.h */,
+				55759E8A14997D7D000F1CE8 /* ClassX.m */,
+			);
+			path = diamond;
+			sourceTree = "<group>";
+		};
+		55759E8B14997D7D000F1CE8 /* maps */ = {
+			isa = PBXGroup;
+			children = (
+				55759E8C14997D7E000F1CE8 /* ClassDes.h */,
+				55759E8D14997D7E000F1CE8 /* ClassDes.m */,
+				55759E8E14997D7E000F1CE8 /* FieldDes.h */,
+				55759E8F14997D7E000F1CE8 /* FieldDes.m */,
+				55759E9014997D7E000F1CE8 /* TranslationS.h */,
+				55759E9114997D7E000F1CE8 /* TranslationS.m */,
+			);
+			path = maps;
+			sourceTree = "<group>";
+		};
+		55759E9214997D7E000F1CE8 /* person */ = {
+			isa = PBXGroup;
+			children = (
+				55759E9314997D7E000F1CE8 /* Faculty.h */,
+				55759E9414997D7E000F1CE8 /* Faculty.m */,
+				55759E9514997D7E000F1CE8 /* Person.h */,
+				55759E9614997D7E000F1CE8 /* Person.m */,
+				55759E9714997D7E000F1CE8 /* PersonDirectory.h */,
+				55759E9814997D7E000F1CE8 /* PersonDirectory.m */,
+				55759E9914997D7E000F1CE8 /* Student.h */,
+				55759E9A14997D7E000F1CE8 /* Student.m */,
+				55759E9B14997D7E000F1CE8 /* StudentDirectory.h */,
+				55759E9C14997D7E000F1CE8 /* StudentDirectory.m */,
+			);
+			path = person;
+			sourceTree = "<group>";
+		};
+		55759E9D14997D7E000F1CE8 /* scalar */ = {
+			isa = PBXGroup;
+			children = (
+				55759E9E14997D7E000F1CE8 /* ScalarCollection.h */,
+				55759E9F14997D7E000F1CE8 /* ScalarCollection.m */,
+			);
+			path = scalar;
+			sourceTree = "<group>";
+		};
+		55759EE6149A8A0F000F1CE8 /* tscope */ = {
+			isa = PBXGroup;
+			children = (
+				55759EE7149A8A0F000F1CE8 /* classDTScope.h */,
+				55759EE8149A8A0F000F1CE8 /* classDTScope.m */,
+				55759EE9149A8A0F000F1CE8 /* facultyTScope.h */,
+				55759EEA149A8A0F000F1CE8 /* facultyTScope.m */,
+				55759EEB149A8A0F000F1CE8 /* personDirectoryTScope.h */,
+				55759EEC149A8A0F000F1CE8 /* personDirectoryTScope.m */,
+				55759EED149A8A0F000F1CE8 /* personTScope.h */,
+				55759EEE149A8A0F000F1CE8 /* personTScope.m */,
+				55759EEF149A8A0F000F1CE8 /* scalarCollectionTScope.h */,
+				55759EF0149A8A0F000F1CE8 /* scalarCollectionTScope.m */,
+				55759EF1149A8A0F000F1CE8 /* studentDirectoryTScope.h */,
+				55759EF2149A8A0F000F1CE8 /* studentDirectoryTScope.m */,
+				55759EF3149A8A0F000F1CE8 /* studentTScope.h */,
+				55759EF4149A8A0F000F1CE8 /* studentTScope.m */,
+				55759EF5149A8A0F000F1CE8 /* testingMapWithinMapsTScope.h */,
+				55759EF6149A8A0F000F1CE8 /* testingMapWithinMapsTScope.m */,
+			);
+			path = tscope;
+			sourceTree = "<group>";
+		};
 		55D0E81B1461BF6C00A9F9B8 /* Json */ = {
 			isa = PBXGroup;
 			children = (
+				5594E8F614A1410400274B9E /* SBJsonTokeniser.h */,
+				5594E8F714A1410400274B9E /* SBJsonTokeniser.m */,
+				5594E8F814A1410400274B9E /* SBJsonUTF8Stream.h */,
+				5594E8F914A1410400274B9E /* SBJsonUTF8Stream.m */,
 				55D0E81C1461BF8900A9F9B8 /* JsonReader.h */,
 				55D0E81D1461BF8900A9F9B8 /* JsonReader.m */,
 			);
@@ -681,6 +889,10 @@
 				552E7728146863DC00297B71 /* StringType.h in Headers */,
 				552E772D1468644F00297B71 /* ParsedUrlType.h in Headers */,
 				552E773214688F2300297B71 /* CollectionType.h in Headers */,
+				5594E897149FCD0500274B9E /* SimplEnum.h in Headers */,
+				5594E8A9149FD2F700274B9E /* VisibilityEnum.h in Headers */,
+				5594E8FA14A1410400274B9E /* SBJsonTokeniser.h in Headers */,
+				5594E8FC14A1410400274B9E /* SBJsonUTF8Stream.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -755,6 +967,8 @@
 			files = (
 				5538EE06145A2993008173D8 /* InfoPlist.strings in Resources */,
 				55D0E8421461D45A00A9F9B8 /* RssSimplTypes.xml in Resources */,
+				55759F02149A9A00000F1CE8 /* personTScope.xml in Resources */,
+				55759F07149A9CA8000F1CE8 /* facultyTScope.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -809,6 +1023,35 @@
 				552E772A146863DC00297B71 /* StringType.m in Sources */,
 				552E772F1468644F00297B71 /* ParsedUrlType.m in Sources */,
 				552E773414688F2300297B71 /* CollectionType.m in Sources */,
+				55759EA014997D7E000F1CE8 /* ClassA.m in Sources */,
+				55759EA114997D7E000F1CE8 /* ClassB.m in Sources */,
+				55759EA214997D7E000F1CE8 /* ClassC.m in Sources */,
+				55759EA314997D7E000F1CE8 /* ClassD.m in Sources */,
+				55759EA414997D7E000F1CE8 /* ClassX.m in Sources */,
+				55759EA514997D7E000F1CE8 /* ClassDes.m in Sources */,
+				55759EA614997D7E000F1CE8 /* FieldDes.m in Sources */,
+				55759EA714997D7E000F1CE8 /* TranslationS.m in Sources */,
+				55759EA814997D7E000F1CE8 /* Faculty.m in Sources */,
+				55759EA914997D7E000F1CE8 /* Person.m in Sources */,
+				55759EAA14997D7E000F1CE8 /* PersonDirectory.m in Sources */,
+				55759EAB14997D7E000F1CE8 /* Student.m in Sources */,
+				55759EAC14997D7E000F1CE8 /* StudentDirectory.m in Sources */,
+				55759EAD14997D7E000F1CE8 /* ScalarCollection.m in Sources */,
+				55759EB0149A638B000F1CE8 /* TestingUtils.m in Sources */,
+				55759EB3149A862D000F1CE8 /* PersonTest.m in Sources */,
+				55759EF7149A8A0F000F1CE8 /* classDTScope.m in Sources */,
+				55759EF8149A8A0F000F1CE8 /* facultyTScope.m in Sources */,
+				55759EF9149A8A0F000F1CE8 /* personDirectoryTScope.m in Sources */,
+				55759EFA149A8A0F000F1CE8 /* personTScope.m in Sources */,
+				55759EFB149A8A0F000F1CE8 /* scalarCollectionTScope.m in Sources */,
+				55759EFC149A8A0F000F1CE8 /* studentDirectoryTScope.m in Sources */,
+				55759EFD149A8A0F000F1CE8 /* studentTScope.m in Sources */,
+				55759EFE149A8A0F000F1CE8 /* testingMapWithinMapsTScope.m in Sources */,
+				55759F05149A9BF8000F1CE8 /* FacultyTest.m in Sources */,
+				5594E8A8149FD2DB00274B9E /* VisibilityEnum.m in Sources */,
+				5594E8AB149FD31200274B9E /* SimplEnum.m in Sources */,
+				5594E8AE149FD33D00274B9E /* AnotherEnum.m in Sources */,
+				5594E8B1149FD3E200274B9E /* EnumTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -844,7 +1087,6 @@
 				55D0E8471461D45A00A9F9B8 /* Item.m in Sources */,
 				55D0E84A1461D45A00A9F9B8 /* Rss.m in Sources */,
 				55D0E84D1461D45A00A9F9B8 /* RssSimplTypes.m in Sources */,
-				55D0E8521461D4EA00A9F9B8 /* RssTest.m in Sources */,
 				55D0E8571461D5FE00A9F9B8 /* JsonPullDeserializer.m in Sources */,
 				55D0E85C1461E07A00A9F9B8 /* BootStrap.m in Sources */,
 				55A18A4014675BD90079BC27 /* SimplBaseType.m in Sources */,
@@ -858,6 +1100,10 @@
 				552E7729146863DC00297B71 /* StringType.m in Sources */,
 				552E772E1468644F00297B71 /* ParsedUrlType.m in Sources */,
 				552E773314688F2300297B71 /* CollectionType.m in Sources */,
+				5594E898149FCD0500274B9E /* SimplEnum.m in Sources */,
+				5594E8AA149FD2F900274B9E /* VisibilityEnum.m in Sources */,
+				5594E8FB14A1410400274B9E /* SBJsonTokeniser.m in Sources */,
+				5594E8FD14A1410400274B9E /* SBJsonUTF8Stream.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 #import "Rss.h"
+#import "Item.h"
 
 @implementation Rss
 
@@ -19,8 +20,46 @@
 	[super dealloc];
 }
 
-- (void) setVersionWithReference: (float *) p_version {
+- (void) setVersionWithReference: (float *) p_version 
+{
 	version = *p_version;
+}
+
+
++ (NSObject *) getPopulatedObject
+{
+    Rss* rss = [[[Rss alloc] init] autorelease];
+    Channel* channel = [[[Channel alloc] init] autorelease];
+    Item* item1 = [[[Item alloc] init] autorelease];
+    Item* item2 = [[[Item alloc] init] autorelease];
+    
+    NSMutableArray* categorySet = [NSMutableArray array];
+    
+    rss.version = 1.0;
+    
+    channel.title = @"testTitle";
+    channel.description = @"testDescription";
+    
+    [categorySet addObject:@"category1"];
+    [categorySet addObject:@"category2"];
+    
+    
+    item1.title = @"testItem1";
+    item1.description = @"testItem1Description";
+    //    item1.categorySet = categorySet;
+    
+    item2.title = @"testItem2";
+    item2.description = @"testItem2Description";
+    
+    NSMutableArray* items = [NSMutableArray array];
+    
+    [items addObject:item1];
+    [items addObject:item2];
+    
+    channel.items = items;
+    rss.channel = channel;
+    
+    return rss;
 }
 
 

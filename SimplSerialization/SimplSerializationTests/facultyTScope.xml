@@ -1,0 +1,24 @@
+<simpl_types_scope name="facultyTScope"
+	xmlns:simpl="http://ecologylab.net/research/simplGuide/serialization/index.html">
+	<class_descriptor name="tests.person.Person" tag_name="person"
+		described_class="tests.person.Person" described_class_simple_name="Person"
+		described_class_package_name="tests.person" simpl:id="1215960438">
+		<field_descriptor name="name" tag_name="name" field="name"
+			type="18" scalar_type="String" xml_hint="XML_ATTRIBUTE" field_type="String"
+			simpl:id="1192696614">
+			<declaring_class_descriptor simpl:ref="1215960438" />
+		</field_descriptor>
+	</class_descriptor>
+	<class_descriptor name="tests.person.Faculty"
+		tag_name="faculty" described_class="tests.person.Faculty"
+		described_class_simple_name="Faculty" described_class_package_name="tests.person"
+		simpl:id="207251401">
+		<super_class simpl:ref="1215960438" />
+		<field_descriptor simpl:ref="1192696614" />
+		<field_descriptor name="designation" tag_name="designation"
+			field="designation" type="18" scalar_type="String" xml_hint="XML_ATTRIBUTE"
+			field_type="String">
+			<declaring_class_descriptor simpl:ref="207251401" />
+		</field_descriptor>
+	</class_descriptor>
+</simpl_types_scope>

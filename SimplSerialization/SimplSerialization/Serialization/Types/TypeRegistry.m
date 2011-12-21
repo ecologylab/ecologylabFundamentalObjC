@@ -26,13 +26,13 @@ static ScalarType* parsedUrlType;
 
 + (void) initialize
 {
-    scalarTypes = [NSMutableDictionary dictionary];
-    collectionTypes = [NSMutableDictionary dictionary];
+    scalarTypes = [[NSMutableDictionary dictionary] retain];
+    collectionTypes = [[NSMutableDictionary dictionary] retain];
     
-    intType = [IntType intType];
-    floatType = [FloatType floatType];
-    stringType = [StringType stringType];
-    parsedUrlType = [ParsedUrlType parsedUrlType];    
+    intType = [[IntType intType] retain];
+    floatType = [[FloatType floatType] retain];
+    stringType = [[StringType stringType] retain];
+    parsedUrlType = [[ParsedUrlType parsedUrlType] retain];    
 }
 
 + (ScalarType*) scalarTypeFromName : (NSString *) typeName

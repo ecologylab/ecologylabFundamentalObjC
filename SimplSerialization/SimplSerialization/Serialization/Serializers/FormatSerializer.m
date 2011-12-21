@@ -16,7 +16,8 @@
 
 + (id) serializerWithFormat : (Format) inputFormat
 {
-    switch (inputFormat) {
+    switch (inputFormat) 
+    {
         case kFXml:
             return [XmlSerializer xmlSerializer];
             break;
@@ -29,7 +30,8 @@
 
 + (id) serializerWithStringFormat : (StringFormat) inputFormat
 {
-    switch (inputFormat) {
+    switch (inputFormat) 
+    {
         case kSFXml:            
             return [XmlSerializer xmlSerializer];
             break;
@@ -43,7 +45,8 @@
 
 + (id) serializerWithBinaryFormat : (BinaryFormat) inputFormat
 {
-    switch (inputFormat) {
+    switch (inputFormat) 
+    {
         case kBFTlv:
             // TODO: add tlv serializer initializer
             break;

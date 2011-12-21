@@ -245,7 +245,6 @@
         
         [outputString appendString: [fd tagName]];
         [outputString appendString: @">"];
-
     }
     
 }
@@ -271,8 +270,7 @@
 - (void) writeScalarCollectionLeaf : (NSObject *) object andFieldDescriptor: (FieldDescriptor *) fd andString: (NSMutableString *) outputString andContext : (TranslationContext *) translationContext
 {
     if([fd isDefaultValue: [object description]])
-    {
-        
+    {        
         [outputString appendString: @"<"];
         [outputString appendString: [fd elementStart]];
         [outputString appendString: @">"];

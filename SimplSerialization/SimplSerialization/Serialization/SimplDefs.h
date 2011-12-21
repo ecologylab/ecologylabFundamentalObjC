@@ -1,5 +1,5 @@
 //
-//  SimplTypeDefinitions.h
+//  SimplDefs.h
 //  SimplSerialization
 //
 //  Created by Nabeel Shahzad on 10/31/11.

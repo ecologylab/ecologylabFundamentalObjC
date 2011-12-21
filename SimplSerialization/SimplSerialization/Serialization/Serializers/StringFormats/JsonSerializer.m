@@ -30,10 +30,9 @@
 - (void) serializePolymorphicCollection : (NSObject *) object andFieldDescriptor : (FieldDescriptor *) fd andString : (NSMutableString *) outputString andContext: (TranslationContext *) translationContext;
 - (void) serializeCompositeCollection : (NSObject *) object andFieldDescriptor : (FieldDescriptor *) fd andString : (NSMutableString *) outputString andContext: (TranslationContext *) translationContext;
 
-- (void) writeSimplRef : (NSObject *) object andFieldDescriptor: (FieldDescriptor *) fd andString: (NSMutableString *) outputString andContext: (TranslationContext *) translationContext;
-- (void) writeObjectStart : (FieldDescriptor *) fd andString: (NSMutableString *) outputString;
-- (void) writeObjectClose : (FieldDescriptor *) fd andString: (NSMutableString *) outputString;
-- (void) writeCompleteClose : (NSMutableString *) outputString;
+- (void) writeSimplRef : (NSObject *) object andFieldDescriptor: (FieldDescriptor *) fd andString: (NSMutableString *) outputString andContext: (TranslationContext *) translationContext withTag: (bool) withTag;
+
+- (void) writeObjectStart : (FieldDescriptor *) fd andString: (NSMutableString *) outputString withTag: (bool) withTag;
 - (void) writeWrap : (FieldDescriptor *) fd andString: (NSMutableString *) outputString andClose : (bool) close;
 
 - (void) writeScalarCollectionLeaf : (NSObject *) object andFieldDescriptor: (FieldDescriptor *) fd andString: (NSMutableString *) outputString andContext : (TranslationContext *) translationContext;
@@ -88,14 +87,14 @@
     
     if ([self alreadySerialized : object andContext: translationContext])
     {
-        [self writeSimplRef : object andFieldDescriptor: rootFieldDescriptor andString: outputString andContext: translationContext];
+        [self writeSimplRef : object andFieldDescriptor: rootFieldDescriptor andString: outputString andContext: translationContext withTag : withTag];
         return;
     }
     
     [translationContext mapObject:object];
     [self serializationPreHook : object andContext: translationContext];
     
-    [self writeObjectStart:rootFieldDescriptor andString:outputString];
+    [self writeObjectStart:rootFieldDescriptor andString:outputString withTag: withTag];
     
     ClassDescriptor* rootClassDescriptor = [ClassDescriptor classDescriptorWithObject:object];
     NSMutableArray* allFieldDescriptors = rootClassDescriptor.allFieldDescriptors;        
@@ -163,7 +162,6 @@
     [fd appendValue:outputString andObject:object];
     
     [outputString appendString: @"\""];
-
 }
 
 - (void) serializeComposite : (NSObject *) object andFieldDescriptor : (FieldDescriptor *) fd andString : (NSMutableString *) outputString andContext: (TranslationContext *) translationContext 
@@ -182,7 +180,23 @@
 
 - (void) serializeScalarCollection : (NSObject *) object andFieldDescriptor : (FieldDescriptor *) fd andString : (NSMutableString *) outputString andContext: (TranslationContext *) translationContext 
 {
-    //TODO: impelement this
+    id scalarCollectionObject = [fd getObject:object];    
+    int numberOfItems = 0;
+    
+    [self writeWrap:fd andString:outputString andClose:false];
+    [self writeCollectionStart:fd andString:outputString];
+    
+    for(NSObject* collectionObject in scalarCollectionObject)
+    {
+        [self writeScalarCollectionLeaf: collectionObject andFieldDescriptor: fd andString: outputString andContext: translationContext];
+        if(++numberOfItems < [scalarCollectionObject count])
+        {
+            [outputString appendString: @","];
+        }        
+    }    
+    
+    [self writeCollectionEnd:outputString];
+    [self writeWrap:fd andString:outputString andClose:true];
 }
 
 - (void) serializePolymorphicCollection : (NSObject *) object andFieldDescriptor : (FieldDescriptor *) fd andString : (NSMutableString *) outputString andContext: (TranslationContext *) translationContext 
@@ -217,76 +231,64 @@
 }
 
 
-- (void) writeSimplRef : (NSObject *) object andFieldDescriptor: (FieldDescriptor *) fd andString: (NSMutableString *) outputString andContext: (TranslationContext *) translationContext
+- (void) writeSimplRef : (NSObject *) object andFieldDescriptor: (FieldDescriptor *) fd andString: (NSMutableString *) outputString andContext: (TranslationContext *) translationContext withTag: (bool) withTag
 {
-    [self writeObjectStart:fd andString:outputString];
+    [self writeObjectStart:fd andString:outputString withTag:withTag];
     [self writeSimplRefAttribute:object andString:outputString andContext:translationContext];
-    [self writeCompleteClose:outputString];
+    [self writeClose:outputString];
 }
 
-- (void) writeObjectStart : (FieldDescriptor *) fd andString: (NSMutableString *) outputString
+- (void) writeObjectStart : (FieldDescriptor *) fd andString: (NSMutableString *) outputString withTag: (bool) withTag
 {
-    [outputString appendString: @"<"];
-    [outputString appendString: [fd elementStart]];
-}
-
-- (void) writeObjectClose : (FieldDescriptor *) fd andString: (NSMutableString *) outputString
-{
-    [outputString appendString: @"<"];
-    [outputString appendString: @"/"];
-    [outputString appendString: [fd elementStart]];
-    [outputString appendString: @">"];
-}
-
-- (void) writeCompleteClose : (NSMutableString *) outputString
-{
-    [outputString appendString: @"/"];
-    [outputString appendString: @">"];
+    if(withTag)
+    {
+        [outputString appendString: @"\""];
+        [outputString appendString: fd.elementStart];
+        [outputString appendString: @"\""];
+        [outputString appendString: @":"];
+    }
+    
+    [outputString appendString: @"{"];
 }
 
 - (void) writeCollectionEnd : (NSMutableString *) outputString
 {
-    //TODO: implement this
+    [outputString appendString: @"]"];
 }
 
 - (void) writeCollectionStart : (FieldDescriptor *) fd andString : (NSMutableString *) outputString
 {
-    //TODO: impelement this
+    [outputString appendString: @"\""];
+    [outputString appendString: fd.elementStart];
+    [outputString appendString: @"\""];    
+    [outputString appendString: @":"];
+    [outputString appendString: @"[ "];
 }
 
-//TODO: fix me
+
 - (void) writeWrap : (FieldDescriptor *) fd andString: (NSMutableString *) outputString andClose : (bool) close
 {
     if([fd isWrapped])
     {
-        [outputString appendString: @"<"];
-        if(close)
-            [outputString appendString: @"/"];
-        
-        [outputString appendString: [fd tagName]];
-        [outputString appendString: @">"];
-        
+        if(!close)
+        {
+            [outputString appendString: @"\""];
+            [outputString appendString: fd.tagName];
+            [outputString appendString: @"\""];
+            [outputString appendString: @":"];
+            [outputString appendString: @"{"];
+        }
+        else
+            [outputString appendString: @"}"];
     }
-    
 }
 
-//TODO: fix me
+// TODO: pass format
 - (void) writeScalarCollectionLeaf : (NSObject *) object andFieldDescriptor: (FieldDescriptor *) fd andString: (NSMutableString *) outputString andContext : (TranslationContext *) translationContext
 {
-    if([fd isDefaultValue: [object description]])
-    {
-        
-        [outputString appendString: @"<"];
-        [outputString appendString: [fd elementStart]];
-        [outputString appendString: @">"];
-        
-        [fd appendCollectionScalarValue:outputString andObject:object];
-        
-        [outputString appendString: @"<"];
-        [outputString appendString: @"/"];
-        [outputString appendString: [fd elementStart]];
-        [outputString appendString: @">"];
-    }
+    [outputString appendString: @"\""];      
+    [fd appendCollectionScalarValue:outputString andObject:object];        
+    [outputString appendString: @"\""];
 }
 
 - (void) writeStart : (NSMutableString *) outputString
@@ -300,7 +302,6 @@
 }
 
 
-//TODO: fix me
 - (void) writeSimplRefAttribute : (NSObject *) object andString: (NSMutableString *) outputString andContext: (TranslationContext *) translationContext
 {
     [outputString appendString: @" "];
@@ -311,7 +312,6 @@
     [outputString appendString: @"\""];
 }
 
-//TODO: fix me
 - (void) writeSimplIdAttribute : (NSObject *) object andString: (NSMutableString *) outputString andContext: (TranslationContext *) translationContext
 {
     [outputString appendString: @" "];
@@ -324,7 +324,34 @@
 
 + (bool) isSerializable : (NSObject *) object andFieldDescriptor : (FieldDescriptor*) fd
 {
-    //TODO: impelment logic
+    switch (fd.type) 
+    {
+        case SCALAR:
+            if([fd isDefaultValueFromContext:object])
+                return false;
+            break;
+        case COMPOSITE_ELEMENT:
+        case MAP_ELEMENT:
+        case COLLECTION_ELEMENT:
+        {
+            NSObject* object = [fd getObject:object];
+            if(object == nil)   
+                return false;
+            break;
+        }
+        case COLLECTION_SCALAR:
+        case MAP_SCALAR:
+        {
+            id scalarCollectionObject = [fd getObject:object]; 
+            if(scalarCollectionObject == nil || [scalarCollectionObject count])
+                return false;
+            break;
+        }            
+        default:
+            return false;
+            break;
+    }
+    
     return true;
 }
 

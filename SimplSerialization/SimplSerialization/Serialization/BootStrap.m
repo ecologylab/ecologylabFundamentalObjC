@@ -23,7 +23,7 @@ static XmlStreamReader* xmlStreamReader;
 
 //convineince methods
 + (void)deserializeClassDescriptorAttribute:(NSString *)value classDescriptor:(ClassDescriptor *)classDescriptor tag:(NSString *)tag translationContext:(TranslationContext *)translationContext;
-+ (void)deserializeFieldDescriptorAttribute:(NSString *)value fieldDescriptor:(FieldDescriptor *)fieldDescriptor tag:(NSString *)tag;
++ (void)deserializeFieldDescriptorAttribute:(NSString *)value fieldDescriptor:(FieldDescriptor *)fieldDescriptor tag:(NSString *)tag translationContext: (TranslationContext *) translationContext;
 
 @end
 
@@ -128,7 +128,15 @@ static XmlStreamReader* xmlStreamReader;
         NSString* tag   = xmlStreamReader.name;
         NSString* value = xmlStreamReader.value;
         
-        [self deserializeFieldDescriptorAttribute:value fieldDescriptor:fieldDescriptor tag:tag];  
+        // if already deserialized, return the instance from translation context
+        if([tag isEqualToString:@SIMPL_REF])
+        {
+            fieldDescriptor =  (FieldDescriptor *) [translationContext getFromMap:value];
+            return fieldDescriptor;
+        }
+
+        
+        [self deserializeFieldDescriptorAttribute:value fieldDescriptor:fieldDescriptor tag:tag translationContext:translationContext];  
     }    
     
     // deserialize elements
@@ -193,7 +201,7 @@ static XmlStreamReader* xmlStreamReader;
 }
 
 // convinience method for creating the correct field related to an attribute
-+ (void)deserializeFieldDescriptorAttribute:(NSString *)value fieldDescriptor:(FieldDescriptor *)fieldDescriptor tag:(NSString *)tag
++ (void)deserializeFieldDescriptorAttribute:(NSString *)value fieldDescriptor:(FieldDescriptor *)fieldDescriptor tag:(NSString *)tag translationContext: (TranslationContext *) translationContext
 {
     if([tag isEqualToString:@"name"])
     {
@@ -246,6 +254,10 @@ static XmlStreamReader* xmlStreamReader;
     if([tag isEqualToString:@"collection_or_map_tag_name"])
     {
         fieldDescriptor.collectionOrMapTagName = value;
+    }
+    if([tag isEqualToString:@SIMPL_ID])
+    {
+        [translationContext markAsUmarshalled:value andObject:fieldDescriptor];
     }
 }
 
