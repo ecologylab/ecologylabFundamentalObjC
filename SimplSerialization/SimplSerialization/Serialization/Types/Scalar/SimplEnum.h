@@ -8,9 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-// An abstract base class from whic all generated enum types will inherit. 
 @interface SimplEnum : NSObject
+{    
+    @private NSDictionary *enumDictionary;
+}
 
+@property(nonatomic, readwrite, retain) NSDictionary *enumDictionary;
+
+
++ (id) simplEnumWithKeys : (NSArray *) keys andValues : (NSArray *) values;
+- (id) initWithKeys : (NSArray *) keys andValues : (NSArray *) values;
 - (int) valueFromString : (NSString *) enumString;
 - (NSString *) stringFromValue : (int) value;
 

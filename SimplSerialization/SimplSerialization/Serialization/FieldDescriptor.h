@@ -20,6 +20,7 @@
 #import "DescriptorBase.h"
 #import "ScalarType.h"
 #import "CollectionType.h"
+#import "EnumeratedType.h"
 
 
 
@@ -37,11 +38,12 @@
 {
 	int					type;
 	ScalarType			*scalarType;
+    EnumeratedType      *enumeratedType;
 	bool				isCDATA;
 	bool				needsEscaping;
 	bool				isWrapped;	
 	XmlHint				xmlHint;
-	
+    
     NSString			*collectionOrMapTagName;
 	NSMutableDictionary *polymorphClassDescriptors;
 	NSMutableDictionary *tagClasses;
@@ -61,6 +63,7 @@
 @property (nonatomic, readwrite, retain) ClassDescriptor *declaringClassDescriptor;
 @property (nonatomic, readwrite, retain) ClassDescriptor *elementClassDescriptor;
 @property (nonatomic, readwrite, retain) ScalarType *scalarType;
+@property (nonatomic, readwrite, retain) EnumeratedType *enumeratedType;
 @property (nonatomic, readwrite, retain) FieldDescriptor *wrapperFD;
 @property (nonatomic, readwrite, retain) NSMutableDictionary *polymorphClassDescriptors;
 

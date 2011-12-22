@@ -19,6 +19,7 @@
 @synthesize elementClassDescriptor;
 @synthesize type;
 @synthesize scalarType;
+@synthesize enumeratedType;
 @synthesize isCDATA;
 @synthesize needsEscaping;
 @synthesize isWrapped;

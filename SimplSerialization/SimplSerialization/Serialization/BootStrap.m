@@ -11,6 +11,7 @@
 #import "TranslationContext.h"
 #import "BootstrapConstants.h"
 #import "TypeRegistry.h"
+#import "EnumeratedType.h"
 
 static XmlStreamReader* xmlStreamReader;
 
@@ -24,6 +25,7 @@ static XmlStreamReader* xmlStreamReader;
 //convineince methods
 + (void)deserializeClassDescriptorAttribute:(NSString *)value classDescriptor:(ClassDescriptor *)classDescriptor tag:(NSString *)tag translationContext:(TranslationContext *)translationContext;
 + (void)deserializeFieldDescriptorAttribute:(NSString *)value fieldDescriptor:(FieldDescriptor *)fieldDescriptor tag:(NSString *)tag translationContext: (TranslationContext *) translationContext;
++ (EnumeratedType *)deserializeEnumeratedType : (NSString *) enumTag andContext: (TranslationContext *) translationContext;
 
 @end
 
@@ -166,7 +168,13 @@ static XmlStreamReader* xmlStreamReader;
             {
                 [xmlStreamReader skipCurrentTag];
                 continue;
-            }            
+            } 
+            
+            if([tagName isEqualToString:ENUMERATED_TYPE])
+            {
+                fieldDescriptor.enumeratedType = [BootStrap deserializeEnumeratedType:tagName andContext: translationContext];
+                continue;
+            }
         }    
     }
     while(xmlStreamReader.read && !(xmlStreamReader.nodeType == XML_READER_TYPE_END_ELEMENT && [xmlStreamReader.name isEqualToString:fieldDescriptorTag]));
@@ -259,6 +267,30 @@ static XmlStreamReader* xmlStreamReader;
     {
         [translationContext markAsUmarshalled:value andObject:fieldDescriptor];
     }
+}
+
++ (EnumeratedType *)deserializeEnumeratedType : (NSString *) enumTag andContext: (TranslationContext *) translationContext
+{
+    NSArray* keys   = [NSArray array];
+    NSArray* values = [NSArray array];
+    
+    do
+    {
+        if(xmlStreamReader.nodeType == XML_READER_TYPE_ELEMENT)
+        {            
+            NSString* tagName = xmlStreamReader.name;           
+            
+            if([tagName isEqualToString:ENUMERATED_STRING])
+            {
+                
+            }
+        }    
+    }
+    while(xmlStreamReader.read && !(xmlStreamReader.nodeType == XML_READER_TYPE_END_ELEMENT && [xmlStreamReader.name isEqualToString:enumTag]));
+    
+
+
+    return nil; 
 }
 
 @end

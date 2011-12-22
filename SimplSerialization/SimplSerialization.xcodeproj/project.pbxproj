@@ -75,6 +75,8 @@
 		5538EECD145A38AC008173D8 /* MultiMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 5538EECB145A38AC008173D8 /* MultiMap.h */; };
 		5538EECE145A38AC008173D8 /* MultiMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EECC145A38AC008173D8 /* MultiMap.m */; };
 		5538EECF145A38AC008173D8 /* MultiMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 5538EECC145A38AC008173D8 /* MultiMap.m */; };
+		554F109514A272F900683A1A /* EnumeratedType.h in Headers */ = {isa = PBXBuildFile; fileRef = 554F109314A272F900683A1A /* EnumeratedType.h */; };
+		554F109614A272F900683A1A /* EnumeratedType.m in Sources */ = {isa = PBXBuildFile; fileRef = 554F109414A272F900683A1A /* EnumeratedType.m */; };
 		55759EA014997D7E000F1CE8 /* ClassA.m in Sources */ = {isa = PBXBuildFile; fileRef = 55759E8214997D7D000F1CE8 /* ClassA.m */; };
 		55759EA114997D7E000F1CE8 /* ClassB.m in Sources */ = {isa = PBXBuildFile; fileRef = 55759E8414997D7D000F1CE8 /* ClassB.m */; };
 		55759EA214997D7E000F1CE8 /* ClassC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55759E8614997D7D000F1CE8 /* ClassC.m */; };
@@ -246,6 +248,8 @@
 		5538EEC9145A35DD008173D8 /* ScalarUnmarshallingContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScalarUnmarshallingContext.h; path = Graph/ScalarUnmarshallingContext.h; sourceTree = "<group>"; };
 		5538EECB145A38AC008173D8 /* MultiMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultiMap.h; path = Graph/MultiMap.h; sourceTree = "<group>"; };
 		5538EECC145A38AC008173D8 /* MultiMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MultiMap.m; path = Graph/MultiMap.m; sourceTree = "<group>"; };
+		554F109314A272F900683A1A /* EnumeratedType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnumeratedType.h; sourceTree = "<group>"; };
+		554F109414A272F900683A1A /* EnumeratedType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnumeratedType.m; sourceTree = "<group>"; };
 		55759E8114997D7D000F1CE8 /* ClassA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassA.h; sourceTree = "<group>"; };
 		55759E8214997D7D000F1CE8 /* ClassA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassA.m; sourceTree = "<group>"; };
 		55759E8314997D7D000F1CE8 /* ClassB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassB.h; sourceTree = "<group>"; };
@@ -528,6 +532,8 @@
 				552E7727146863DC00297B71 /* StringType.m */,
 				552E772B1468644F00297B71 /* ParsedUrlType.h */,
 				552E772C1468644F00297B71 /* ParsedUrlType.m */,
+				554F109314A272F900683A1A /* EnumeratedType.h */,
+				554F109414A272F900683A1A /* EnumeratedType.m */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -893,6 +899,7 @@
 				5594E8A9149FD2F700274B9E /* VisibilityEnum.h in Headers */,
 				5594E8FA14A1410400274B9E /* SBJsonTokeniser.h in Headers */,
 				5594E8FC14A1410400274B9E /* SBJsonUTF8Stream.h in Headers */,
+				554F109514A272F900683A1A /* EnumeratedType.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1104,6 +1111,7 @@
 				5594E8AA149FD2F900274B9E /* VisibilityEnum.m in Sources */,
 				5594E8FB14A1410400274B9E /* SBJsonTokeniser.m in Sources */,
 				5594E8FD14A1410400274B9E /* SBJsonUTF8Stream.m in Sources */,
+				554F109614A272F900683A1A /* EnumeratedType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

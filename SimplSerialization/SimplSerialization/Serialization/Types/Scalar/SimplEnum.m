@@ -10,18 +10,30 @@
 
 @implementation SimplEnum
 
+@synthesize enumDictionary;
+
++ (id) simplEnumWithKeys : (NSArray *) keys andValues : (NSArray *) values
+{
+    return [[[SimplEnum alloc] initWithKeys : keys andValues : values] autorelease];
+}
+
+- (id) initWithKeys : (NSArray *) keys andValues : (NSArray *) values
+{
+    if ((self = [super init]))
+    {
+        self.enumDictionary = [NSDictionary dictionaryWithObjects:values forKeys:keys];
+    }
+    return self;
+}
+
 - (int) valueFromString : (NSString *) enumString
 {
-    @throw [NSException exceptionWithName:NSInternalInconsistencyException
-                                   reason:[NSString stringWithFormat:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)]
-                                 userInfo:nil];
+    return [[self.enumDictionary objectForKey:enumString] intValue];
 }
 
 - (NSString *) stringFromValue : (int) value
 {
-    @throw [NSException exceptionWithName:NSInternalInconsistencyException
-                                   reason:[NSString stringWithFormat:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)]
-                                 userInfo:nil];
+    return  [[self.enumDictionary allKeys] objectAtIndex:value];
 }
 
 @end
