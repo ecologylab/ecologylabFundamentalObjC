@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'SimplOODSS' target in the 'SimplOODSS' project
-//
-
-#ifdef __OBJC__
-    #import <Foundation/Foundation.h>
-#endif
