@@ -1,0 +1,81 @@
+<simpl_types_scope name="rss"
+	xmlns:simpl="http://ecologylab.net/research/simplGuide/serialization/index.html">
+	<class_descriptor name="tests.rss.Item" tag_name="item"
+		described_class="tests.rss.Item" described_class_simple_name="Item"
+		described_class_package_name="tests.rss" simpl:id="279807577">
+		<field_descriptor name="title" tag_name="title"
+			field="title" type="18" scalar_type="String" xml_hint="XML_LEAF"
+			needs_escaping="true" field_type="String">
+			<declaring_class_descriptor simpl:ref="279807577" />
+		</field_descriptor>
+		<field_descriptor name="description" tag_name="description"
+			field="description" type="18" scalar_type="String" xml_hint="XML_LEAF"
+			needs_escaping="true" field_type="String">
+			<declaring_class_descriptor simpl:ref="279807577" />
+		</field_descriptor>
+		<field_descriptor name="link" tag_name="link" field="link"
+			type="18" scalar_type="ParsedURL" xml_hint="XML_LEAF" needs_escaping="true"
+			field_type="ParsedURL">
+			<declaring_class_descriptor simpl:ref="279807577" />
+		</field_descriptor>
+		<field_descriptor name="guid" tag_name="guid" field="guid"
+			type="18" scalar_type="ParsedURL" xml_hint="XML_LEAF" needs_escaping="true"
+			field_type="ParsedURL">
+			<declaring_class_descriptor simpl:ref="279807577" />
+		</field_descriptor>
+		<field_descriptor name="author" tag_name="author"
+			field="author" type="18" scalar_type="String" xml_hint="XML_LEAF"
+			needs_escaping="true" field_type="String">
+			<declaring_class_descriptor simpl:ref="279807577" />
+		</field_descriptor>
+	</class_descriptor>
+	<class_descriptor name="tests.rss.Rss" tag_name="rss"
+		described_class="tests.rss.Rss" described_class_simple_name="Rss"
+		described_class_package_name="tests.rss" simpl:id="833984911">
+		<field_descriptor name="version" tag_name="version"
+			field="version" type="18" scalar_type="float" xml_hint="XML_ATTRIBUTE"
+			field_type="float">
+			<declaring_class_descriptor simpl:ref="833984911" />
+		</field_descriptor>
+		<field_descriptor name="channel" tag_name="channel"
+			field="channel" element_class="tests.rss.Channel" type="3"
+			composite_tag_name="channel" field_type="Channel">
+			<element_class_descriptor name="tests.rss.Channel"
+				tag_name="channel" described_class="tests.rss.Channel"
+				described_class_simple_name="Channel" described_class_package_name="tests.rss"
+				simpl:id="820233764">
+				<field_descriptor name="items" tag_name="items"
+					field="items" element_class="tests.rss.Item" is_generic="true"
+					type="4" collection_type="simpl.types.collection.ArrayList"
+					collection_or_map_tag_name="item" field_type="ArrayList"
+					generic_parameters_string="&lt;Item&gt;">
+					<element_class_descriptor simpl:ref="279807577" />
+					<declaring_class_descriptor simpl:ref="820233764" />
+					<library_namespaces>
+						<library_namespace simpl:id="-1163724539" />
+					</library_namespaces>
+				</field_descriptor>
+				<field_descriptor name="title" tag_name="title"
+					field="title" type="18" scalar_type="String" xml_hint="XML_LEAF"
+					needs_escaping="true" field_type="String">
+					<declaring_class_descriptor simpl:ref="820233764" />
+				</field_descriptor>
+				<field_descriptor name="description" tag_name="description"
+					field="description" type="18" scalar_type="String" xml_hint="XML_LEAF"
+					needs_escaping="true" field_type="String">
+					<declaring_class_descriptor simpl:ref="820233764" />
+				</field_descriptor>
+				<field_descriptor name="link" tag_name="link"
+					field="link" type="18" scalar_type="ParsedURL" xml_hint="XML_LEAF"
+					needs_escaping="true" field_type="ParsedURL">
+					<declaring_class_descriptor simpl:ref="820233764" />
+				</field_descriptor>
+			</element_class_descriptor>
+			<declaring_class_descriptor simpl:ref="833984911" />
+			<library_namespaces>
+				<library_namespace simpl:ref="-1163724539" />
+			</library_namespaces>
+		</field_descriptor>
+	</class_descriptor>
+	<class_descriptor simpl:ref="820233764" />
+</simpl_types_scope>
