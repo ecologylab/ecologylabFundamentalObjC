@@ -22,6 +22,7 @@
 		49EFC27D1467BFC4005E1A6E /* FloatType.h in Headers */ = {isa = PBXBuildFile; fileRef = 49EFC27B1467BFC3005E1A6E /* FloatType.h */; };
 		49EFC27E1467BFC4005E1A6E /* FloatType.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EFC27C1467BFC3005E1A6E /* FloatType.m */; };
 		49EFC27F1467BFC4005E1A6E /* FloatType.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EFC27C1467BFC3005E1A6E /* FloatType.m */; };
+		49F325B414A83ED6001C4417 /* EnumeratedType.m in Sources */ = {isa = PBXBuildFile; fileRef = 554F109414A272F900683A1A /* EnumeratedType.m */; };
 		552E7723146863BC00297B71 /* ReferenceType.h in Headers */ = {isa = PBXBuildFile; fileRef = 552E7721146863BC00297B71 /* ReferenceType.h */; };
 		552E7724146863BC00297B71 /* ReferenceType.m in Sources */ = {isa = PBXBuildFile; fileRef = 552E7722146863BC00297B71 /* ReferenceType.m */; };
 		552E7725146863BC00297B71 /* ReferenceType.m in Sources */ = {isa = PBXBuildFile; fileRef = 552E7722146863BC00297B71 /* ReferenceType.m */; };
@@ -1059,6 +1060,7 @@
 				5594E8AB149FD31200274B9E /* SimplEnum.m in Sources */,
 				5594E8AE149FD33D00274B9E /* AnotherEnum.m in Sources */,
 				5594E8B1149FD3E200274B9E /* EnumTest.m in Sources */,
+				49F325B414A83ED6001C4417 /* EnumeratedType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

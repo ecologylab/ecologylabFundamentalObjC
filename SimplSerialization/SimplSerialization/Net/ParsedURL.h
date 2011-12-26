@@ -56,5 +56,6 @@
 - (NSString *) noAnchorNoQueryPageString;
 - (NSString *) noAnchorPageString;
 - (BOOL) hasSuffix: (NSString *) s;
+- (NSString *) toString;
 
 @end

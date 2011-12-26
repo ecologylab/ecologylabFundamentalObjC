@@ -18,7 +18,8 @@
 @property(nonatomic, readwrite, retain) SimplEnum *simplEnum;
 
 
-//+ (id) enumeratedTypeWithSimplEnum : (SimplEnum *) sipm
++ (id) enumeratedTypeWithSimplEnum : (SimplEnum *) pSimplEnum;
+- (id) initWithSimplEnum : (SimplEnum *) pSimplEnum;
 
 
 @end

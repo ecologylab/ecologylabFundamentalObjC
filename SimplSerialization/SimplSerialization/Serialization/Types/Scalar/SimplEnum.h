@@ -10,14 +10,16 @@
 
 @interface SimplEnum : NSObject
 {    
-    @private NSDictionary *enumDictionary;
+    @private NSDictionary *stringToInteger;
+    @private NSDictionary *integerToString;
 }
 
-@property(nonatomic, readwrite, retain) NSDictionary *enumDictionary;
+@property(nonatomic, readwrite, retain) NSDictionary *stringToInteger;
+@property(nonatomic, readwrite, retain) NSDictionary *integerToString;
 
 
-+ (id) simplEnumWithKeys : (NSArray *) keys andValues : (NSArray *) values;
-- (id) initWithKeys : (NSArray *) keys andValues : (NSArray *) values;
++ (id) simplEnumWithStrings : (NSArray *) keys andIntegers : (NSArray *) values;
+- (id) initWithStrings : (NSArray *) keys andIntegers : (NSArray *) values;
 - (int) valueFromString : (NSString *) enumString;
 - (NSString *) stringFromValue : (int) value;
 

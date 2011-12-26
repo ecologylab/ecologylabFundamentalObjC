@@ -12,6 +12,7 @@
 #import "BootstrapConstants.h"
 #import "TypeRegistry.h"
 #import "EnumeratedType.h"
+#import "SimplEnum.h"
 
 static XmlStreamReader* xmlStreamReader;
 
@@ -271,8 +272,10 @@ static XmlStreamReader* xmlStreamReader;
 
 + (EnumeratedType *)deserializeEnumeratedType : (NSString *) enumTag andContext: (TranslationContext *) translationContext
 {
-    NSArray* keys   = [NSArray array];
-    NSArray* values = [NSArray array];
+    NSMutableArray* integers   = [NSMutableArray array];
+    NSMutableArray* strings = [NSMutableArray array];
+    
+    int i = 0;
     
     do
     {
@@ -282,12 +285,17 @@ static XmlStreamReader* xmlStreamReader;
             
             if([tagName isEqualToString:ENUMERATED_STRING])
             {
+                NSString* text = xmlStreamReader.readElementContentAsString;
                 
+                [integers addObject:[NSNumber numberWithInt:i++]];
+                [strings addObject:text];
             }
         }    
     }
     while(xmlStreamReader.read && !(xmlStreamReader.nodeType == XML_READER_TYPE_END_ELEMENT && [xmlStreamReader.name isEqualToString:enumTag]));
     
+    
+    return [EnumeratedType enumeratedTypeWithSimplEnum:[SimplEnum simplEnumWithStrings:strings andIntegers:integers]];
 
 
     return nil; 

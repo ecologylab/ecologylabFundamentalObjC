@@ -8,6 +8,8 @@
 
 #import "ParsedUrlType.h"
 
+#import "ParsedURL.h"
+
 @implementation ParsedUrlType
 
 
@@ -23,6 +25,18 @@
         
     }
     return self;
+}
+
+- (void) setField : (NSObject *) object andFieldName : (NSString *) fieldName andValue : (NSString *) value
+{
+    ParsedURL *parsedUrlObject = [ParsedURL parsedURLWithAbsoluteAddress:value];
+    [object setValue:parsedUrlObject forKey:fieldName];
+}
+
+- (void) appendValue : (NSMutableString *) outputString andValue : (id) valueObject
+{
+    ParsedURL *parsedUrlObject = (ParsedURL *) valueObject; 
+    [outputString appendString : [parsedUrlObject toString]];
 }
 
 @end

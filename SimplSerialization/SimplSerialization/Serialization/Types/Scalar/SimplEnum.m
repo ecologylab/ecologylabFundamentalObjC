@@ -10,30 +10,32 @@
 
 @implementation SimplEnum
 
-@synthesize enumDictionary;
+@synthesize stringToInteger;
+@synthesize integerToString;
 
-+ (id) simplEnumWithKeys : (NSArray *) keys andValues : (NSArray *) values
++ (id) simplEnumWithStrings : (NSArray *) strings andIntegers : (NSArray *) integers
 {
-    return [[[SimplEnum alloc] initWithKeys : keys andValues : values] autorelease];
+    return [[[SimplEnum alloc] initWithStrings : strings andIntegers : integers] autorelease];
 }
 
-- (id) initWithKeys : (NSArray *) keys andValues : (NSArray *) values
+- (id) initWithStrings : (NSArray *) strings andIntegers : (NSArray *) integers
 {
     if ((self = [super init]))
     {
-        self.enumDictionary = [NSDictionary dictionaryWithObjects:values forKeys:keys];
+        self.stringToInteger = [NSDictionary dictionaryWithObjects:integers forKeys:strings]; 
+        self.integerToString = [NSDictionary dictionaryWithObjects:strings forKeys:integers]; 
     }
     return self;
 }
 
 - (int) valueFromString : (NSString *) enumString
 {
-    return [[self.enumDictionary objectForKey:enumString] intValue];
+    return [[self.stringToInteger objectForKey:enumString] intValue];
 }
 
 - (NSString *) stringFromValue : (int) value
 {
-    return  [[self.enumDictionary allKeys] objectAtIndex:value];
+    return [self.integerToString objectForKey:[NSNumber numberWithInt: value]];
 }
 
 @end

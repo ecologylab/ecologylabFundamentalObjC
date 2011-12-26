@@ -40,7 +40,7 @@
 #define ELEMENT_CLASSDESCRIPTOR          @"element_class_descriptor"
 #define DECLARING_CLASSDESCRIPTOR        @"declaring_class_descriptor"
 #define COLLECTION_TYPE                  @"collection_type"
-#define ENUMERATED_TYPE                  @"enumerated_type" 
+#define ENUMERATED_TYPE                  @"enum_type" 
 #define ENUMERATED_STRING                @"enum_string_constant" 
 
 #endif

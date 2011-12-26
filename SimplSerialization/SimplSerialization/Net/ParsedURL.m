@@ -23,7 +23,7 @@
 
 + (id) parsedURLWithAbsoluteAddress: (NSString *) webAddr 
 {
-	return nil;
+	return [ParsedURL parsedURLWithURL:[NSURL URLWithString:webAddr]];
 }
 
 + (id) parsedURLWithAbsoluteAddress: (NSString *) webAddr withErrorDescription: (NSString *) errorDescription 
@@ -148,6 +148,11 @@
 - (BOOL) hasSuffix: (NSString *) s 
 {
 	return NO;
+}
+
+- (NSString *) toString
+{
+    return [url absoluteString];
 }
 
 @end
